@@ -32,7 +32,7 @@ We are a community dedicated to bridging the gap between multilingual AI and Sou
 
 ### 🖼️ SEA Visual Instruction
 
-We will launch our new project in early Nov 2024 (11/2024). [Stay tuned!](https://seacrowd.github.io/contact/)
+Our new project, [SEA-VL](https://seacrowd.github.io/seavl-launch/) is now live! 
 
 ### 🌏 Special Interest Group in Southeast Asian NLP (SIGSEA)
 

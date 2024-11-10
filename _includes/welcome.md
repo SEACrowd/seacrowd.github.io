@@ -8,8 +8,8 @@ We are a community dedicated to bridging the gap between multilingual AI and Sou
 > See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/seacrowd-datahub/blob/master/LANGUAGES.md) are under our study.
 
 <blockquote style="background-color: #F87A63; color: white">
-  <p><b>🚨 Call for contributors! 🚨</b><br/> The follow-up to the highly successful *SEACrowd* is here! We are now <b style="color: #FFF4B7; font-size:1.5em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. <br/><br/>
- Checkout the detail on our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!</p>
+  <b>🚨 Call for contributors! 🚨</b><br/> The follow-up to the highly successful *SEACrowd* is here! We are now <b style="color: #FFF4B7; font-size:1.5em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. <br/><br/>
+ Checkout the detail on our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!
 </blockquote>
 
 <div align="center">
@@ -38,7 +38,7 @@ SEA-VL is a big initiative which is why we have decided to split it into two pha
 
 <blockquote style="background-color: #F87A63; color: white">
     <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    <p>You can also participate in this initiative and become a co-author of SEA-VL! For more detail check our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!</p>
+    You can also participate in this initiative and become a co-author of SEA-VL! For more detail check our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!
 </blockquote>
     
 

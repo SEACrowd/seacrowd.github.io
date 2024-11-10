@@ -30,9 +30,9 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 ## 🤔 What's Next?
 
-### 🖼️ SEA Visual Instruction
+### 🖼️ SEA-VL
 
-The follow-up to the highly successful *SEACrowd* is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
+The follow-up to [the highly successful *SEACrowd* project](https://seacrowd.github.io/seacrowd-emnlp-2024/) is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
 
 SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase 1** of SEA-VL, the task is to submit and review **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase 2** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 

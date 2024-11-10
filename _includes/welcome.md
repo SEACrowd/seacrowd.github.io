@@ -7,9 +7,9 @@ We are a community dedicated to bridging the gap between multilingual AI and Sou
 
 > See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/seacrowd-datahub/blob/master/LANGUAGES.md) are under our study.
 
-<blockquote style="background-color: #F87A63; color: white">
+<blockquote style="background-color: #ff444b; color: white">
   <b>🚨 Call for contributors! 🚨</b><br/> The follow-up to the highly successful *SEACrowd* is here! We are now <b style="color: #FFF4B7; font-size:1.5em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. <br/><br/>
- Checkout the detail on our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!
+ Checkout the detail on our <a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
 </blockquote>
 
 <div align="center">
@@ -36,9 +36,9 @@ The follow-up to the highly successful *SEACrowd* is here! We are now opening an
 
 SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase One** of SEA-VL, the task is to submit **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase Two** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
-<blockquote style="background-color: #F87A63; color: white">
-    <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    You can also participate in this initiative and become a co-author of SEA-VL! For more detail check our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!
+<blockquote style="background-color: #ff444b; color: white">
+    <h3 align="center; color: white"> 🚨 Call for contributors! 🚨</h3>
+    You can also participate in this initiative and become a co-author of SEA-VL! For more detail check our <a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
 </blockquote>
     
 

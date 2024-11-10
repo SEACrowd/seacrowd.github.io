@@ -9,8 +9,7 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 <blockquote>
     <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    The follow-up to the highly successful *SEACrowd* is here! We are now <b style="font-size:1.5em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. <br/><br/>
- Checkout the detail on our <a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
+    The follow-up to the highly successful *SEACrowd* is here! We are now <b style="font-size:1.2em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. Checkout the detail on our <a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
 </blockquote>
 
 <div align="center">
@@ -35,11 +34,11 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 The follow-up to the highly successful *SEACrowd* is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
 
-SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase One** of SEA-VL, the task is to submit **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase Two** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
+SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase 1** of SEA-VL, the task is to submit and review **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase 2** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
 <blockquote>
     <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    You can also participate in this initiative and become a co-author of SEA-VL! For more detail check our <a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
+    You can also participate in this initiative and become a co-author of SEA-VL! Checkout the detail on our<a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
 </blockquote>
     
 

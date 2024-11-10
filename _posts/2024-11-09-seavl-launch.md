@@ -4,22 +4,40 @@ title: ""
 categories: Announcement,Project
 ---
 
-# 🚨 Call for contributors
-The follow-up to the highly successful *SEACrowd* project is here! Become a co-author for SEA-VL: a community-driven project to create vision-language models and datasets for SEA languages!
+# 🚨 SEA-VL: Call for Contributors
 
-<!-- ADD A SHORT BANNER HERE, SOMETHING THE SIZE OF A TWITTER BANNER WITH THE PROJECT NAME -->
-
-### What can I do for SEA-VL?
+The follow-up to [the highly successful *SEACrowd* project](https://seacrowd.github.io/seacrowd-emnlp-2024/) is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
 
 SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase 1** of SEA-VL, the task is to submit and review **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase 2** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
+Phase 1 will be open from 11 Nov 2024 to 15 Feb 2024. Details about Phase 2 will be added near the end of Phase 1.
+
+<!-- ADD A SHORT BANNER HERE, SOMETHING THE SIZE OF A TWITTER BANNER WITH THE PROJECT NAME -->
+
 ### What's in it for me?
-Like the previous SEACrowd project, contributions will be rewarded with points. Achieving **200 points** will guarantee you a spot in our paper publication for **Phase 1**.
+
+Like the previous SEACrowd project, contributions will be rewarded with points. Achieving **200 points** in Phase 1 will guarantee you a co-authorship in our publication for ACL 2025.
 
 > Live contribution tracking monitor will be open soon!
 
-### What is a "Culturally-relevant Image"?
-Any image containing a subject relevant to your culture is accepted. For example, this can be food (ex. a photo of someone eating Nasi Goreng), places (ex. a scene from Escolta Street in Manila), events (ex. Chinese New Year celebration in your country), day-to-day life with culture-specific things (ex. eating with hands), and many more. As long as it contains something that's related to SEA culture, you can submit it.
+### How can I contribute?
+
+We divide the **Phase 1** into two tasks: image submission and image review, each task follow the following scoring standard:
+
+##### Task 1: Submit a SEA culturally-relevant self-photo (1-2 points depending on where the photo is taken)
+
+Submitting is easy! Simply access this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKkNhFvPNXXDy1eFyrqy3XGXq7M15Vw/viewform) and fill in the required details.
+
+- 1 point for each self-taken culturally-relevant image from **Indonesia**, **Singapore**, and **Phillippines**
+- 1.5 points for each self-taken culturally-relevant images from **Thailand**, **Malaysia**, and **Vietnam**
+- 2 points for each self-taken culturally-relevant images from **Brunei**, **EastTimor**, **Cambodia**, **Laos**, **Myanmar**
+
+##### Task 2: Review an image-caption pair (1 point per instance)
+For reviewing, have the reviewer candidates pass a short test first. Details are coming soon by **25 Nov 2024**.
+
+### What is a "culturally-relevant image"?
+
+Any image containing a subject relevant to your culture is accepted. For example, this can be food (e.g., a photo of someone eating Nasi Goreng), places (e.g., a scene from Escolta Street in Manila), events (e.g., Chinese New Year celebration in your country), day-to-day life with culture-specific things (e.g., eating with hands), and many more. As long as it contains something that's related to SEA culture, you can submit it.
 
 ### Can I submit images from the internet?
 **No.** Images have to be strictly taken by you.
@@ -28,36 +46,15 @@ Any images you provide will be later licensed under the open-source CC-BY-SA 4.0
 
 ### Timeline
 
-#### Phase 1
+Here is our schedule for Phase 1!
+
 - 11 Nov 2024: Launch Task 1 (Culturally-Relevant Self-Photo Collection)
 - 25 Nov 2024: Launch Task 2 (Culturally-Relevant Image Review)
 - 15 Jan 2025: End of self-photo review period
 - 15 Feb 2025: Round 1 publication deadline (ACL 2025)
 
-#### Phase 2
-(Please wait for a further announcement)
-
-### Contribution Point
-
-#### Phase 1
-We divide the **Phase 1** into two tasks: image submission and image review, each task follow the following scoring standard:
-
-##### Task 1: Submit a SEA culturally-relevant self-photo (1-2 points depending on where the photo is taken)
-- 1 point for each self-taken culturally-relevant image from **Indonesia**, **Singapore**, and **Phillippines**
-- 1.5 points for each self-taken culturally-relevant images from **Thailand**, **Malaysia**, and **Vietnam**
-- 2 points for each self-taken culturally-relevant images from **Brunei**, **EastTimor**, **Cambodia**, **Laos**, **Myanmar**
-
-##### Task 2: Review an image-caption pair (1 point per instance)
-For reviewing, have the reviewer candidates pass a short test first. Details are coming soon by **25 Nov 2024**.
-
-#### Phase 2
-(Please wait for a further announcement)
-
-#### How do I join?
-Submitting is easy! Simply access this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKkNhFvPNXXDy1eFyrqy3XGXq7M15Vw/viewform) and fill in the required details.
-
 #### Do you have a group / online community that I can join in?
-Check out our [GitHub](https://github.com/SEACrowd) page, and join our Discord server. Everyone is welcome to discuss and ask questions there!
+Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord server](https://discord.gg/XXRHFuvkTA). Everyone is welcome to discuss and ask questions there!
 
 ---
 

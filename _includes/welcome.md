@@ -1,3 +1,4 @@
+
 <img width="100%" alt="SEACrowd Logo" src="https://github.com/SEACrowd/.github/blob/main/profile/assets/seacrowd-email-banner-without-logo.png?raw=true">
 
 # Welcome to SEACrowd! 👋
@@ -5,6 +6,11 @@
 We are a community dedicated to bridging the gap between multilingual AI and Southeast Asian AI and enhancing the quality of AI research and researchers in the region.
 
 > See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/seacrowd-datahub/blob/master/LANGUAGES.md) are under our study.
+
+<blockquote style="background-color: #F87A63; color: white">
+  <p><b>🚨 Call for contributors! 🚨</b><br/> The follow-up to the highly successful *SEACrowd* is here! We are now <b style="color: #FFF4B7; font-size:1.5em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. <br/><br/>
+ Checkout the detail on our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!</p>
+</blockquote>
 
 <div align="center">
   <div class="btn-group" role="group" aria-label="Button group">
@@ -22,17 +28,15 @@ We are a community dedicated to bridging the gap between multilingual AI and Sou
 
 <hr/>
 
-## ✔️ Past Projects
-
-- 11/2023 to 06/2024. [**SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages**](https://arxiv.org/pdf/2406.10118). Accepted in EMNLP 2024. [[Announcement]](https://seacrowd.github.io/seacrowd-emnlp-2024/)
-
-<hr/>
-
 ## 🤔 What's Next?
 
 ### 🖼️ SEA Visual Instruction
 
-We will launch our new project in early Nov 2024 (11/2024). [Stay tuned!](https://seacrowd.github.io/contact/)
+The follow-up to the highly successful *SEACrowd* is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
+
+SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase One** of SEA-VL, the task is to submit **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase Two** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
+
+> <h3 align="center"> 🚨 Call for contributors! 🚨</h3>You can also participate in this initiative and become a co-author of SEA-VL! For more detail check our [SEA-VL blog post](https://seacrowd.github.io/seavl-launch/)!
 
 ### 🌏 Special Interest Group in Southeast Asian NLP (SIGSEA)
 
@@ -52,9 +56,13 @@ Our program addresses these gaps by providing research problems for participants
 
 <hr/>
 
+## ✔️ Past Projects
+
+- 11/2023 to 06/2024. [**SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages**](https://arxiv.org/pdf/2406.10118). Accepted in EMNLP 2024. [[Announcement]](https://seacrowd.github.io/seacrowd-emnlp-2024/)
+
+<hr/>
+
 # News and Updates
-
-
 
 
 

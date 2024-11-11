@@ -4,8 +4,6 @@ title: "🚨 SEA-VL: Call for Contributors"
 categories: Announcement,Project
 ---
 
-# SEA-VL: Developing Culturally Relevant Vision-Language Models for Southeast Asia
-
 Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 
 SEA-VL is a big initiative, so we have decided to split it into two phases. In **Phase 1** of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for Phase 2, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.

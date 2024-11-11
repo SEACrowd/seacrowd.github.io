@@ -30,7 +30,7 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 ## 🤔 What's Next?
 
-### 🖼️ SEA-VL
+### 🖼️ SEA-VL: Developing Culturally Relevant Vision-Language Models for Southeast Asia
 
 Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 

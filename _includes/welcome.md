@@ -9,7 +9,7 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 <blockquote>
     <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    The follow-up to the highly successful *SEACrowd* is here! We are now <b style="font-size:1.2em;">SEA-VL</b> another open-source crowdsourcing initiative for collecting SEA vision-language datasets and models. Checkout the detail on our <a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
+    Following the success of our SEACrowd project, we’re excited to announce <b style="font-size:1.2em;"><a href="https://seacrowd.github.io/seavl-launch/">SEA-VL</a></b>, a new open-source initiative to create **high-quality vision-language datasets** for Southeast Asian (SEA) languages! Check it out <a href="https://seacrowd.github.io/seavl-launch/">here</a>.
 </blockquote>
 
 <div align="center">
@@ -32,15 +32,13 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 ### 🖼️ SEA-VL
 
-The follow-up to [the highly successful *SEACrowd* project](https://seacrowd.github.io/seacrowd-emnlp-2024/) is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
+Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 
-SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase 1** of SEA-VL, the task is to submit and review **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase 2** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
+SEA-VL is a big initiative, so we have decided to split it into two phases. In **Phase 1** of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for Phase 2, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
-<blockquote>
-    <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    You can also participate in this initiative and become a co-author of SEA-VL! Checkout the detail on our<a href="https://seacrowd.github.io/seavl-launch/">SEA-VL blog post</a>!
-</blockquote>
-    
+Phase 1 is open from **11 Nov 2024 to 15 Feb 2024**.
+
+> Everyone can join this initiative and become a co-author of SEA-VL. Find out all the details [here](https://seacrowd.github.io/seavl-launch/)!
 
 ### 🌏 Special Interest Group in Southeast Asian NLP (SIGSEA)
 

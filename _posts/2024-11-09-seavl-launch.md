@@ -6,7 +6,7 @@ categories: Announcement,Project
 
 # 🚨 SEA-VL: Call for Contributors
 
-Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce SEA-VL, a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
+Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 
 SEA-VL is a big initiative, so we have decided to split it into two phases. In **Phase 1** of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for Phase 2, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
@@ -31,7 +31,7 @@ Submission is simple! Just go to this [form](https://docs.google.com/forms/d/e/1
 Points:
 - 1 point for images from Indonesia, Singapore, and Phillippines
 - 1.5 points for images from Thailand, Malaysia, and Vietnam
-- 2 points for images from Brunei, EastTimor, Cambodia, Laos, Myanmar
+- 2 points for images from Brunei, East Timor, Cambodia, Laos, Myanmar
 
 ##### Task 2: Review Image-Description Pairs (1 point per review)
 
@@ -47,31 +47,31 @@ All images will be openly licensed under the CC-BY-SA 4.0 license, so please ens
 
 ## Project Timeline
 
-Here’s the schedule for Phase 1:
+Here’s our schedule for Phase 1:
 
 - 11 Nov 2024: Task 1 - Culturally-Relevant Image Collection opens
 - 25 Nov 2024: Task 2 - Culturally-Relevant Image Review opens
 - 15 Jan 2025: Call for contribution ends
 - 15 Feb 2025: ACL 2025 submission deadline
 
-## Do you have a group or an online community that I can join?
+## Join the Community!
 
 Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord server](https://discord.gg/XXRHFuvkTA). Everyone is welcome to discuss and ask questions there!
 
 ---
 
 ## FAQs
-1. Will Phase 1 authorship guarantee authorship in Phase 2?
+1. **Will Phase 1 authorship guarantee authorship in Phase 2?**
 - No. Co-authorship in Phase 2 will have its own points system as the tasks will differ from Phase 1. Points from Phase 1 will not carry over.
-2. Can I submit an image I posted online if I still own the copyright?
+2. **Can I submit an image I posted online if I still own the copyright?**
 - Yes, as long as you took the image and still hold the copyright.
-3. Do images need to be high quality?
+3. **Do images need to be high quality?**
 - No, phone-quality images are perfectly acceptable as long as they're not blurry or obstructed.
-4. Can I submit images that reflect SEA culture but were taken outside of SEA?
+4. **Can I submit images that reflect SEA culture but were taken outside of SEA?**
 - Yes, images taken abroad are welcome if they are culturally relevant.
-5. Do I have to be a resident of the SEA culture represented in the photo I submit?
+5. **Do I have to be a resident of the SEA culture represented in the photo I submit?**
 - No, you do not.
-6. Have more questions?
+6. **Have more questions?**
 - Join our [Discord server](https://discord.gg/XXRHFuvkTA) and we'll be happy to help!
 
 

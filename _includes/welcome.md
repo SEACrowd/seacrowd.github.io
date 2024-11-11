@@ -9,7 +9,7 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 <blockquote>
     <h3 align="center"> 🚨 Call for contributors! 🚨</h3>
-    Following the success of our SEACrowd project, we’re excited to announce <b style="font-size:1.2em;"><a href="https://seacrowd.github.io/seavl-launch/">SEA-VL</a></b>, a new open-source initiative to create **high-quality vision-language datasets** for Southeast Asian (SEA) languages! Check it out <a href="https://seacrowd.github.io/seavl-launch/">here</a>.
+    Following the success of our SEACrowd project, we’re excited to announce <b><a href="https://seacrowd.github.io/seavl-launch/">SEA-VL</a></b>, a new open-source initiative to create <u>high-quality vision-language datasets</u> for Southeast Asian (SEA) languages! Check it out <a href="https://seacrowd.github.io/seavl-launch/">here</a>.
 </blockquote>
 
 <div align="center">

@@ -49,7 +49,7 @@ Here’s our schedule for Phase 1:
 
 - 11 Nov 2024: Task 1 - Culturally-Relevant Image Collection opens
 - 25 Nov 2024: Task 2 - Culturally-Relevant Image Review opens
-- 15 Jan 2025: Call for contribution ends
+- 15 Jan 2025: Contribution ends
 - 15 Feb 2025: ACL 2025 submission deadline
 
 ## Join the Community!

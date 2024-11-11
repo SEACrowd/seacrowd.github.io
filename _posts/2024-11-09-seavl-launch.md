@@ -10,7 +10,7 @@ SEA-VL is a big initiative, so we have decided to split it into two phases. In *
 
 > Phase 1 is open from **11 Nov 2024 to 15 Feb 2024**. More details about Phase 2 will be shared at the end of Phase 1.
 
-<img width="500" alt="SEA-VL Banner" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-banner.png?raw=true">
+<img width="700" alt="SEA-VL Banner" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-banner.png?raw=true">
 
 ## Why Contribute?
 

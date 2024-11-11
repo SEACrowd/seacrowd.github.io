@@ -1,10 +1,8 @@
 ---
 layout: post
-title: ""
+title: "🚨 SEA-VL: Call for Contributors"
 categories: Announcement,Project
 ---
-
-# 🚨 SEA-VL: Call for Contributors
 
 Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 

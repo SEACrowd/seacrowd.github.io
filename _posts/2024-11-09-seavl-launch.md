@@ -6,64 +6,73 @@ categories: Announcement,Project
 
 # 🚨 SEA-VL: Call for Contributors
 
-The follow-up to [the highly successful *SEACrowd* project](https://seacrowd.github.io/seacrowd-emnlp-2024/) is here! We are now opening another open-source crowdsourcing initiative, **SEA-VL**, for developing high-quality open-source SEA-specific vision-language datasets and building vision-language models for SEA languages!
+Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce SEA-VL, a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 
-SEA-VL is a big initiative which is why we have decided to split it into two phases. In the **Phase 1** of SEA-VL, the task is to submit and review **self-taken culturally-relevant images**, plus descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will be incorporated as the core component of the **Phase 2** where we will build instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
+SEA-VL is a big initiative, so we have decided to split it into two phases. In **Phase 1** of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for Phase 2, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
-Phase 1 will be open from 11 Nov 2024 to 15 Feb 2024. Details about Phase 2 will be added near the end of Phase 1.
+> Phase 1 is open from 11 Nov 2024 to 15 Feb 2024. More details about Phase 2 will be shared at the end of Phase 1.
 
 <!-- ADD A SHORT BANNER HERE, SOMETHING THE SIZE OF A TWITTER BANNER WITH THE PROJECT NAME -->
 
-### What's in it for me?
+### Why Contribute?
 
-Like the previous SEACrowd project, contributions will be rewarded with points. Achieving **200 points** in Phase 1 will guarantee you a co-authorship in our publication for ACL 2025.
+As with SEACrowd, every contribution to SEA-VL will earn points. Reaching 200 points in Phase 1 will guarantee **co-authorship in our publication for ACL 2025**.
 
-> Live contribution tracking monitor will be open soon!
+Live contribution tracking monitor will be open soon!
 
 ### How can I contribute?
 
-We divide the **Phase 1** into two tasks: image submission and image review, each task follow the following scoring standard:
+Phase 1 is split into two main tasks: culturally-relevant image submission and image review. Here’s how points are awarded:
 
-##### Task 1: Submit a SEA culturally-relevant self-photo (1-2 points depending on where the photo is taken)
+##### Task 1: Submit a SEA Culturally-Relevant Image (1-2 points per photo)
 
-Submitting is easy! Simply access this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKkNhFvPNXXDy1eFyrqy3XGXq7M15Vw/viewform) and fill in the required details.
+Submission is simple! Just go to this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKkNhFvPNXXDy1eFyrqy3XGXq7M15Vw/viewform) and provide your <underline>self-taken, culturally relevant</underline> photo with a brief description.
 
-- 1 point for each self-taken culturally-relevant image from **Indonesia**, **Singapore**, and **Phillippines**
-- 1.5 points for each self-taken culturally-relevant images from **Thailand**, **Malaysia**, and **Vietnam**
-- 2 points for each self-taken culturally-relevant images from **Brunei**, **EastTimor**, **Cambodia**, **Laos**, **Myanmar**
+Points:
+- 1 point for images from **Indonesia**, **Singapore**, and **Phillippines**
+- 1.5 points for images from **Thailand**, **Malaysia**, and **Vietnam**
+- 2 points for images from **Brunei**, **EastTimor**, **Cambodia**, **Laos**, **Myanmar**
 
-##### Task 2: Review an image-caption pair (1 point per instance)
-For reviewing, have the reviewer candidates pass a short test first. Details are coming soon by **25 Nov 2024**.
+##### Task 2: Review Image-Description Pairs (1 point per review)
 
-### What is a "culturally-relevant image"?
+To participate in reviewing, contributors must first pass a short test. Details on how to get started will be released by November 25, 2024.
 
-Any image containing a subject relevant to your culture is accepted. For example, this can be food (e.g., a photo of someone eating Nasi Goreng), places (e.g., a scene from Escolta Street in Manila), events (e.g., Chinese New Year celebration in your country), day-to-day life with culture-specific things (e.g., eating with hands), and many more. As long as it contains something that's related to SEA culture, you can submit it.
+### What Qualifies as a "Culturally-Relevant Image"?
 
-### Can I submit images from the internet?
-**No.** Images have to be strictly taken by you.
+Any image that reflects an aspect of SEA culture is welcome! This could include food (e.g., eating Nasi Goreng), locations (e.g., Manila’s Escolta Street), events (e.g., Lunar New Year festivities), or cultural day-to-day practices (e.g., eating with hands). As long as it connects to SEA culture, it’s a great fit!
 
-Any images you provide will be later licensed under the open-source CC-BY-SA 4.0 license. Please make sure that the photos you submit do not belong to anyone else.
+**Note:** Only images that you have personally taken are eligible.
 
-### Timeline
+All images will be openly licensed under the CC-BY-SA 4.0 license, so please ensure you own full rights to them before submission.
 
-Here is our schedule for Phase 1!
+### Project Timeline
 
-- 11 Nov 2024: Launch Task 1 (Culturally-Relevant Self-Photo Collection)
-- 25 Nov 2024: Launch Task 2 (Culturally-Relevant Image Review)
-- 15 Jan 2025: End of self-photo review period
-- 15 Feb 2025: Round 1 publication deadline (ACL 2025)
+Here’s the schedule for Phase 1:
 
-#### Do you have a group / online community that I can join in?
+- 11 Nov 2024: Task 1 - Culturally-Relevant Image Collection opens
+- 25 Nov 2024: Task 2 - Culturally-Relevant Image Review opens
+- 15 Jan 2025: Call for contribution ends
+- 15 Feb 2025: ACL 2025 submission deadline
+
+#### Do you have a group or an online community that I can join?
+
 Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord server](https://discord.gg/XXRHFuvkTA). Everyone is welcome to discuss and ask questions there!
 
 ---
 
 ## FAQs
-1. **The project has two phases. Does authorship in Phase One also guarantee authorship in Phase 2?** -- No. The points system for both phases will be different as both will involve different tasks. Points from Phase One will also not carry over into the next one.
-2. **I have an image that is self-taken but I posted it on the internet before. Is this OK?** -- Yes, this is OK as long as (1) you took the image and (2) you did not release copyright to anyone else.
-3. **Do the images have to be professional-quality?** -- No. Images from your phone are fine.
-4. **I have images taken abroad that are culturally-releavant but they are not my culture. Is this OK?** -- Yes, this is OK. 
-5. **I have other questions!** -- Please join our Discord server and let's discuss there!
+1. Will Phase 1 authorship guarantee authorship in Phase 2?
+- No. Co-authorship in Phase 2 will have its own points system as the tasks will differ from Phase 1. Points from Phase 1 will not carry over.
+2. Can I submit an image I posted online if I still own the copyright?
+- Yes, as long as you took the image and still hold the copyright.
+3. Do images need to be high quality?
+- No, phone-quality images are perfectly acceptable as long as they're not blurry or obstructed.
+4. Can I submit images that reflect SEA culture but were taken outside of SEA?
+- Yes, images taken abroad are welcome if they are culturally relevant.
+5. Do I have to be a resident of the SEA culture represented in the photo I submit?
+- No, you do not.
+6. Have more questions?
+- Join our [Discord server](https://discord.gg/XXRHFuvkTA) and we'll be happy to help!
 
 
 <!-- CHANGE THIS TO THE NEW POSTER -->

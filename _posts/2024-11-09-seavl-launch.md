@@ -72,6 +72,4 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 6. **Have more questions?**
 - Join our [Discord server](https://discord.gg/XXRHFuvkTA) and we'll be happy to help!
 
-
-<!-- CHANGE THIS TO THE NEW POSTER -->
-<!-- <img width="500" alt="SEACrowd Poster" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEACrowd_Poster_1x.png?raw=true"> -->
+<img width="500" alt="SEA-VL Poster" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-poster.png?raw=true">

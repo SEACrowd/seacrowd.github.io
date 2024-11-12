@@ -38,7 +38,7 @@ Following the success of our [SEACrowd project](https://seacrowd.github.io/seacr
 
 SEA-VL is a big initiative, so we have decided to split it into two phases. In **Phase 1** of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for Phase 2, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
-Phase 1 is open from **11 Nov 2024 to 15 Feb 2024**.
+Phase 1 is open from **11 Nov 2024 to 15 Feb 2025**.
 
 > Everyone can join this initiative and become a co-author of SEA-VL. Find out all the details [here](https://seacrowd.github.io/seavl-launch/)!
 

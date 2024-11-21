@@ -31,6 +31,9 @@ Points:
 - 1.5 points for images from Thailand, Malaysia, and Vietnam
 - 2 points for images from Brunei, East Timor, Cambodia, Laos, Myanmar
 
+Curious about the types of images we've been gathering? Take a look at our [submission monitor](https://docs.google.com/spreadsheets/d/e/2PACX-1vS5NgqIAxMvN-9tnEbuYab1IP6eM_IFjwKFhp-Le072jiB_zAYvbFA5Be7b0R3RUH3E-anvXIjPa02p/pubhtml?gid=2004297798&single=true
+).
+
 ##### Task 2: Review Image-Description Pairs (1 point per review)
 
 To participate in reviewing, contributors must first pass a short test. Details on how to get started will be released by November 25, 2024.
@@ -69,7 +72,9 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 - Yes, images taken abroad are welcome if they are culturally relevant.
 5. **Do I have to be a resident of the SEA culture represented in the photo I submit?**
 - No, you do not.
-6. **Have more questions?**
-- Join our [Discord server](https://discord.gg/XXRHFuvkTA) and we'll be happy to help!
+6. **My native language is not a SEA indigenous language. Can I still submit my SEA culturally-relevant images?**
+- Yes, you can select `Other...` as your native language.
+7. **Have more questions?**
+- Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on `#sea-vl` or `#discussion-forum`, and we'll be happy to help!
 
 <img width="500" alt="SEA-VL Poster" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-poster.png?raw=true">

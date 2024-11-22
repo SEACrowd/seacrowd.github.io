@@ -10,6 +10,8 @@ Our members have been engaged in AI research in Southeast Asia since 2016. Colle
 
 > Explore the complete list of our contributors' SEA-related publications [here](https://docs.google.com/spreadsheets/d/1rtQ42Q-ehfJ4v5Xc_xh-ibzfDvz7i53VrOEWTnjIuIo/pubhtml?gid=149756427&single=true)!
 
+PS: Feel free to add your SEA-related publication(s) via [this form](https://forms.gle/kDckVzjcNNap3U2P9).
+
 ## Our Contributors
 
 - [Holy Lovenia](https://holylovenia.github.io/)

@@ -21,10 +21,12 @@ A lot has been happening for Southeast Asia!
 
 ## Discussions
 
+- [**Southeast Asian NLP Community, Projects, and Beyond.**](https://docs.google.com/presentation/d/e/2PACX-1vT9msXO7omrZw1ewOKUOM_V9UTuVlzskOn8dC2qzhY7vu52k6FKASXmUtgD8zbvtfWf2V9T5BlNkusE/pub?start=false&loop=false&delayms=3000) Birds-of-a-Feather Session @ EMNLP 2024.
 - [**Should Southeast Asian Regions, Languages, and Cultures Prioritize AI Advancement?**](https://docs.google.com/presentation/d/1FkrnvXCMzyAtfXsXpvmgsg6tkF3QP6rwW4m9eoK1iNg/pub?start=false&loop=false&delayms=3000) Birds-of-a-Feather Session @ ACL 2024.
 - [**Current Status of NLP in South East Asia with Insights from Multilingualism and Language Diversity**](https://aclanthology.org/2023.ijcnlp-tutorials.2/). Tutorial @ IJCNLP-AACL 2023.
 
 ## Meet-ups & Hangouts
+- EMNLP 2024 in Miami, Florida, US
 - ACL 2024 in Bangkok, Thailand
 - IJCNLP-AACL 2023 in Bali, Indonesia
 - EMNLP 2023 in Singapore

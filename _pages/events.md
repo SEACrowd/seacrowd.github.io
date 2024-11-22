@@ -28,5 +28,5 @@ A lot has been happening for Southeast Asia!
 ## Meet-ups & Hangouts
 - EMNLP 2024 in Miami, Florida, US
 - ACL 2024 in Bangkok, Thailand
-- IJCNLP-AACL 2023 in Bali, Indonesia
 - EMNLP 2023 in Singapore
+- IJCNLP-AACL 2023 in Bali, Indonesia

@@ -36,7 +36,7 @@ Curious about the types of images we've been gathering? Take a look at our [subm
 
 ##### Task 2: Review Image-Description Pairs (1 point per review)
 
-To participate in reviewing, contributors must first pass a short test. Details on how to get started will be released by November 25, 2024.
+To participate in reviewing, contributors must first pass this [short screening test](https://forms.gle/p1MmJcKtier9tYZT9). Check [our annotation guideline](https://docs.google.com/document/d/10VTsoD9Lfh_agxE1doSDjgPD4WsDtElDJJ5u775t68g/edit?usp=sharing) to learn more!
 
 ## What Qualifies as a "Culturally-Relevant Image"?
 

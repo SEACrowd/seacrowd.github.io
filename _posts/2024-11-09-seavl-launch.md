@@ -74,7 +74,9 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 - No, you do not.
 6. **My native language is not a SEA indigenous language. Can I still submit my SEA culturally-relevant images?**
 - Yes, you can select `Other...` as your native language.
-7. **Have more questions?**
+7. **Do you have some materials we can use to promote SEA-VL to our friends?**
+- Of course! Feel free to use [this slide deck](https://docs.google.com/presentation/d/12FEPmmGzF6MsgQALBiepD7bvmpPNwHsaIUMsnq-MbFw/edit?usp=sharing) or [this email template](https://docs.google.com/document/d/1U1ZbX2i9tbjSccRfqzNqWFMVsOWlIFt4XkYXZ4M6a8k/edit?usp=sharing).
+8. **Have more questions?**
 - Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on `#sea-vl` or `#discussion-forum`, and we'll be happy to help!
 
 <img width="500" alt="SEA-VL Poster" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-poster.png?raw=true">

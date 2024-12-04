@@ -6,6 +6,8 @@ permalink: /events/
 
 A lot has been happening for Southeast Asia!
 
+> Explore moments captured from these events in our [Google Photos album](https://photos.app.goo.gl/chgNTwJkFH7K1kBAA)!
+
 ## Workshops
 
 - [The Second Workshop in South East Asian Language Processing @ COLING 2025](https://sealp-workshop.github.io/)

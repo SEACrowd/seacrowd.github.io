@@ -14,7 +14,7 @@ SEA-VL is a big initiative, so we have decided to split it into two phases. In *
 
 ## Why Contribute?
 
-As with SEACrowd, every contribution to SEA-VL will earn points. Reaching <u>200 points</u> in Phase 1 will guarantee <u>co-authorship in our publication for ACL 2025</u>.
+As with SEACrowd, every contribution to SEA-VL will earn points. Reaching <u>200 points</u> in Phase 1 will guarantee <u>co-authorship in our publication for ACL 2025</u>. You'll also be eligible for <u>our exclusive merch</u> once you surpass <u>300 points</u> in Phase 1!
 
 > Our live contribution tracking monitor is [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkp3tZJ2LfJp8ajSotMccXQa4SnWZO-cksktMPExH1418to9B4gMB2ds7FMDTZTsHeb8f-Jghdp44o/pubhtml?gid=1432901868&single=true)!
 

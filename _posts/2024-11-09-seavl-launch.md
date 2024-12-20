@@ -27,12 +27,14 @@ Phase 1 is split into two main tasks: culturally-relevant image submission and i
 Submission is simple! Just go to this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKkNhFvPNXXDy1eFyrqy3XGXq7M15Vw/viewform) and provide your <u>self-taken, culturally relevant</u> photo with a brief description.
 
 Points:
-- 1 point for images from Indonesia, Singapore, and Phillippines
-- 1.5 points for images from Thailand, Malaysia, and Vietnam
-- 2 points for images from Brunei, East Timor, Cambodia, Laos, Myanmar
+- 2 points ~1 point~ for images from Indonesia, Singapore, and Phillippines
+- 3 points ~1.5 points~ for images from Thailand, Malaysia, and Vietnam
+- 4 points ~2 points~ for images from Brunei, East Timor, Cambodia, Laos, Myanmar
 
 Curious about the types of images we've been gathering? Take a look at our [submission monitor](https://docs.google.com/spreadsheets/d/e/2PACX-1vS5NgqIAxMvN-9tnEbuYab1IP6eM_IFjwKFhp-Le072jiB_zAYvbFA5Be7b0R3RUH3E-anvXIjPa02p/pubhtml?gid=2004297798&single=true
 ).
+
+Update (2024/12/20): We have revised the contribution points for image collection to reflect the difficulty level.
 
 ##### Task 2: Review Image-Description Pairs (1 point per review)
 

@@ -54,9 +54,9 @@ All images will be openly licensed under the CC-BY-SA 4.0 license, so please ens
 
 Here’s our schedule for Phase 1:
 
-- 11 Nov 2024: Task 1 - Culturally-Relevant Image Collection opens
-- 25 Nov 2024: Task 2 - Culturally-Relevant Image Review opens
-- 3 Feb 2025: Task 1 - Culturally-Relevant Image Collection ends
+- 11 Nov 2024: Task 1 - Culturally-Relevant Image Collection opens ✔
+- 25 Nov 2024: Task 2 - Culturally-Relevant Image Review opens ✔
+- 3 Feb 2025: Task 1 - Culturally-Relevant Image Collection ends ✔
 - 10 Feb 2025: Task 2 - Culturally-Relevant Image Review ends
 - 15 Feb 2025: ACL 2025 submission deadline
 

@@ -28,6 +28,7 @@ A lot has been happening for Southeast Asia!
 - [**Current Status of NLP in South East Asia with Insights from Multilingualism and Language Diversity**](https://aclanthology.org/2023.ijcnlp-tutorials.2/). Tutorial @ IJCNLP-AACL 2023.
 
 ## Meet-ups & Hangouts
+- COLING 2025 in Abu Dhabi, UAE
 - EMNLP 2024 in Miami, Florida, US
 - ACL 2024 in Bangkok, Thailand
 - EMNLP 2023 in Singapore

@@ -15,6 +15,7 @@ A lot has been happening for Southeast Asia!
 
 ## Talks
 
+- 24/02/2025. [**SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages**](https://docs.google.com/presentation/d/1SHw8dFyl2SO06rW0TVwP3qTcXfhcuIChgseePd1js4Y/pub?start=false&loop=false&delayms=3000). Onno Kampman, Peerat Limkontichotiwat. AI meetup at Temus, Singapore.
 - 16/08/2024. **Insights from Language Resource Collection in Linguistically Diverse Southeast Asian Languages**. Genta Indra Winata, Alham Fikri Aji. Panel discussion at Fields Matter Workshop, ACL 2024.
 - 13/08/2024. [**Challenges and Opportunities with SEA LLMs**](https://underline.io/events/466/sessions?eventSessionId=18202&searchGroup=lecture). Ayu Purwarianti, Sarana Nutanong, William Tjhi. Panel discussion at ACL 2024.
 - 15/07/2024. [**SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages**](https://docs.google.com/presentation/d/1SHw8dFyl2SO06rW0TVwP3qTcXfhcuIChgseePd1js4Y/pub?start=false&loop=false&delayms=3000). Holy Lovenia. IMDA Tech Sharing Session. <a href="https://youtu.be/neBUqHdLCrA?si=u6DwspyGMdC41Uri&t=0" class="btn btn-primary" target="_blank"><i class="fa-brands fa-youtube"></i></a>
@@ -29,6 +30,7 @@ A lot has been happening for Southeast Asia!
 - [**Current Status of NLP in South East Asia with Insights from Multilingualism and Language Diversity**](https://aclanthology.org/2023.ijcnlp-tutorials.2/). Tutorial @ IJCNLP-AACL 2023.
 
 ## Meet-ups & Hangouts
+- [Coming soon] NAACL 2025 in New Mexico, US
 - COLING 2025 in Abu Dhabi, UAE
 - EMNLP 2024 in Miami, Florida, US
 - ACL 2024 in Bangkok, Thailand

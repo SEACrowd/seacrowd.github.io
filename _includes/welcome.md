@@ -35,7 +35,7 @@ Following the success of our [SEACrowd project](https://seacrowd.github.io/seacr
 
 SEA-VL is a big initiative, so we have decided to split it into two phases. In Phase 1 of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for **Phase 2**, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
-- Phase 1 has been wrapped up. 10/2024 to 03/2025. [**Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia**](https://arxiv.org/pdf/2503.07920). Under review. [[Announcement]](https://seacrowd.github.io/seavl-dataset/) [[Project Page]](https://seacrowd.github.io/seavl-launch/)
+- Phase 1 has been wrapped up. [**Paper**](https://arxiv.org/pdf/2503.07920). [[Announcement]](https://seacrowd.github.io/seavl-dataset/) [[Project Page]](https://seacrowd.github.io/seavl-launch/)
 - Phase 2 is estimated to start from April/May 2025.
 
 ### 🌏 Special Interest Group in Southeast Asian NLP (SIGSEA)

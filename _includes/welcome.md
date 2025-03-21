@@ -29,7 +29,7 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 
-> **Phase 2's preparation is still underway.** Stay tuned on [our Discord](https://discord.gg/XXRHFuvkTA) for information on call for contributions! Estimated to start from April/May 2025.
+> **Phase 2's preparation is still underway.** Stay tuned on [our Discord](https://discord.gg/XXRHFuvkTA) for updates! Open contribution is estimated to start from April/May 2025.
 
 <img width="700" alt="SEA-VL Banner" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-banner.png?raw=true">
 

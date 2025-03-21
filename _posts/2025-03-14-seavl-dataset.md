@@ -4,7 +4,7 @@ title: "Introducing SEA-VL: A Multicultural Vision-Language Dataset for Southeas
 categories: Announcement,Project
 ---
 
-We’re excited to announce a major milestone from the **SEACrowd** team — the launch of **SEA-VL**, the largest open-source **vision-language (VL) dataset** specifically designed to represent the cultural diversity of **Southeast Asia** 🇧🇳🇰🇭🇹🇱🇮🇩🇱🇦🇲🇾🇲🇲🇵🇭🇸🇬🇹🇭🇻🇳.
+We’re excited to announce a major milestone from the **SEACrowd** team—the launch of [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), the largest open-source vision-language (VL) dataset specifically designed to represent the cultural diversity of **Southeast Asia** 🇧🇳🇰🇭🇹🇱🇮🇩🇱🇦🇲🇾🇲🇲🇵🇭🇸🇬🇹🇭🇻🇳.
 
 ## 📄 Read the Paper
 

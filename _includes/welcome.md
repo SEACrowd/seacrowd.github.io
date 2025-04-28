@@ -3,9 +3,20 @@
 
 # Welcome to SEACrowd! 👋
 
-We are a community dedicated to bridging the gap between multilingual AI and Southeast Asian AI and enhancing the quality of AI research and researchers in the region.
+We are a world-leading research community dedicated to bridging the gap between multilingual AI and Southeast Asian AI and enhancing the quality of AI research and researchers in the region.
 
-See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/seacrowd-datahub/blob/master/LANGUAGES.md) are under our study.
+Our current efforts are focused on:
+- Running data collection and model building efforts to advance AI in SEA
+- Building a community of SEA researchers through the ACL special interest group SIGSEA
+- Supporting early-career AI enthusiasts in the region through the SEACrowd Apprentice Program
+
+One of our key contributions has been to build and maintain a comprehensive [catalogue](https://seacrowd.github.io/seacrowd-catalogue/){:target="_blank"} of publicly available SEA datasets, including standardized dataloaders to make them easily accessible for model training and benchmarking purposes.
+Our work has the highest language cover of Southeast Asia of any effort so far.
+Check out what [indigenous and non-indigenous languages](https://github.com/SEACrowd/seacrowd-datahub/blob/master/LANGUAGES.md){:target="_blank"} are under our study.
+
+We have an active community of over 400 people on Discord.
+Please join us if you share our interests!
+Our datasets and code can be found on Github and Huggingface.
 
 <div align="center">
   <div class="btn-group" role="group" aria-label="Button group">
@@ -29,18 +40,22 @@ See what [indigenous and non-indigenous languages](https://github.com/SEACrowd/s
 
 Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
 
-> **Phase 2's preparation is still underway.** Stay tuned on [our Discord](https://discord.gg/XXRHFuvkTA) for updates! Open contribution is estimated to start from April/May 2025.
+> **Phase 2's preparation is still underway.** Stay tuned on [our Discord](https://discord.gg/XXRHFuvkTA) for updates! Open contribution is expected to start from April/May 2025.
 
 <img width="700" alt="SEA-VL Banner" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-banner.png?raw=true">
 
-SEA-VL is a big initiative, so we have decided to split it into two phases. In Phase 1 of SEA-VL, we’re looking for self-taken, culturally-relevant images with descriptions about the shared image. This will be cleaned and compiled into a comprehensive open-access SEA-relevant image dataset. This dataset will serve as the foundation for **Phase 2**, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
+SEA-VL is a large and ambitious initiative, so we have decided to split it into two phases.
+In Phase 1 of SEA-VL, we collected self-taken, culturally-relevant images with descriptions about the shared image in the respective local language.
+This dataset was compiled into an open-access SEA-relevant image dataset, the largest of its kind to date.
+This dataset will serve as the foundation for **Phase 2**, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
 - Phase 1 has been wrapped up. [**Paper**](https://arxiv.org/pdf/2503.07920). [[Announcement]](https://seacrowd.github.io/seavl-dataset/) [[Project Page]](https://seacrowd.github.io/seavl-launch/)
 - Phase 2 is estimated to start from April/May 2025.
 
 ### 🌏 Special Interest Group in Southeast Asian NLP (SIGSEA)
 
-[SIGSEA](https://www.sigsea.org/) aims to change that by promoting research, collaboration, and sharing updates on Southeast Asian NLP. This way, in the future, we also can hold our own SEA workshops & events in ACL conferences! 💪
+The SEACrowd community has launched [SIGSEA](https://www.sigsea.org/), which aims to promote research, collaboration, and update sharing on Southeast Asian NLP.
+In the future, we also can hold our own SEA workshops & events in ACL conferences! 💪
 
 We're collecting expressions of interest for membership. As a member, you'll receive regular updates on research, events, and opportunities in the region.
 

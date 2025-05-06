@@ -42,7 +42,7 @@ Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKk
 
 To ensure quality images for the dataset used in training the model, we need local annotators to rate the submitted images from Task 1.
 
-Contributors for this task must first pass this [short screening test](https://forms.gle/p1MmJcKtier9tYZT9). Check [our annotation guideline](https://docs.google.com/document/d/10VTsoD9Lfh_agxE1doSDjgPD4WsDtElDJJ5u775t68g/edit?usp=sharing)  [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) to learn more and to apply for the screening test. You will receive a link to the annotation platform if you pass the screening test.
+Contributors for this task must first pass this [short screening test](https://forms.gle/p1MmJcKtier9tYZT9). Check our annotation guideline [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) to learn more and to apply for the screening test. You will receive a link to the annotation platform if you pass the screening test.
 
 ### Task 3: Translate Benchmark Datasets
 

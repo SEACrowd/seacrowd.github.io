@@ -22,7 +22,7 @@ Your efforts won't go unappreciated! Every contribution to any SEA-VL Phase 2 ta
 
 SEA-VL Phase 2 is split into five main tasks described below. You can contribute to any task that aligns with your interest or expertise.
 
-Read the main contributor guidelines  [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) for more details about the tasks.
+**Important:** Read the main contributor guidelines  [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) for more details about the tasks.
 
 If you have any questions about the process, please join our Discord to ask questions.
 
@@ -110,7 +110,7 @@ The contribution tracking can be viewed here, where it is updated every weekend.
 
 -   May 8, 2025 - Project public launch. Contributions for Tasks 1, 2, 3, 4, and 5 are open.
     
--   December 2025 - End of public contributions to Tasks 1, 2, 3, 4, and 5.
+-   November 8, 2025 - End of public contributions to Tasks 1, 2, 3, 4, and 5.
     
 -   January 2026 - Prepare model, data, and paper release.
     

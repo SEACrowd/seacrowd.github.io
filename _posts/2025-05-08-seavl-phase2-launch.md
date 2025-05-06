@@ -16,7 +16,7 @@ Whether you're a researcher, developer, artist, linguist, photographer, student,
 
 Contributing to SEA-VL Phase 2 will give you a chance to work with an international group of researchers who are equally passionate about SEA research.
 
-Your efforts won't go unappreciated! Every contribution to any SEA-VL Phase 2 tasks below will earn points. Reaching 200 or more points guarantees a certificate of participation and merchandise, while reaching 300 or more points earns co-authorship in our final paper.
+Your efforts won't go unappreciated! Every contribution to any SEA-VL Phase 2 tasks below will earn points. Reaching 200 or more points guarantees a certificate of participation and merchandise (t-shirt and keychain), while reaching 300 or more points will earn co-authorship in the final terminal paper.
 
 ## How can I contribute?
 
@@ -50,7 +50,7 @@ To ensure the proper evaluation and testing of vision language capabilities, we 
 
 Contributors for this task will translate the English prompts into any one of the following languages in which they are fluent/native speakers:
 
-*Indonesian, Vietnamese, Thai, Malay, Filipino/Tagalog, Lao, Khmer, Tamil, Mandarin Chinese*
+*Thai, Malay, Filipino/Tagalog, Lao, Khmer, Tamil, Mandarin Chinese*
 
 We need three contributors per language for this task. Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
 
@@ -102,7 +102,7 @@ We give more weight to submissions (e.g., culturally relevant images for Task 1)
 | Task 5: Submit High-Quality Text Prompts for Image Generation      | 1                                |  1                           | 1.5                                         |
 
 
-Remember, reaching **200 or more points** will guarantee a certificate of participation, while reaching **300 or more points** will earn co-authorship in our final terminal paper.
+Remember, reaching **200 or more points** will guarantee a certificate of participation and merchandise (t-shirt and keychain), while reaching **300 or more points** will earn co-authorship in the final terminal paper.
 
 The contribution tracking can be viewed here, where it is updated every weekend.
 

@@ -11,7 +11,7 @@ We consolidate a comprehensive resource hub, [**SEACrowd Catalogue**](https://se
 
 Furthermore, we also build the [**SEACrowd Benchmarks**](https://github.com/SEACrowd/seacrowd-experiments) to assess the quality of AI models on 36 indigenous languages across 13 tasks, offering valuable insights into the current AI landscape in SEA. Furthermore, we propose strategies to facilitate greater AI advancements, maximizing potential utility and resource equity for the future of AI in SEA.
 
-> Check out [our "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages" paper](https://arxiv.org/pdf/2406.10118)!
+> We are still open for submissions! Please fill out [this form](https://form.jotform.com/team/232952680898069/seacrowd-sea-datasets){:target="_blank"} to add a SEA dataset to our catalogue.
 
 ## Quick Start
 

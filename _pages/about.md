@@ -4,13 +4,13 @@ title: About
 permalink: /about/
 ---
 
-[SEACrowd](https://seacrowd.github.io/) is a community dedicated to bridging the gap between multilingual AI and Southeast Asian AI and enhancing the quality of AI research and researchers in the region. This initiative is co-founded by Southeast Asian researchers and practitioners from diverse institutions.
+[SEACrowd](https://seacrowd.github.io/) is a community dedicated to bridging the gap between multilingual AI and Southeast Asian AI and enhancing the quality of AI research and researchers in the region. This initiative is co-founded by Southeast Asian researchers and practitioners from diverse, world-leading institutions.
 
 Our members have been engaged in AI research in Southeast Asia since 2016. Collectively, our research efforts have transformed the landscape of AI in the region, providing other AI practitioners with access to SEA resources, models, and insights, thereby advancing AI development in Southeast Asia.
 
 > Explore the complete list of our contributors' SEA-related publications [here](https://docs.google.com/spreadsheets/d/1rtQ42Q-ehfJ4v5Xc_xh-ibzfDvz7i53VrOEWTnjIuIo/pubhtml?gid=149756427&single=true)!
 
-PS: Feel free to add your SEA-related publication(s) via [this form](https://forms.gle/kDckVzjcNNap3U2P9).
+PS: Feel free to add your SEA-related publication(s) via [this form](https://forms.gle/kDckVzjcNNap3U2P9){:target="_blank"}.
 
 ## Our Contributors
 

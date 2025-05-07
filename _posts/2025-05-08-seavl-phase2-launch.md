@@ -50,7 +50,7 @@ To ensure the proper evaluation and testing of vision language capabilities, we 
 
 Contributors for this task will translate the English prompts into any one of the following languages in which they are fluent/native speakers:
 
-*Thai, Malay, Filipino/Tagalog, Lao, Khmer, Tamil, Mandarin Chinese*
+*Thai, Standard Malay, Filipino/Tagalog, Lao, Khmer, Tamil, Mandarin Chinese, Burmese, Tetun, Bruneian Malay*
 
 We need three contributors per language for this task. Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
 
@@ -60,21 +60,17 @@ We need three contributors per language for this task. Go to this [form](https:/
 
 Contributors for this task will create original questions related to a given image (e.g., “What sport is played in this image?”) in any of the following languages in which they are fluent/native speakers:
 
-*Indonesian, Vietnamese, Thai, Malay, Filipino/Tagalog, Lao, Khmer, Tamil, Mandarin Chinese*
+*Indonesian, Thai, Standard Malay, Filipino/Tagalog, Tamil, Chinese Mandarin, Vietnamese, Burmese, Lao, Khmer, Tetun, Bruneian Malay*
 
 Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
 
 ### Task 5: Submit High-Quality Text Prompts for Image Generation
 
- To evaluate the image generation capabilities of the models we will train, we need to compile a dataset of increasingly complex, high-quality English-only prompts.
-
-Contributors to this task will create original English-only text prompts at three levels of complexity anchored in various SEA cultures. To ensure the quality of the prompts, contributors must also be knowledgeable of the general culture in a SEA country.
-
-  
+ To evaluate the image generation capabilities of the models we will train, we need to compile a dataset of high-quality English-only prompts at three complexity levels. 
+ 
+ To ensure the quality of the prompts, we need contributors who are natives or extremely familiar with the cultures of the SEA countries (*Indonesia, Singapore, Philippines, Thailand, Malaysia, Vietnam, Brunei, Timor Leste, Cambodia, Laos, Myanmar*)
 
 Example prompts for the Indonesian culture:
-
-  
 
 Level 1 (Easy) - *“Draw an image of people drinking cendol.”*
 

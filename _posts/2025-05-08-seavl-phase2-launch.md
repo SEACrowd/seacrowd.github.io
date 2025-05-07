@@ -4,7 +4,7 @@ title: "🚨 SEA-VL Phase 2 - Building Visual Language Models for Southeast Asia
 categories: Announcement,Project
 ---
 
-Welcome! SEA-VL is a global community project organized by the SEACrowd community to push the boundaries of vision and language research in Southeast Asia (SEA). We recently completed Phase 1 of this project with the release of high-quality, culturally relevant image datasets and a benchmarking study for SEA languages, as detailed in this [paper](https://arxiv.org/abs/2503.07920).
+Welcome! SEA-VL is a global community project organized by the SEACrowd community to push the boundaries of vision and language research in Southeast Asia (SEA). We recently completed [Phase 1])(https://seacrowd.github.io/seavl-dataset/) of this project with the release of high-quality, culturally relevant image datasets and a benchmarking study for SEA languages, as detailed in this [paper](https://arxiv.org/abs/2503.07920).
 
 For Phase 2, we have an even bigger ambition: we want to build an open-source state-of-the-art vision language model (VLM) for Southeast Asia! We believe it’s high time to create a model that truly understands Southeast Asia culture and language, the way we see it. We want the model to reflect the visual and linguistic richness of the SEA region. This effort requires diverse contributions: high-quality data curation and annotation, prompting, model training, evaluation, and more.
 
@@ -16,13 +16,13 @@ Whether you're a researcher, developer, artist, linguist, photographer, student,
 
 Contributing to SEA-VL Phase 2 will give you a chance to work with an international group of researchers who are equally passionate about SEA research.
 
-Your efforts won't go unappreciated! Every contribution to any SEA-VL Phase 2 tasks below will earn points. Reaching 200 or more points guarantees a certificate of participation and merchandise (t-shirt and keychain), while reaching 300 or more points will earn co-authorship in the final terminal paper.
+Your efforts won't go unappreciated! Every contribution to any SEA-VL Phase 2 tasks below will earn points. Reaching 200 or more points guarantees a certificate of participation and merchandise (t-shirt and keychain), while reaching 300 or more points will earn co-authorship in the final project paper.
 
 ## How can I contribute?
 
 SEA-VL Phase 2 is split into five main tasks described below. You can contribute to any task that aligns with your interest or expertise.
 
-**Important:** Read the main contributor guidelines  [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) for more details about the tasks.
+**Important:** Read the main contributor guidelines [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) for more details about the tasks.
 
 If you have any questions about the process, please join our Discord to ask questions.
 
@@ -98,7 +98,7 @@ We give more weight to submissions (e.g., culturally relevant images for Task 1)
 | Task 5: Submit High-Quality Text Prompts for Image Generation      | 1                                |  1                           | 1.5                                         |
 
 
-Remember, reaching **200 or more points** will guarantee a certificate of participation and merchandise (t-shirt and keychain), while reaching **300 or more points** will earn co-authorship in the final terminal paper.
+Remember, reaching **200 or more points** will guarantee a certificate of participation and merchandise (t-shirt and keychain), while reaching **300 or more points** will earn co-authorship in the final project paper.
 
 The contribution tracking can be viewed here, where it is updated every weekend.
 
@@ -108,9 +108,9 @@ The contribution tracking can be viewed here, where it is updated every weekend.
     
 -   November 8, 2025 - End of public contributions to Tasks 1, 2, 3, 4, and 5.
     
--   January 2026 - Prepare model, data, and paper release.
+-   January 2026 - Prepare models, data, and multiple paper releases.
     
--   February 2026 - Prepare submission to ICML 2026.
+-   February 2026 - Prepare submission to ARR February 2026. Publication of the project paper on the SEACrowd website and Arxiv.
     
 
 ## Join the Community!
@@ -149,7 +149,7 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 
 7.  Do you have some materials we can use to promote SEA-VL to our friends?
     
--   Of course! Feel free to use [this slide deck](https://docs.google.com/presentation/d/12FEPmmGzF6MsgQALBiepD7bvmpPNwHsaIUMsnq-MbFw/edit?usp=sharing) or [this email template](https://docs.google.com/document/d/1U1ZbX2i9tbjSccRfqzNqWFMVsOWlIFt4XkYXZ4M6a8k/edit?usp=sharing).
+-   Coming soon!
     
 8.  Have more questions?
 

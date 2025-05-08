@@ -154,3 +154,5 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 8.  Have more questions?
 
 -   Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on #sea-vl or #discussion-forum, and we’ll be happy to help!
+
+<img width="500" alt="SEA-VL Phase 2 Poster" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-phase2-poster.png?raw=true">

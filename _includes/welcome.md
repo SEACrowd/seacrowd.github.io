@@ -38,11 +38,11 @@ Our datasets and code can be found on Github and Huggingface.
 
 ### 🖼️ SEA-VL: Developing Culturally Relevant Vision-Language Models for Southeast Asia
 
-Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-launch/), a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.
+Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce [**SEA-VL**](https://seacrowd.github.io/seavl-phase2-launch/), a new open-source initiative to build a SEA-specific vision-language model.
 
-> **Phase 2's preparation is still underway.** Stay tuned on [our Discord](https://discord.gg/XXRHFuvkTA) for updates! Open contribution is expected to start from April/May 2025.
+> **Phase 2 has begun! Check out [our project page](https://seacrowd.github.io/seavl-phase2-launch/) to contribute.** Stay tuned on [our Discord](https://discord.gg/XXRHFuvkTA) for updates!
 
-<img width="700" alt="SEA-VL Banner" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-banner.png?raw=true">
+<img width="700" alt="SEA-VL Phase 2 Banner" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-phase2-banner.png?raw=true">
 
 SEA-VL is a large and ambitious initiative, so we have decided to split it into two phases.
 In Phase 1 of SEA-VL, we collected self-taken, culturally-relevant images with descriptions about the shared image in the respective local language.
@@ -50,7 +50,7 @@ This dataset was compiled into an open-access SEA-relevant image dataset, the la
 This dataset will serve as the foundation for **Phase 2**, where we’ll develop instruction-tuning VL datasets and build a SEA-specific vision language model (VLM) using the constructed dataset.
 
 - Phase 1 has been wrapped up. [**Paper**](https://arxiv.org/pdf/2503.07920). [[Announcement]](https://seacrowd.github.io/seavl-dataset/) [[Project Page]](https://seacrowd.github.io/seavl-launch/)
-- Phase 2 is estimated to start from April/May 2025.
+- Phase 2 is up from May 2025 - Feb 2026! [[**Project Page**]](https://seacrowd.github.io/seavl-phase2-launch/)
 
 ### 🌏 Special Interest Group in Southeast Asian NLP (SIGSEA)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🚨 SEA-VL Phase 2 - Building Visual Language Models for Southeast Asia: Call for Contributors"
+title: "🚨 SEA-VL Phase 2 - Building Vision-Language Models for Southeast Asia: Call for Contributors"
 categories: Announcement,Project
 ---
 
@@ -154,6 +154,3 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 8.  Have more questions?
 
 -   Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on #sea-vl or #discussion-forum, and we’ll be happy to help!
-
-
-> Written with [StackEdit](https://stackedit.io/).

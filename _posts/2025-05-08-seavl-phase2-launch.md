@@ -112,7 +112,7 @@ The contribution tracking can be viewed here, where it is updated every weekend.
     
 -   January 2026 - Prepare models, data, and multiple paper releases.
     
--   February 2026 - Prepare submission to ARR February 2026. Publication of the project paper on the SEACrowd website and Arxiv.
+-   February 2026 - Prepare experiment paper submissions to ACL 2026. Publication of the project paper on the SEACrowd website and arXiv.
     
 
 ## Join the Community!
@@ -152,8 +152,12 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 7.  Do you have some materials we can use to promote SEA-VL to our friends?
     
 -   Coming soon!
+
+8. If I contribute to the open tasks but don't participate in the modeling or experiments, will I be listed as a co-author on the paper(s) submitted to ACL 2026?
+
+- No, contributors to the open tasks will not be listed on the ACL 2026 experimental papers. Those papers will primarily highlight model development results. However, if you reach 300 points, you will be credited as a co-author in our final organizational-wide publication, which will summarize the entire SEA-VL and other SEACrowd projects in 2025. This paper will be published on the SEACrowd website and arXiv, recognizing all community contributors who helped build the dataset and evaluation resources.
     
-8.  Have more questions?
+9.  Have more questions?
 
 -   Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on #sea-vl or #discussion-forum, and we’ll be happy to help!
 

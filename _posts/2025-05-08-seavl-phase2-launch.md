@@ -22,7 +22,7 @@ Your efforts won't go unappreciated! Every contribution to any SEA-VL Phase 2 ta
 
 SEA-VL Phase 2 is split into five main tasks described below. You can contribute to any task that aligns with your interest or expertise.
 
-**Important:** Read the main contributor guidelines [here](https://docs.google.com/document/d/1Akyd__e3hJdBvJMey69ykSScQJXVMlD0PJNxJf4D-VI/edit?usp=sharing) for more details about the tasks.
+**Important:** Read the main contributor guidelines [here](https://docs.google.com/document/d/e/2PACX-1vRRJmadtbTdjumIFyhx5MdpRwMOk0Al7WSUReYyhbD-3NpGxu8PlRPTNgobFPJSDelqjhWmOIJSW1lu/pub) for more details about the tasks.
 
 If you have any questions about the process, please join our Discord to ask questions.
 
@@ -37,6 +37,8 @@ Any image that reflects an aspect of SEA culture is welcome! This could include 
 You may check this [resource](https://huggingface.co/datasets/SEACrowd/sea-vl_crowdsourcing) to see what images we want for this task.
 
 Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLScHKqaNlh-SvTD75AtWKkNhFvPNXXDy1eFyrqy3XGXq7M15Vw/viewform) to submit your images.
+
+For bulk image upload, follow this [guide](https://github.com/SEACrowd/sea-vl-image-collection/)!
 
 ### Task 2: Review Image-Description Pairs
 

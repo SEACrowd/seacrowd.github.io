@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: People
+permalink: /people/
 ---
 
 Our contributors have been engaged in AI research in Southeast Asia since 2016. Collectively, our research efforts have transformed the landscape of AI in the region, providing other AI practitioners with access to SEA resources, models, and insights, thereby advancing AI development in Southeast Asia.

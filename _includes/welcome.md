@@ -3,7 +3,7 @@
 
 # Welcome to SEACrowd! 👋
 
-We are a world-leading research community dedicated to advance Southeast Asian-focused AI and empower the next generation of SEA AI researchers. We're building towards a future in which AI ecosystems in Southeast Asia are mature and competitive with the rest of the world, and the people in SEA can use world-class AI in their own linguistic and cultural context.
+We are a research community dedicated to advance Southeast Asian-focused AI and empower the next generation of SEA AI researchers. We're building towards a future in which AI ecosystems in Southeast Asia are mature and competitive with the rest of the world, and the people in SEA can use world-class AI in their own linguistic and cultural context.
 
 ## Mission
 

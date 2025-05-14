@@ -25,6 +25,7 @@ PS: Feel free to add your SEA-related publication(s) via [this form](https://for
 - [**Peerat Limkonchotiwat**](https://mrpeerat.github.io/). Communications team.
 - [**Joseph Marvin Imperial**](https://www.josephimperial.com/). Communications team.
 - [**Carlos Rafael Catalan**](https://www.linkedin.com/in/clcatalan/). Communications team.
+- [**Patricia Nicole Monderin**](https://www.linkedin.com/in/pemonderin073101/). Communications team.
 - [**Ruochen Zhang**](ruochenzhang.com). Communications team.
 - [**Jan Christian Blaise Cruz**](https://blaisecruz.com). Communications team.
 - [**Aye Hninn Khine**](https://ayehninnkhine.github.io/). Funding team, communications team.

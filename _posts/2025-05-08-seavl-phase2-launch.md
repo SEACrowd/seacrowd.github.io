@@ -125,40 +125,40 @@ Check out our [GitHub](https://github.com/SEACrowd) page, and join our [Discord 
 
 1.  What qualifies as a *“culturally-relevant image”*?
     
--   Any image that reflects an aspect of SEA culture is welcome! This could include food (e.g., eating Nasi Goreng), locations (e.g., Manila’s Escolta Street), events (e.g., Lunar New Year festivities), or everyday cultural practices (e.g., eating with your hands). As long as it connects to SEA culture, it’s a great fit!
+    - Any image that reflects an aspect of SEA culture is welcome! This could include food (e.g., eating Nasi Goreng), locations (e.g., Manila’s Escolta Street), events (e.g., Lunar New Year festivities), or everyday cultural practices (e.g., eating with your hands). As long as it connects to SEA culture, it’s a great fit!
 
 2.  Can I submit an image I posted online if I still own the copyright to it?
     
--   Yes, as long as you took the image and still hold the copyright.
+    - Yes, as long as you took the image and still hold the copyright.
     
--   All images will be openly licensed under the CC-BY-SA 4.0 license, so please ensure you own full rights to them before submission.
+    - All images will be openly licensed under the CC-BY-SA 4.0 license, so please ensure you own full rights to them before submission.
   
 3.  Do images need to be high quality?
 
--   No, phone-quality images are perfectly acceptable as long as they’re not blurry or obstructed.
+    - No, phone-quality images are perfectly acceptable as long as they’re not blurry or obstructed.
 
 4.  Can I submit images that reflect SEA culture but were taken outside of SEA?
 
--   Yes, images taken abroad are welcome if they are culturally relevant.
+    - Yes, images taken abroad are welcome if they are culturally relevant.
 
 5.  Do I have to be a resident of the SEA culture represented in the photo I submit?
 
--   No, you do not.
+    - No, you do not.
     
 6.  My native language is not a SEA indigenous language. Can I still submit my SEA culturally-relevant images?
 
--   Yes, you can select Other... as your native language in the submission form. 
+    - Yes, you can select Other... as your native language in the submission form. 
 
 7.  Do you have some materials we can use to promote SEA-VL to our friends?
     
--   Coming soon!
+    - Coming soon!
 
 8. If I contribute to the open tasks but don't participate in the modeling or experiments, will I be listed as a co-author on the paper(s) submitted to ACL 2026?
 
-- No, contributors to the open tasks will not be listed on the ACL 2026 experimental papers. Those papers will primarily highlight model development results. However, if you reach 300 points, you will be credited as a co-author in our final organizational-wide publication, which will summarize the entire SEA-VL and other SEACrowd projects in 2025. This paper will be published on the SEACrowd website and arXiv, recognizing all community contributors who helped build the dataset and evaluation resources.
+    - No, contributors to the open tasks will not be listed on the ACL 2026 experimental papers. Those papers will primarily highlight model development results. However, if you reach 300 points, you will be credited as a co-author in our final organizational-wide publication, which will summarize the entire SEA-VL and other SEACrowd projects in 2025. This paper will be published on the SEACrowd website and arXiv, recognizing all community contributors who helped build the dataset and evaluation resources.
     
 9.  Have more questions?
 
--   Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on #sea-vl or #discussion-forum, and we’ll be happy to help!
+    - Join our [Discord server](https://discord.gg/XXRHFuvkTA), ask us on #sea-vl or #discussion-forum, and we’ll be happy to help!
 
 <img width="500" alt="SEA-VL Phase 2 Poster" src="https://github.com/SEACrowd/seacrowd.github.io/blob/master/images/SEA-VL/seavl-phase2-poster.png?raw=true">

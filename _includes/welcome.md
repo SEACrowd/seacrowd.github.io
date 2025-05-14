@@ -3,7 +3,11 @@
 
 # Welcome to SEACrowd! 👋
 
-We are a world-leading research community dedicated to bridging the gap between multilingual AI and Southeast Asian AI and enhancing the quality of AI research and researchers in the region.
+We are a world-leading research community dedicated to advance Southeast Asian-focused AI and empower the next generation of SEA AI researchers. We're building towards a future in which AI ecosystems in Southeast Asia are mature and competitive with the rest of the world, and the people in SEA can use world-class AI in their own linguistic and cultural context.
+
+## Mission
+
+To advance Southeast Asian-focused AI and empower the next generation of SEA AI researchers.
 
 Our current efforts are focused on:
 - Running data collection and model building efforts to advance AI in SEA
@@ -12,9 +16,9 @@ Our current efforts are focused on:
 
 > Learn more about [our projects](https://seacrowd.github.io/projects/).
 
-We have an active community of over 400 people on Discord.
+We have an active community of over 400 people on [Discord](https://discord.gg/XXRHFuvkTA).
 Please join us if you share our interests!
-Our datasets and code can be found on Github and Huggingface.
+Our datasets and code can be found on [Github](https://github.com/SEACrowd) and [HuggingFace](https://huggingface.co/SEACrowd).
 
 <div align="center">
   <div class="btn-group" role="group" aria-label="Button group">

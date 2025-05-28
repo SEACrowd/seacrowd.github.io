@@ -82,7 +82,6 @@ Level 3 (Hard) - *“Draw an image of people drinking cendol with durian topping
 
 Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
 
-
 ### Task 6: Submit High-Quality Text Prompts *(To be opened at a later date)*
 
 ## Contribution Point System for Tasks
@@ -102,7 +101,7 @@ We give more weight to submissions (e.g., culturally relevant images for Task 1)
 
 Remember, reaching **200 or more points** will guarantee a certificate of participation and merchandise (t-shirt and keychain), while reaching **300 or more points** will earn co-authorship in the final project paper.
 
-The contribution tracking can be viewed here, where it is updated every weekend.
+The contribution tracking can be viewed [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe_BZt8O7GJMMqZcwvifvhScIVOObA7TOZkxxbjCl-3ZnkhjEy0RrmJWCjhgW_69y5Urg5g4V_Hr8F/pubhtml?gid=1432901868&single=true), where it is updated every weekend.
 
 ## Project Timeline
 

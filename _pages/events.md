@@ -33,6 +33,8 @@ A lot has been happening for Southeast Asia!
 ## Meet-ups & Hangouts
 - [Coming soon] ACL 2025 in Vienna, Austria
 - NAACL 2025 in New Mexico, USA
+- CHI 2025 in Yokohama, Japan
+- ICLR 2025 in Singapore
 - COLING 2025 in Abu Dhabi, UAE
 - EMNLP 2024 in Miami, Florida, USA
 - ACL 2024 in Bangkok, Thailand

@@ -6,6 +6,7 @@ tags:
     - project
 header-img: images/project/seavl-banner.png
 shortdesc: The first culturally-relevant vision-language dataset for Southeast Asia.
+status: completed
 ---
 
 ![Image]({{ site.baseurl }}/images/project/seavl-banner.png)

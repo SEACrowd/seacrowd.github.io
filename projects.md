@@ -20,9 +20,14 @@ An archive of projects that the community has created.
                     <h3 class="post-title">
                         {{ post.title }}
                     </h3>
-                    <p class="list-detail" >
+                    <p class="list-detail" style="margin-bottom: 0.4em">
                       {{ post.shortdesc }}
                     </p>
+                    {% if post.status == "completed" %}
+                    <p class="project-completed">COMPLETED</p>
+                    {% else %}
+                    <p class="project-ongoing">ONGOING</p>
+                    {% endif %}
                 </div>
             </div>
             <hr/>

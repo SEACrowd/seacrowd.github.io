@@ -562,3 +562,16 @@ tbody tr:nth-child(odd) th {
   border: none;
   background-color: #FFF;
 }
+
+//project
+.project-ongoing {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(228, 114, 8);
+    font-weight: bold;
+}
+
+.project-completed {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(11, 179, 64);
+  font-weight: bold;
+}

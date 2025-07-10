@@ -6,6 +6,7 @@ tags:
     - project
 header-img: images/project/catalog.png
 shortdesc: The first comprehensive catalog and benchmark for all Southeast Asian datasets.
+status: completed
 ---
 
 ![Image]({{ site.baseurl }}/images/project/catalog.png)

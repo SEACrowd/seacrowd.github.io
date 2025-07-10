@@ -6,6 +6,7 @@ tags:
     - project
 header-img: images/project/seavl-phase2-banner.png
 shortdesc: Large-scale Multimodal Models for Southeast Asia.
+status: ongoing
 ---
 
 ![Image]({{ site.baseurl }}/images/project/seavl-phase2-banner.png)

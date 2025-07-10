@@ -1,0 +1,64 @@
+# # # # # # # #
+#   K i k o   #
+# # # # # # # #
+
+# Basic
+name:               "SEACrowd"
+title:              "SEACrowd: AI for SEA"
+description:        "SEACrowd"
+
+# URL
+url:                http://kordinglab.com
+baseurl:            
+#baseurl:            "" #For Root Domain
+permalink:          /:year/:month/:day/:title.html
+
+# Markdown
+markdown:           kramdown
+
+# Highlighter
+highlighter:        rouge
+
+# Navigation
+nav:
+  - name:           "news"
+    href:           "/news"
+  - name:           "people"
+    href:           "/people"
+  - name:           "publications"
+    href:           "/publication"
+  - name:           "projects"
+    href:           "/projects"
+  - name:           "apprenticeship program"
+    href:           "/apprenticeshipprogram"
+
+# Sass
+sass:
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+  -
+    scope:
+      path:         ""
+      type:         "people"
+    values:
+      layout:       "profile"
+
+
+collections:
+  people:
+    output: true
+    permalink: /people/:title/index.html

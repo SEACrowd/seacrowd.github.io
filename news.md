@@ -1,9 +1,10 @@
 ---
-title: news
+title: News
 permalink: /news/
 ---
 
-### **Latest News**
+# **Latest News**
+Be sure to check here periodically for the latest in SEA research!
 
 <div class="content list">
   {% for post in site.posts %}

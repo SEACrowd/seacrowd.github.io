@@ -27,10 +27,10 @@ nav:
     href:           "/people"
   - name:           "publications"
     href:           "/publication"
-  - name:           "projects"
-    href:           "/projects"
-  - name:           "apprenticeship program"
+  - name:           "apprenticeship"
     href:           "/apprenticeshipprogram"
+  - name:           "Datahub"
+    href:           "https://seacrowd.github.io/seacrowd-catalogue/"
 
 # Sass
 sass:
@@ -57,6 +57,10 @@ defaults:
     values:
       layout:       "profile"
 
+scholar:
+   style: apa
+   source: /_bibliography/
+   bibliography: references.bib
 
 collections:
   people:

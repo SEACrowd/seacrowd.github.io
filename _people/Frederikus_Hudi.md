@@ -1,18 +1,19 @@
 ---
-name: Alham Fikri Aji
+name: Frederikus Hudi
 position: coreteam
 avatar: aji-hd.jpg
 twitter:
-sortorder: 1
-job: Research Steering Head
-title: Alham Fikri Aji
+sortorder: 0
+job: Treasurer
+title: Frederikus Hudi
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">
 
+
 ### Contact
 
-<i class="fa fa-envelope-o"></i>`email@address.com`<br>
+<i class="fa fa-envelope-o"></i>  `email@address.com`<br>
 
 <hr>
 

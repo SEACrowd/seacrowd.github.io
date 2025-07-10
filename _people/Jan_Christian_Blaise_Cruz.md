@@ -1,10 +1,10 @@
 ---
 name: Jan Christian Blaise Cruz
 position: coreteam
-avatar: 
+avatar: aji-hd.jpg
 twitter:
 sortorder: 1
-job: Communications
+job: Communications Head
 title: Jan Christian Blaise Cruz
 ---
 

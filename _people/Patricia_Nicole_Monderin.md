@@ -1,18 +1,19 @@
 ---
-name: Alham Fikri Aji
+name: Patricia Nicole Monderin
 position: coreteam
 avatar: aji-hd.jpg
 twitter:
-sortorder: 1
-job: Research Steering Head
-title: Alham Fikri Aji
+sortorder: 2
+job: Communications
+title: Patricia Nicole Monderin
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">
 
+
 ### Contact
 
-<i class="fa fa-envelope-o"></i>`email@address.com`<br>
+<i class="fa fa-envelope-o"></i>  `email@address.com`<br>
 
 <hr>
 

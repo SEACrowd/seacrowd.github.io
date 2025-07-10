@@ -3,4 +3,4 @@ title: projects
 permalink: /projects/
 ---
 
-### **Projects**
+# **Projects**

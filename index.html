@@ -16,7 +16,9 @@ layout: default
     <span style="display: block; margin-bottom: 2em"></span>
 
     <p>
-      <a href="https://github.com/seacrowd"><i class="fa fa-github"></i>SEACrowd</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://discord.gg/f4k36zDJKc"><i class="fa fa-brands fa-discord"></i> Join the Discord</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/seacrowd_ai"><i class="fa fa-github"></i> SEACrowd</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://huggingface.com/SEACrowd">🤗 SEACrowd</a>&nbsp;&nbsp;&nbsp;
       <a href="https://twitter.com/seacrowd"><i class="fa fa-twitter"></i> SEACrowd</a>&nbsp;&nbsp;&nbsp;
       <a href="mailto:contact@seacrowd.org"><i class="fa fa-envelope-o"></i> contact@seacrowd.org</a>
     </p>
@@ -27,7 +29,7 @@ layout: default
       <div style="text-align:left">
         <h3> Recent News </h3>  
           {% for post in newposts %}
-            {{ post.postdate }} - <a href="{{ post.url }}">{{ post.title }}</a>
+            {{ post.date | date: "%B %-d, %Y" }} - <a href="{{ post.url }}">{{ post.title }}</a>
           {% endfor %}
       </div >
     </div>

@@ -8,7 +8,7 @@ title:              "SEACrowd: AI for SEA"
 description:        "SEACrowd"
 
 # URL
-url:                http://kordinglab.com
+url:                https://seacrowd.org
 baseurl:            
 #baseurl:            "" #For Root Domain
 permalink:          /:year/:month/:day/:title.html

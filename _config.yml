@@ -29,10 +29,12 @@ nav:
     href:           "/projects"
   - name:           "publications"
     href:           "/publication"
+  - name:           "events"
+    href:           "/events"
   - name:           "apprenticeship"
     href:           "/apprenticeshipprogram"
-  - name:           "Datahub"
-    href:           "https://seacrowd.github.io/seacrowd-catalogue/"
+  - name:           "Resources"
+    href:           "/resources"
 
 # Sass
 sass:

@@ -1,11 +1,12 @@
 ---
 name: Aye Hninn Khine
 position: coreteam
-avatar: aji-hd.jpg
+avatar: aye_hninn_khine.avif
 twitter:
 sortorder: 2
 job: Communications and Funding
 title: Aye Hninn Khine
+site: https://ayehninnkhine.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

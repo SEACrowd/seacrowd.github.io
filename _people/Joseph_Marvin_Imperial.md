@@ -1,11 +1,12 @@
 ---
 name: Joseph Marvin Imperial
 position: coreteam
-avatar: aji-hd.jpg
+avatar: joseph_marvin_imperial.png
 twitter:
 sortorder: 2
 job: Communications
 title: Joseph Marvin Imperial
+site: https://www.josephimperial.com/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

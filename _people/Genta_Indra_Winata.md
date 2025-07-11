@@ -1,11 +1,12 @@
 ---
 name: Genta Indra Winata
 position: coreteam
-avatar: aji-hd.jpg
+avatar: genta_indra_winata.jpg
 twitter:
 sortorder: 2
 job: Communications
 title: Genta Indra Winata
+site: https://gentawinata.com/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

@@ -1,11 +1,12 @@
 ---
 name: Carlos Rafael Catalan
 position: coreteam
-avatar: aji-hd.jpg
+avatar: carlos_rafael_catalan.jpeg
 twitter:
 sortorder: 2
 job: Communications
 title: Carlos Rafael Catalan
+site: https://scholar.google.com/citations?user=mU6Qvs4AAAAJ&hl=en
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

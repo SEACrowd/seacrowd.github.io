@@ -1,11 +1,12 @@
 ---
 name: Salsabil Maulana Akbar
 position: coreteam
-avatar: aji-hd.jpg
+avatar: salsabil_maulana_akbar.png
 twitter:
 sortorder: 0
 job: Secretary
 title: Salsabil Maulana Akbar
+site: https://sabilmakbar.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

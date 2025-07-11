@@ -1,11 +1,12 @@
 ---
 name: Patricia Nicole Monderin
 position: coreteam
-avatar: aji-hd.jpg
+avatar: patricia_nicole_monderin.jpeg
 twitter:
 sortorder: 2
 job: Communications
 title: Patricia Nicole Monderin
+site: https://ph.linkedin.com/in/patricia-nicole-monderin-417b09190
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

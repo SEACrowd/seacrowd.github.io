@@ -1,11 +1,12 @@
 ---
 name: Jennifer Santoso
 position: coreteam
-avatar: aji-hd.jpg
+avatar: jennifer_santoso.jpeg
 twitter:
 sortorder: 2
 job: Research Steering
 title: Jennifer Santoso
+site: https://github.com/jensan-1
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

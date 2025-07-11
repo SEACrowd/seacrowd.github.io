@@ -1,11 +1,12 @@
 ---
 name: Alham Fikri Aji
 position: coreteam
-avatar: aji-hd.jpg
+avatar: alham_fikri.png
 twitter:
 sortorder: 1
 job: Research Steering Head
 title: Alham Fikri Aji
+site: https://afaji.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

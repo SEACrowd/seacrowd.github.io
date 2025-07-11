@@ -1,11 +1,12 @@
 ---
 name: Peerat Limkonchotiwat
 position: coreteam
-avatar: aji-hd.jpg
+avatar: peerat_limkonchotiwat.jpg
 twitter:
 sortorder: 2
 job: Communications
 title: Peerat Limkonchotiwat
+site: https://mrpeerat.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

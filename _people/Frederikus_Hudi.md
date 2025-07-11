@@ -1,11 +1,12 @@
 ---
 name: Frederikus Hudi
 position: coreteam
-avatar: aji-hd.jpg
+avatar: frederikus_hudi.webp
 twitter:
 sortorder: 0
 job: Treasurer
 title: Frederikus Hudi
+site: https://jp.linkedin.com/in/fhudi
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

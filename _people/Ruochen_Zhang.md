@@ -1,11 +1,12 @@
 ---
 name: Ruochen Zhang
 position: coreteam
-avatar: aji-hd.jpg
+avatar: ruochen_zhang.jpg
 twitter:
 sortorder: 2
 job: Communications
 title: Ruochen Zhang
+site: https://www.ruochenzhang.com/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

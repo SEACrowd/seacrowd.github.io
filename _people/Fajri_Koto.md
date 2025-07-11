@@ -1,11 +1,12 @@
 ---
 name: Fajri Koto
 position: coreteam
-avatar: aji-hd.jpg
+avatar: fajri_koto.png
 twitter:
 sortorder: 0
 job: Research Steering & SIGSEA Secretary
 title: Fajri Koto
+site: https://www.fajrikoto.com/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

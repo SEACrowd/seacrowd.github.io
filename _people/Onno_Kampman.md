@@ -1,11 +1,12 @@
 ---
 name: Onno Kampman
 position: coreteam
-avatar: aji-hd.jpg
+avatar: onno_kampman.jpeg
 twitter:
 sortorder: 1
 job: Funding Head
 title: Onno Kampman
+site: https://onnokampman.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

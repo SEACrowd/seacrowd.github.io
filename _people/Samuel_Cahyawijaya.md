@@ -1,11 +1,12 @@
 ---
 name: Samuel Cahyawijaya
 position: coreteam
-avatar: 
+avatar: samuel_cahyawijaya.jpg
 twitter:
 sortorder: 1
 job: Research Steering
 title: Samuel Cahyawijaya
+site: https://samuelcahyawijaya.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

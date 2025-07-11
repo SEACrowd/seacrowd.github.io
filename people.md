@@ -18,11 +18,13 @@ The members who keep the community running.
       <div class="list-item-people">
         <p class="list-post-title">
           {% if profile.avatar %}
-            <a href="{{ site.baseurl }}{{ profile.url }}"><img class="profile-thumbnail" src="{{site.baseurl}}/images/people/{{profile.avatar}}"></a>
+            <!--<a href="{{ site.baseurl }}{{ profile.url }}"><img class="profile-thumbnail" src="{{site.baseurl}}/images/people/{{profile.avatar}}"></a>-->
+            <a href="{{ profile.site }}" target="_blank"><img class="profile-thumbnail" src="{{site.baseurl}}/images/people/{{profile.avatar}}"></a>
           {% else %}
             <a href="{{ site.baseurl }}{{ profile.url }}"><img class="profile-thumbnail" src="{{site.baseurl}}/images/people/aji-hd.jpg"></a>
           {% endif %}
-          <a class="name" href="{{ site.baseurl }}{{ profile.url }}">{{ profile.name }}</a>
+          <!--<a class="name" href="{{ site.baseurl }}{{ profile.url }}">{{ profile.name }}</a>-->
+          <a class="name" href="{{ profile.site }}" target="_blank"><p class="nametitle">{{ profile.name }}</p></a>
           <p class="subtitle">{{ profile.job }}</p>
         </p>
       </div>    

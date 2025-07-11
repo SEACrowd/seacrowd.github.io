@@ -1,11 +1,12 @@
 ---
 name: Holy Lovenia
 position: coreteam
-avatar: aji-hd.jpg
+avatar: holy_lovenia.png
 twitter:
 sortorder: -1
 title: Holy Lovenia
 job: Lead & SIGSEA President
+site: https://holylovenia.github.io/
 ---
 
 <img width="300" src="{{site.baseurl}}/images/people/{{page.avatar}}" data-action="zoom">

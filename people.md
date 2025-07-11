@@ -38,7 +38,7 @@ Researchers, students, professors, professionals, and community members who have
 <div class="contributors">
 {% for member in contributors %}
   {% if member.website != 'none' %}
-      <a href="{{ member.website }}"><p>{{ member.name }}</p></a>
+      <a href="{{ member.website }}" target="_blank"><p>{{ member.name }}</p></a>
     {% else %}
       <p>{{ member.name }}</p>
     {% endif %}

@@ -4,9 +4,11 @@ permalink: /people/
 ---
 
 # **People**
-From 11 initial members when we launched in 2023, to over 400 community participants as of 2025, SEACrowd is built on a strong foundation of active contributors. This page lists all who have contributed to the SEACrowd community, from Southeast Asia and to the rest of the world. 
+
+From 11 initial members when we launched in 2023, to over 400 community participants as of 2025, SEACrowd is built on a strong foundation of active contributors. This page lists all who have contributed to the SEACrowd community, from Southeast Asia and to the rest of the world.
 
 <!-- {% assign people_sorted = site.people | sort: 'joined' %} -->
+
 {% assign people_sorted = site.people | sort: 'sortorder' %}
 {% assign role_array = "coreteam|contributor" | split: "|" %}
 

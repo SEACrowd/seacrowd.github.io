@@ -4,6 +4,7 @@ permalink: /projects/
 ---
 
 # **Projects**
+
 An archive of projects that the community has created.
 
 <div class="content list">

@@ -3,68 +3,64 @@
 # # # # # # # #
 
 # Basic
-name:               "SEACrowd"
-title:              "SEACrowd: AI for SEA"
-description:        "SEACrowd"
+name: "SEACrowd"
+title: "SEACrowd: AI for SEA"
+description: "SEACrowd"
 
 # URL
-url:                https://seacrowd.org
-baseurl:            
+url: https://seacrowd.org
 #baseurl:            "" #For Root Domain
-permalink:          /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title.html
 
 # Markdown
-markdown:           kramdown
+markdown: kramdown
 
 # Highlighter
-highlighter:        rouge
+highlighter: rouge
 
 # Navigation
 nav:
-  - name:           "news"
-    href:           "/news"
-  - name:           "people"
-    href:           "/people"
-  - name:           "projects"
-    href:           "/projects"
-  - name:           "publications"
-    href:           "/publication"
-  - name:           "events"
-    href:           "/events"
-  - name:           "apprenticeship"
-    href:           "/apprenticeshipprogram"
-  - name:           "Resources"
-    href:           "/resources"
+  - name: "news"
+    href: "/news"
+  - name: "people"
+    href: "/people"
+  - name: "projects"
+    href: "/projects"
+  - name: "publications"
+    href: "/publication"
+  - name: "events"
+    href: "/events"
+  - name: "apprenticeship"
+    href: "/apprenticeshipprogram"
+  - name: "Resources"
+    href: "/resources"
 
 # Sass
 sass:
-  style:            :compressed
+  style: "compressed"
 
 # Scopes
 defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
+  - scope:
+      path: ""
+      type: "pages"
     values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
     values:
-      layout:       "post"
-  -
-    scope:
-      path:         ""
-      type:         "people"
+      layout: "post"
+  - scope:
+      path: ""
+      type: "people"
     values:
-      layout:       "profile"
+      layout: "profile"
 
 scholar:
-   style: apa
-   source: /_bibliography/
-   bibliography: references.bib
+  style: apa
+  source: /_bibliography/
+  bibliography: references.bib
 
 collections:
   people:

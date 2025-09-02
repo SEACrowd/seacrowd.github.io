@@ -3,7 +3,7 @@ layout: post
 title: SEACrowd forms legal entity in Indonesia
 category: news
 tags:
-    - news
+  - news
 header-img: images/post/sign-holy.jpg
 date: 2024-08-22
 ---
@@ -19,13 +19,13 @@ This marks a significant milestone in our growth and commitment to fostering loc
 The structure of our legal entity is as follows:
 
 - Board of Trustees
-    - Alham Fikri Aji (_Chief_)
-    - Samuel Cahyawijaya
+  - Alham Fikri Aji (_Chief_)
+  - Samuel Cahyawijaya
 - Executive Board
-    - Holy Lovenia (_Chief_)
-    - Salsabil Maulana Akbar (_Secretary_)
-    - Frederikus Hudi (_Treasury_)
+  - Holy Lovenia (_Chief_)
+  - Salsabil Maulana Akbar (_Secretary_)
+  - Frederikus Hudi (_Treasury_)
 - Supervisory Board
-    - Genta Indra Winata (_Chief_)
-    - Fajri Koto
-    - Jennifer Santoso
+  - Genta Indra Winata (_Chief_)
+  - Fajri Koto
+  - Jennifer Santoso

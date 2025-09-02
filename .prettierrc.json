@@ -1,0 +1,33 @@
+{
+  "semi": false,
+  "trailingComma": "none",
+  "singleQuote": false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "embeddedLanguageFormatting": "auto",
+  "overrides": [
+    {
+      "files": "*.{yml,yaml}",
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "htmlWhitespaceSensitivity": "ignore"
+      }
+    },
+    {
+      "files": "_config*.yml",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ layout: post
 title: Call for Contributors - SEAVL Phase 1
 category: news
 tags:
-    - news
+  - news
 header-img: images/project/seavl-banner.png
 date: 2024-11-10
 ---

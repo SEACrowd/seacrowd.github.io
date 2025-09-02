@@ -4,6 +4,7 @@ permalink: /news/
 ---
 
 # **Latest News**
+
 Be sure to check here periodically for the latest in SEA research!
 
 <div class="content list">

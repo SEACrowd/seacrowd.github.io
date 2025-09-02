@@ -784,3 +784,46 @@ img.zoom-img {
 .zoom-overlay-transitioning {
   cursor: default;
 }
+
+// Footer styles
+.footer {
+  padding: 1rem 0;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  color: #6c757d;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #6c757d;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #0d6efd;
+}
+
+.copyright {
+  font-size: 0.7rem;
+}
+
+.credits {
+  font-size: 0.7rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}

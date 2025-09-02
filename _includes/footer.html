@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="social-links">
+    <a href="mailto:seacrowd.research@gmail.com" class="social-link">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://github.com/seacrowd_ai" class="social-link">
+      <i class="fa fa-github"></i>
+    </a>
+    <a href="https://discord.gg/XXRHFuvkTA" class="social-link">
+      <i class="fa fa-brands fa-discord"></i>
+    </a>
+    <a href="https://twitter.com/seacrowd" class="social-link"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.facebook.com/seacrowd2025" class="social-link">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/seacrowd/" class="social-link">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a href="https://bsky.app/profile/seacrowd.bsky.social" class="social-link">
+      <i class="fa-brands fa-bluesky"></i>
+    </a>
+    <a href="https://groups.google.com/u/0/g/seacrowd" class="social-link">
+      <i class="fa-solid fa-user-group"></i>
+    </a>
+  </div>
+  <p class="copyright">
+    ©
+    <span id="current-year">{{ "now" | date: "%Y" }}</span>
+    {{ site.name }} - {{ site.description }}
+  </p>
+  <p class="credits">
+    Powered by
+    <a href="https://jekyllrb.com/" class="footer-link">Jekyll</a>
+    building on
+    <a href="https://kordinglab.com" class="footer-link">KordingLab's</a>
+    theme
+  </p>
+</footer>
+
+<script>
+  document.getElementById("current-year").textContent = new Date().getFullYear()
+</script>

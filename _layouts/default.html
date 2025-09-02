@@ -128,8 +128,12 @@
     <meta name="twitter:image" content="{{ '/images/banner.png' | absolute_url }}" />
   </head>
 
-  <body id="page-top" style="padding-top: 2em">
-    {% include navbar.html %} {{ content }}
+  <body id="page-top" class="d-flex flex-column min-vh-100" style="padding-top: 2em">
+    {% include navbar.html %}
+    <main class="flex-grow-1">
+      <div class="container" style="margin-top: 2em; margin-bottom: 2em">{{ content }}</div>
+    </main>
+    {% include footer.html %}
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

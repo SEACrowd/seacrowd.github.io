@@ -1,6 +1,6 @@
 ---
 title: Apprenticeship Program
-permalink: /apprenticeshipprogram/
+permalink: /apprenticeship.html
 ---
 
 # Apprenticeship Program

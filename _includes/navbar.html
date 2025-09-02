@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <div class="container">
-    <a class="navbar-brand page-scroll flex-shrink-0" href="/">
-      <img src="{{site.baseurl}}/images/logo.png" height="30" alt="SEACrowd Logo" />
+  <div class="container px-3">
+    <a class="navbar-brand" href="/">
+      <img src="{{site.baseurl}}/images/logo.png" alt="SEACrowd Logo" height="32" />
     </a>
-
     <button
       class="navbar-toggler border-0"
       type="button"
@@ -13,15 +12,18 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        {% for nav in site.nav %}
+        {% for nav in site.data.navigation %}
         <li class="nav-item">
           <a
-            class="nav-link p-2 {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
+            class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
             href="{{ nav.href }}"
           >
             {{ nav.name }}
@@ -35,33 +37,72 @@
 
 <style>
   .navbar {
-    min-height: 70px;
-  }
-
-  .navbar-brand {
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 40px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin: 0;
   }
 
   .nav-link {
-    transition: all 0.3s ease;
-    border-radius: 8px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+    border-bottom: 2px solid transparent;
   }
 
-  .nav-link:hover {
-    background-color: rgba(13, 110, 253, 0.1);
+  .nav-link:hover,
+  .nav-link:focus {
     color: #0d6efd;
+    text-decoration: none;
   }
 
   .nav-link.active {
-    background-color: #0d6efd;
-    color: white !important;
-    font-weight: 500;
+    color: #0d6efd;
+    font-weight: 600;
+    border-bottom: 2px solid #0d6efd;
   }
 
-  .navbar-nav {
-    align-items: center;
+  /* Custom toggler icon transition */
+  .navbar-toggler-icon {
+    background: none;
+    position: relative;
+    width: 24px;
+    height: 18px;
+    display: block;
+  }
+
+  .line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.55);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    left: 0;
+  }
+
+  .line-1 {
+    top: 0;
+  }
+  .line-2 {
+    top: 8px;
+  }
+  .line-3 {
+    top: 16px;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .line-1 {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .line-2 {
+    opacity: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .line-3 {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
   }
 
   .navbar-toggler:focus {

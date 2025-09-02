@@ -14,23 +14,6 @@ markdown: kramdown
 # Highlighter
 highlighter: rouge
 
-# Navigation
-nav:
-  - name: "news"
-    href: "/news"
-  - name: "people"
-    href: "/people"
-  - name: "projects"
-    href: "/projects"
-  - name: "publications"
-    href: "/publication"
-  - name: "events"
-    href: "/events"
-  - name: "apprenticeship"
-    href: "/apprenticeshipprogram"
-  - name: "Resources"
-    href: "/resources"
-
 # Sass
 sass:
   style: "compressed"
@@ -47,11 +30,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "people"
-    values:
-      layout: "profile"
 
 scholar:
   style: apa

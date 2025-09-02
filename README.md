@@ -49,7 +49,7 @@ rbenv install
 
 ```bash
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --config _config.yml,_config_dev.yml
 ```
 
 The site should show up on `http://localhost:4000`

@@ -66,3 +66,39 @@ collections:
   people:
     output: true
     permalink: /people/:title/index.html
+
+# Exclude files from processing for faster build
+exclude:
+  - docker/
+  - .docker/
+  - Dockerfile
+  - docker-compose.yml
+  - "docker-compose.*.yml"
+  - .dockerignore
+  - .git/
+  - .gitignore
+  - .husky/
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - "*.lock"
+  - "*-lock.*"
+  - CNAME
+  - README.md
+  - LICENSE
+  - scripts/
+  - "*.log"
+
+# Keep files (override exclude)
+keep_files:
+  - .git
+  - .svn
+
+# Build settings for performance
+incremental: true
+profile: false
+safe: false

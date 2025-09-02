@@ -33,7 +33,7 @@ If you prefer to run without Docker, ensure you have Ruby installed (managed thr
 1. Install rbenv and Ruby:
 
 ```bash
-# Install rbenv (macOS)
+# Install rbenv (macOS/Linux)
 brew install rbenv
 
 # Add to your shell profile (.zshrc, .bash_profile, etc.)

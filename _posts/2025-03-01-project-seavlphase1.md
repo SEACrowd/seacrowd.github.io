@@ -9,8 +9,6 @@ shortdesc: The first culturally-relevant vision-language dataset for Southeast A
 status: completed
 ---
 
-![Image]({{ site.baseurl }}/images/project/seavl-banner.png)
-
 # SEA-VL Phase 1
 
 This is an archive of the SEA-VL Phase 1 project, which culminated in a paper in ACL 2025.

@@ -9,8 +9,6 @@ shortdesc: The first comprehensive catalog and benchmark for all Southeast Asian
 status: completed
 ---
 
-![Image]({{ site.baseurl }}/images/project/catalog.png)
-
 # The SEACrowd Catalogue Project
 
 This is an archive of the original SEACrowd Project, completed in November 2024 with a paper published at EMNLP 2024.

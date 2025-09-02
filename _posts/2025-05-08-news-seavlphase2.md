@@ -8,8 +8,6 @@ header-img: images/post/seavl-phase2-banner.png
 date: 2025-05-08
 ---
 
-![Image]({{ site.baseurl }}/images/post/seavl-phase2-banner.png)
-
 **Please check the project page for information on contributing**: [SEA-VL Phase 2]({% post_url 2025-05-01-project-seavlphase2 %})
 
 Welcome! SEA-VL is a global community project organized by the SEACrowd community to push the boundaries of vision and language research in Southeast Asia (SEA). We recently completed [Phase 1](https://seacrowd.github.io/seavl-dataset/) of this project with the release of high-quality, culturally relevant image datasets and a benchmarking study for SEA languages, as detailed in this [paper](https://arxiv.org/abs/2503.07920).

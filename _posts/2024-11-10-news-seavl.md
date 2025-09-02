@@ -8,8 +8,6 @@ header-img: images/project/seavl-banner.png
 date: 2024-11-10
 ---
 
-![Image]({{ site.baseurl }}/images/project/seavl-banner.png)
-
 **Please check the project page for information on contributing**: [SEA-VL Phase 1]({% post_url 2025-03-01-project-seavlphase1 %})
 
 Following the success of our [SEACrowd project](https://seacrowd.github.io/seacrowd-emnlp-2024/), we’re excited to announce **SEA-VL**, a new open-source initiative to create high-quality vision-language datasets specifically for Southeast Asian (SEA) languages! We’re calling on contributors to help us build a SEA-specific vision-language model.

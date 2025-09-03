@@ -1,40 +1,13 @@
-# Basic
+# Basic Site Info
 name: "SEACrowd"
 title: "SEACrowd: AI for SEA"
 description: "AI for Southeast Asia, by Southeast Asians"
 
 # URL
 url: https://seacrowd.org
-#baseurl:            "" #For Root Domain
-permalink: /:year/:month/:day/:title.html
-
-# Markdown
-markdown: kramdown
-
-# Highlighter
-highlighter: rouge
-
-# Sass
-sass:
-  style: "compressed"
-
-# Scopes
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-scholar:
-  style: apa
-  source: /_bibliography/
-  bibliography: references.bib
+# baseurl: "" # For Root Domain
+permalink: /:title/
+header-img: banner.png
 
 # Social Links
 social:
@@ -47,6 +20,30 @@ social:
   bluesky: "https://bsky.app/profile/seacrowd.bsky.social"
   google_group: "https://groups.google.com/u/0/g/seacrowd"
 
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "post"
+
+# Collections
 collections:
   people:
     output: true
@@ -54,8 +51,36 @@ collections:
   pages:
     output: true
     permalink: /:name/
+  news:
+    output: true
+    permalink: /news/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
 
-# Exclude files from processing for faster build
+# Markdown & Highlighter
+markdown: kramdown
+highlighter: rouge
+
+# Sass (Jekyll built-in)
+sass:
+  sass_dir: _sass
+  style: compressed
+  load_paths:
+    - _sass
+    - assets/css
+
+# Plugins
+plugins:
+  - jekyll-scholar
+
+# Jekyll Scholar
+scholar:
+  style: apa
+  source: /_bibliography/
+  bibliography: references.bib
+
+# Exclude files from processing
 exclude:
   - docker/
   - .docker/
@@ -86,7 +111,7 @@ keep_files:
   - .git
   - .svn
 
-# Build settings for performance
+# Build settings
 incremental: true
 profile: false
 safe: false

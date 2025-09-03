@@ -1,0 +1,67 @@
+// ========================================
+// Page-specific Styles
+// ========================================
+
+.page-title {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #6c757d;
+}
+
+// People/Profile styles
+.people {
+  margin: auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.list-item-people {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.profile-thumbnail {
+  object-fit: cover;
+  object-position: center top;
+  width: 200px;
+  height: 200px;
+}
+
+.list-post-title {
+  color: #212529;
+
+  .name {
+    font-size: 1.125rem;
+  }
+
+  &:hover .name,
+  .name:hover {
+    color: #dc3545;
+  }
+}
+
+.list-detail {
+  font-size: 0.9375rem;
+  color: #6c757d;
+}
+
+.project-ongoing {
+  font-family: "Courier New", Courier, monospace;
+  color: #fd7e14;
+  font-weight: bold;
+}
+
+.project-completed {
+  font-family: "Courier New", Courier, monospace;
+  color: #198754;
+  font-weight: bold;
+}

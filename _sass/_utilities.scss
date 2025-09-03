@@ -1,0 +1,17 @@
+// ========================================
+// Utility Classes
+// ========================================
+
+.contributors p {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.authorlist {
+  font-size: 0.875rem;
+}
+
+// Image zoom functionality - match exact JS selector
+main img:not(.profile-thumbnail):not(a img):not(.card img):not(.clickable-card img) {
+  cursor: zoom-in;
+}

@@ -2,15 +2,18 @@
 layout: default
 ---
 
-<article class="container content post my-5 col-lg-8 mx-auto">
-  <h2 class="fw-bold mb-3">{{ page.title }}</h2>
+<header>
+  <h1 class="fw-bold mb-3">{{ page.title }}</h1>
   <p class="text-muted mb-4">
     <small>Posted on {{ page.date | date: '%B %-d, %Y'}}</small>
   </p>
-
+</header>
+<article class="container-lg content my-5 col-lg-8 mx-auto">
   {% if page.header-img %}
   <img src="/{{ page.header-img }}" class="img-fluid rounded mb-4" alt="{{ page.title }}" />
-  {% endif %} {{ content }}
+  {% endif %}
 
-  <div class="mt-5">{% include social-share.html %}</div>
+  <div id="markdown-content">{{ content }}</div>
 </article>
+
+{% include social-share.html %}

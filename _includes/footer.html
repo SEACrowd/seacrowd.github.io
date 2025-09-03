@@ -1,27 +1,38 @@
 <footer class="footer">
   <div class="social-links">
-    <a href="mailto:seacrowd.research@gmail.com" class="social-link">
+    {% if site.social.email %}
+    <a href="mailto:{{ site.social.email }}" class="social-link" title="Email">
       <i class="fa-solid fa-envelope"></i>
     </a>
-    <a href="https://github.com/seacrowd_ai" class="social-link">
-      <i class="fa fa-github"></i>
+    {% endif %} {% if site.social.github %}
+    <a href="{{ site.social.github }}" class="social-link" title="GitHub">
+      <i class="fa-brands fa-github"></i>
     </a>
-    <a href="https://discord.gg/XXRHFuvkTA" class="social-link">
-      <i class="fa fa-brands fa-discord"></i>
+    {% endif %} {% if site.social.discord %}
+    <a href="{{ site.social.discord }}" class="social-link" title="Discord">
+      <i class="fa-brands fa-discord"></i>
     </a>
-    <a href="https://twitter.com/seacrowd" class="social-link"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.facebook.com/seacrowd2025" class="social-link">
-      <i class="fa fa-facebook"></i>
+    {% endif %} {% if site.social.twitter %}
+    <a href="{{ site.social.twitter }}" class="social-link" title="Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
     </a>
-    <a href="https://www.linkedin.com/company/seacrowd/" class="social-link">
-      <i class="fa fa-linkedin"></i>
+    {% endif %} {% if site.social.facebook %}
+    <a href="{{ site.social.facebook }}" class="social-link" title="Facebook">
+      <i class="fa-brands fa-facebook"></i>
     </a>
-    <a href="https://bsky.app/profile/seacrowd.bsky.social" class="social-link">
+    {% endif %} {% if site.social.linkedin %}
+    <a href="{{ site.social.linkedin }}" class="social-link" title="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    {% endif %} {% if site.social.bluesky %}
+    <a href="{{ site.social.bluesky }}" class="social-link" title="Bluesky">
       <i class="fa-brands fa-bluesky"></i>
     </a>
-    <a href="https://groups.google.com/u/0/g/seacrowd" class="social-link">
+    {% endif %} {% if site.social.google_group %}
+    <a href="{{ site.social.google_group }}" class="social-link" title="Google Group">
       <i class="fa-solid fa-user-group"></i>
     </a>
+    {% endif %}
   </div>
   <p class="copyright">
     ©

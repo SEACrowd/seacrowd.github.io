@@ -36,6 +36,17 @@ scholar:
   source: /_bibliography/
   bibliography: references.bib
 
+# Social Links
+social:
+  email: "seacrowd.research@gmail.com"
+  github: "https://github.com/seacrowd_ai"
+  discord: "https://discord.gg/XXRHFuvkTA"
+  twitter: "https://twitter.com/seacrowd"
+  facebook: "https://www.facebook.com/seacrowd2025"
+  linkedin: "https://www.linkedin.com/company/seacrowd/"
+  bluesky: "https://bsky.app/profile/seacrowd.bsky.social"
+  google_group: "https://groups.google.com/u/0/g/seacrowd"
+
 collections:
   people:
     output: true

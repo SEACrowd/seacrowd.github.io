@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      {% if page.title %}{{ site.name }} - {{ page.title }}{% else %}{{ site.name }}{% endif %}
+      {% if page.title %} {{ site.name }} - {{ page.title }} - {{ site.description }} {% else %} {{
+      site.name }} - {{ site.description }} {% endif %}
     </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />

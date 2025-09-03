@@ -6,18 +6,20 @@ layout: default
 
 ## Our Vision
 
-We are a grassroots-led community of researchers from Southeast Asia advancing Southeast Asian
-AI tools, resources, and capabilities. We envision a future where AI ecosystems in SEA are
-mature and competitive with the rest of the world, wherein people from SEA can use world-class
+We are a **grassroots-led community of researchers from Southeast Asia (SEA)**
+advancing Artificial Intelligence (AI) tools, resources, and capabilities for the region.
+
+We envision a future where AI ecosystems in SEA are mature and competitive
+with the rest of the world, wherein people from SEA can use world-class
 AI in their own linguistic and cultural context.
 
 ## Our Mission
 
 We commit to a three-pronged approach to reaching our vision:
 
-- spearheading grassroots-led model and dataset building to improve the resources of SEA
+- spearheading grassroots-led model training and dataset building to improve AI resources for SEA
 - creating a community of like-minded researchers via the [ACL Special Interest Group SIGSEA](https://www.sigsea.org/)
-- supporting early-career researchers through the SEACrowd Apprentice Program
+- supporting early-career researchers through the [SEACrowd Apprenticeship Program](/apprenticeship)
 
 ## Recent News
 

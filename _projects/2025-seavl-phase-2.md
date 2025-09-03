@@ -1,17 +1,15 @@
 ---
 layout: project
 title: SEA-VL Phase 2
-category: project
 tags:
   - project
-header-img: images/project/seavl-phase2-banner.png
+header-img: project/seavl-phase2-banner.png
 shortdesc: Large-scale Multimodal Models for Southeast Asia.
-status: ongoing
+fromDate: 2025-03-01
+toDate: 2025-11-08
 ---
 
 # SEA-VL Phase 2
-
-After the success of [SEA-VL Phase 1](https://seacrowd.github.io/seavl-dataset/), we are proud to launch **SEA-VL Phase 2**!
 
 <div class="w3-container" style="background:rgb(237, 216, 204); padding: 25px; border-radius:10px; border: 1px solid rgb(220, 102, 29)">
     <div style="text-align:center">
@@ -19,13 +17,22 @@ After the success of [SEA-VL Phase 1](https://seacrowd.github.io/seavl-dataset/)
     </div>
 </div><br>
 
-### About the Project
+## About the Project
 
-For Phase 2, we have an even bigger ambition: we want to build an open-source state-of-the-art vision language model (VLM) for Southeast Asia! We believe it’s high time to create a model that truly understands Southeast Asia culture and language, the way we see it. We want the model to reflect the visual and linguistic richness of the SEA region. This effort requires diverse contributions: high-quality data curation and annotation, prompting, model training, evaluation, and more.
+After the success of [SEA-VL Phase 1](https://seacrowd.github.io/seavl-dataset/), we are proud to launch **SEA-VL Phase 2**!
 
-Every contribution to any SEA-VL Phase 2 task will earn participation points. Reaching 200 or more points guarantees a certificate of participation and merchandise (t-shirt and keychain), while reaching 300 or more points will earn co-authorship in the final project paper.
+For Phase 2, we have an even bigger ambition:
 
-### Contribution Guide
+> Build an open-source state-of-the-art vision language model (VLM) for Southeast Asia
+
+We believe it’s high time to create a model that truly understands Southeast Asia culture and language, the way we see it. We want the model to reflect the visual and linguistic richness of the SEA region. This effort requires diverse contributions: high-quality data curation and annotation, prompting, model training, evaluation, and more.
+
+## Contribution Guide
+
+Every contribution to any SEA-VL Phase 2 task will earn participation points.
+
+- Reaching >= 200 points guarantees a certificate of participation and merchandise (t-shirt and keychain)
+- Reaching >= 300 points will earn co-authorship in the final project paper.
 
 SEA-VL Phase 2 is split into five main tasks described below. You can contribute to any task that aligns with your interest or expertise.
 
@@ -57,7 +64,7 @@ To ensure the proper evaluation and testing of vision language capabilities, we 
 
 Contributors for this task will translate the English prompts into any one of the following languages in which they are fluent/native speakers: _Thai, Standard Malay, Filipino/Tagalog, Lao, Khmer, Tamil, Mandarin Chinese, Burmese, Tetun, Bruneian Malay_.
 
-We need three contributors per language for this task. Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
+We need **three (03)** contributors per language for this task. Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
 
 ### Task 4: Submit Visual Questions for Multicultural Images
 
@@ -75,11 +82,9 @@ To ensure the quality of the prompts, we need contributors who are natives or ex
 
 Example prompts for the Indonesian culture:
 
-Level 1 (Easy) - _“Draw an image of people drinking cendol.”_
-
-Level 2 (Medium) - _“Draw an image of people drinking cendol with durian topping.”_
-
-Level 3 (Hard) - _“Draw an image of people drinking cendol with durian topping while wearing kebaya.”_
+- Level 1 (Easy) - _“Draw an image of people drinking cendol.”_
+- Level 2 (Medium) - _“Draw an image of people drinking cendol with durian topping.”_
+- Level 3 (Hard) - _“Draw an image of people drinking cendol with durian topping while wearing kebaya.”_
 
 Go to this [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog) to contribute.
 

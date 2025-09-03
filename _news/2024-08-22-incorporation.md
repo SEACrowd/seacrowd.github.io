@@ -1,10 +1,9 @@
 ---
-layout: post
+layout: page
 title: SEACrowd forms legal entity in Indonesia
-category: news
 tags:
   - news
-header-img: images/post/sign-holy.jpg
+header-img: post/sign-holy.jpg
 date: 2024-08-22
 ---
 
@@ -12,9 +11,9 @@ Today, SEACrowd has formed a legal entity in Indonesia. 🇮🇩
 
 This marks a significant milestone in our growth and commitment to fostering local collaborations and innovation across Southeast Asia. We look forward to strengthening our presence and contributing to AI in SEA even more.
 
-![Image]({{ site.baseurl }}/images/post/sign-holy.jpg)
-![Image]({{ site.baseurl }}/images/post/sign-aji.jpg)
-![Image]({{ site.baseurl }}/images/post/sign-sabil.jpg)
+![Image]({{ site.baseurl }}/assets/images/post/sign-holy.jpg)
+![Image]({{ site.baseurl }}/assets/images/post/sign-aji.jpg)
+![Image]({{ site.baseurl }}/assets/images/post/sign-sabil.jpg)
 
 The structure of our legal entity is as follows:
 

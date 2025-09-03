@@ -1,12 +1,10 @@
 ---
 layout: project
 title: SEA-VL Phase 1
-category: project
-tags:
-  - project
-header-img: images/project/seavl-banner.png
+header-img: project/seavl-banner.png
 shortdesc: The first culturally-relevant vision-language dataset for Southeast Asia.
-status: completed
+fromDate: 2024-03-01
+toDate: 2025-02-28
 ---
 
 # SEA-VL Phase 1

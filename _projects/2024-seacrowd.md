@@ -1,12 +1,10 @@
 ---
 layout: project
 title: SEACrowd
-category: project
-tags:
-  - project
-header-img: images/project/catalog.png
+header-img: project/seacrowd-catalog.png
 shortdesc: The first comprehensive catalog and benchmark for all Southeast Asian datasets.
-status: completed
+fromDate: 2023-06-01
+toDate: 2024-11-07
 ---
 
 # The SEACrowd Catalogue Project

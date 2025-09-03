@@ -1,14 +1,13 @@
 ---
-layout: post
+layout: page
 title: Call for Contributors - SEAVL Phase 2
-category: news
 tags:
   - news
-header-img: images/post/seavl-phase2-banner.png
+header-img: project/seavl-phase2-banner.png
 date: 2025-05-08
 ---
 
-**Please check the project page for information on contributing**: [SEA-VL Phase 2]({% post_url 2025-05-01-project-seavlphase2 %})
+**Please check the project page for information on contributing**: [SEA-VL Phase 2]({{ '/projects/2025-seavl-phase-2/' | relative_url }})
 
 Welcome! SEA-VL is a global community project organized by the SEACrowd community to push the boundaries of vision and language research in Southeast Asia (SEA). We recently completed [Phase 1](https://seacrowd.github.io/seavl-dataset/) of this project with the release of high-quality, culturally relevant image datasets and a benchmarking study for SEA languages, as detailed in this [paper](https://arxiv.org/abs/2503.07920).
 

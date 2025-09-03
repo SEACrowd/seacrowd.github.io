@@ -1,6 +1,22 @@
 # SEACrowd Website
 
-Brand new SEACrowd website! Theme is based on a modified version of the [Kording lab page](http://kordinglab.com/).
+Brand new SEACrowd website!
+
+# Writing
+
+These need to be filled and updated periodically:
+
+- \_data: team.yml, contributors.csv
+- Collections: \_news, \_projects
+- \_config.yml
+- \_pages/
+
+# Development
+
+⚠️ In all cases, Jekyll requires restarting server when you make change to a
+root-level configuration file like `_config.yml`.
+
+Docker solution automatically restarts when it detects changes to the file.
 
 ## Quick Start with Docker (Recommended)
 

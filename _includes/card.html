@@ -1,0 +1,53 @@
+<a href="{{ include.post.url | prepend: site.baseurl }}" class="text-decoration-none">
+  <article class="card border-0 shadow-sm h-100 clickable-card">
+    <div class="card-body">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img
+            src="/{% if include.post.header-img %}{{ include.post.header-img }}{% else %}{{ site.header-img }}{% endif %}"
+            class="img-fluid rounded"
+            alt="{{ include.post.title }}"
+            style="height: 180px; object-fit: cover; width: 100%"
+          />
+        </div>
+        <div class="col-md-7">
+          <div class="card-body ps-md-4">
+            {% if include.type == 'project' %}
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h3 class="card-title h4 mb-0 text-dark">{{ include.post.title }}</h3>
+              {% if include.post.status == "completed" %}
+              <span class="badge bg-success ms-2">COMPLETED</span>
+              {% else %}
+              <span class="badge bg-warning text-dark ms-2">ONGOING</span>
+              {% endif %}
+            </div>
+            <p class="card-text text-muted">{{ include.post.shortdesc }}</p>
+            {% else %}
+            <h3 class="card-title h4 mb-2 text-dark">{{ include.post.title }}</h3>
+            <p class="text-muted small mb-3">
+              Posted on {{ include.post.date | date: "%B %-d, %Y" }}
+            </p>
+            <p class="card-text text-muted">
+              {{ include.post.content | markdownify | strip_html | truncatewords:30 }}
+            </p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</a>
+
+<style>
+  .clickable-card {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .clickable-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  }
+</style>

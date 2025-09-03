@@ -40,6 +40,9 @@ collections:
   people:
     output: true
     permalink: /people/:title/index.html
+  pages:
+    output: true
+    permalink: /:name/
 
 # Exclude files from processing for faster build
 exclude:

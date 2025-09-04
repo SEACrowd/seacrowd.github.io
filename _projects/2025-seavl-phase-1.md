@@ -6,15 +6,12 @@ fromDate: 2024-03-01
 toDate: 2025-02-28
 ---
 
-# SEA-VL Phase 1
-
 This is an archive of the SEA-VL Phase 1 project, which culminated in a paper in ACL 2025.
 
-<div class="w3-container" style="background:rgb(204, 237, 211); padding: 25px; border-radius:10px; border: 1px solid rgb(11, 168, 29)">
-    <div style="text-align:center">
-        <b>This project has been completed.</b><br>Thank you for your contributions!
-    </div>
-</div><br>
+<div class="alert alert-success text-center" role="alert">
+  <strong>This project has been completed.</strong><br>
+  Thank you for your contributions!
+</div>
 
 **Paper**: [ACL 2025](), [arXiv](https://arxiv.org/abs/2503.07920)  
 **HuggingFace Collection**:

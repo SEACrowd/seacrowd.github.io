@@ -4,7 +4,7 @@
       <div class="row g-0">
         <div class="col-md-4">
           <img
-            src="/assets/images/{% if include.project.header-img %}{{ include.project.header-img }}{% else %}project/{{ site.header-img }}{% endif %}"
+            src="/assets/images/project/{% if include.project.header-img %}{{ include.project.header-img }}{% else %}{{ site.header-img }}{% endif %}"
             class="img-fluid rounded"
             alt="{{ include.project.title }}"
             style="height: 180px; object-fit: cover; width: 100%"
@@ -30,7 +30,7 @@
               "%B %Y" }} {% endif %}
             </p>
             {% endif %}
-            <p class="card-text text-muted">{{ include.project.shortdesc }}</p>
+            <p class="card-text text-muted">{{ include.project.description }}</p>
           </div>
         </div>
       </div>

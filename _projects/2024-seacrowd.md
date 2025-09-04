@@ -6,16 +6,13 @@ fromDate: 2023-06-01
 toDate: 2024-11-07
 ---
 
-# The SEACrowd Catalogue Project
-
 This is an archive of the original SEACrowd Project, completed in November 2024 with a paper
 published at EMNLP 2024.
 
-<div class="w3-container" style="background:rgb(204, 237, 211); padding: 25px; border-radius:10px; border: 1px solid rgb(11, 168, 29)">
-    <div style="text-align:center">
-        <b>This project has been completed.</b><br>Thank you for your contributions!
-    </div>
-</div><br>
+<div class="alert alert-success text-center" role="alert">
+  <strong>This project has been completed.</strong><br>
+  Thank you for your contributions!
+</div>
 
 **Paper**: [EMNLP 2024](https://aclanthology.org/2024.emnlp-main.296/)  
 **Project Link:** [Catalogue](https://seacrowd.github.io/seacrowd-catalogue/)  

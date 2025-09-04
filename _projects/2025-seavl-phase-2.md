@@ -8,13 +8,10 @@ fromDate: 2025-03-01
 toDate: 2025-11-08
 ---
 
-# SEA-VL Phase 2
-
-<div class="w3-container" style="background:rgb(237, 216, 204); padding: 25px; border-radius:10px; border: 1px solid rgb(220, 102, 29)">
-    <div style="text-align:center">
-        <b>This is an ongoing project.</b><br>This page will be updated as new information is released. For faster updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA">Discord</a>.
-    </div>
-</div><br>
+<div class="alert alert-warning text-center" role="alert">
+  <strong>This is an ongoing project.</strong><br>
+  This page will be updated as new information is released. For faster updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>.
+</div>
 
 ## About the Project
 

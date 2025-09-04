@@ -26,26 +26,21 @@
 
   <div class="social-links mt-1">
     {% if profile.site and profile.site != "" %}
-    <a href="{{ profile.site }}" target="_blank" class="text-decoration-none me-2" title="Website">
-      <i class="fas fa-globe text-muted"></i>
+    <a href="{{ profile.site }}" target="_blank" class="social-link" title="Website">
+      <i class="fas fa-globe"></i>
     </a>
     {% endif %} {% if profile.twitter and profile.twitter != "" %}
     <a
       href="https://twitter.com/{{ profile.twitter }}"
       target="_blank"
-      class="text-decoration-none me-2"
+      class="social-link"
       title="Twitter/X"
     >
-      <i class="fab fa-twitter text-muted"></i>
+      <i class="fab fa-twitter"></i>
     </a>
     {% endif %} {% if profile.scholar and profile.scholar != "" %}
-    <a
-      href="{{ profile.scholar }}"
-      target="_blank"
-      class="text-decoration-none me-2"
-      title="Google Scholar"
-    >
-      <i class="fas fa-graduation-cap text-muted"></i>
+    <a href="{{ profile.scholar }}" target="_blank" class="social-link" title="Google Scholar">
+      <i class="fas fa-graduation-cap"></i>
     </a>
     {% endif %}
   </div>

@@ -23,8 +23,8 @@
               <span class="badge bg-secondary me-1">{{ tag }}</span>
               {% endfor %}
             </div>
-            {% endif %} {% if include.item.shortdesc %}
-            <p class="card-text text-muted">{{ include.item.shortdesc }}</p>
+            {% endif %} {% if include.item.description %}
+            <p class="card-text text-muted">{{ include.item.description }}</p>
             {% else %}
             <p class="card-text text-muted">
               {{ include.item.content | markdownify | strip_html | truncatewords:30 }}

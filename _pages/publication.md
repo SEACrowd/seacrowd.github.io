@@ -1,9 +1,9 @@
 ---
 title: Publication
-permalink: /publications.html
+permalink: /publication.html
 ---
 
-# Publications
+# Publication
 
 Papers that we have published so far as a community.
 

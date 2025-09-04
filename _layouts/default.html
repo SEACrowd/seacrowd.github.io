@@ -149,5 +149,21 @@
     <!-- Medium Zoom JS -->
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
     <script src="{{ '/assets/js/zoom.js' | relative_url }}"></script>
+
+    <!-- AnchorJS for heading anchors -->
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        anchors.options = {
+          placement: "right",
+          visible: "hover",
+          class: "anchor-link",
+          icon: "#"
+        }
+
+        // Add anchors to headings h2-h6 (excluding h1 which is usually the page title)
+        anchors.add("h2, h3, h4, h5, h6")
+      })
+    </script>
   </body>
 </html>

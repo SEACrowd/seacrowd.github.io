@@ -1,11 +1,8 @@
 ---
 title: News
 permalink: /news/
+description: Updates on SEACrowd and SEA AI research. Be sure to check here periodically!
 ---
-
-# News
-
-Be sure to check here periodically for the latest in SEA research!
 
 <div class="row g-4">
   {% assign sortedNews = site.news | sort: 'date' | reverse %}

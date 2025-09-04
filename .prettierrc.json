@@ -12,21 +12,16 @@
   "embeddedLanguageFormatting": "auto",
   "overrides": [
     {
-      "files": "*.{yml,yaml}",
-      "options": {
-        "singleQuote": true
-      }
-    },
-    {
       "files": "*.html",
       "options": {
         "htmlWhitespaceSensitivity": "ignore"
       }
     },
     {
-      "files": "_config*.yml",
+      "files": "*.md",
       "options": {
-        "singleQuote": false
+        "proseWrap": "always",
+        "printWidth": 100
       }
     }
   ]

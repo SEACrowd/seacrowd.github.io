@@ -1,11 +1,8 @@
 ---
 title: Projects
 permalink: /projects/
+description: A collection of projects that SEACrowd worked or has been working on as a community.
 ---
-
-# Projects
-
-A collection of projects that SEACrowd worked or has been working on as a community.
 
 ## Ongoing Projects
 

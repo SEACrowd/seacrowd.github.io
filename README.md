@@ -35,16 +35,18 @@ Contribute to SEACrowd content without any technical setup:
 1. **Fork the repository** on GitHub
 2. **Edit files directly** in the GitHub web interface
 3. **Submit a pull request** with your changes
-4. All editing can be done through GitHub
+4. All editing can be done through GitHub. Note that all \_pages/\*.md should start with heading 2
+   (##)
 
 ## Development
 
-⚠️ In all cases, Jekyll requires restarting server when you make change to a
-root-level configuration file like `_config.yml`.
+⚠️ In all cases, Jekyll requires restarting server when you make change to a root-level
+configuration file like `_config.yml`.
 
 ### Docker Environment (Recommended)
 
-We use a single environment-aware Dockerfile that builds optimized containers for both development and production.
+We use a single environment-aware Dockerfile that builds optimized containers for both development
+and production.
 
 #### Development Mode (Default)
 
@@ -79,7 +81,8 @@ Features:
 
 ### Manual Setup with Ruby
 
-If you prefer to run without Docker, ensure you have Ruby installed (managed through [rbenv](https://github.com/rbenv/rbenv) preferred):
+If you prefer to run without Docker, ensure you have Ruby installed (managed through
+[rbenv](https://github.com/rbenv/rbenv) preferred):
 
 1. Install rbenv and Ruby:
 

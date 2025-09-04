@@ -18,8 +18,6 @@ background and interests.
 1. Read about our [ongoing projects](/projects/)
 2. Join our [Discord]({{ site.social.discord }}) to connect with the community
 3. Subscribe to our [mailing list]({{ site.social.google_group }}) for updates
-4. Email us at [{{ site.social.email }}](mailto:{{ site.social.email }}) with your background and
-   interests
 
 ## Contributors
 
@@ -30,20 +28,35 @@ Southeast Asia.
 {% assign contributors = site.data.contributors | sort: "name" %}
 {% assign contributor_count = contributors | size %}
 
-<div style="margin: 1rem 0; padding: 1rem; background: #e8f5e8; border-radius: 6px;">
+<div class="alert alert-info" role="alert">
   <strong>{{ contributor_count }} contributors</strong> from across Southeast Asia and beyond 🎉
 </div>
 
-<div class="contributors" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.5rem;">
+Contributors are sorted alphabetically by their first name, by column.
+
+<ol class="contributors-list" style="columns: 3; column-gap: 2rem; break-inside: avoid;">
   {% for member in contributors %}
     {% if member.website != 'none' %}
-      <div style="padding: 0.25rem;">
-        <a href="{{ member.website }}" target="_blank" style="text-decoration: none; color: #007bff;">
+      <li style="break-inside: avoid; margin-bottom: 0.5rem;">
+        <a href="{{ member.website }}" target="_blank" class="text-decoration-none">
           {{ member.name }} <i class="fas fa-external-link" style="font-size: 0.75em;"></i>
         </a>
-      </div>
+      </li>
     {% else %}
-      <div style="padding: 0.25rem;">{{ member.name }}</div>
+      <li style="break-inside: avoid; margin-bottom: 0.5rem;">{{ member.name }}</li>
     {% endif %}
   {% endfor %}
-</div>
+</ol>
+
+<style>
+@media (max-width: 767px) {
+  .contributors-list {
+    columns: 1 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .contributors-list {
+    columns: 2 !important;
+  }
+}
+</style>

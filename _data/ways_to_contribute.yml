@@ -1,5 +1,5 @@
 - title: "🗣️ SEA Languages & Culture"
-  icon: "fas fa-globe-asia"
+  icon: "fa-globe-asia"
   description: "Speak SEA languages or familiar with the region?"
   items:
     - "Help collect and curate datasets for your languages"
@@ -7,16 +7,16 @@
     - "Share cultural context and linguistic insights"
 
 - title: "🎓 Academic Researcher"
-  icon: "fas fa-graduation-cap"
+  icon: "fa-graduation-cap"
   description: "Research experience in AI/ML/NLP?"
   items:
     - "Contribute to model training and evaluation"
     - "Collaborate on publications and papers"
-    - 'Mentor through our <a href="/apprenticeship.html">apprenticeship program</a>'
+    - 'Mentor through our <a href="/apprenticeship">apprenticeship program</a>'
     - "Guide early-career researchers"
 
 - title: "💻 Developer/Engineer"
-  icon: "fas fa-code"
+  icon: "fa-code"
   description: "Technical skills and coding experience?"
   items:
     - "Improve our codebase and technical infrastructure"
@@ -24,15 +24,15 @@
     - "Support model deployment and optimization"
 
 - title: "💰 Funding/Resources"
-  icon: "fas fa-hand-holding-usd"
+  icon: "fa-hand-holding-usd"
   description: "Have resources to support our mission?"
   items:
     - "Fund SEACrowd community initiatives"
-    - 'Support research by our <a href="/about.html">core team</a>'
+    - 'Support research by our <a href="/about">core team</a>'
     - "Sponsor events and workshops"
 
 - title: "📢 Educator/Leader"
-  icon: "fas fa-chalkboard-teacher"
+  icon: "fa-chalkboard-teacher"
   description: "Teaching or community leadership experience?"
   items:
     - "Share knowledge through talks and workshops"
@@ -41,9 +41,9 @@
     - "Promote SEACrowd initiatives"
 
 - title: "🌟 New to Research"
-  icon: "fas fa-seedling"
+  icon: "fa-seedling"
   description: "Eager to learn and contribute?"
   items:
-    - 'Join our <a href="/apprenticeship.html">apprenticeship program</a>'
+    - 'Join our <a href="/apprenticeship">apprenticeship program</a>'
     - "Participate in community discussions"
     - "Learn through collaborative projects"

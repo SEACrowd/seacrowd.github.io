@@ -41,7 +41,7 @@ defaults:
       path: ""
       type: "projects"
     values:
-      layout: "post"
+      layout: "project"
 
 # Collections
 collections:
@@ -73,6 +73,7 @@ sass:
 # Plugins
 plugins:
   - jekyll-scholar
+  - jekyll-sitemap
 
 # Jekyll Scholar
 scholar:

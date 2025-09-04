@@ -25,6 +25,7 @@ h4,
 h5,
 h6 {
   position: relative;
+  scroll-margin-top: 60px; /* Adjust for fixed navbar height */
 }
 
 .contributors p {

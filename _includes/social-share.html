@@ -1,18 +1,197 @@
-<ul class="share-buttons">
-  <a
-    style="color: #3b5998"
-    href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+{% if include.pageurl != nil and include.pageurl != '' %} {% assign pageurl = include.pageurl %} {%
+else %} {% assign pageurl = page.url %} {% endif %}
+
+<style>
+  #share-buttons {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #share-buttons:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #share-buttons > div {
+    position: relative;
+    text-align: center;
+    height: 36px;
+    width: 36px;
+    float: left;
+    margin: 0 4px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #share-buttons > div > i {
+    font-size: 18px;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  #share-buttons > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #share-buttons > div.facebook:hover {
+    background-color: #3b5998;
+  }
+  #share-buttons > div.facebook:hover > i {
+    color: white;
+  }
+  #share-buttons > div.twitter:hover {
+    background-color: #1da1f2;
+  }
+  #share-buttons > div.twitter:hover > i {
+    color: white;
+  }
+  #share-buttons > div.linkedin:hover {
+    background-color: #0077b5;
+  }
+  #share-buttons > div.linkedin:hover > i {
+    color: white;
+  }
+  #share-buttons > div.pinterest:hover {
+    background-color: #e60023;
+  }
+  #share-buttons > div.pinterest:hover > i {
+    color: white;
+  }
+  #share-buttons > div.instagram:hover {
+    background-color: #e4405f;
+  }
+  #share-buttons > div.instagram:hover > i {
+    color: white;
+  }
+  #share-buttons > div.bluesky:hover {
+    background-color: #00a8e8;
+  }
+  #share-buttons > div.bluesky:hover > i {
+    color: white;
+  }
+  #share-buttons > div.mail:hover {
+    background-color: #7d7d7d;
+  }
+  #share-buttons > div.mail:hover > i {
+    color: white;
+  }
+  #share-buttons > div.copy:hover {
+    background-color: #28a745;
+  }
+  #share-buttons > div.copy:hover > i {
+    color: white;
+  }
+
+  .copy-success {
+    background-color: #28a745 !important;
+  }
+  .copy-success > i {
+    color: white !important;
+  }
+</style>
+
+<span style="color: #666; font-size: 14px; margin-right: 8px">Share:</span>
+<div id="share-buttons">
+  <div
+    class="facebook"
     title="Share on Facebook"
-    target="_blank"
+    onclick="window.open('https://www.facebook.com/share.php?u={{ site.url }}{{ pageurl }}', '_blank', 'width=600,height=400');"
   >
-    <i class="fa fa-facebook-square fa-2x"></i>
-  </a>
-  <a
-    style="color: #0084b4"
-    href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}"
+    <i class="fa-brands fa-facebook-f"></i>
+  </div>
+
+  <div
+    class="twitter"
     title="Share on Twitter"
-    target="_blank"
+    onclick="window.open('https://twitter.com/intent/tweet?url={{ site.url }}{{ pageurl }}&text={{ page.title | default: site.title }}', '_blank', 'width=600,height=400');"
   >
-    <i class="fa fa-twitter-square fa-2x"></i>
-  </a>
-</ul>
+    <i class="fa-brands fa-twitter"></i>
+  </div>
+
+  <div
+    class="linkedin"
+    title="Share on LinkedIn"
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ pageurl }}&title={{ page.title | default: site.title }}', '_blank', 'width=600,height=400');"
+  >
+    <i class="fa-brands fa-linkedin-in"></i>
+  </div>
+
+  <div
+    class="pinterest"
+    title="Share on Pinterest"
+    onclick="window.open('https://pinterest.com/pin/create/button/?url={{ site.url }}{{ pageurl }}&media={{ site.url }}{% if page.image %}{{ page.image }}{% else %}/assets/img/banner.png{% endif %}&description={{ page.title | default: site.title }}', '_blank', 'width=600,height=400');"
+  >
+    <i class="fa-brands fa-pinterest"></i>
+  </div>
+
+  <div
+    class="instagram"
+    title="Share on Instagram"
+    onclick="window.open('https://www.instagram.com/', '_blank');"
+  >
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+
+  <div
+    class="bluesky"
+    title="Share on Bluesky"
+    onclick="window.open('https://bsky.app/intent/compose?text={{ page.title | default: site.title }} {{ site.url }}{{ pageurl }}', '_blank', 'width=600,height=400');"
+  >
+    <i class="fa-brands fa-bluesky"></i>
+  </div>
+
+  <div
+    class="mail"
+    title="Share via Email"
+    onclick="window.open('mailto:?subject={{ page.title | default: site.title }}&body=Check this out: {{ site.url }}{{ pageurl }}', '_blank');"
+  >
+    <i class="fas fa-envelope"></i>
+  </div>
+
+  <div
+    class="copy"
+    id="copyButton"
+    title="Copy URL to clipboard"
+    onclick="copyToClipboard('{{ site.url }}{{ pageurl }}', this);"
+  >
+    <i class="fas fa-copy"></i>
+  </div>
+</div>
+
+<script>
+  function copyToClipboard(text, element) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(function () {
+        showCopySuccess(element)
+      })
+    } else {
+      // Fallback for older browsers
+      const textArea = document.createElement("textarea")
+      textArea.value = text
+      document.body.appendChild(textArea)
+      textArea.focus()
+      textArea.select()
+      try {
+        document.execCommand("copy")
+        showCopySuccess(element)
+      } catch (err) {
+        console.error("Copy failed", err)
+      }
+      document.body.removeChild(textArea)
+    }
+  }
+
+  function showCopySuccess(element) {
+    const icon = element.querySelector("i")
+    element.classList.add("copy-success")
+    icon.className = "fas fa-check"
+    element.title = "Copied!"
+
+    setTimeout(() => {
+      element.classList.remove("copy-success")
+      icon.className = "fas fa-copy"
+      element.title = "Copy URL to clipboard"
+    }, 2000)
+  }
+</script>

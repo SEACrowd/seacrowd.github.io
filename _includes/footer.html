@@ -1,52 +1,138 @@
-<footer class="footer container-lg">
-  <div class="social-links">
-    {% if site.social.email %}
-    <a href="mailto:{{ site.social.email }}" class="social-link" title="Email">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-    {% endif %} {% if site.social.github %}
-    <a href="{{ site.social.github }}" class="social-link" title="GitHub">
-      <i class="fa-brands fa-github"></i>
-    </a>
-    {% endif %} {% if site.social.discord %}
-    <a href="{{ site.social.discord }}" class="social-link" title="Discord">
-      <i class="fa-brands fa-discord"></i>
-    </a>
-    {% endif %} {% if site.social.twitter %}
-    <a href="{{ site.social.twitter }}" class="social-link" title="Twitter">
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
-    {% endif %} {% if site.social.facebook %}
-    <a href="{{ site.social.facebook }}" class="social-link" title="Facebook">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
-    {% endif %} {% if site.social.linkedin %}
-    <a href="{{ site.social.linkedin }}" class="social-link" title="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    {% endif %} {% if site.social.bluesky %}
-    <a href="{{ site.social.bluesky }}" class="social-link" title="Bluesky">
-      <i class="fa-brands fa-bluesky"></i>
-    </a>
-    {% endif %} {% if site.social.google_group %}
-    <a href="{{ site.social.google_group }}" class="social-link" title="Google Group">
-      <i class="fa-solid fa-user-group"></i>
-    </a>
-    {% endif %}
+<footer class="bg-light border-top py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="mb-1">
+          <img
+            src="/assets/images/logo-wide.png"
+            alt="{{ site.name }}"
+            class="img-fluid"
+            style="max-height: 30px"
+          />
+        </div>
+        <p class="text-muted small mb-3">{{ site.description }}</p>
+
+        <div class="social-links mb-3">
+          {% if site.social.email %}
+          <a href="mailto:{{ site.social.email }}" class="social-link" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          {% endif %} {% if site.social.github %}
+          <a href="{{ site.social.github }}" class="social-link" title="GitHub" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          {% endif %} {% if site.social.discord %}
+          <a href="{{ site.social.discord }}" class="social-link" title="Discord" target="_blank">
+            <i class="fab fa-discord"></i>
+          </a>
+          {% endif %} {% if site.social.twitter %}
+          <a href="{{ site.social.twitter }}" class="social-link" title="Twitter" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          {% endif %} {% if site.social.linkedin %}
+          <a href="{{ site.social.linkedin }}" class="social-link" title="LinkedIn" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          {% endif %} {% if site.social.bluesky %}
+          <a href="{{ site.social.bluesky }}" class="social-link" title="Bluesky" target="_blank">
+            <i class="fab fa-bluesky"></i>
+          </a>
+          {% endif %} {% if site.social.google_group %}
+          <a
+            href="{{ site.social.google_group }}"
+            class="social-link"
+            title="Google Group"
+            target="_blank"
+          >
+            <i class="fas fa-user-group"></i>
+          </a>
+          {% endif %}
+        </div>
+
+        <div class="small text-muted">
+          <p class="mb-1">
+            © 2023 -
+            <span id="current-year"></span>
+            {{ site.name }}. All rights reserved.
+          </p>
+          <p class="mb-0">
+            Powered by
+            <a href="https://jekyllrb.com/" class="text-muted" target="_blank">Jekyll</a>
+            &
+            <a href="https://getbootstrap.com/" class="text-muted" target="_blank">Bootstrap</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+        <p class="fw-bold mb-3">SEACrowd</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="/about" class="text-decoration-none text-muted">About Us</a>
+          </li>
+          <li class="mb-2">
+            <a href="/publication" class="text-decoration-none text-muted">Publication</a>
+          </li>
+          <li class="mb-2"><a href="/news" class="text-decoration-none text-muted">News</a></li>
+          <li class="mb-2"><a href="/events" class="text-decoration-none text-muted">Events</a></li>
+          <li class="mb-2">
+            <a href="/join" class="text-decoration-none text-muted">Join Our Team</a>
+          </li>
+          <li class="mb-2"><a href="/legal" class="text-decoration-none text-muted">Legal</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+        <p class="fw-bold mb-3">For Researchers</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="/publication.html" class="text-decoration-none text-muted">Publication</a>
+          </li>
+          <li class="mb-2">
+            <a href="/resources.html" class="text-decoration-none text-muted">Resources</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+        <p class="fw-bold mb-3">For Contributors</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="/contribute.html" class="text-decoration-none text-muted">Contribute</a>
+          </li>
+          <li class="mb-2">
+            <a href="/apprenticeship.html" class="text-decoration-none text-muted">
+              Apprenticeship
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="/projects.html" class="text-decoration-none text-muted">Projects</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+        <p class="fw-bold mb-3">For Sponsors</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="/about.html#impact" class="text-decoration-none text-muted">Our Impact</a>
+          </li>
+          <li class="mb-2">
+            <a href="/sponsor.html" class="text-decoration-none text-muted">Ways to Give</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <p class="copyright">
-    ©
-    <span id="current-year">{{ "now" | date: "%Y" }}</span>
-    {{ site.name }} - {{ site.description }}
-  </p>
-  <p class="credits">
-    Powered by
-    <a href="https://jekyllrb.com/">Jekyll</a>
-    and
-    <a href="https://getbootstrap.com/">Bootstrap</a>
-  </p>
 </footer>
 
 <script>
-  document.getElementById("current-year").textContent = new Date().getFullYear()
+  // Get current year client side
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentYear = new Date().getFullYear()
+    const yearElement = document.getElementById("current-year")
+    if (yearElement) {
+      yearElement.textContent = currentYear
+    }
+  })
 </script>

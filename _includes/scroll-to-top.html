@@ -1,0 +1,44 @@
+<button
+  id="scroll-to-top"
+  class="btn btn-outline-secondary rounded-circle shadow"
+  style="
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    z-index: 1000;
+  "
+>
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scroll-to-top")
+
+    // Show/hide button based on scroll position
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.style.display = "block"
+      } else {
+        scrollToTopBtn.style.display = "none"
+      }
+    })
+
+    // Scroll to top when clicked
+    scrollToTopBtn.addEventListener("click", function () {
+      const target =
+        document.querySelector(".page-title") ||
+        document.querySelector("h1") ||
+        document.getElementById("page-top")
+
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" })
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      }
+    })
+  })
+</script>

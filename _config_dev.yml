@@ -1,0 +1,20 @@
+# Development-specific settings
+# Use with: bundle exec jekyll serve --config _config.yml,_config_dev.yml
+
+# Development optimizations
+profile: true
+livereload: true
+livereload_port: 35729
+
+# Faster regeneration
+future: true
+show_drafts: true
+unpublished: true
+
+# Enable detailed logging
+verbose: true
+
+# Faster Sass compilation in dev
+sass:
+  style: expanded
+  sourcemap: "development"

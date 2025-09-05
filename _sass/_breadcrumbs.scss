@@ -1,0 +1,46 @@
+.breadcrumb-nav {
+  padding: 0.5rem 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 56px;
+}
+
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #999;
+}
+
+.breadcrumb-link {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+.breadcrumb-separator {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.breadcrumb-current {
+  color: #777;
+  font-weight: 400;
+}
+
+@media (max-width: 40em) {
+  .breadcrumb-nav {
+    font-size: 0.65rem;
+  }
+
+  .breadcrumb-content {
+    gap: 0.3rem;
+  }
+}

@@ -1,27 +1,36 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class='navbar-brand page-scroll' href='/'><img src="{{site.baseurl}}/images/logo/banner-logo-transparent.png" height=20px></img></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <ul class="nav navbar-nav navbar-right">
-                      {% for nav in site.nav %}
-                      <li><a class='name' href="{{ nav.href }}">{{ nav.name }}</a></li>
-                      {% endfor %}
-                    </ul>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-md px-3">
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/logo-wide.png" alt="SEACrowd Logo" height="32" />
+    </a>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {% for nav in site.data.navigation %}
+        <li class="nav-item">
+          <a
+            class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
+            href="{{ nav.href }}"
+          >
+            {{ nav.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </nav>

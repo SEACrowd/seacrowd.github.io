@@ -1,72 +1,118 @@
-# # # # # # # #
-#   K i k o   #
-# # # # # # # #
-
-# Basic
-name:               "SEACrowd"
-title:              "SEACrowd: AI for SEA"
-description:        "SEACrowd"
+# Basic Site Info
+name: "SEACrowd"
+title: "SEACrowd: AI for SEA"
+description: "AI for Southeast Asia, by Southeast Asians"
 
 # URL
-url:                https://seacrowd.org
-baseurl:            
-#baseurl:            "" #For Root Domain
-permalink:          /:year/:month/:day/:title.html
+url: https://seacrowd.org
+# baseurl: "" # For Root Domain
+permalink: /:title/
+header-img: banner.png
 
-# Markdown
-markdown:           kramdown
+# Social Links
+social:
+  email: "seacrowd.research@gmail.com"
+  github: "https://github.com/seacrowd_ai"
+  discord: "https://discord.gg/XXRHFuvkTA"
+  twitter: "https://twitter.com/seacrowd"
+  facebook: "https://www.facebook.com/seacrowd2025"
+  linkedin: "https://www.linkedin.com/company/seacrowd/"
+  bluesky: "https://bsky.app/profile/seacrowd.bsky.social"
+  google_group: "https://groups.google.com/u/0/g/seacrowd"
 
-# Highlighter
-highlighter:        rouge
-
-# Navigation
-nav:
-  - name:           "news"
-    href:           "/news"
-  - name:           "people"
-    href:           "/people"
-  - name:           "projects"
-    href:           "/projects"
-  - name:           "publications"
-    href:           "/publication"
-  - name:           "events"
-    href:           "/events"
-  - name:           "apprenticeship"
-    href:           "/apprenticeshipprogram"
-  - name:           "Resources"
-    href:           "/resources"
-
-# Sass
-sass:
-  style:            :compressed
-
-# Scopes
+# Defaults
 defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
+  - scope:
+      path: ""
+      type: "pages"
     values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
     values:
-      layout:       "post"
-  -
-    scope:
-      path:         ""
-      type:         "people"
+      layout: "post"
+  - scope:
+      path: ""
+      type: "news"
     values:
-      layout:       "profile"
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
-scholar:
-   style: apa
-   source: /_bibliography/
-   bibliography: references.bib
-
+# Collections
 collections:
   people:
     output: true
     permalink: /people/:title/index.html
+  pages:
+    output: true
+    permalink: /:name/
+  news:
+    output: true
+    permalink: /news/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+# Markdown & Highlighter
+markdown: kramdown
+highlighter: rouge
+
+# Sass (Jekyll built-in)
+sass:
+  sass_dir: _sass
+  style: compressed
+  load_paths:
+    - _sass
+    - assets/css
+
+# Plugins
+plugins:
+  - jekyll-scholar
+  - jekyll-sitemap
+
+# Jekyll Scholar
+scholar:
+  style: apa
+  source: /_bibliography/
+  bibliography: references.bib
+
+# Exclude files from processing
+exclude:
+  - docker/
+  - .docker/
+  - Dockerfile
+  - docker-compose.yml
+  - "docker-compose.*.yml"
+  - .dockerignore
+  - .git/
+  - .gitignore
+  - .husky/
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - "*.lock"
+  - "*-lock.*"
+  - CNAME
+  - README.md
+  - LICENSE
+  - scripts/
+  - "*.log"
+
+# Keep files (override exclude)
+keep_files:
+  - .git
+  - .svn
+
+# Build settings
+incremental: true
+profile: false
+safe: false

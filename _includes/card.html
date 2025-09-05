@@ -1,0 +1,52 @@
+<a href="{{ include.item.url | relative_url }}" class="text-decoration-none">
+  <article class="card border-0 shadow-sm h-100 clickable-card">
+    <div class="card-body">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="/assets/images/{% if include.item.header-img %}{{ include.item.header-img }}{% else %}{{ site.header-img }}{% endif %}"
+            class="img-fluid rounded"
+            alt="{{ include.item.title }}"
+            style="height: 180px; object-fit: cover; width: 100%"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body ps-md-4">
+            <h3 class="card-title h4 mb-2 text-dark">{{ include.item.title }}</h3>
+            {% if include.item.date %}
+            <p class="text-muted small mb-2">
+              Posted on {{ include.item.date | date: "%B %-d, %Y" }}
+            </p>
+            {% endif %} {% if include.item.tags %}
+            <div class="mb-3">
+              {% for tag in include.item.tags %}
+              <span class="badge bg-secondary me-1">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %} {% if include.item.description %}
+            <p class="card-text text-muted">{{ include.item.description }}</p>
+            {% else %}
+            <p class="card-text text-muted">
+              {{ include.item.content | markdownify | strip_html | truncatewords:30 }}
+            </p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</a>
+
+<style>
+  .clickable-card {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .clickable-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+</style>

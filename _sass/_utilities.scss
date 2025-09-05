@@ -1,0 +1,39 @@
+.anchor-link {
+  color: #6c757d !important;
+  text-decoration: none !important;
+  margin-left: 0.5em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.anchor-link:hover {
+  color: #007bff !important;
+}
+
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  opacity: 1;
+}
+
+/* Ensure headings have position relative for anchor positioning */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  scroll-margin-top: 60px; /* Adjust for fixed navbar height */
+}
+
+.contributors p {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+// Image zoom functionality - match exact JS selector
+main img:not(.profile-thumbnail):not(a img):not(.card img):not(.clickable-card img) {
+  cursor: zoom-in;
+}

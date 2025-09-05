@@ -1,0 +1,17 @@
+{
+  "name": "seacrowd-website",
+  "version": "0.7.0",
+  "description": "SEACrowd Jekyll website",
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,scss,js,json,md,yml,yaml}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.{html,css,scss,js,json,md,yml,yaml}": "prettier --write"
+  }
+}

@@ -1,0 +1,32 @@
+.page-title {
+  font-weight: 600;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  margin-bottom: 2rem;
+}
+
+.post-date {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #6c757d;
+}
+
+// People/Profile styles
+.people {
+  margin: auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.profile-thumbnail {
+  object-fit: cover;
+  object-position: center top;
+  width: 200px;
+  height: 200px;
+}

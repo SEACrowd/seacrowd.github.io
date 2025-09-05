@@ -1,0 +1,52 @@
+services:
+  jekyll:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        BUILD_ENV: development
+        INSTALL_DEV_DEPS: true
+    image: seacrowd-jekyll:dev-3.4.5
+    ports:
+      - '4000:4000'
+      - '35729:35729' # LiveReload port
+    volumes:
+      - jekyll_vendor:/site/vendor
+      - jekyll_bundle:/usr/local/bundle
+      - jekyll_cache:/site/.jekyll-cache
+      - node_modules:/site/node_modules
+    environment:
+      - JEKYLL_ENV=development
+      - BUNDLE_PATH=/usr/local/bundle
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:4000/']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    develop:
+      watch:
+        - action: sync
+          path: ..
+          target: /site
+          ignore:
+            - _site/
+            - .git/
+            - vendor/
+            - node_modules/
+            - .bundle/
+            - .jekyll-cache/
+            - .sass-cache/
+            - Gemfile.lock
+            - docker/
+            - scripts/
+        - action: rebuild
+          path: ../_config.yml
+        - action: rebuild
+          path: ../_config_dev.yml
+
+volumes:
+  jekyll_vendor:
+  jekyll_bundle:
+  jekyll_cache:
+  node_modules:

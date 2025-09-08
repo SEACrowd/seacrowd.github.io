@@ -34,6 +34,6 @@ h6 {
 }
 
 // Image zoom functionality - match exact JS selector
-main img:not(.profile-thumbnail):not(a img):not(.card img):not(.clickable-card img) {
+main img:not(.profile-thumbnail):not(a img):not(.card img) {
   cursor: zoom-in;
 }

@@ -3,10 +3,11 @@
   "version": "0.7.0",
   "description": "SEACrowd Jekyll website",
   "scripts": {
-    "format": "prettier --write \"**/*.{html,css,scss,js,json,md,yml,yaml}\"",
+    "format": "prettier --write \"**/*.{html,liquid,css,scss,js,json,md,yml,yaml}\"",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.10.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
     "prettier": "^3.6.2"

@@ -2,7 +2,7 @@
   "semi": false,
   "trailingComma": "none",
   "singleQuote": false,
-  "printWidth": 100,
+  "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
   "bracketSpacing": true,
@@ -10,18 +10,14 @@
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
   "embeddedLanguageFormatting": "auto",
+  "plugins": ["@shopify/prettier-plugin-liquid"],
   "overrides": [
     {
-      "files": "*.html",
+      "files": "**/*.html",
       "options": {
-        "htmlWhitespaceSensitivity": "ignore"
-      }
-    },
-    {
-      "files": "*.md",
-      "options": {
-        "proseWrap": "always",
-        "printWidth": 100
+        "parser": "liquid-html",
+        "printWidth": 80,
+        "embeddedSingleQuote": false
       }
     }
   ]

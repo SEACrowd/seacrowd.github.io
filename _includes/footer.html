@@ -8,44 +8,79 @@
             alt="{{ site.name }}"
             class="img-fluid"
             style="max-height: 30px"
-          />
+          >
         </div>
         <p class="text-muted small mb-3">{{ site.description }}</p>
 
         <div class="social-links mb-3">
           {% if site.social.email %}
-          <a href="mailto:{{ site.social.email }}" class="social-link" title="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          {% endif %} {% if site.social.github %}
-          <a href="{{ site.social.github }}" class="social-link" title="GitHub" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          {% endif %} {% if site.social.discord %}
-          <a href="{{ site.social.discord }}" class="social-link" title="Discord" target="_blank">
-            <i class="fab fa-discord"></i>
-          </a>
-          {% endif %} {% if site.social.twitter %}
-          <a href="{{ site.social.twitter }}" class="social-link" title="Twitter" target="_blank">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          {% endif %} {% if site.social.linkedin %}
-          <a href="{{ site.social.linkedin }}" class="social-link" title="LinkedIn" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          {% endif %} {% if site.social.bluesky %}
-          <a href="{{ site.social.bluesky }}" class="social-link" title="Bluesky" target="_blank">
-            <i class="fab fa-bluesky"></i>
-          </a>
-          {% endif %} {% if site.social.google_group %}
-          <a
-            href="{{ site.social.google_group }}"
-            class="social-link"
-            title="Google Group"
-            target="_blank"
-          >
-            <i class="fas fa-user-group"></i>
-          </a>
+            <a
+              href="mailto:{{ site.social.email }}"
+              class="social-link"
+              title="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          {% endif %}
+          {% if site.social.github %}
+            <a
+              href="{{ site.social.github }}"
+              class="social-link"
+              title="GitHub"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          {% endif %}
+          {% if site.social.discord %}
+            <a
+              href="{{ site.social.discord }}"
+              class="social-link"
+              title="Discord"
+              target="_blank"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+          {% endif %}
+          {% if site.social.twitter %}
+            <a
+              href="{{ site.social.twitter }}"
+              class="social-link"
+              title="Twitter"
+              target="_blank"
+            >
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          {% endif %}
+          {% if site.social.linkedin %}
+            <a
+              href="{{ site.social.linkedin }}"
+              class="social-link"
+              title="LinkedIn"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          {% endif %}
+          {% if site.social.bluesky %}
+            <a
+              href="{{ site.social.bluesky }}"
+              class="social-link"
+              title="Bluesky"
+              target="_blank"
+            >
+              <i class="fab fa-bluesky"></i>
+            </a>
+          {% endif %}
+          {% if site.social.google_group %}
+            <a
+              href="{{ site.social.google_group }}"
+              class="social-link"
+              title="Google Group"
+              target="_blank"
+            >
+              <i class="fas fa-user-group"></i>
+            </a>
           {% endif %}
         </div>
 
@@ -57,9 +92,17 @@
           </p>
           <p class="mb-0">
             Powered by
-            <a href="https://jekyllrb.com/" class="text-muted" target="_blank">Jekyll</a>
+            <a href="https://jekyllrb.com/" class="text-muted" target="_blank">
+              Jekyll
+            </a>
             &
-            <a href="https://getbootstrap.com/" class="text-muted" target="_blank">Bootstrap</a>
+            <a
+              href="https://getbootstrap.com/"
+              class="text-muted"
+              target="_blank"
+            >
+              Bootstrap
+            </a>
           </p>
         </div>
       </div>
@@ -68,17 +111,29 @@
         <p class="fw-bold mb-3">SEACrowd</p>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="/about" class="text-decoration-none text-muted">About Us</a>
+            <a href="/about" class="text-decoration-none text-muted">
+              About Us
+            </a>
           </li>
           <li class="mb-2">
-            <a href="/publication" class="text-decoration-none text-muted">Publication</a>
+            <a href="/publication" class="text-decoration-none text-muted">
+              Publication
+            </a>
           </li>
-          <li class="mb-2"><a href="/news" class="text-decoration-none text-muted">News</a></li>
-          <li class="mb-2"><a href="/events" class="text-decoration-none text-muted">Events</a></li>
           <li class="mb-2">
-            <a href="/join" class="text-decoration-none text-muted">Join Our Team</a>
+            <a href="/news" class="text-decoration-none text-muted">News</a>
           </li>
-          <li class="mb-2"><a href="/legal" class="text-decoration-none text-muted">Legal</a></li>
+          <li class="mb-2">
+            <a href="/events" class="text-decoration-none text-muted">Events</a>
+          </li>
+          <li class="mb-2">
+            <a href="/join" class="text-decoration-none text-muted">
+              Join Our Team
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="/legal" class="text-decoration-none text-muted">Legal</a>
+          </li>
         </ul>
       </div>
 
@@ -86,10 +141,14 @@
         <p class="fw-bold mb-3">For Researchers</p>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="/publication" class="text-decoration-none text-muted">Publication</a>
+            <a href="/publication" class="text-decoration-none text-muted">
+              Publication
+            </a>
           </li>
           <li class="mb-2">
-            <a href="/resources" class="text-decoration-none text-muted">Resources</a>
+            <a href="/resources" class="text-decoration-none text-muted">
+              Resources
+            </a>
           </li>
         </ul>
       </div>
@@ -98,13 +157,19 @@
         <p class="fw-bold mb-3">For Contributors</p>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="/contribute" class="text-decoration-none text-muted">Contribute</a>
+            <a href="/contribute" class="text-decoration-none text-muted">
+              Contribute
+            </a>
           </li>
           <li class="mb-2">
-            <a href="/apprenticeship" class="text-decoration-none text-muted">Apprenticeship</a>
+            <a href="/apprenticeship" class="text-decoration-none text-muted">
+              Apprenticeship
+            </a>
           </li>
           <li class="mb-2">
-            <a href="/projects" class="text-decoration-none text-muted">Projects</a>
+            <a href="/projects" class="text-decoration-none text-muted">
+              Projects
+            </a>
           </li>
         </ul>
       </div>
@@ -113,10 +178,17 @@
         <p class="fw-bold mb-3">For Sponsors</p>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="/about.html#impact" class="text-decoration-none text-muted">Our Impact</a>
+            <a
+              href="/about.html#impact"
+              class="text-decoration-none text-muted"
+            >
+              Our Impact
+            </a>
           </li>
           <li class="mb-2">
-            <a href="/sponsor" class="text-decoration-none text-muted">Ways to Give</a>
+            <a href="/sponsor" class="text-decoration-none text-muted">
+              Ways to Give
+            </a>
           </li>
         </ul>
       </div>

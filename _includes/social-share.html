@@ -1,5 +1,8 @@
-{% if include.pageurl != nil and include.pageurl != '' %} {% assign pageurl = include.pageurl %} {%
-else %} {% assign pageurl = page.url %} {% endif %}
+{% if include.pageurl != null and include.pageurl != '' %}
+  {% assign pageurl = include.pageurl %}
+{% else %}
+  {% assign pageurl = page.url %}
+{% endif %}
 
 <style>
   #share-buttons {

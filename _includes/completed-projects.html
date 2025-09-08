@@ -1,24 +1,29 @@
-{% assign allProjects = site.projects | sort: 'fromDate' | reverse %} {% assign today = site.time |
-date: "%Y-%m-%d" %}
+{% assign allProjects = site.projects | sort: 'fromDate' | reverse %}
+{% assign today = site.time | date: '%Y-%m-%d' %}
 <div class="row g-4" id="completed-projects-container">
-  {% for project in allProjects %} {% assign isCompleted = false %} {% if project.toDate %} {%
-  assign projectEndDate = project.toDate | date: "%Y-%m-%d" %} {% if projectEndDate < today %} {%
-  assign isCompleted = true %} {% endif %} {% endif %}
-  <div
-    class="col-12 project-item completed"
-    data-to-date="{{ project.toDate | default: '' }}"
-    {%
-    unless
-    isCompleted
-    %}style="display: none;"
-    {%
-    endunless
-    %}
-  >
-    {% include project-card.html project=project %}
-  </div>
+  {% for project in allProjects %}
+    {% assign isCompleted = false %}
+    {% if project.toDate %}
+      {% assign projectEndDate = project.toDate | date: '%Y-%m-%d' %}
+      {% if projectEndDate < today %}
+        {% assign isCompleted = true %}
+      {% endif %}
+    {% endif %}
+    <div
+      class="col-12 project-item completed"
+      data-to-date="{{ project.toDate | default: '' }}"
+      {% unless isCompleted %}
+        style="display: none;"
+      {% endunless %}
+    >
+      {% include project-card.html project=project %}
+    </div>
   {% endfor %}
 </div>
-<p class="text-muted no-projects-message" data-type="completed" style="display: none">
+<p
+  class="text-muted no-projects-message"
+  data-type="completed"
+  style="display: none"
+>
   No completed projects yet.
 </p>

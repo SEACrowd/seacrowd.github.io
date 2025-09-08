@@ -1,23 +1,29 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      {% if page.title %} {{ site.name }} - {{ page.title }} - {{ site.description }} {% else %} {{
-      site.name }} - {{ site.description }} {% endif %}
+      {% if page.title %}
+        {{ site.name }} - {{ page.title }} - {{ site.description }}
+      {% else %}
+        {{ site.name }} - {{ site.description }}
+      {% endif %}
     </title>
 
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    />
+    >
 
-    <script src="https://kit.fontawesome.com/c96fb2b46d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c96fb2b46d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- MathJax 3 -->
     <script>
@@ -47,36 +53,40 @@
     <link
       href="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css"
       rel="stylesheet"
-    />
+    >
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="{{ 'assets/images/favicon.ico' | relative_url }}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ 'assets/images/favicon.ico' | relative_url }}"
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="{{ 'assets/images/favicon-32x32.png' | relative_url }}"
-    />
+    >
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="{{ 'assets/images/apple-touch-icon.png' | relative_url }}"
-    />
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="192x192"
       href="{{ 'assets/images/android-chrome-192x192.png' | relative_url }}"
-    />
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
       href="{{ 'assets/images/android-chrome-512x512.png' | relative_url }}"
-    />
+    >
 
     <!-- RSS Feed -->
     <link
@@ -84,65 +94,83 @@
       type="application/rss+xml"
       title="{{ site.title }}"
       href="{{ site.url }}/feed.xml"
-    />
+    >
 
     <!-- SEO and Social Meta Tags -->
-    {% assign page_url = page.url | absolute_url %} {% assign page_description = page.description %}
-    {% unless page_description %} {% assign page_description = content | strip_html | strip_newlines
-    | truncate: 160 %} {% endunless %}
+    {% assign page_url = page.url | absolute_url %}
+    {% assign page_description = page.description %}
+    {% unless page_description %}
+      {% assign page_description = content
+        | strip_html
+        | strip_newlines
+        | truncate: 160
+      %}
+    {% endunless %}
 
-    <link rel="canonical" href="{{ page_url }}" />
+    <link rel="canonical" href="{{ page_url }}">
     <meta
       name="description"
       content="{{ page_description | strip_html | condense_spaces | truncate:155 }}"
-    />
-    <meta name="robots" content="index, follow" />
+    >
+    <meta name="robots" content="index, follow">
     {% if page.layout == 'post' and page.date %}
-    <meta name="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+      <meta
+        name="article:published_time"
+        content="{{ page.date | date_to_xmlschema }}"
+      >
     {% endif %}
 
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="en_US">
     <meta
       property="og:type"
       content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
-    />
-    <meta property="og:url" content="{{ page_url }}" />
+    >
+    <meta property="og:url" content="{{ page_url }}">
     <meta
       property="og:title"
       content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }} | {{ site.description }}{% endif %}"
-    />
-    <meta property="og:site_name" content="{{ site.name }}" />
+    >
+    <meta property="og:site_name" content="{{ site.name }}">
     <meta
       property="og:description"
       content="{{ page_description | strip_html | condense_spaces | truncate:150 }}"
-    />
-    {% assign page_image = page.header-img | default: 'assets/images/banner.png' %}
-    <meta property="og:image" content="{{ page_image | absolute_url }}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    >
+    {% assign page_image = page['header-img']
+      | default: 'assets/images/banner.png'
+    %}
+    <meta property="og:image" content="{{ page_image | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image">
     <meta
       name="twitter:title"
       content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }} | {{ site.description }}{% endif %}"
-    />
+    >
     <meta
       name="twitter:description"
       content="{{ page_description | strip_html | condense_spaces | truncate:150 }}"
-    />
-    <meta name="twitter:image" content="{{ page_image | absolute_url }}" />
+    >
+    <meta name="twitter:image" content="{{ page_image | absolute_url }}">
     {% if site.social.twitter %}
-    <meta name="twitter:site" content="{{ site.social.twitter }}" />
+      <meta name="twitter:site" content="{{ site.social.twitter }}">
     {% endif %}
   </head>
 
-  <body id="page-top" class="d-flex flex-column min-vh-100" style="padding-top: 2em">
+  <body
+    id="page-top"
+    class="d-flex flex-column min-vh-100"
+    style="padding-top: 2em"
+  >
     {% include navbar.html %}
     <main class="flex-grow-1">
-      <div class="container-md" style="margin-top: 2em; margin-bottom: 2em">{{ content }}</div>
+      <div class="container-md" style="margin-top: 2em; margin-bottom: 2em">
+        {{ content }}
+      </div>
     </main>
-    {% include footer.html %} {% include scroll-to-top.html %}
+    {% include footer.html %}
+    {% include scroll-to-top.html %}
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -156,7 +184,9 @@
     ></script>
 
     <!-- Medium Zoom JS -->
-    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+    ></script>
     <script src="{{ '/assets/js/zoom.js' | relative_url }}"></script>
 
     <!-- AnchorJS for heading anchors -->

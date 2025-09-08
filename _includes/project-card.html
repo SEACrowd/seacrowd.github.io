@@ -8,12 +8,14 @@
             class="img-fluid rounded"
             alt="{{ include.project.title }}"
             style="height: 180px; object-fit: cover; width: 100%"
-          />
+          >
         </div>
         <div class="col-md-8">
           <div class="card-body ps-md-4">
             <div class="d-flex justify-content-between align-items-start mb-2">
-              <h3 class="card-title h4 mb-0 text-dark">{{ include.project.title }}</h3>
+              <h3 class="card-title h4 mb-0 text-dark">
+                {{ include.project.title }}
+              </h3>
               <span
                 class="badge project-status ms-2"
                 data-to-date="{{ include.project.toDate | default: '' }}"
@@ -22,15 +24,20 @@
               </span>
             </div>
             {% if include.project.fromDate or include.project.toDate %}
-            <p class="text-muted small mb-2">
-              {% if include.project.fromDate and include.project.toDate %} {{
-              include.project.fromDate | date: "%B %Y" }} – {{ include.project.toDate | date: "%B
-              %Y" }} {% elsif include.project.fromDate %} From {{ include.project.fromDate | date:
-              "%B %Y" }} {% elsif include.project.toDate %} Until {{ include.project.toDate | date:
-              "%B %Y" }} {% endif %}
-            </p>
+              <p class="text-muted small mb-2">
+                {% if include.project.fromDate and include.project.toDate %}
+                  {{ include.project.fromDate | date: '%B %Y' }} –
+                  {{ include.project.toDate | date: '%B %Y' }}
+                {% elsif include.project.fromDate %}
+                  From {{ include.project.fromDate | date: '%B %Y' }}
+                {% elsif include.project.toDate %}
+                  Until {{ include.project.toDate | date: '%B %Y' }}
+                {% endif %}
+              </p>
             {% endif %}
-            <p class="card-text text-muted">{{ include.project.description }}</p>
+            <p class="card-text text-muted">
+              {{ include.project.description }}
+            </p>
           </div>
         </div>
       </div>

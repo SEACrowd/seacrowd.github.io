@@ -1,47 +1,61 @@
 <div class="col-md-4 col-sm-6 text-center p-3">
-  {% if profile.avatar %} {% if profile.site and profile.site != "" %}
-  <a href="{{ profile.site }}" target="_blank">
-    <img
-      class="profile-thumbnail"
-      src="{{ 'assets/images/people/' | append: profile.avatar | relative_url }}"
-      alt="{{ profile.name }}"
-      style="display: block; margin: 0 auto 0.25rem auto"
-    />
-  </a>
-  {% else %}
-  <img
-    class="profile-thumbnail"
-    src="{{ 'assets/images/people/' | append: profile.avatar | relative_url }}"
-    alt="{{ profile.name }}"
-    style="display: block; margin: 0 auto 0.25rem auto"
-  />
-  {% endif %} {% endif %}
+  {% if profile.avatar %}
+    {% if profile.site and profile.site != '' %}
+      <a href="{{ profile.site }}" target="_blank">
+        <img
+          class="profile-thumbnail"
+          src="{{ 'assets/images/people/' | append: profile.avatar | relative_url }}"
+          alt="{{ profile.name }}"
+          style="display: block; margin: 0 auto 0.25rem auto"
+        >
+      </a>
+    {% else %}
+      <img
+        class="profile-thumbnail"
+        src="{{ 'assets/images/people/' | append: profile.avatar | relative_url }}"
+        alt="{{ profile.name }}"
+        style="display: block; margin: 0 auto 0.25rem auto"
+      >
+    {% endif %}
+  {% endif %}
 
   <p class="name m-1">{{ profile.name }}</p>
   <p class="text-muted small m-1">{{ profile.job }}</p>
 
   {% if profile.affiliation %}
-  <p class="affiliation text-muted small mb-1">{{ profile.affiliation }}</p>
+    <p class="affiliation text-muted small mb-1">{{ profile.affiliation }}</p>
   {% endif %}
 
   <div class="social-links mt-1">
-    {% if profile.site and profile.site != "" %}
-    <a href="{{ profile.site }}" target="_blank" class="social-link" title="Website">
-      <i class="fas fa-globe"></i>
-    </a>
-    {% endif %} {% if profile.twitter and profile.twitter != "" %}
-    <a
-      href="https://twitter.com/{{ profile.twitter }}"
-      target="_blank"
-      class="social-link"
-      title="Twitter/X"
-    >
-      <i class="fab fa-twitter"></i>
-    </a>
-    {% endif %} {% if profile.scholar and profile.scholar != "" %}
-    <a href="{{ profile.scholar }}" target="_blank" class="social-link" title="Google Scholar">
-      <i class="fas fa-graduation-cap"></i>
-    </a>
+    {% if profile.site and profile.site != '' %}
+      <a
+        href="{{ profile.site }}"
+        target="_blank"
+        class="social-link"
+        title="Website"
+      >
+        <i class="fas fa-globe"></i>
+      </a>
+    {% endif %}
+    {% if profile.twitter and profile.twitter != '' %}
+      <a
+        href="https://twitter.com/{{ profile.twitter }}"
+        target="_blank"
+        class="social-link"
+        title="Twitter/X"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+    {% endif %}
+    {% if profile.scholar and profile.scholar != '' %}
+      <a
+        href="{{ profile.scholar }}"
+        target="_blank"
+        class="social-link"
+        title="Google Scholar"
+      >
+        <i class="fas fa-graduation-cap"></i>
+      </a>
     {% endif %}
   </div>
 </div>

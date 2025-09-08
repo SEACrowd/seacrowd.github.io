@@ -40,8 +40,9 @@ Contribute to SEACrowd content without any technical setup:
 
 ## Development
 
-⚠️ In all cases, Jekyll requires restarting server when you make change to a root-level
-configuration file like `_config.yml`.
+⚠️ In all cases, Jekyll requires restarting server when you make change to
+a root-level configuration file like `_config.yml`,
+and special file [_layouts/bib.html] to render publication.
 
 ### Docker Environment (Recommended)
 
@@ -78,6 +79,27 @@ Features:
 - Production Jekyll configuration only
 - Smaller image size and faster startup
 - Automatic restart on failure
+
+#### Debugging Docker
+
+##### Failed build
+
+Sometimes changing build (e.g. adding gems, config, ) could fail.
+
+Try restarting the container.
+
+```bash
+docker compose -f docker/docker-compose.yml down
+docker compose -f docker/docker-compose.yml up --watch
+```
+
+If it doesn't work, try rebuilding:
+
+```bash
+docker compose -f docker/docker-compose.yml down
+docker compose -f docker/docker-compose.yml build --no-cache
+docker compose -f docker/docker-compose.yml up --watch
+```
 
 ### Manual Setup with Ruby
 

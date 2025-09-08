@@ -101,16 +101,17 @@ exclude:
   - Gemfile
   - "*.lock"
   - "*-lock.*"
-  - CNAME
   - README.md
   - LICENSE
   - scripts/
   - "*.log"
+  - _pages/robots.txt
 
 # Keep files (override exclude)
 keep_files:
   - .git
   - .svn
+  - _pages/robots.txt
 
 # Build settings
 incremental: true

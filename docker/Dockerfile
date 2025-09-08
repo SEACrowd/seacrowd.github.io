@@ -44,9 +44,10 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
 # Set environment variables
 ENV BUILD_ENV=${BUILD_ENV}
 
-# Environment-aware Jekyll command
-CMD if [ "$BUILD_ENV" = "development" ]; then \
-  bundle exec jekyll serve --host 0.0.0.0 --port 4000 --config _config.yml,_config_dev.yml; \
+# Environment-aware Jekyll command with bundle check fallback
+CMD bundle check || bundle install --jobs=4 --retry=3 && \
+  if [ "$BUILD_ENV" = "development" ]; then \
+    bundle exec jekyll serve --host 0.0.0.0 --port 4000 --config _config.yml,_config_dev.yml; \
   else \
-  bundle exec jekyll serve --host 0.0.0.0 --port 4000; \
+    bundle exec jekyll serve --host 0.0.0.0 --port 4000; \
   fi

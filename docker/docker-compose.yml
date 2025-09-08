@@ -6,10 +6,10 @@ services:
       args:
         BUILD_ENV: development
         INSTALL_DEV_DEPS: true
-    image: seacrowd-jekyll:dev-3.4.5
+    image: seacrowd-jekyll:dev-0.7
     ports:
-      - '4000:4000'
-      - '35729:35729' # LiveReload port
+      - "4000:4000"
+      - "35729:35729" # LiveReload port
     volumes:
       - jekyll_vendor:/site/vendor
       - jekyll_bundle:/usr/local/bundle
@@ -19,7 +19,7 @@ services:
       - JEKYLL_ENV=development
       - BUNDLE_PATH=/usr/local/bundle
     healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://localhost:4000/']
+      test: ["CMD", "curl", "-f", "http://localhost:4000/"]
       interval: 30s
       timeout: 10s
       retries: 3

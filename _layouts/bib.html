@@ -1,0 +1,272 @@
+---
+---
+<article class="bibliography-entry row m-1">
+  <div class="bibliography-meta col-md-3 mb-2">
+    {% if entry.abbr %}
+      {% assign venue = site.data.venues[entry.abbr] %}
+      {% if venue and venue.url %}
+        <a
+          href="{{ venue.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="publisher-name text-decoration-none d-inline-block px-2 py-1 w-100 rounded"
+        >
+          {{ entry.abbr -}}
+          {%- if entry.year %} {{ entry.year }}{% endif %}
+        </a>
+      {% else %}
+        <span class="publisher-name px-2 py-1 rounded w-100">
+          {{ entry.abbr -}}
+          {%- if entry.year %} {{ entry.year }}{% endif %}
+        </span>
+      {% endif %}
+    {% elsif entry.eprint %}
+      <span class="publisher-name px-2 py-1 rounded w-100">
+        arXiv{% if entry.year %} {{ entry.year }}{% endif %}
+      </span>
+    {% endif %}
+  </div>
+
+  {% if entry.preview %}
+    <img
+      src="{{ entry.preview | prepend: '/assets/images/pub_preview' | relative_url }}"
+      alt="Preview for {{ entry.title }}"
+      class="bibliography-preview mt-2 img-fluid rounded w-100"
+      style="max-height: 200px; object-fit: cover;"
+    >
+  {% endif %}
+
+  <div class="col-md-9">
+    {% if entry.award %}
+      <div class="award-badge mb-2">
+        <i class="fa-solid fa-award text-primary"></i>
+        <span class="award-name">{{ entry.award }}</span>
+      </div>
+    {% endif %}
+
+    <!-- Title -->
+    <div class="bibliography-title">
+      {% if entry.doi %}
+        <a
+          href="https://doi.org/{{ entry.doi }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>{{ entry.title }}</strong>
+        </a>
+      {% elsif entry.url %}
+        <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">
+          <strong>{{ entry.title }}</strong>
+        </a>
+      {% else %}
+        <strong>{{ entry.title }}</strong>
+      {% endif %}
+    </div>
+
+    <!-- Authors -->
+    <div class="bibliography-authors">
+      {% assign authors = entry.author | split: ' and ' %}
+      {% assign show_limit = site.pub_show_max_authors %}
+      {% assign all_names = '' | split: '' %}
+      {% assign short_names = '' | split: '' %}
+      {% for author in authors %}
+        {% assign parts = author | strip | split: ', ' %}
+        {% if parts.size >= 2 %}
+          {% assign first_name = parts[1] | strip %}
+          {% assign last_name = parts[0] | strip %}
+          {% assign name = first_name | append: ' ' | append: last_name %}
+        {% else %}
+          {% assign name = author | strip %}
+        {% endif %}
+        {% assign all_names = all_names | push: name %}
+        {% if forloop.index <= show_limit %}
+          {% assign short_names = short_names | push: name %}
+        {% endif %}
+      {% endfor %}
+      {% if authors.size <= show_limit %}
+        {{ all_names | join: ', ' }}
+      {% else %}
+        <span class="authors-short">
+          {{ short_names | join: ', ' }}
+          <button
+            type="button"
+            class="btn-link author-toggle"
+            onclick="toggleAuthors(this)"
+          >
+            and {{ authors.size | minus: show_limit }} more
+          </button>
+        </span>
+        <span class="authors-full d-none">
+          {{ all_names | join: ', ' }}
+          <button
+            type="button"
+            class="btn-link author-toggle"
+            onclick="toggleAuthors(this)"
+          >
+            (show fewer)
+          </button>
+        </span>
+      {% endif %}
+    </div>
+
+    <!-- Publication Details -->
+    <div class="bibliography-details">
+      {% if entry.journal %}
+        <span class="publication-type">{{ entry.journal }}</span>
+      {% elsif entry.booktitle %}
+        <span class="publication-type">{{ entry.booktitle }}</span>
+      {% elsif entry.publisher %}
+        <span class="publication-type">{{ entry.publisher }}</span>
+      {% elsif entry.eprint %}
+        <span class="publication-type">Preprint</span>
+      {% endif %}
+      {% if entry.year %} • {{ entry.year }}{% endif %}
+      {% if entry.volume %} • Vol. {{ entry.volume }}{% endif %}
+      {% if entry.number %} ({{ entry.number }}){% endif %}
+      {% if entry.pages %} • pp. {{ entry.pages }}{% endif %}
+      {% if entry.address %} • {{ entry.address }}{% endif %}
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="bibliography-buttons mt-3 d-flex flex-wrap gap-2">
+      {% if entry.abstract %}
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-sm"
+          onclick="toggleAbstract(this)"
+        >
+          Abstract
+        </button>
+      {% endif %}
+      {% if entry.doi %}
+        <a
+          href="https://doi.org/{{ entry.doi }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary btn-sm"
+        >
+          DOI
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      {% endif %}
+      {% if entry.pdf %}
+        {% if entry.pdf contains 'http' %}
+          <a
+            href="{{ entry.pdf }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-warning btn-sm"
+          >
+            PDF
+            <i class="fa-solid fa-external-link-alt"></i>
+          </a>
+        {% else %}
+          <a
+            href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"
+            target="_blank"
+            class="btn btn-outline-warning btn-sm"
+          >
+            PDF
+          </a>
+        {% endif %}
+      {% endif %}
+      {% if entry.code %}
+        <a
+          href="{{ entry.code }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary btn-sm"
+        >
+          Code
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      {% endif %}
+      {% if entry.resources %}
+        <a
+          href="{{ entry.resources }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary btn-sm"
+        >
+          Resources
+          <i class="fa-solid fa-external-link-alt"></i>
+        </a>
+      {% endif %}
+      {% if entry.video %}
+        {% if entry.video contains 'http' %}
+          <a
+            href="{{ entry.video }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            Video
+            <i class="fa-solid fa-external-link-alt"></i>
+          </a>
+        {% else %}
+          <a
+            href="{{ entry.video | prepend: '/assets/video/' | relative_url }}"
+            target="_blank"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            Video
+          </a>
+        {% endif %}
+      {% endif %}
+      {% if entry.slides %}
+        <a
+          href="{{ entry.slides }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary btn-sm"
+        >
+          Slides
+        </a>
+      {% endif %}
+      {% if entry.poster %}
+        <a
+          href="{{ entry.poster }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary btn-sm"
+        >
+          Poster
+        </a>
+      {% endif %}
+      {% if entry.arxiv %}
+        <a
+          href="https://arxiv.org/abs/{{ entry.arxiv }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary btn-sm"
+        >
+          arXiv
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Abstract -->
+    {% if entry.abstract %}
+      <div class="bibliography-abstract mt-3 d-none">
+        <div class="abstract-content">{{ entry.abstract }}</div>
+      </div>
+    {% endif %}
+  </div>
+</article>
+
+<script>
+  function toggleAuthors(button) {
+    const entry = button.closest(".bibliography-entry")
+    entry.querySelector(".authors-short").classList.toggle("d-none")
+    entry.querySelector(".authors-full").classList.toggle("d-none")
+  }
+
+  function toggleAbstract(button) {
+    const entry = button.closest(".bibliography-entry")
+    const abstract = entry.querySelector(".bibliography-abstract")
+    abstract.classList.toggle("d-none")
+    button.textContent = abstract.classList.contains("d-none")
+      ? "Abstract"
+      : "Hide Abstract"
+  }
+</script>

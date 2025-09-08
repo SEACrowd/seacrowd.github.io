@@ -78,8 +78,16 @@ plugins:
 # Jekyll Scholar
 scholar:
   style: apa
+  locale: en
   source: /_bibliography/
-  bibliography: references.bib
+  bibliography: "**/*.bib{,tex}"
+  bibliography_template: bib # _layouts/bib.html
+  sort_by: year,month
+  order: descending
+  group_by: none
+  group_order: ascending
+
+pub_show_max_authors: 10
 
 # Exclude files from processing
 exclude:

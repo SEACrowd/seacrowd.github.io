@@ -44,6 +44,8 @@ services:
           path: ../_config.yml
         - action: rebuild
           path: ../_config_dev.yml
+        - action: rebuild
+          path: ../_layouts/bib.html
 
 volumes:
   jekyll_vendor:

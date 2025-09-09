@@ -16,25 +16,4 @@ peer-reviewed papers which will hopefully lead to PhD acceptance letters, job pl
     <b>Applications for the apprenticeship program is currently closed.</b><br>
     Information for the next application openings will be released soon.
   </div>
-</div><br>
-
-The following groups have been on the program.
-
-### Project 1
-
-Mentors: Samuel Cahyawijaya, Alham Fikri Aji, Peerat Limkonchotiwat, Genta Indra Winata, and Fajri
-Koto
-
-Members: Joanito Agili Lopo, Muhammad Ravi Shulthan Habibi, Tack Hwa Wong, Muhammad Ilham Ghozali
-
-### Project 2
-
-Mentors: Genta Indra Winata and Ekapol Chuangsuwanich
-
-Members: Muhammad Dehan Al Kautsar, Aswin Candra, M. Alif, Maxalmina Satria Kahfi
-
-### Project 3
-
-Mentors: Samuel Cahyawijaya, Fajri Koto, Alham Fikri Aji, and Genta Indra Winata
-
-Members: Patrick Amadeus Irawan, Ryandito Diandaru, Randy Zakya, Belati Jagad Bintang Syuhada
+</div>

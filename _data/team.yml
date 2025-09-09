@@ -14,6 +14,7 @@
   sortorder: 0
   job: Research Steering & SIGSEA Secretary
   site: https://www.fajrikoto.com/
+  scholar: https://scholar.google.com/citations?user=RA9l3s4AAAAJ&hl=id
 
 - name: Frederikus Hudi
   position: coreteam
@@ -30,6 +31,7 @@
   sortorder: 0
   job: Funding Head
   site: https://onnokampman.github.io/
+  scholar: https://scholar.google.com/citations?user=gSVe8CkAAAAJ
 
 - name: Salsabil Maulana Akbar
   position: coreteam
@@ -46,6 +48,7 @@
   sortorder: 1
   job: Research Steering Head
   site: https://afaji.github.io/
+  scholar: https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en&oi=ao
 
 - name: Jan Christian Blaise Cruz
   position: coreteam
@@ -71,6 +74,7 @@
   sortorder: 1
   job: Research Steering
   site: https://samuelcahyawijaya.github.io/
+  scholar: https://scholar.google.com/citations?user=w5w_WZEAAAAJ&hl=en
 
 - name: Aye Hninn Khine
   position: coreteam
@@ -127,3 +131,11 @@
   sortorder: 2
   job: Communications
   site: https://www.ruochenzhang.com/
+
+- name: My Chiffon Nguyen
+  position: coreteam
+  avatar: my_chiffon_nguyen.jpg
+  twitter: ""
+  sortorder: 2
+  job: Communications
+  site: https://mychiffonn.com/

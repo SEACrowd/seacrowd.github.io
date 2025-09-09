@@ -34,6 +34,19 @@ h6 {
 }
 
 // Image zoom functionality - match exact JS selector
-main img:not(.profile-thumbnail):not(a img):not(.card img) {
+main
+  img:not(.profile-thumbnail):not(a img):not(.card img):not(
+    .clickable-card img
+  ),
+main .bibliography-preview {
   cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.medium-zoom-overlay {
+  z-index: 999;
+}
+
+.medium-zoom-image--opened {
+  z-index: 1000;
 }

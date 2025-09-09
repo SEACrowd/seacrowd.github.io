@@ -25,16 +25,16 @@
         arXiv{% if entry.year %} {{ entry.year }}{% endif %}
       </span>
     {% endif %}
-  </div>
 
-  {% if entry.preview %}
-    <img
-      src="{{ entry.preview | prepend: '/assets/images/pub_preview' | relative_url }}"
-      alt="Preview for {{ entry.title }}"
-      class="bibliography-preview mt-2 img-fluid rounded w-100"
-      style="max-height: 200px; object-fit: cover;"
-    >
-  {% endif %}
+    {% if entry.preview %}
+      <img
+        src="{{ entry.preview | prepend: '/assets/images/pub_preview/' | relative_url }}"
+        alt="Preview for {{ entry.title }}"
+        class="bibliography-preview img-fluid rounded mw-100"
+        style="object-fit: cover;"
+      >
+    {% endif %}
+  </div>
 
   <div class="col-md-9">
     {% if entry.award %}
@@ -44,7 +44,6 @@
       </div>
     {% endif %}
 
-    <!-- Title -->
     <div class="bibliography-title">
       {% if entry.doi %}
         <a
@@ -63,7 +62,6 @@
       {% endif %}
     </div>
 
-    <!-- Authors -->
     <div class="bibliography-authors">
       {% assign authors = entry.author | split: ' and ' %}
       {% assign show_limit = site.pub_show_max_authors %}
@@ -109,7 +107,6 @@
       {% endif %}
     </div>
 
-    <!-- Publication Details -->
     <div class="bibliography-details">
       {% if entry.journal %}
         <span class="publication-type">{{ entry.journal }}</span>
@@ -127,7 +124,6 @@
       {% if entry.address %} • {{ entry.address }}{% endif %}
     </div>
 
-    <!-- Action Buttons -->
     <div class="bibliography-buttons mt-3 d-flex flex-wrap gap-2">
       {% if entry.abstract %}
         <button
@@ -245,7 +241,6 @@
       {% endif %}
     </div>
 
-    <!-- Abstract -->
     {% if entry.abstract %}
       <div class="bibliography-abstract mt-3 d-none">
         <div class="abstract-content">{{ entry.abstract }}</div>

@@ -5,11 +5,9 @@ permalink: /events/
 
 The latest events from the organization, our partners, and the rest of the SEA community.
 
-<div class="w3-container" style="background: #f0f8ff; padding: 25px; border-radius:10px; border: 1px solid #5d8aa8">
-  <div style="text-align:center">
-    Explore moments captured from our community events in our <a href="https://photos.app.goo.gl/chgNTwJkFH7K1kBAA">Google Photos Album</a>!
-  </div>
-</div><br>
+<div id="events-alert" class="alert alert-info text-center" role="alert">
+  Explore moments captured from our community events in our <a href="https://photos.app.goo.gl/chgNTwJkFH7K1kBAA">Google Photos Album</a>!
+</div>
 
 ## Workshops
 

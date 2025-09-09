@@ -8,9 +8,9 @@ description: Papers that we have published so far as a community
 
 ## Affiliated publication
 
-## Apprentice
+## Selected papers by apprentices
 
-Papers originated from our [apprenticeship](/apprenticeship) program.
+Selected papers and preprints originated from our [apprenticeship](/apprenticeship) program.
 Please visit [apprenticeship](/apprenticeship) for more details.
 
-{% bibliography --file apprenticeship_24-25 %}
+{% bibliography --file apprenticeship %}

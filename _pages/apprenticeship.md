@@ -31,3 +31,5 @@ peer-reviewed papers which will hopefully lead to PhD acceptance letters, job pl
     );
   });
 </script>
+
+{% include apprenticeship-tabs.html %}

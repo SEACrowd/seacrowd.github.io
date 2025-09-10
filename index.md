@@ -30,5 +30,5 @@ We commit to a three-pronged approach to reaching our vision:
 {% assign recentNews = site.news | sort: 'date' | reverse | limit: 5 %}
 {% for article in recentNews %}
 {{ article.date | date: "%b %-d, %Y" }} -
-<a href="{{ article.url }}" class="text-decoration-none">{{ article.title }}</a>
+<a href="{{ article.url }}">{{ article.title }}</a>
 {% endfor %}

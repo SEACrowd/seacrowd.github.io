@@ -1,8 +1,7 @@
 .footer {
   padding: 1rem 0;
-  border-top: 1px solid #dee2e6;
-  text-align: center;
-  color: #6c757d;
+  border-top: 1px solid var(--bs-tertiary-color);
+  color: var(--bs-secondary-color);
 }
 
 .social-links {
@@ -18,13 +17,13 @@
 }
 
 .social-link {
-  color: #6c757d;
+  color: var(--bs-secondary-color);
   font-size: 1.2rem;
   transition: color 0.3s ease;
   text-decoration: none;
   display: inline-block;
 
   &:hover {
-    color: #0d6efd;
+    color: var(--bs-secondary);
   }
 }

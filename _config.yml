@@ -87,7 +87,7 @@ scholar:
   group_by: none
   group_order: ascending
 
-pub_show_max_authors: 10
+pub_show_max_authors: 8 # first + last authors
 
 # Exclude files from processing
 exclude:
@@ -114,12 +114,14 @@ exclude:
   - scripts/
   - "*.log"
   - _pages/robots.txt
+  - _pages/feed.xml
 
 # Keep files (override exclude)
 keep_files:
   - .git
   - .svn
   - _pages/robots.txt
+  - _pages/feed.xml
 
 # Build settings
 incremental: true

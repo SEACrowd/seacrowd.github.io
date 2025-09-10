@@ -1,113 +1,137 @@
-// Remove numbering from bibliography list
-.bibliography,
-.bibliography div,
-.bibliography ol,
-.bibliography ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-  counter-reset: none !important;
+.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-  &::before {
-    display: none !important;
+  li::marker,
+  li::before {
+    content: none;
+  }
+}
+
+/* ---------------------------
+   Bibliography Entry
+---------------------------- */
+.bibliography-entry {
+  .bibliography-preview {
+    object-fit: cover;
   }
 
-  li {
-    list-style: none !important;
-    counter-increment: none !important;
+  .bibliography-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
-    &::before,
-    &::marker {
-      display: none !important;
-      content: none !important;
+    a[target="_blank"]::after,
+    a[rel*="noopener"]::after {
+      content: "\f35d";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-left: 0.25rem;
+      font-size: 0.875em;
     }
   }
 }
 
-.bibliography-entry {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border: 1px solid #e9ecef;
+.author-toggle {
+  border: none;
+  background: none;
+  color: var(--bs-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
 
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  &:hover {
+    color: var(--bs-secondary-dark);
+  }
+}
 
-  .bibliography-meta {
-    .publisher-name {
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 0.25rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      text-align: center;
-    }
+/* ---------------------------
+   Metadata / Badges
+---------------------------- */
+.publisher-name {
+  font-size: 0.5rem;
+  width: 100%;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  color: inherit;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  a:hover,
+  a:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+}
+
+.award-badge {
+  .fa-award {
+    margin-right: 0.5rem;
   }
 
-  .award-badge {
-    .fa-award {
-      margin-right: 0.5rem;
-    }
-
-    .award-name {
-      font-weight: 600;
-      color: #007bff;
-      font-size: 0.9rem;
-    }
-  }
-
-  .bibliography-title {
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .bibliography-authors {
-    margin-bottom: 0.75rem;
-    color: #6c757d;
-    line-height: 1.4;
-
-    .author-toggle {
-      background: none;
-      border: none;
-      color: #007bff;
-      text-decoration: underline;
-      cursor: pointer;
-      padding: 0;
-      font: inherit;
-
-      &:hover {
-        color: #0056b3;
-      }
-    }
-  }
-
-  .bibliography-details {
+  .award-name {
+    font-weight: 600;
+    color: var(--bs-primary);
     font-size: 0.9rem;
-    color: #6c757d;
-    margin-bottom: 1rem;
+  }
+}
 
-    .publication-type {
-      font-weight: 500;
-      color: #495057;
+/* ---------------------------
+   Bibliography Content
+---------------------------- */
+.bibliography-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--bs-primary-color);
+}
+
+.bibliography-authors {
+  margin-bottom: 0.75rem;
+  color: var(--bs-body-secondary-color);
+  line-height: 1.4;
+
+  .team-member {
+    text-decoration: underline dotted;
+  }
+}
+
+.bibliography-details {
+  font-size: 0.9rem;
+  color: var(--bs-body-secondary-color);
+  margin-bottom: 1rem;
+
+  .publication-type {
+    font-weight: 500;
+    color: var(--bs-secondary-color);
+  }
+}
+
+/* ---------------------------
+   Abstract Disclosure (details/summary)
+---------------------------- */
+.bibliography-abstract {
+  display: inline-block;
+
+  summary {
+    cursor: pointer;
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
     }
   }
 
-  .bibliography-abstract {
-    border-top: 1px solid #e9ecef;
-    padding-top: 1rem;
-    margin-top: 1rem;
-
-    .abstract-content {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #495057;
-      text-align: justify;
-    }
+  .abstract-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--bs-secondary-color);
+    text-align: justify;
   }
 }

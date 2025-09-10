@@ -1,61 +1,77 @@
-<a href="{{ include.item.url | relative_url }}" class="text-decoration-none">
-  <article class="card border-0 shadow-sm h-100 clickable-card">
-    <div class="card-body">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img
-            src="/assets/images/{% if include.item.header-img %}{{ include.item.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-            class="img-fluid rounded"
-            alt="{{ include.item.title }}"
-            style="height: 180px; object-fit: cover; width: 100%"
-          >
-        </div>
-        <div class="col-md-8">
-          <div class="card-body ps-md-4">
-            <h3 class="card-title h4 mb-2 text-dark">
-              {{ include.item.title }}
-            </h3>
-            {% if include.item.date %}
-              <p class="text-muted small mb-2">
-                Posted on {{ include.item.date | date: '%B %-d, %Y' }}
-              </p>
-            {% endif %}
-            {% if include.item.tags %}
-              <div class="mb-3">
-                {% for tag in include.item.tags %}
-                  <span class="badge bg-secondary me-1">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-            {% if include.item.description %}
-              <p class="card-text text-muted">{{ include.item.description }}</p>
+<article
+  class="card card-clickable h-100"
+  aria-labelledby="card-title-{{ include.item.title | slugify }}"
+  aria-describedby="card-desc-{{ include.item.title | slugify }}"
+>
+  <a
+    href="{{ include.item.url | relative_url }}"
+    class="text-reset"
+  >
+    <div class="row g-0 h-100">
+      <div class="col-md-4 p-3">
+        <img
+          src="/assets/images/{% if include.type == 'project' %}project/{% endif %}{% if include.item.header-img %}{{ include.item.header-img }}{% else %}{{ site.header-img }}{% endif %}"
+          class="img-fluid {% if include.type == 'project' %}rounded{% endif %} w-100 object-fit-cover"
+          alt="{{ include.item.title }}"
+          style="height: 180px;"
+        >
+      </div>
+
+      <div class="col-md-8 ps-md-4 card-body">
+        <h3
+          id="card-title-{{ include.item.title | slugify }}"
+          class="card-title mt-0"
+        >
+          {{ include.item.title }}
+        </h3>
+
+        {% if include.type == 'project' %}
+          {% if include.item.fromDate or include.item.toDate %}
+            <p class="text-muted small mb-2">
+              {% if include.item.fromDate and include.item.toDate %}
+                {{ include.item.fromDate | date: '%B %Y' }} –
+                {{ include.item.toDate | date: '%B %Y' }}
+              {% elsif include.item.fromDate %}
+                From {{ include.item.fromDate | date: '%B %Y' }}
+              {% elsif include.item.toDate %}
+                Until {{ include.item.toDate | date: '%B %Y' }}
+              {% endif %}
+            </p>
+          {% endif %}
+        {% else %}
+          {% if include.item.date %}
+            <p class="text-muted small mb-2">
+              Posted on {{ include.item.date | date: '%B %-d, %Y' }}
+            </p>
+          {% endif %}
+        {% endif %}
+
+        {% if include.item.tags %}
+          {% for tag in include.item.tags %}
+            <span class="badge bg-secondary me-1">{{ tag }}</span>
+          {% endfor %}
+        {% endif %}
+
+        <p
+          id="card-desc-{{ include.item.title | slugify }}"
+          class="card-text text-muted mt-2"
+        >
+          {% if include.item.description %}
+            {{ include.item.description }}
+          {% else %}
+            {% if include.type == 'project' %}
+              <!-- projects are always expected to have description -->
             {% else %}
-              <p class="card-text text-muted">
-                {{
-                  include.item.content
-                  | markdownify
-                  | strip_html
-                  | truncatewords: 30
-                }}
-              </p>
+              {{
+                include.item.content
+                | markdownify
+                | strip_html
+                | truncatewords: 30
+              }}
             {% endif %}
-          </div>
-        </div>
+          {% endif %}
+        </p>
       </div>
     </div>
-  </article>
-</a>
-
-<style>
-  .clickable-card {
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-    cursor: pointer;
-  }
-
-  .clickable-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  }
-</style>
+  </a>
+</article>

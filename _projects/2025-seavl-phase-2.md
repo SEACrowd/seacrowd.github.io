@@ -1,7 +1,5 @@
 ---
 title: SEA-VL Phase 2
-tags:
-  - project
 header-img: seavl-phase2-banner.png
 description: Large-scale Multimodal Models for Southeast Asia.
 fromDate: 2025-03-01

@@ -8,7 +8,7 @@ date: 2025-05-08
 ---
 
 **Please check the project page for information on contributing**:
-[SEA-VL Phase 2]({{ '/projects/2025-seavl-phase-2' }})
+[SEA-VL Phase 2](/projects/2025-seavl-phase-2)
 
 Welcome! SEA-VL is a global community project organized by the SEACrowd community to push the
 boundaries of vision and language research in Southeast Asia (SEA). We recently completed

@@ -12,6 +12,7 @@
     </title>
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -19,40 +20,10 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     >
-
-    <script
-      src="https://kit.fontawesome.com/c96fb2b46d.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [
-            ["$", "$"],
-            ["\\(", "\\)"]
-          ],
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"]
-          ]
-        },
-        svg: {
-          fontCache: "global"
-        }
-      }
-    </script>
-    <script
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
-    ></script>
-
     <link
       href="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/style.min.css"
       rel="stylesheet"
     >
-
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
     <link
@@ -92,19 +63,21 @@
     >
 
     {% assign page_url = page.url | absolute_url %}
-    {% assign page_description = page.description %}
-    {% unless page_description %}
-      {% assign page_description = content
-        | strip_html
-        | strip_newlines
-        | truncate: 160
-      %}
-    {% endunless %}
+    {% assign page_description = page.description
+      | default: content
+      | strip_html
+      | strip_newlines
+      | condense_spaces
+      | truncate: 150
+    %}
+    {% assign page_image = page['header-img']
+      | default: 'assets/images/banner.png'
+    %}
 
     <link rel="canonical" href="{{ page_url }}">
     <meta
       name="description"
-      content="{{ page_description | strip_html | condense_spaces | truncate:155 }}"
+      content="{{ page_description }}"
     >
     <meta name="robots" content="index, follow">
     {% if page.layout == 'post' and page.date %}
@@ -127,11 +100,8 @@
     <meta property="og:site_name" content="{{ site.name }}">
     <meta
       property="og:description"
-      content="{{ page_description | strip_html | condense_spaces | truncate:150 }}"
+      content="{{ page_description }}"
     >
-    {% assign page_image = page['header-img']
-      | default: 'assets/images/banner.png'
-    %}
     <meta property="og:image" content="{{ page_image | absolute_url }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -143,7 +113,7 @@
     >
     <meta
       name="twitter:description"
-      content="{{ page_description | strip_html | condense_spaces | truncate:150 }}"
+      content="{{ page_description }}"
     >
     <meta name="twitter:image" content="{{ page_image | absolute_url }}">
     {% if site.social.twitter %}
@@ -153,37 +123,40 @@
 
   <body
     id="page-top"
-    class="d-flex flex-column min-vh-100"
-    style="padding-top: 2em"
+    class="d-flex flex-column min-vh-100 pt-2"
   >
     {% include navbar.html %}
     <main class="flex-grow-1">
-      <div class="container-md" style="margin-top: 2em; margin-bottom: 2em">
+      <div class="container-md my-2">
         {{ content }}
       </div>
     </main>
-    {% include footer.html %}
     {% include scroll-to-top.html %}
+    {% include footer.html %}
 
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      defer
+      src="https://kit.fontawesome.com/c96fb2b46d.js"
       crossorigin="anonymous"
     ></script>
-
     <script
+      defer
       src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
     ></script>
-    <script src="{{ '/assets/js/zoom.js' | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/zoom.js' | relative_url }}"></script>
 
     <!-- AnchorJS for heading anchors -->
-    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
-    <script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"
+    ></script>
+    <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         anchors.options = {
           placement: "right",
@@ -192,9 +165,31 @@
           icon: "#"
         }
 
-        // Add anchors to headings h2-h6 (excluding h1 which is usually the page title)
         anchors.add("h2, h3, h4, h5, h6")
       })
     </script>
+    <script defer>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        svg: {
+          fontCache: "global"
+        }
+      }
+    </script>
+    <script
+      defer
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
   </body>
 </html>

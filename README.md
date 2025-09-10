@@ -63,95 +63,46 @@ In `_bibliography/`:
 
 ## Development
 
-⚠️ In all cases, Jekyll requires restarting server when you make change to
-a root-level configuration file like `_config.yml`,
-and special file [_layouts/bib.html] to render publication.
-Docker automates this.
+### Quick Start
 
-### Docker Environment (Recommended)
-
-We use a single environment-aware Dockerfile that builds optimized containers for both development
-and production.
-
-#### Development Mode (Default)
-
-For full development with Ruby, Jekyll, Node.js, and Prettier:
+**Docker (Recommended):** Building requires `docker compose` and >= 1.9GB disk space.
 
 ```bash
-docker compose -f docker/docker-compose.yml build
-docker compose -f docker/docker-compose.yml up --watch
+make build && make dev
 ```
 
-Features:
-
-- Live reloading on port 4000 + 35729 (LiveReload)
-- Development config (`_config_dev.yml`) with verbose logging
-- Node.js and Prettier for code formatting
-- File watching with auto-rebuild on config changes
-
-#### Production Mode
-
-For production builds (minimal, no dev dependencies):
+To change ports:
 
 ```bash
-docker compose -f docker/docker-compose-prod.yml build
-docker compose -f docker/docker-compose-prod.yml up
+JEKYLL_PORT=4001 LIVERELOAD_PORT=35730 make dev
 ```
 
-Features:
+or create `.env` file from `.env.example`.
 
-- Production Jekyll configuration only
-- Smaller image size and faster startup
-- Automatic restart on failure
+- Make exists on most systems, but if yours doesn't have it, copy corresponding commands in Makefile.
+  You can check for this using `make -v`
+- If `docker compose` (compose plugin of Docker) doesn't work, try `docker-compose` (separate build).
 
-#### Debugging Docker
-
-##### Failed build
-
-Sometimes changing build (e.g. adding gems, config, ) could fail.
-
-Try restarting the container.
+**Manual Ruby Setup:**
 
 ```bash
-docker compose -f docker/docker-compose.yml down
-docker compose -f docker/docker-compose.yml up --watch
+make install  # Install dependencies
+make serve    # Run development server
 ```
 
-If it doesn't work, try rebuilding:
+### Available Commands
 
-```bash
-docker compose -f docker/docker-compose.yml down
-docker compose -f docker/docker-compose.yml build --no-cache
-docker compose -f docker/docker-compose.yml up --watch
-```
+See [Makefile](Makefile) for all development commands:
 
-### Manual Setup with Ruby
+- `make dev` - Development server with live reload, and
+  pre-commit hook for code formatting
+- `make prod` - Production build
+- `make rebuild` - Rebuild containers without cache (if changes not reflected)
+- `make clean` - Remove Jekyll caches
+- `make format` - Format code (requires npm)
 
-If you prefer to run without Docker, ensure you have Ruby installed (managed through
-[rbenv](https://github.com/rbenv/rbenv) preferred):
+### Setup Notes
 
-1. Install rbenv and Ruby:
-
-```bash
-# Install rbenv (macOS/Linux)
-brew install rbenv
-
-# Add to your shell profile (.zshrc, .bash_profile, etc.)
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(rbenv init -)"' >> ~/.zshrc
-source ~/.zshrc
-
-# Install Ruby version specified in .ruby-version
-rbenv install
-```
-
-2. Run the site
-
-```bash
-bundle install
-bundle exec jekyll serve --config _config.yml,_config_dev.yml
-```
-
-The site should show up on [http://localhost:4000](http://localhost:4000)
-
-If you have `npm` package manager, you can run `npm run format`
+- Docker automates Jekyll restarts for `_config.yml` and `_layouts/bib.html` changes
+- Manual Ruby setup requires [rbenv](https://github.com/rbenv/rbenv) (see Makefile comments)
+- Site runs on [http://localhost:4000](http://localhost:4000)

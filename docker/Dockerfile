@@ -1,53 +1,52 @@
 FROM ruby:3.4.5-slim
 
-# Build arguments to control environment
 ARG BUILD_ENV=production
 ARG INSTALL_DEV_DEPS=false
+ARG PORT=4000
 
 WORKDIR /site
 
-# Install base dependencies
-RUN apt-get update && apt-get install -y \
+# Install base dependencies for Ruby gems
+RUN apt-get update && apt-get install -y --no-install-recommends \
   git \
   build-essential \
   curl \
+  gnupg \
   && rm -rf /var/lib/apt/lists/*
 
-# Conditionally install Node.js for development builds
+# Conditionally install Node.js (modern NodeSource repo)
 RUN if [ "$INSTALL_DEV_DEPS" = "true" ]; then \
-  curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-  && apt-get install -y nodejs; \
+  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
+  | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg \
+  && echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" \
+  > /etc/apt/sources.list.d/nodesource.list \
+  && apt-get update && apt-get install -y --no-install-recommends nodejs \
+  && rm -rf /var/lib/apt/lists/*; \
   fi
 
-# Copy Gemfile first for caching
 COPY Gemfile Gemfile.lock ./
-
-# Install gems globally (so that they persist in volume)
 RUN bundle config set path /usr/local/bundle \
   && bundle install --jobs=4 --retry=3
 
-# Conditionally copy package.json and install Node dependencies for development
-COPY package.json ./
-RUN if [ "$INSTALL_DEV_DEPS" = "true" ]; then \
-  npm install --only=dev; \
-  fi
+# Copy Node deps only if dev tools are enabled
+COPY package.json package-lock.json* ./
+RUN if [ "$INSTALL_DEV_DEPS" = "true" ]; then npm install --only=dev; fi
 
-# Copy site source code
 COPY . .
 
-EXPOSE 4000
+EXPOSE ${PORT}
 
-# Environment-aware healthcheck
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-  CMD curl -f http://localhost:4000/ || exit 1
+  CMD curl -f http://localhost:${PORT}/ || exit 1
 
-# Set environment variables
+# Env vars
 ENV BUILD_ENV=${BUILD_ENV}
+ENV PORT=${PORT}
 
 # Environment-aware Jekyll command with bundle check fallback
 CMD bundle check || bundle install --jobs=4 --retry=3 && \
   if [ "$BUILD_ENV" = "development" ]; then \
-    bundle exec jekyll serve --host 0.0.0.0 --port 4000 --config _config.yml,_config_dev.yml; \
+  bundle exec jekyll serve --host 0.0.0.0 --port ${PORT} --config _config.yml,_config_dev.yml; \
   else \
-    bundle exec jekyll serve --host 0.0.0.0 --port 4000; \
+  bundle exec jekyll serve --host 0.0.0.0 --port ${PORT}; \
   fi

@@ -33,6 +33,8 @@ In `_bibliography/`:
   To assign a publication to a batch, add "batch" key.
   Batch value must be synced between this .bib file and [\_data/apprentices.yml](_data/apprentices.yml),
   such as "24-25" for batch 2024-2025.
+- Add `venue` to bib to render venue/publisher more efficiently.
+  Common venues are in [\_data/venues.yml](_data/venues.yml)
 - .bib accept custom fields: award, code, poster, preview (the image path relative to /assets/images/pub_preview),
   resources, selected, slides, video. For all fields, see [bib.html](_layouts/bib.html).
 
@@ -97,8 +99,9 @@ See [Makefile](Makefile) for all development commands:
 - `make dev` - Development server with live reload, and
   pre-commit hook for code formatting
 - `make prod` - Production build
+- `make restart` - Restart without cache
 - `make rebuild` - Rebuild containers without cache (if changes not reflected)
-- `make clean` - Remove Jekyll caches
+- `make clean` - Remove local Jekyll caches
 - `make format` - Format code (requires npm)
 
 ### Setup Notes

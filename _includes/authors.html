@@ -4,10 +4,11 @@
 {% assign authors = entry.author | split: ' and ' %}
 {% assign author_limit = site.pub_show_max_authors %}
 {% assign total_shown = author_limit | times: 2 %}
-{% assign last_start_index = authors.size | minus: author_limit | plus: 1 %}
 {% assign formatted_authors = '' | split: '' %}
-{% assign first_authors = '' | split: '' %}
-{% assign last_authors = '' | split: '' %}
+
+{% comment %} Precompute team member names for faster lookup {% endcomment %}
+{% assign team_member_names = site.data.team | map: 'name' %}
+
 {% for author in authors %}
   {% assign author_clean = author | strip %}
   {% assign parts = author_clean | split: ', ' %}
@@ -21,34 +22,24 @@
   {% else %}
     {% assign formatted_name = author_clean %}
   {% endif %}
-  {% assign is_team_member = false %}
-  {% for team_member in site.data.team %}
-    {% assign team_name = team_member.name | strip %}
-    {% if team_name == formatted_name %}
-      {% assign is_team_member = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% if is_team_member %}
-    {% assign styled_name = '<span class="team-member">'
-      | append: formatted_name
-      | append: '</span>'
-    %}
+
+  {% if team_member_names contains formatted_name %}
+    {% assign styled_name = formatted_name | append: '‡' %}
   {% else %}
     {% assign styled_name = formatted_name %}
   {% endif %}
   {% assign formatted_authors = formatted_authors | push: styled_name %}
-  {% if forloop.index <= author_limit %}
-    {% assign first_authors = first_authors | push: styled_name %}
-  {% elsif forloop.index >= last_start_index %}
-    {% assign last_authors = last_authors | push: styled_name %}
-  {% endif %}
 {% endfor %}
 <div class="bibliography-authors">
   {% if authors.size <= total_shown %}
     {{ formatted_authors | join: ', ' }}
   {% else %}
     {% assign hidden_count = authors.size | minus: total_shown %}
+    {% assign first_authors = formatted_authors | slice: 0, author_limit %}
+    {% assign last_start_index = authors.size | minus: author_limit %}
+    {% assign last_authors = formatted_authors
+      | slice: last_start_index, author_limit
+    %}
     <span class="authors-short">
       {{ first_authors | join: ', ' }},
       <button
@@ -72,16 +63,3 @@
     </span>
   {% endif %}
 </div>
-
-<script>
-  function toggleAuthors(btn) {
-    const short = btn
-      .closest(".bibliography-authors")
-      .querySelector(".authors-short")
-    const full = btn
-      .closest(".bibliography-authors")
-      .querySelector(".authors-full")
-    short.classList.toggle("d-none")
-    full.classList.toggle("d-none")
-  }
-</script>

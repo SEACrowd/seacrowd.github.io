@@ -36,7 +36,7 @@ The latest events from the organization, our partners, and the rest of the SEA c
 
 ### Community Events
 
-- [**The One Year Community Retrospective.**]() Birds-of-a-Feather Session @ ACL 2025.
+- **The One Year Community Retrospective.** Birds-of-a-Feather Session @ ACL 2025.
 - [**Where are we now? SEA AI in the Post-Training Era.**](https://docs.google.com/presentation/d/e/2PACX-1vT-8kzyB3xlOQxybX8li5XL-6YXl7BHo1KoBxnkwoKNnyhyZUP3rALVxZfxYk7C476IOI-Zt9SBAO2l/pub?start=false&loop=false&delayms=3000)
   Birds-of-a-Feather Session @ NAACL 2025.
 - [**Community and Grassroots-driven Building for SEA.**](https://docs.google.com/presentation/d/e/2PACX-1vQEQQagN5jFYup2UKGMmFQ2aE_bkNwkIPeT7XQQKFrURHGGIFVPxCHkc4j2edgKEWpvs7xyCrbMsrIm/pub?start=false&loop=false&delayms=3000)

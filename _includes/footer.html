@@ -1,188 +1,82 @@
-<footer class="bg-light border-top py-5 container">
-  <div class="row g-4">
-    <div class="col-lg-4 col-md-6 col-12">
-      <div class="mb-1">
+<footer class="bg-light border-top py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6 col-md-6">
         <img
           src="/assets/images/logo-wide.png"
           alt="{{ site.name }}"
           class="img-fluid"
           style="max-height: 30px"
         >
-      </div>
-      <p class="text-muted small mb-3">{{ site.description }}</p>
+        <p class="text-muted small mb-3">{{ site.description }}</p>
 
-      <div class="social-links mb-3">
-        {% if site.social.email %}
-          <a
-            href="mailto:{{ site.social.email }}"
-            class="social-link"
-            title="Email"
-          >
-            <i class="fas fa-envelope"></i>
-          </a>
-        {% endif %}
-        {% if site.social.github %}
-          <a
-            href="{{ site.social.github }}"
-            class="social-link"
-            title="GitHub"
-            target="_blank"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-        {% endif %}
-        {% if site.social.discord %}
-          <a
-            href="{{ site.social.discord }}"
-            class="social-link"
-            title="Discord"
-            target="_blank"
-          >
-            <i class="fab fa-discord"></i>
-          </a>
-        {% endif %}
-        {% if site.social.twitter %}
-          <a
-            href="{{ site.social.twitter }}"
-            class="social-link"
-            title="Twitter"
-            target="_blank"
-          >
-            <i class="fab fa-x-twitter"></i>
-          </a>
-        {% endif %}
-        {% if site.social.linkedin %}
-          <a
-            href="{{ site.social.linkedin }}"
-            class="social-link"
-            title="LinkedIn"
-            target="_blank"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-        {% endif %}
-        {% if site.social.bluesky %}
-          <a
-            href="{{ site.social.bluesky }}"
-            class="social-link"
-            title="Bluesky"
-            target="_blank"
-          >
-            <i class="fab fa-bluesky"></i>
-          </a>
-        {% endif %}
-        {% if site.social.google_group %}
-          <a
-            href="{{ site.social.google_group }}"
-            class="social-link"
-            title="Google Group"
-            target="_blank"
-          >
-            <i class="fas fa-user-group"></i>
-          </a>
-        {% endif %}
+        <div class="social-links gap-3">
+          {% assign socials = 'email,envelope;github,github;discord,discord;twitter,x-twitter;linkedin,linkedin;bluesky,bluesky;google_group,user-group'
+            | split: ';'
+          %}
+          {% for s in socials %}
+            {% assign pair = s | split: ',' %}
+            {% assign key = pair[0] %}
+            {% assign icon = pair[1] %}
+            {% if site.social[key] %}
+              <a
+                href="{% if key == 'email' %}mailto:{{ site.social[key] }}{% else %}{{ site.social[key] }}{% endif %}"
+                class="social-link"
+                title="{{ key | replace: '_',' ' | capitalize }}"
+                {% unless key == 'email' %}
+                  target="_blank"
+                {% endunless %}
+              >
+                <i
+                  class="fa{% if key == 'email' or key == 'google_group' %}s{% else %}b{% endif %} fa-{{ icon }}"
+                ></i>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
 
-      <div class="small text-muted">
-        <p class="mb-1">
-          © 2023 -
-          <span id="current-year"></span>
-          {{ site.name }}. All rights reserved.
-        </p>
-        <p class="mb-0">
-          Powered by
-          <a href="https://jekyllrb.com/" class="text-muted" target="_blank">
-            Jekyll
-          </a>
-          &
-          <a
-            href="https://getbootstrap.com/"
-            class="text-muted"
-            target="_blank"
-          >
-            Bootstrap
-          </a>
-        </p>
-      </div>
+      {% for section in site.data.footer %}
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <p class="fw-bold mb-2">{{ section.title }}</p>
+          <ul class="list-unstyled small">
+            {% for link in section.links %}
+              <li>
+                <a
+                  href="{{ link.href }}"
+                  class="text-muted mb-1"
+                >
+                  {{- link.name -}}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
     </div>
 
-    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-      <p class="fw-bold mb-3">SEACrowd</p>
-      <ul class="list-unstyled">
-        <li class="mb-2">
-          <a href="/about" class="text-muted"> About Us </a>
-        </li>
-        <li class="mb-2">
-          <a href="/publications" class="text-muted"> Publications </a>
-        </li>
-        <li class="mb-2">
-          <a href="/news" class="text-muted">News</a>
-        </li>
-        <li class="mb-2">
-          <a href="/events" class="text-muted">Events</a>
-        </li>
-        <li class="mb-2">
-          <a href="/join" class="text-muted"> Join Our Team </a>
-        </li>
-        <li class="mb-2">
-          <a href="/legal" class="text-muted">Legal</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-      <p class="fw-bold mb-3">For Researchers</p>
-      <ul class="list-unstyled">
-        <li class="mb-2">
-          <a href="/publication" class="text-muted"> Publication </a>
-        </li>
-        <li class="mb-2">
-          <a href="/resources" class="text-muted"> Resources </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-      <p class="fw-bold mb-3">For Contributors</p>
-      <ul class="list-unstyled">
-        <li class="mb-2">
-          <a href="/contribute" class="text-muted"> Contribute </a>
-        </li>
-        <li class="mb-2">
-          <a href="/apprenticeship" class="text-muted"> Apprenticeship </a>
-        </li>
-        <li class="mb-2">
-          <a href="/projects" class="text-muted"> Projects </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="col-lg-2 col-md-3 col-sm-6 col-12">
-      <p class="fw-bold mb-3">For Sponsors</p>
-      <ul class="list-unstyled">
-        <li class="mb-2">
-          <a
-            href="/about.html#impact"
-            class="text-muted"
-          >
-            Our Impact
-          </a>
-        </li>
-        <li class="mb-2">
-          <a href="/sponsor" class="text-muted"> Ways to Give </a>
-        </li>
-      </ul>
+    <div class="small text-muted mt-4">
+      <p class="mb-1">
+        © 2023 - <span id="current-year"></span> {{ site.name }}. All rights
+        reserved.
+      </p>
+      <p class="mb-0">
+        Powered by
+        <a href="https://jekyllrb.com/" class="text-muted" target="_blank"
+          >Jekyll</a
+        >
+        &
+        <a href="https://getbootstrap.com/" class="text-muted" target="_blank"
+          >Bootstrap</a
+        >
+      </p>
     </div>
   </div>
 </footer>
 
 <script>
-  // Get current year client side
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentYear = new Date().getFullYear()
-    const yearElement = document.getElementById("current-year")
-    if (yearElement) {
-      yearElement.textContent = currentYear
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear()
   })
 </script>

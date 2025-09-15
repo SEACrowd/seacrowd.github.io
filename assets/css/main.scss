@@ -1,6 +1,7 @@
 ---
 ---
 
+@use "variables";
 @use "base";
 @use "navbar";
 @use "footer";
@@ -8,3 +9,4 @@
 @use "pages";
 @use "utilities";
 @use "syntax-highlighting";
+@use "bibliography";

@@ -1,47 +1,75 @@
 <div class="col-md-4 col-sm-6 text-center p-3">
-  {% if profile.avatar %} {% if profile.site and profile.site != "" %}
-  <a href="{{ profile.site }}" target="_blank">
-    <img
-      class="profile-thumbnail"
-      src="{{ 'assets/images/people/' | append: profile.avatar | relative_url }}"
-      alt="{{ profile.name }}"
-      style="display: block; margin: 0 auto 0.25rem auto"
-    />
-  </a>
-  {% else %}
-  <img
-    class="profile-thumbnail"
-    src="{{ 'assets/images/people/' | append: profile.avatar | relative_url }}"
-    alt="{{ profile.name }}"
-    style="display: block; margin: 0 auto 0.25rem auto"
-  />
-  {% endif %} {% endif %}
+  {% assign image_path = include.image_path | default: 'people' %}
+  {% assign current_profile = include.profile | default: profile %}
+  {% assign profile_image = current_profile.avatar
+    | default: current_profile.image
+  %}
+  {% assign profile_site = current_profile.site
+    | default: current_profile.website
+  %}
 
-  <p class="name m-1">{{ profile.name }}</p>
-  <p class="text-muted small m-1">{{ profile.job }}</p>
+  {% if profile_image and profile_image != '' %}
+    {% if profile_site and profile_site != '' %}
+      <a href="{{ profile_site }}" target="_blank">
+        <img
+          class="profile-thumbnail"
+          src="{{ 'assets/images/' | append: image_path | append: '/' | append: profile_image | relative_url }}"
+          alt="{{ current_profile.name }}"
+          style="display: block; margin: 0 auto 0.25rem auto"
+        >
+      </a>
+    {% else %}
+      <img
+        class="profile-thumbnail"
+        src="{{ 'assets/images/' | append: image_path | append: '/' | append: profile_image | relative_url }}"
+        alt="{{ current_profile.name }}"
+        style="display: block; margin: 0 auto 0.25rem auto"
+      >
+    {% endif %}
+  {% endif %}
 
-  {% if profile.affiliation %}
-  <p class="affiliation text-muted small mb-1">{{ profile.affiliation }}</p>
+  <p class="name m-1">{{ current_profile.name }}</p>
+
+  {% if current_profile.job and current_profile.job != '' %}
+    <p class="text-muted small m-1">{{ current_profile.job }}</p>
+  {% endif %}
+
+  {% if current_profile.affiliation and current_profile.affiliation != '' %}
+    <p class="affiliation text-muted small mb-1">
+      {{ current_profile.affiliation }}
+    </p>
   {% endif %}
 
   <div class="social-links mt-1">
-    {% if profile.site and profile.site != "" %}
-    <a href="{{ profile.site }}" target="_blank" class="social-link" title="Website">
-      <i class="fas fa-globe"></i>
-    </a>
-    {% endif %} {% if profile.twitter and profile.twitter != "" %}
-    <a
-      href="https://twitter.com/{{ profile.twitter }}"
-      target="_blank"
-      class="social-link"
-      title="Twitter/X"
-    >
-      <i class="fab fa-twitter"></i>
-    </a>
-    {% endif %} {% if profile.scholar and profile.scholar != "" %}
-    <a href="{{ profile.scholar }}" target="_blank" class="social-link" title="Google Scholar">
-      <i class="fas fa-graduation-cap"></i>
-    </a>
+    {% if profile_site and profile_site != '' %}
+      <a
+        href="{{ profile_site }}"
+        target="_blank"
+        class="social-link"
+        title="Website"
+      >
+        <i class="fas fa-globe"></i>
+      </a>
+    {% endif %}
+    {% if current_profile.twitter and current_profile.twitter != '' %}
+      <a
+        href="https://twitter.com/{{ current_profile.twitter }}"
+        target="_blank"
+        class="social-link"
+        title="Twitter/X"
+      >
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    {% endif %}
+    {% if current_profile.scholar and current_profile.scholar != '' %}
+      <a
+        href="{{ current_profile.scholar }}"
+        target="_blank"
+        class="social-link"
+        title="Google Scholar"
+      >
+        <i class="fas fa-graduation-cap"></i>
+      </a>
     {% endif %}
   </div>
 </div>

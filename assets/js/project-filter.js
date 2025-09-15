@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function filterProjects(type) {
     const items = document.querySelectorAll(`.project-item.${type}`)
-    const message = document.querySelector(`.no-projects-message[data-type="${type}"]`)
+    const message = document.querySelector(
+      `.no-projects-message[data-type="${type}"]`
+    )
     let visible = 0
 
     items.forEach((item) => {

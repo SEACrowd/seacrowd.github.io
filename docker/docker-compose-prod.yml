@@ -6,18 +6,20 @@ services:
       args:
         BUILD_ENV: production
         INSTALL_DEV_DEPS: false
-    image: seacrowd-jekyll:prod-3.4.5
+        PORT: ${JEKYLL_PORT:-4000}
+    image: seacrowd-jekyll:prod-0.7
     ports:
-      - '4000:4000'
+      - "${JEKYLL_PORT:-4000}:${JEKYLL_PORT:-4000}"
     volumes:
       - jekyll_vendor:/site/vendor
       - jekyll_bundle:/usr/local/bundle
-      - jekyll_cache:/site/.jekyll-cache
+      - jekyll_site:/site/_site
     environment:
       - JEKYLL_ENV=production
       - BUNDLE_PATH=/usr/local/bundle
+      - PORT=${JEKYLL_PORT:-4000}
     healthcheck:
-      test: ['CMD', 'curl', '-f', 'http://localhost:4000/']
+      test: ["CMD", "curl", "-f", "http://localhost:${JEKYLL_PORT:-4000}/"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -27,4 +29,4 @@ services:
 volumes:
   jekyll_vendor:
   jekyll_bundle:
-  jekyll_cache:
+  jekyll_site:

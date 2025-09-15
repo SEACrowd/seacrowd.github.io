@@ -1,13 +1,13 @@
 .anchor-link {
-  color: #6c757d !important;
-  text-decoration: none !important;
+  color: var(--bs-secondary);
+  text-decoration: none;
   margin-left: 0.5em;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
 
 .anchor-link:hover {
-  color: #007bff !important;
+  color: var(--bs-primary);
 }
 
 h2:hover .anchor-link,
@@ -34,6 +34,19 @@ h6 {
 }
 
 // Image zoom functionality - match exact JS selector
-main img:not(.profile-thumbnail):not(a img):not(.card img):not(.clickable-card img) {
+main
+  img:not(.profile-thumbnail):not(a img):not(.card img):not(
+    .clickable-card img
+  ),
+main .bibliography-preview {
   cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.medium-zoom-overlay {
+  z-index: 999;
+}
+
+.medium-zoom-image--opened {
+  z-index: 1000;
 }

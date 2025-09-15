@@ -1,0 +1,128 @@
+.bibliography {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li::marker,
+  li::before {
+    content: none;
+  }
+}
+
+/* ---------------------------
+   Bibliography Entry
+---------------------------- */
+.bibliography-entry {
+  .bibliography-preview {
+    object-fit: cover;
+  }
+
+  .bibliography-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    a[target="_blank"]::after,
+    a[rel*="noopener"]::after {
+      content: "\f35d";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-left: 0.25rem;
+      font-size: 0.875em;
+    }
+  }
+}
+
+.author-toggle {
+  border: none;
+  background: none;
+  color: var(--bs-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    color: var(--bs-secondary-dark);
+  }
+}
+
+/* ---------------------------
+   Metadata / Badges
+---------------------------- */
+.publisher-name {
+  font-size: 0.5rem;
+  width: 100%;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  color: inherit;
+}
+
+.award-badge {
+  .fa-award {
+    margin-right: 0.5rem;
+  }
+
+  .award-name {
+    font-weight: 600;
+    color: var(--bs-primary);
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------
+   Bibliography Content
+---------------------------- */
+.bibliography-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--bs-primary-color);
+}
+
+.bibliography-authors {
+  margin-bottom: 0.75rem;
+  color: var(--bs-body-secondary-color);
+  line-height: 1.4;
+
+  .team-member {
+    text-decoration: underline dotted;
+  }
+}
+
+.bibliography-details {
+  font-size: 0.9rem;
+  color: var(--bs-body-secondary-color);
+  margin-bottom: 1rem;
+
+  .publication-type {
+    font-weight: 500;
+    color: var(--bs-secondary-color);
+  }
+}
+
+/* ---------------------------
+   Abstract Disclosure (details/summary)
+---------------------------- */
+.bibliography-abstract {
+  display: inline-block;
+
+  summary {
+    cursor: pointer;
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+    }
+  }
+
+  .abstract-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--bs-secondary-color);
+    text-align: justify;
+  }
+}

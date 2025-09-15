@@ -1,0 +1,195 @@
+---
+---
+<article class="card bibliography-entry">
+  <div class="card-body row m-1">
+    <div class="bibliography-meta col-md-3 mb-2">
+      {% if entry.venue %}
+        <span class="publisher-name">
+          {{ entry.venue -}}
+          {%- if entry.year %} {{ entry.year }}{% endif %}
+        </span>
+      {% elsif entry.series %}
+        <span class="publisher-name">
+          {{ entry.series }}
+        </span>
+      {% elsif entry.eprint %}
+        <span class="publisher-name">
+          arXiv{% if entry.year %} {{ entry.year }}{% endif %}
+        </span>
+      {% endif %}
+
+      {% if entry.preview %}
+        <img
+          src="{{ entry.preview | prepend: '/assets/images/pub_preview/' | relative_url }}"
+          alt="Preview for {{ entry.title }}"
+          class="bibliography-preview"
+        >
+      {% endif %}
+    </div>
+
+    <div class="col-md-9">
+      {% if entry.award %}
+        <div class="award-badge mb-2">
+          <i class="fa-solid fa-award text-primary"></i>
+          <span class="award-name">{{ entry.award }}</span>
+        </div>
+      {% endif %}
+
+      <div class="bibliography-title">
+        {% if entry.doi %}
+          <a
+            href="https://doi.org/{{ entry.doi }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>{{ entry.title }}</strong>
+          </a>
+        {% elsif entry.url %}
+          <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">
+            <strong>{{ entry.title }}</strong>
+          </a>
+        {% else %}
+          <strong>{{ entry.title }}</strong>
+        {% endif %}
+      </div>
+
+      {% include authors.html entry=entry %}
+
+      <div class="bibliography-details">
+        {% if entry.eprint %}
+          <span class="publication-type">Preprint</span>
+        {% elsif entry.journal %}
+          <span class="publication-type">{{ entry.journal }}</span>
+        {% elsif entry.booktitle %}
+          <span class="publication-type">{{ entry.booktitle }}</span>
+        {% elsif entry.publisher %}
+          <span class="publication-type">{{ entry.publisher }}</span>
+        {% endif %}
+        {% if entry.year %} • {{ entry.year }}{% endif %}
+        {% if entry.volume %} • Vol. {{ entry.volume }}{% endif %}
+        {% if entry.number %} ({{ entry.number }}){% endif %}
+        {% if entry.pages %} • pp. {{ entry.pages }}{% endif %}
+        {% if entry.address %} • {{ entry.address }}{% endif %}
+      </div>
+
+      <div class="bibliography-buttons">
+        {% if entry.abstract %}
+          <details class="bibliography-abstract">
+            <summary class="btn btn-outline-primary btn-sm">Abstract</summary>
+            <div class="abstract-content">{{ entry.abstract }}</div>
+          </details>
+        {% endif %}
+        {% if entry.doi %}
+          <a
+            href="https://doi.org/{{ entry.doi }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            DOI
+          </a>
+        {% endif %}
+        {% if entry.pdf %}
+          {% if entry.pdf contains 'http' %}
+            <a
+              href="{{ entry.pdf }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-warning btn-sm"
+            >
+              PDF
+            </a>
+          {% else %}
+            <a
+              href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"
+              target="_blank"
+              class="btn btn-outline-info btn-sm"
+            >
+              PDF
+            </a>
+          {% endif %}
+        {% endif %}
+        {% if entry.code %}
+          <a
+            href="{{ entry.code }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            Code
+          </a>
+        {% endif %}
+        {% if entry.resources %}
+          <a
+            href="{{ entry.resources }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            Resources
+          </a>
+        {% endif %}
+        {% if entry.video %}
+          {% if entry.video contains 'http' %}
+            <a
+              href="{{ entry.video }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Video
+            </a>
+          {% else %}
+            <a
+              href="{{ entry.video | prepend: '/assets/video/' | relative_url }}"
+              target="_blank"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Video
+            </a>
+          {% endif %}
+        {% endif %}
+        {% if entry.slides %}
+          <a
+            href="{{ entry.slides }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            Slides
+          </a>
+        {% endif %}
+        {% if entry.poster %}
+          <a
+            href="{{ entry.poster }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-info btn-sm"
+          >
+            Poster
+          </a>
+        {% endif %}
+        {% if entry.website %}
+          <a
+            href="{{ entry.poster }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-info btn-sm"
+          >
+            Website
+          </a>
+        {% endif %}
+        {% if entry.arxiv %}
+          <a
+            href="https://arxiv.org/abs/{{ entry.arxiv }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            arXiv
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

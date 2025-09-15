@@ -2,39 +2,41 @@
   position: coreteam
   job: Lead & SIGSEA President
   avatar: holy_lovenia.png
-  twitter: ''
+  twitter: ""
   site: https://holylovenia.github.io/
-  scholar: 'https://scholar.google.com/citations?user=bugb-lAAAAAJ&hl=en'
+  scholar: "https://scholar.google.com/citations?user=bugb-lAAAAAJ&hl=en"
   sortorder: -1
 
 - name: Fajri Koto
   position: coreteam
   avatar: fajri_koto.png
-  twitter: ''
+  twitter: ""
   sortorder: 0
   job: Research Steering & SIGSEA Secretary
   site: https://www.fajrikoto.com/
+  scholar: https://scholar.google.com/citations?user=RA9l3s4AAAAJ&hl=id
 
 - name: Frederikus Hudi
   position: coreteam
   avatar: frederikus_hudi.webp
-  twitter: ''
+  twitter: ""
   sortorder: 0
   job: Treasurer
   site: https://jp.linkedin.com/in/fhudi
 
-- name: Onno Kampman
+- name: Onno P. Kampman
   position: coreteam
   avatar: onno_kampman.jpeg
-  twitter: ''
+  twitter: ""
   sortorder: 0
   job: Funding Head
   site: https://onnokampman.github.io/
+  scholar: https://scholar.google.com/citations?user=gSVe8CkAAAAJ
 
 - name: Salsabil Maulana Akbar
   position: coreteam
   avatar: salsabil_maulana_akbar.png
-  twitter: ''
+  twitter: ""
   sortorder: 0
   job: Secretary
   site: https://sabilmakbar.github.io/
@@ -42,15 +44,16 @@
 - name: Alham Fikri Aji
   position: coreteam
   avatar: alham_fikri.png
-  twitter: ''
+  twitter: ""
   sortorder: 1
   job: Research Steering Head
   site: https://afaji.github.io/
+  scholar: https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en&oi=ao
 
 - name: Jan Christian Blaise Cruz
   position: coreteam
   avatar: jan_christian_blaise_cruz.png
-  twitter: ''
+  twitter: ""
   sortorder: 1
   job: Communications Head
   site: https://blaisecruz.com/
@@ -58,7 +61,7 @@
 - name: Jennifer Santoso
   position: coreteam
   avatar: jennifer_santoso.jpeg
-  twitter: ''
+  twitter: ""
   sortorder: 1
   job: Research Steering
   scholar: https://orcid.org/0000-0001-7723-3396
@@ -67,15 +70,16 @@
 - name: Samuel Cahyawijaya
   position: coreteam
   avatar: samuel_cahyawijaya.jpg
-  twitter: ''
+  twitter: ""
   sortorder: 1
   job: Research Steering
   site: https://samuelcahyawijaya.github.io/
+  scholar: https://scholar.google.com/citations?user=w5w_WZEAAAAJ&hl=en
 
 - name: Aye Hninn Khine
   position: coreteam
   avatar: aye_hninn_khine.avif
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications and Funding
   site: https://ayehninnkhine.github.io/
@@ -83,7 +87,7 @@
 - name: Carlos Rafael Catalan
   position: coreteam
   avatar: carlos_rafael_catalan.jpeg
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications
   site: https://scholar.google.com/citations?user=mU6Qvs4AAAAJ&hl=en
@@ -91,7 +95,7 @@
 - name: Genta Indra Winata
   position: coreteam
   avatar: genta_indra_winata.jpg
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications
   site: https://gentawinata.com/
@@ -99,7 +103,7 @@
 - name: Joseph Marvin Imperial
   position: coreteam
   avatar: joseph_marvin_imperial.png
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications
   site: https://www.josephimperial.com/
@@ -107,7 +111,7 @@
 - name: Patricia Nicole Monderin
   position: coreteam
   avatar: patricia_nicole_monderin.jpeg
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications
   site: https://ph.linkedin.com/in/patricia-nicole-monderin-417b09190
@@ -115,7 +119,7 @@
 - name: Peerat Limkonchotiwat
   position: coreteam
   avatar: peerat_limkonchotiwat.jpg
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications
   site: https://mrpeerat.github.io/
@@ -123,7 +127,15 @@
 - name: Ruochen Zhang
   position: coreteam
   avatar: ruochen_zhang.jpg
-  twitter: ''
+  twitter: ""
   sortorder: 2
   job: Communications
   site: https://www.ruochenzhang.com/
+
+- name: My Chiffon Nguyen
+  position: coreteam
+  avatar: my_chiffon_nguyen.jpg
+  twitter: ""
+  sortorder: 2
+  job: Communications
+  site: https://mychiffonn.com/

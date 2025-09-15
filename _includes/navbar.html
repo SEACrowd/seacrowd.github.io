@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container-md px-3">
     <a class="navbar-brand" href="/">
-      <img src="/assets/images/logo-wide.png" alt="SEACrowd Logo" height="32" />
+      <img src="/assets/images/logo-wide.png" alt="SEACrowd Logo" height="32">
     </a>
     <button
       class="navbar-toggler border-0"
@@ -21,16 +21,98 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         {% for nav in site.data.navigation %}
-        <li class="nav-item">
-          <a
-            class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
-            href="{{ nav.href }}"
-          >
-            {{ nav.name }}
-          </a>
-        </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
+              href="{{ nav.href }}"
+            >
+              {{ nav.name }}
+              {% if nav.name == 'apprenticeship' %}
+                {% assign apprenticeship_page = site.pages
+                  | where: 'permalink', '/apprenticeship.html'
+                  | first
+                %}
+                <span
+                  class="apprenticeship-badge"
+                  data-open-date="{{ apprenticeship_page.openDate }}"
+                  data-close-date="{{ apprenticeship_page.closeDate }}"
+                  data-form-url="{{ apprenticeship_page.form }}"
+                >
+                  <noscript>
+                    {% assign now_timestamp = 'now' | date: '%s' %}
+                    {% assign open_timestamp = apprenticeship_page.openDate
+                      | date: '%s'
+                    %}
+                    {% assign close_timestamp = apprenticeship_page.closeDate
+                      | date: '%s'
+                    %}
+
+                    {% if now_timestamp < open_timestamp %}
+                      <sup
+                        ><small class="text-info fw-bold p-1">Soon</small></sup
+                      >
+                    {% elsif now_timestamp <= close_timestamp %}
+                      <sup
+                        ><small class="text-success fw-bold p-1"
+                          >Open</small
+                        ></sup
+                      >
+                    {% else %}
+                      <sup
+                        ><small class="text-muted fw-bold p-1"
+                          >Closed</small
+                        ></sup
+                      >
+                    {% endif %}
+                  </noscript>
+
+                  {% comment %}Fallback badge that will be replaced by JavaScript{% endcomment %}
+                  {% assign now_timestamp = 'now' | date: '%s' %}
+                  {% assign open_timestamp = apprenticeship_page.openDate
+                    | date: '%s'
+                  %}
+                  {% assign close_timestamp = apprenticeship_page.closeDate
+                    | date: '%s'
+                  %}
+
+                  {% if now_timestamp < open_timestamp %}
+                    <sup><small class="text-info fw-bold p-1">Soon</small></sup>
+                  {% elsif now_timestamp <= close_timestamp %}
+                    <sup
+                      ><small class="text-success fw-bold p-1">Open</small></sup
+                    >
+                  {% else %}
+                    <sup
+                      ><small class="text-muted fw-bold p-1">Closed</small></sup
+                    >
+                  {% endif %}
+                </span>
+              {% endif %}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </div>
   </div>
 </nav>
+
+<script
+  src="{{ '/assets/js/apprenticeship-dates.js' | relative_url }}"
+></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find the first badge element to get the data
+    const badgeElement = document.querySelector(".apprenticeship-badge")
+
+    if (badgeElement) {
+      const openDate = badgeElement.getAttribute("data-open-date")
+      const closeDate = badgeElement.getAttribute("data-close-date")
+      const formUrl = badgeElement.getAttribute("data-form-url") || ""
+
+      if (openDate && closeDate) {
+        // Initialize badge manager for navbar only
+        initApprenticeshipBadges(openDate, closeDate, formUrl)
+      }
+    }
+  })
+</script>

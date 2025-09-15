@@ -11,27 +11,27 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: #999;
+  color: var(--bs-secondary);
 }
 
 .breadcrumb-link {
-  color: #999;
+  color: var(--bs-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: #666;
+    color: var(--bs-dark);
     text-decoration: none;
   }
 }
 
 .breadcrumb-separator {
-  color: #ccc;
+  color: var(--bs-secondary-bg);
   font-weight: 300;
 }
 
 .breadcrumb-current {
-  color: #777;
+  color: var(--bs-secondary);
   font-weight: 400;
 }
 

@@ -1,0 +1,116 @@
+// SEACrowd Brand Colors
+$sea-red: #e40614;
+$sea-blue: #052eab;
+$sea-yellow: #f2df65;
+$sea-green: #009639;
+$sea-white: #ffffff;
+$sea-black: #111111;
+
+$sea-gray-100: #f1f3f5;
+$sea-gray-200: #e9ecef;
+$sea-gray-300: #dee2e6;
+$sea-gray-400: #ced4da;
+$sea-gray-500: #adb5bd;
+$sea-gray-600: #6c757d;
+$sea-gray-700: #495057;
+$sea-gray-800: #343a40;
+$sea-gray-900: #212529;
+
+:root,
+[data-bs-theme="light"] {
+  // Body
+  --bs-body-bg: #{$sea-white};
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-color: #{$sea-black};
+  --bs-body-color-rgb: 17, 17, 17;
+
+  // Secondary (muted text, dividers, disabled states)
+  --bs-secondary-color: #{$sea-gray-700};
+  --bs-secondary-color-rgb: 73, 80, 87;
+  --bs-secondary-bg: #{$sea-gray-100};
+  --bs-secondary-bg-rgb: 248, 249, 250;
+
+  // Tertiary (lighter text, hover/well backgrounds)
+  --bs-tertiary-color: #{$sea-gray-900};
+  --bs-tertiary-color-rgb: 33, 37, 41;
+  --bs-tertiary-bg: #{$sea-gray-200};
+  --bs-tertiary-bg-rgb: 233, 236, 239;
+
+  // Emphasis (strong foreground for headings, emphasis text)
+  --bs-emphasis-color: #{$sea-black};
+  --bs-emphasis-color-rgb: 17, 17, 17;
+
+  // Border
+  --bs-border-color: #dee2e6;
+  --bs-border-color-rgb: 222, 226, 230;
+
+  // Primary theme set
+  --bs-primary: #{$sea-red};
+  --bs-primary-rgb: 239, 51, 64;
+  --bs-primary-bg-subtle: #fce5e7;
+  --bs-primary-border-subtle: #f5a3a9;
+  --bs-primary-text-emphasis: #a3161f;
+
+  --bs-secondary: #{$sea-blue};
+  --bs-secondary-rgb: 5, 46, 171;
+  --bs-secondary-bg-subtle: #e6ebf7;
+  --bs-secondary-border-subtle: #99addf;
+  --bs-secondary-text-emphasis: #001a66;
+
+  --bs-success: #{$sea-green};
+  --bs-success-rgb: 0, 150, 57;
+  --bs-success-bg-subtle: #e0f5e8;
+  --bs-success-border-subtle: #93d4a9;
+  --bs-success-text-emphasis: #004d1e;
+
+  --bs-warning: #{$sea-yellow};
+  --bs-warning-rgb: 255, 209, 0;
+  --bs-warning-bg-subtle: #fff8db;
+  --bs-warning-border-subtle: #ffe26e;
+  --bs-warning-text-emphasis: #7a6600;
+
+  --bs-danger: #b22222;
+  --bs-danger-rgb: 178, 34, 34;
+  --bs-danger-bg-subtle: #f7e0e0;
+  --bs-danger-border-subtle: #d88a8a;
+  --bs-danger-text-emphasis: #5a0f0f;
+
+  --bs-info: #{$sea-blue};
+  --bs-info-rgb: 5, 46, 171;
+  --bs-info-bg-subtle: #e6ebf7;
+  --bs-info-border-subtle: #99addf;
+  --bs-info-text-emphasis: #001a66;
+
+  --bs-light: #{$sea-white};
+  --bs-light-rgb: 255, 255, 255;
+  --bs-light-bg-subtle: #f8f9fa;
+  --bs-light-border-subtle: #e9ecef;
+  --bs-light-text-emphasis: #495057;
+
+  --bs-dark: #{$sea-black};
+  --bs-dark-rgb: 17, 17, 17;
+  --bs-dark-bg-subtle: #343a40;
+  --bs-dark-border-subtle: #495057;
+  --bs-dark-text-emphasis: #e9ecef;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #{$sea-black};
+  --bs-body-bg-rgb: 17, 17, 17;
+  --bs-body-color: #{$sea-white};
+  --bs-body-color-rgb: 255, 255, 255;
+
+  --bs-secondary-color: #{$sea-gray-200};
+  --bs-secondary-bg: #{$sea-gray-900};
+
+  --bs-tertiary-color: #{$sea-gray-100};
+  --bs-tertiary-bg: #{$sea-gray-700};
+
+  --bs-emphasis-color: #{$sea-white};
+  --bs-border-color: #444;
+}
+
+::selection {
+  background-color: $sea-yellow;
+  color: $sea-black;
+}

@@ -1,0 +1,65 @@
+{% comment %}
+  Usage: {% include authors.html entry=entry %}
+{% endcomment %}
+{% assign authors = entry.author | split: ' and ' %}
+{% assign author_limit = site.pub_show_max_authors %}
+{% assign total_shown = author_limit | times: 2 %}
+{% assign formatted_authors = '' | split: '' %}
+
+{% comment %} Precompute team member names for faster lookup {% endcomment %}
+{% assign team_member_names = site.data.team | map: 'name' %}
+
+{% for author in authors %}
+  {% assign author_clean = author | strip %}
+  {% assign parts = author_clean | split: ', ' %}
+  {% if parts.size >= 2 %}
+    {% assign formatted_name = parts[1]
+      | strip
+      | append: ' '
+      | append: parts[0]
+      | strip
+    %}
+  {% else %}
+    {% assign formatted_name = author_clean %}
+  {% endif %}
+
+  {% if team_member_names contains formatted_name %}
+    {% assign styled_name = formatted_name | append: '‡' %}
+  {% else %}
+    {% assign styled_name = formatted_name %}
+  {% endif %}
+  {% assign formatted_authors = formatted_authors | push: styled_name %}
+{% endfor %}
+<div class="bibliography-authors">
+  {% if authors.size <= total_shown %}
+    {{ formatted_authors | join: ', ' }}
+  {% else %}
+    {% assign hidden_count = authors.size | minus: total_shown %}
+    {% assign first_authors = formatted_authors | slice: 0, author_limit %}
+    {% assign last_start_index = authors.size | minus: author_limit %}
+    {% assign last_authors = formatted_authors
+      | slice: last_start_index, author_limit
+    %}
+    <span class="authors-short">
+      {{ first_authors | join: ', ' }},
+      <button
+        type="button"
+        class="author-toggle btn-link"
+        onclick="toggleAuthors(this)"
+      >
+        ... and {{ hidden_count }} more ...
+      </button>
+      , {{ last_authors | join: ', ' }}
+    </span>
+    <span class="authors-full d-none">
+      {{ formatted_authors | join: ', ' }}
+      <button
+        type="button"
+        class="author-toggle btn-link"
+        onclick="toggleAuthors(this)"
+      >
+        (show fewer)
+      </button>
+    </span>
+  {% endif %}
+</div>

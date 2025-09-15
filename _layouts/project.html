@@ -1,24 +1,25 @@
 ---
 layout: default
 ---
-
 <header class="container-md">
   <h1 class="page-title">{{ page.title }}</h1>
   <p class="text-muted mb-4">
     <small>
-      {% if page.fromDate %} {{ page.fromDate | date: '%b %-d, %Y' }}{% endif %} {% if page.fromDate
-      and page.toDate %} - {% endif %} {% if page.toDate %}{{ page.toDate | date: '%b %-d, %Y' }}{%
-      endif %}
+      {% if page.fromDate %} {{ page.fromDate | date: '%b %-d, %Y' }}{% endif %}
+      {% if page.fromDate and page.toDate %} - {% endif %}
+      {% if page.toDate -%}
+        {{- page.toDate | date: '%b %-d, %Y' -}}
+      {%- endif %}
     </small>
   </p>
 </header>
 <article class="container-md content my-5 mx-auto">
-  {% if page.header-img %}
-  <img
-    src="/assets/images/project/{{ page.header-img }}"
-    class="img-fluid rounded mb-4"
-    alt="{{ page.title }}"
-  />
+  {% if page['header-img'] %}
+    <img
+      src="/assets/images/project/{{ page.header-img }}"
+      class="img-fluid rounded mb-4"
+      alt="{{ page.title }}"
+    >
   {% endif %}
 
   <div id="markdown-content">{{ content }}</div>

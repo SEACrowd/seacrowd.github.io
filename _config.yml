@@ -78,8 +78,16 @@ plugins:
 # Jekyll Scholar
 scholar:
   style: apa
+  locale: en
   source: /_bibliography/
-  bibliography: references.bib
+  bibliography: "**/*.bib{,tex}"
+  bibliography_template: bib # _layouts/bib.html
+  sort_by: year,month
+  order: descending
+  group_by: none
+  group_order: ascending
+
+pub_show_max_authors: 8 # first + last authors
 
 # Exclude files from processing
 exclude:
@@ -101,16 +109,19 @@ exclude:
   - Gemfile
   - "*.lock"
   - "*-lock.*"
-  - CNAME
   - README.md
   - LICENSE
   - scripts/
   - "*.log"
+  - _pages/robots.txt
+  - _pages/feed.xml
 
 # Keep files (override exclude)
 keep_files:
   - .git
   - .svn
+  - _pages/robots.txt
+  - _pages/feed.xml
 
 # Build settings
 incremental: true

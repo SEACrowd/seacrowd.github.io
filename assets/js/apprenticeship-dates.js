@@ -2,7 +2,7 @@
  * Handles dynamic date calculations and alert rendering for the apprenticeship program
  */
 class ApprenticeshipDateManager {
-  constructor(openDate, closeDate, formUrl, config = {}) {
+  constructor(openDate, closeDate, formUrl = "", config = {}) {
     this.openDate = new Date(openDate)
     this.closeDate = new Date(closeDate)
     this.formUrl = formUrl
@@ -229,7 +229,7 @@ function initApprenticeshipManager(
   return mgr
 }
 
-const initApprenticeshipBadges = (o, c, f, cfg) =>
+const initApprenticeshipBadges = (o, c, f = "", cfg) =>
   initApprenticeshipManager(o, c, f, cfg, { badgesOnly: true })
 
 window.initApprenticeshipManager = initApprenticeshipManager

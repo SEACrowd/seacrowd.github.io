@@ -1,0 +1,39 @@
+{% assign apprenticeship_page = site.pages
+  | where: 'permalink', '/apprenticeship.html'
+  | first
+%}
+<span
+  class="apprenticeship-badge"
+  data-open-date="{{ apprenticeship_page.openDate }}"
+  data-close-date="{{ apprenticeship_page.closeDate }}"
+>
+  <noscript>
+    {% assign now_timestamp = 'now' | date: '%s' %}
+    {% assign open_timestamp = apprenticeship_page.openDate | date: '%s' %}
+    {% assign close_timestamp = apprenticeship_page.closeDate | date: '%s' %}
+
+    <sup
+      ><small class="text-info fw-bold p-1">
+        {%- if now_timestamp < open_timestamp -%}
+          soon
+        {%- elsif now_timestamp <= close_timestamp -%}
+          open
+        {%- else -%}
+          closed
+        {%- endif -%}
+      </small></sup
+    >
+  </noscript>
+
+  {% assign now_timestamp = 'now' | date: '%s' %}
+  {% assign open_timestamp = apprenticeship_page.openDate | date: '%s' %}
+  {% assign close_timestamp = apprenticeship_page.closeDate | date: '%s' %}
+
+  {% if now_timestamp < open_timestamp %}
+    <sup><small class="text-info fw-bold p-1">soon</small></sup>
+  {% elsif now_timestamp <= close_timestamp %}
+    <sup><small class="text-success fw-bold p-1">open</small></sup>
+  {% else %}
+    <sup><small class="text-muted fw-bold p-1">closed</small></sup>
+  {% endif %}
+</span>

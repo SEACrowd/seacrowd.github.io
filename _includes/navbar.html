@@ -20,76 +20,48 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        {% for nav in site.data.navigation %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
-              href="{{ nav.href }}"
-            >
-              {{ nav.name }}
-              {% if nav.name == 'apprenticeship' %}
-                {% assign apprenticeship_page = site.pages
-                  | where: 'permalink', '/apprenticeship.html'
-                  | first
-                %}
-                <span
-                  class="apprenticeship-badge"
-                  data-open-date="{{ apprenticeship_page.openDate }}"
-                  data-close-date="{{ apprenticeship_page.closeDate }}"
-                  data-form-url="{{ apprenticeship_page.form }}"
-                >
-                  <noscript>
-                    {% assign now_timestamp = 'now' | date: '%s' %}
-                    {% assign open_timestamp = apprenticeship_page.openDate
-                      | date: '%s'
-                    %}
-                    {% assign close_timestamp = apprenticeship_page.closeDate
-                      | date: '%s'
-                    %}
-
-                    {% if now_timestamp < open_timestamp %}
-                      <sup
-                        ><small class="text-info fw-bold p-1">Soon</small></sup
-                      >
-                    {% elsif now_timestamp <= close_timestamp %}
-                      <sup
-                        ><small class="text-success fw-bold p-1"
-                          >Open</small
-                        ></sup
-                      >
-                    {% else %}
-                      <sup
-                        ><small class="text-muted fw-bold p-1"
-                          >Closed</small
-                        ></sup
-                      >
-                    {% endif %}
-                  </noscript>
-
-                  {% comment %}Fallback badge that will be replaced by JavaScript{% endcomment %}
-                  {% assign now_timestamp = 'now' | date: '%s' %}
-                  {% assign open_timestamp = apprenticeship_page.openDate
-                    | date: '%s'
-                  %}
-                  {% assign close_timestamp = apprenticeship_page.closeDate
-                    | date: '%s'
-                  %}
-
-                  {% if now_timestamp < open_timestamp %}
-                    <sup><small class="text-info fw-bold p-1">Soon</small></sup>
-                  {% elsif now_timestamp <= close_timestamp %}
-                    <sup
-                      ><small class="text-success fw-bold p-1">Open</small></sup
+        {% for nav in site.data.navbar %}
+          {% if nav.children %}
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown{{ forloop.index }}"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {{ nav.name }}
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="dropdown{{ forloop.index }}"
+              >
+                {% for child in nav.children %}
+                  <li>
+                    <a
+                      class="dropdown-item {% if page.permalink == child.href or page.url == child.href %}active{% endif %}"
+                      href="{{ child.href }}"
                     >
-                  {% else %}
-                    <sup
-                      ><small class="text-muted fw-bold p-1">Closed</small></sup
-                    >
-                  {% endif %}
-                </span>
-              {% endif %}
-            </a>
-          </li>
+                      {{ child.name }}
+                      {% if child.href == '/apprenticeship.html' %}
+                        {% include apprenticeship-badge.html %}
+                      {% endif %}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a
+                class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
+                href="{{ nav.href }}"
+              >
+                {{ nav.name }}
+              </a>
+            </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
@@ -107,11 +79,9 @@
     if (badgeElement) {
       const openDate = badgeElement.getAttribute("data-open-date")
       const closeDate = badgeElement.getAttribute("data-close-date")
-      const formUrl = badgeElement.getAttribute("data-form-url") || ""
-
       if (openDate && closeDate) {
         // Initialize badge manager for navbar only
-        initApprenticeshipBadges(openDate, closeDate, formUrl)
+        initApprenticeshipBadges(openDate, closeDate)
       }
     }
   })

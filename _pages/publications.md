@@ -4,7 +4,7 @@ permalink: /publications.html
 description: Papers that we have published so far as a community.
 ---
 
-<span style="text-decoration: underline dotted;">Underlined authors</span> are [SEACrowd core team members](/about#core-team).
+Authors with ‡ markers are [SEACrowd core team members](/about#core-team).
 
 {% bibliography --file main %}
 
@@ -14,3 +14,12 @@ Selected papers and preprints originated from our [apprenticeship](/apprenticesh
 Please visit [apprenticeship](/apprenticeship) for more details.
 
 {% bibliography --file apprenticeship %}
+
+## Affiliated publications
+
+Recent papers and preprints from SEACrowd core team and affiliated members.
+{% bibliography --file affiliated %}
+
+## Tutorials
+
+{% bibliography --file tutorials %}

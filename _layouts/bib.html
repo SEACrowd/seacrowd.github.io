@@ -103,7 +103,7 @@
             <a
               href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"
               target="_blank"
-              class="btn btn-outline-warning btn-sm"
+              class="btn btn-outline-info btn-sm"
             >
               PDF
             </a>
@@ -164,9 +164,19 @@
             href="{{ entry.poster }}"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-outline-secondary btn-sm"
+            class="btn btn-outline-info btn-sm"
           >
             Poster
+          </a>
+        {% endif %}
+        {% if entry.website %}
+          <a
+            href="{{ entry.poster }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-info btn-sm"
+          >
+            Website
           </a>
         {% endif %}
         {% if entry.arxiv %}

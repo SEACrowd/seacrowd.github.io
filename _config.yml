@@ -124,6 +124,5 @@ keep_files:
   - _pages/feed.xml
 
 # Build settings
-incremental: true
 profile: false
 safe: false

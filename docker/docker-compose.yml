@@ -20,7 +20,6 @@ services:
       - JEKYLL_ENV=development
       - BUNDLE_PATH=/usr/local/bundle
       - PORT=${JEKYLL_PORT:-4000}
-    restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${JEKYLL_PORT:-4000}/"]
       interval: 30s
@@ -47,8 +46,6 @@ services:
           path: ../_config.yml
         - action: rebuild
           path: ../_config_dev.yml
-        - action: rebuild
-          path: ../_layouts/bib.html
 
 volumes:
   jekyll_vendor:

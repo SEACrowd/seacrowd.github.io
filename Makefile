@@ -18,6 +18,14 @@ prod:
 down:
 	docker compose -f docker/docker-compose.yml down
 
+# Restart Docker without cache - thorough cleanup
+restart:
+	docker compose -f docker/docker-compose.yml down
+	docker volume rm -f seacrowd-website_jekyll_cache || true
+	docker volume rm -f docker_jekyll_cache || true  
+	rm -rf .jekyll-cache/ _site/ .sass-cache/
+	docker compose -f docker/docker-compose.yml up --watch
+
 # Rebuild Docker containers (no cache)
 rebuild:
 	docker compose -f docker/docker-compose.yml down

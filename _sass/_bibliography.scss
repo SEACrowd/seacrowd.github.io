@@ -22,15 +22,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-
-    a[target="_blank"]::after,
-    a[rel*="noopener"]::after {
-      content: "\f35d";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      margin-left: 0.25rem;
-      font-size: 0.875em;
-    }
   }
 }
 

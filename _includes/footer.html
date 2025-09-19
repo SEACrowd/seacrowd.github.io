@@ -1,7 +1,7 @@
 <footer class="bg-light border-top py-4">
   <div class="container">
     <div class="row g-4">
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-4 col-md-4">
         <img
           src="/assets/images/logo-wide.png"
           alt="{{ site.name }}"
@@ -42,10 +42,7 @@
           <ul class="list-unstyled small">
             {% for link in section.links %}
               <li>
-                <a
-                  href="{{ link.href }}"
-                  class="text-muted mb-1"
-                >
+                <a href="{{ link.href }}" class="text-muted mb-1">
                   {{- link.name -}}
                 </a>
               </li>

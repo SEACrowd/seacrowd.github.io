@@ -8,10 +8,6 @@
       href: "/news"
     - name: "Events"
       href: "/events"
-    - name: "Join Our Team"
-      href: "/join"
-    - name: "Legal"
-      href: "/legal"
 - title: "For Researchers"
   links:
     - name: "Publications"
@@ -26,9 +22,3 @@
       href: "/apprenticeship"
     - name: "Projects"
       href: "/projects"
-- title: "For Sponsors"
-  links:
-    - name: "Our Impact"
-      href: "/about.html#impact"
-    - name: "Ways to Give"
-      href: "/sponsor"

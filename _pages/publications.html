@@ -1,0 +1,80 @@
+---
+title: Publications
+permalink: /publications.html
+description: Papers that we have published so far as a community.
+---
+<div
+  class="publication-filter mb-4 btn-group"
+  role="group"
+  aria-label="Publication Filter"
+>
+  <button class="btn btn-primary filter-btn active" data-filter="all">
+    All
+  </button>
+  <button class="btn btn-outline-primary filter-btn" data-filter="main">
+    Main
+  </button>
+  <button class="btn btn-outline-secondary filter-btn" data-filter="affiliated">
+    Affiliation
+  </button>
+</div>
+
+<div id="all-publications">
+  <div class="publication-section" data-category="main">
+    <h2>Main Publications</h2>
+    {% bibliography --file main %}
+
+    <h3>Apprenticeship Program Papers</h3>
+    <p>
+      Selected papers and preprints originated from our
+      <a href="/apprenticeship">apprenticeship</a> program. Please visit
+      <a href="/apprenticeship">apprenticeship</a> for more details.
+    </p>
+    {% bibliography --file apprenticeship %}
+  </div>
+
+  <div class="publication-section" data-category="affiliated">
+    <h2>Affiliated Publications</h2>
+    <p>
+      Recent papers and preprints from members of SEACrowd core team and
+      affiliated members.
+    </p>
+    {% bibliography --file affiliated %}
+  </div>
+
+  <div class="publication-section" data-category="affiliated">
+    <h2>Tutorials</h2>
+    {% bibliography --file tutorials %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn")
+    const publicationSections = document.querySelectorAll("[data-category]")
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter")
+
+        filterButtons.forEach((btn) => {
+          btn.classList.remove("btn-primary", "active")
+          btn.classList.add("btn-outline-primary")
+        })
+
+        this.classList.remove("btn-outline-primary")
+        this.classList.add("btn-primary", "active")
+
+        publicationSections.forEach((section) => {
+          const category = section.getAttribute("data-category")
+
+          if (filter === "all" || filter === category) {
+            section.style.display = "block"
+          } else {
+            section.style.display = "none"
+          }
+        })
+      })
+    })
+  })
+</script>

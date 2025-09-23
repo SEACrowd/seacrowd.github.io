@@ -77,7 +77,7 @@ plugins:
 
 # Jekyll Scholar
 scholar:
-  style: apa
+  style: ./_csl/acl.csl
   locale: en
   source: /_bibliography/
   bibliography: "**/*.bib{,tex}"

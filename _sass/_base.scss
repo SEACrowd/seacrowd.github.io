@@ -96,13 +96,13 @@ img {
     background-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
 
   &:focus-within {
     outline: 2px solid var(--bs-primary);
     outline-offset: 2px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -112,7 +112,6 @@ img {
 
   &:hover {
     border: 1px solid rgba(var(--bs-primary-rgb), 0.3); // lighter border
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
     background-color: rgba(var(--bs-primary-rgb), 0.03); // very subtle tint
   }
 
@@ -120,7 +119,6 @@ img {
     outline: 2px solid var(--bs-primary);
     outline-offset: 2px;
     border: 1px solid var(--bs-primary);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
     background-color: rgba(var(--bs-primary-rgb), 0.05);
   }
 }

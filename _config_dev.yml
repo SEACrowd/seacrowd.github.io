@@ -5,14 +5,16 @@
 profile: true
 livereload: true
 livereload_port: 35729
-
-# Faster regeneration
 future: true
+
+# Show drafts
 show_drafts: true
 unpublished: true
 
 # Enable detailed logging
 verbose: true
+trace: true
+watch: true
 
 # Faster Sass compilation in dev
 sass:

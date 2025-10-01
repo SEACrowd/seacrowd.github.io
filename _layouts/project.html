@@ -2,27 +2,68 @@
 layout: default
 ---
 <header class="container-md">
-  <h1 class="page-title">{{ page.title }}</h1>
-  <p class="text-muted mb-4">
-    <small>
-      {% if page.fromDate %} {{ page.fromDate | date: '%b %-d, %Y' }}{% endif %}
-      {% if page.fromDate and page.toDate %} - {% endif %}
-      {% if page.toDate -%}
-        {{- page.toDate | date: '%b %-d, %Y' -}}
-      {%- endif %}
-    </small>
-  </p>
-</header>
-<article class="container-md content my-5 mx-auto">
-  {% if page['header-img'] %}
+  {% if page.thumbnail %}
     <img
-      src="/assets/images/project/{{ page.header-img }}"
-      class="img-fluid rounded mb-4"
-      alt="{{ page.title }}"
+      src="{{ '/assets/images/project/' | append: page.thumbnail | relative_url }}"
+      class="img-fluid rounded mb-4 w-100"
+      alt="{{ page.title | escape }}"
+      style="max-height: 400px; object-fit: cover;"
     >
   {% endif %}
 
-  <div id="markdown-content">{{ content }}</div>
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <div class="post-meta text-muted mb-4">
+    {%- if page.status -%}
+      <span class="meta-item">
+        <i class="fas fa-signal" aria-hidden="true"></i>
+        {%- case page.status -%}
+          {%- when 'ongoing' -%}
+            {%- assign badge_class = 'bg-success' -%}
+          {%- when 'completed' -%}
+            {%- assign badge_class = 'bg-dark' -%}
+          {%- else -%}
+            {%- assign badge_class = 'bg-secondary' -%}
+        {%- endcase -%}
+        <span class="badge {{ badge_class }} me-1">
+          {{- page.status | capitalize -}}
+        </span>
+      </span>
+    {%- endif -%}
+
+    {%- if page.fromDate or page.toDate -%}
+      <span class="meta-item">
+        <i class="fas fa-calendar" aria-hidden="true"></i>
+        {% if page.fromDate and page.toDate %}
+          {{ page.fromDate | date: '%b %-d, %Y' }} &ndash;
+          {{ page.toDate | date: '%b %-d, %Y' }}
+        {% elsif page.fromDate %}
+          From {{ page.fromDate | date: '%b %-d, %Y' }}
+        {% elsif page.toDate %}
+          Until {{ page.toDate | date: '%b %-d, %Y' }}
+        {% endif %}
+      </span>
+    {%- endif -%}
+
+    {%- if page.category -%}
+      <span class="meta-item">
+        <i class="fas fa-folder" aria-hidden="true"></i>
+        {{ page.category }}
+      </span>
+    {%- endif -%}
+  </div>
+
+  {%- unless page.tags == empty -%}
+    <div class="post-tags mb-3">
+      {%- for tag in page.tags -%}
+        <span class="badge bg-secondary me-1">{{ tag }}</span>
+      {%- endfor -%}
+    </div>
+  {%- endunless -%}
+</header>
+
+<article class="container-md content my-5 mx-auto">
+  {{ content }}
 </article>
 
 {% include social-share.html %}

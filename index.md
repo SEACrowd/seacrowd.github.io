@@ -21,14 +21,14 @@ We commit to a three-pronged approach to reaching our vision:
   [ACL Special Interest Group SIGSEA](https://www.sigsea.org/)
 - supporting early-career researchers through the [SEACrowd Apprenticeship Program](/apprenticeship)
 
-## Ongoing Projects
-
-{% include ongoing-projects.html %}
-
 ## Recent News
 
+{% if site.news and site.news.size > 0 %}
 {% assign recentNews = site.news | sort: 'date' | reverse | limit: 5 %}
 {% for article in recentNews %}
 {{ article.date | date: "%b %-d, %Y" }} -
 <a href="{{ article.url }}">{{ article.title }}</a>
 {% endfor %}
+{% else %}
+No recent news available.
+{% endif %}

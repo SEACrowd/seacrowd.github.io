@@ -33,29 +33,78 @@
           id="card-title-{{ include.item.title | slugify }}"
           class="card-title mt-0"
         >
+          {% if include.item.featured %}
+            <i
+              class="fas fa-thumbtack fa-xs text-primary me-2"
+              aria-label="Featured post"
+            ></i>
+          {% endif %}
           {{ include.item.title }}
         </h3>
 
-        {% if include.type == 'project' %}
-          {% if include.item.fromDate or include.item.toDate %}
-            <p class="text-muted small mb-2">
-              {% if include.item.fromDate and include.item.toDate %}
-                {{ include.item.fromDate | date: '%B %Y' }} –
-                {{ include.item.toDate | date: '%B %Y' }}
-              {% elsif include.item.fromDate %}
-                From {{ include.item.fromDate | date: '%B %Y' }}
-              {% elsif include.item.toDate %}
-                Until {{ include.item.toDate | date: '%B %Y' }}
-              {% endif %}
-            </p>
+        <div class="card-meta text-muted small mb-2">
+          {% if include.type == 'project' %}
+            {% if include.item.fromDate or include.item.toDate %}
+              <span class="meta-item">
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                {% if include.item.fromDate and include.item.toDate %}
+                  {{ include.item.fromDate | date: '%b %Y' }} –
+                  {{ include.item.toDate | date: '%b %Y' }}
+                {% elsif include.item.fromDate %}
+                  From {{ include.item.fromDate | date: '%b %Y' }}
+                {% elsif include.item.toDate %}
+                  Until {{ include.item.toDate | date: '%b %Y' }}
+                {% endif %}
+              </span>
+            {% endif %}
+          {% else %}
+            {% if include.item.date %}
+              <span class="meta-item">
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                {{ include.item.date | date: '%b %-d, %Y' }}
+              </span>
+            {% endif %}
+
+            {% if include.item.category %}
+              <span class="meta-item">
+                <i class="fas fa-folder" aria-hidden="true"></i>
+                {{ include.item.category }}
+              </span>
+            {% endif %}
+
+            {% if include.type == 'post' and include.item.content %}
+              <span class="meta-item">
+                {% include reading-time.html content=include.item.content %}
+              </span>
+            {% endif %}
+
+            {% if include.item.authors and include.item.authors.size > 0 %}
+              <span class="meta-item">
+                <i class="fas fa-user" aria-hidden="true"></i>
+                {% assign max_authors = site.max_authors_card | default: 2 %}
+                {% assign display_authors = include.item.authors
+                  | slice: 0, max_authors
+                %}
+                {% for author in display_authors %}
+                  {{ author }}
+                  {% unless forloop.last %}
+                    {% if forloop.index == display_authors.size
+                      and display_authors.size > 1
+                    %}
+                      and
+                    {% else %}
+                      ,
+                    {% endif %}
+                  {% endunless %}
+                {% endfor %}
+                {% if include.item.authors.size > max_authors %}
+                  , and
+                  {{ include.item.authors.size | minus: max_authors }} more
+                {% endif %}
+              </span>
+            {% endif %}
           {% endif %}
-        {% else %}
-          {% if include.item.date %}
-            <p class="text-muted small mb-2">
-              Posted on {{ include.item.date | date: '%B %-d, %Y' }}
-            </p>
-          {% endif %}
-        {% endif %}
+        </div>
 
         {% if include.item.tags %}
           {% for tag in include.item.tags %}
@@ -70,8 +119,8 @@
           {% if include.item.description %}
             {{ include.item.description }}
           {% else %}
-            {% if include.type == 'project' %}
-              <!-- projects are always expected to have description -->
+            {% if include.type == 'post' %}
+              {{ include.item.excerpt }}
             {% else %}
               {{
                 include.item.content

@@ -4,16 +4,88 @@ permalink: /projects/
 description: A collection of projects that SEACrowd worked or has been working on as a community.
 ---
 
+{% assign allProjects = site.projects | sort: 'fromDate' | reverse %}
+{% assign today = site.time | date: '%Y-%m-%d' %}
+
 ## Ongoing Projects
 
-<div class="mb-4">
-  {% include ongoing-projects.html %}
+<div class="row g-4" id="ongoing-projects-container">
+  {% for project in allProjects %}
+    {% assign showInOngoing = true %}
+    
+    {% comment %} Check status field for "completed" {% endcomment %}
+    {% if project.status == 'completed' %}
+      {% assign showInOngoing = false %}
+    {% else %}
+      {% comment %} Jekyll build time date comparison {% endcomment %}
+      {% if project.toDate %}
+        {% assign projectEndDate = project.toDate | date: '%Y-%m-%d' %}
+        {% if projectEndDate < today %}
+          {% assign showInOngoing = false %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    
+    <div
+      class="col-12 project-item ongoing"
+      data-from-date="{{ project.fromDate | default: '' }}"
+      data-to-date="{{ project.toDate | default: '' }}"
+      data-status="{{ project.status | default: '' }}"
+      {% unless showInOngoing %}
+        style="display: none;"
+      {% endunless %}
+    >
+      {% include card.html item=project type="project" %}
+    </div>
+  {% endfor %}
 </div>
+<p
+  class="text-muted no-projects-message"
+  data-type="ongoing"
+  style="display: none"
+>
+  No ongoing projects at the moment.
+</p>
 
 ## Completed Projects
 
-<div class="mb-4">
-  {% include completed-projects.html %}
+<div class="row g-4" id="completed-projects-container">
+  {% for project in allProjects %}
+    {% comment %}Jekyll fallback logic (Priority 3){% endcomment %}
+    {% assign showInCompleted = false %}
+    
+    {% comment %}Priority 1: Check status field for "completed"{% endcomment %}
+    {% if project.status == 'completed' %}
+      {% assign showInCompleted = true %}
+    {% else %}
+      {% comment %}Priority 2 fallback: Jekyll build time date comparison{% endcomment %}
+      {% if project.toDate %}
+        {% assign projectEndDate = project.toDate | date: '%Y-%m-%d' %}
+        {% if projectEndDate < today %}
+          {% assign showInCompleted = true %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    
+    <div
+      class="col-12 project-item completed"
+      data-from-date="{{ project.fromDate | default: '' }}"
+      data-to-date="{{ project.toDate | default: '' }}"
+      data-status="{{ project.status | default: '' }}"
+      {% unless showInCompleted %}
+        style="display: none;"
+      {% endunless %}
+    >
+      {% include card.html item=project type="project" %}
+    </div>
+  {% endfor %}
 </div>
+<p
+  class="text-muted"
+  id="no-projects-message"
+  style="display: none"
+>
+  No completed projects yet.
+</p>
 
 <script src="{{ '/js/project-filter.js' | relative_url }}"></script>

@@ -2,18 +2,58 @@
 // Base Typography and Global Styles
 // ========================================
 
+@import "variables";
+
+::selection {
+  background-color: var(--sea-yellow);
+  color: var(--sea-black);
+}
+
 body {
   line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 1.5rem;
+// Font size hierarchy following Bootstrap's scale
+h1 {
+  font-size: 2.5rem; // 40px
+  font-weight: 500;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem; // 32px
+  font-weight: 500;
+  margin-top: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.75rem; // 28px
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem; // 24px
+  font-weight: 500;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 1.25rem; // 20px
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem; // 16px
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
@@ -121,4 +161,92 @@ img {
     border: 1px solid var(--bs-primary);
     background-color: rgba(var(--bs-primary-rgb), 0.05);
   }
+}
+
+.card-meta,
+.post-meta {
+  .meta-item {
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    i {
+      margin-right: 0.375rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+/*
+ * ===================================================================
+ * Accordion Style (minimalist style with +/x Icons)
+ * ===================================================================
+ */
+
+.accordion {
+  /* Resets Bootstrap's default negative margin */
+  --bs-accordion-inner-border-radius: var(--bs-border-radius);
+  --bs-accordion-border-radius: var(--bs-border-radius);
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.accordion-item:first-of-type {
+  /* Optional: removes top border if you don't want it */
+  border-top: none;
+}
+
+.accordion-item:last-of-type {
+  /* Removes the final bottom border for a cleaner look */
+  border-bottom: none;
+}
+
+.accordion-button {
+  font-weight: 500;
+  padding: 1.25rem 1rem;
+}
+
+/* State: Open/Active */
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--bs-body-color);
+  box-shadow: none;
+}
+
+/* State: Focus & Hover */
+.accordion-button:hover {
+  background-color: var(--bs-tertiary-bg);
+}
+
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Default Icon (Plus) */
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  /* This is a theme-aware PLUS icon with a thinner 1.5px stroke. */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 5v14'/%3e%3cpath d='M5 12h14'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Open Icon (Cross) */
+.accordion-button:not(.collapsed)::after {
+  /* The plus icon is rotated 45 degrees to create the 'x' shape. */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 5v14'/%3e%3cpath d='M5 12h14'/%3e%3c/svg%3e");
+  transform: rotate(45deg);
 }

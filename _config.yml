@@ -6,8 +6,8 @@ description: "AI for Southeast Asia, by Southeast Asians"
 # URL
 url: https://seacrowd.org
 # baseurl: "" # For Root Domain
-permalink: /:title/
-header-img: banner.png
+permalink: /posts/:title.html
+thumbnail: banner.png
 
 # Social Links
 social:
@@ -42,22 +42,22 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
 
 # Collections
 collections:
-  people:
-    output: true
-    permalink: /people/:title/index.html
-  pages:
-    output: true
-    permalink: /:name/
   news:
     output: true
-    permalink: /news/:title/
+    permalink: /news/:title.html
   projects:
     output: true
-    permalink: /projects/:title/
+    permalink: /projects/:title.html
 
+include:
+  - _pages
 # Markdown & Highlighter
 markdown: kramdown
 highlighter: rouge
@@ -74,12 +74,13 @@ sass:
 plugins:
   - jekyll-scholar
   - jekyll-sitemap
+  - jekyll-paginate-v2
 
 # Jekyll Scholar
 scholar:
   style: ./_csl/acl.csl
   locale: en
-  source: /_bibliography/
+  source: _bibliography/
   bibliography: "**/*.bib{,tex}"
   bibliography_template: bib # _layouts/bib.html
   sort_by: year,month
@@ -88,9 +89,25 @@ scholar:
   group_order: ascending
 
 pub_show_max_authors: 8 # first + last authors
+max_authors_card: 2 # Maximum authors to show in card.html
+max_authors_post: 4 # Maximum authors to show in post.html
+
+# jekyll-paginate-v2
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /page/:num/
+  per_page: 8
+  sort_field: date
+  sort_reverse: true
+  trail:
+    before: 2 # The number of links before the current page
+    after: 2 # The number of links after the current page
+  debug: true
 
 # Exclude files from processing
 exclude:
+  - _site/
   - docker/
   - .docker/
   - Dockerfile
@@ -100,6 +117,8 @@ exclude:
   - .git/
   - .gitignore
   - .husky/
+  - Makefile
+  - package.json
   - node_modules/
   - vendor/
   - .bundle/
@@ -115,6 +134,7 @@ exclude:
   - "*.log"
   - _pages/robots.txt
   - _pages/feed.xml
+  - _posts/_template.md
 
 # Keep files (override exclude)
 keep_files:

@@ -2,21 +2,142 @@
 layout: default
 ---
 <header>
-  <h1 class="page-title">{{ page.title }}</h1>
-  <p class="text-muted mb-4">
-    <small>Posted on {{ page.date | date: '%B %-d, %Y' }}</small>
-  </p>
-</header>
-<article class="container-md content my-5 mx-auto">
-  {% if page['header-img'] %}
+  {% if page.thumbnail %}
     <img
-      src="/{{ page.header-img }}"
-      class="img-fluid rounded mb-4"
+      src="/assets/images/post/{{ page['thumbnail'] }}"
+      class="img-fluid rounded mb-4 w-100"
       alt="{{ page.title }}"
+      style="max-height: 400px; object-fit: cover;"
     >
   {% endif %}
+  <h1 class="page-title">{{ page.title }}</h1>
+  <div class="post-meta text-muted mb-4">
+    {% if page.featured == true %}
+      <span class="meta-item">
+        <i class="fas fa-thumbtack text-primary" aria-label="Featured post"></i>
+        Featured
+      </span>
+    {% endif %}
+    <span class="meta-item">
+      <i class="fas fa-calendar" aria-hidden="true"></i>
+      {{ page.date | date: '%b %-d, %Y' }}
+    </span>
 
-  <div id="markdown-content">{{ content }}</div>
+    {% if page.category %}
+      <span class="meta-item">
+        <i class="fas fa-folder" aria-hidden="true"></i>
+        {{ page.category }}
+      </span>
+    {% endif %}
+
+    <span class="meta-item">
+      {% include reading-time.html content=content %}
+    </span>
+
+    {% if page.authors and page.authors.size > 0 %}
+      <span class="meta-item">
+        <i class="fas fa-user" aria-hidden="true"></i>
+        {% assign max_authors = site.max_authors_post | default: 4 %}
+        {% assign display_authors = page.authors | slice: 0, max_authors %}
+        {% for author in display_authors %}
+          {% assign author_link = null %}
+          {% for team_member in site.data.team %}
+            {% assign name_lower = team_member.name | downcase %}
+            {% assign author_lower = author | downcase %}
+            {% if name_lower == author_lower
+              or name_lower contains author_lower
+              or author_lower contains name_lower
+            %}
+              {% assign author_link = team_member.site %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if author_link %}
+            <a href="{{ author_link }}">
+              {{- author -}}
+            </a>
+          {% else %}
+            {{ author }}
+          {% endif %}
+
+          {% unless forloop.last %}
+            {% if forloop.index == display_authors.size
+              and display_authors.size > 1
+            %}
+              and
+            {% else %}
+              ,
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+        {% if page.authors.size > max_authors -%}
+          , and {{ page.authors.size | minus: max_authors }} more
+        {% endif %}
+      </span>
+    {% endif %}
+  </div>
+
+  {% if page.tags and page.tags.size > 0 %}
+    <div class="post-tags mb-3">
+      {% for tag in page.tags %}
+        <span class="badge bg-secondary me-1">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</header>
+<article class="container-md content my-5 mx-auto">
+  {{ content }}
 </article>
 
 {% include social-share.html %}
+
+<nav
+  class="post-navigation my-5"
+  role="navigation"
+  aria-label="{% if nav_type == 'news' %}News{% else %}Post{% endif %} navigation"
+>
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        {% if page.previous %}
+          <a
+            href="{{ page.previous.url | relative_url }}"
+            class="post-nav-link post-nav-prev d-flex align-items-center p-3 h-100 text-decoration-none border rounded-3"
+            aria-label="Go to previous post: {{ page.previous.title }}"
+            role="button"
+            tabindex="0"
+          >
+            <div class="nav-icon me-3">
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="nav-content text-start">
+              <small class="nav-label d-block text-muted mb-1">Previous</small>
+              <span class="nav-title fw-medium">{{ page.previous.title }}</span>
+            </div>
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="col-md-6">
+        {% if page.next %}
+          <a
+            href="{{ page.next.url | relative_url }}"
+            class="post-nav-link post-nav-next d-flex align-items-center p-3 h-100 text-decoration-none border rounded-3"
+            aria-label="Go to next post: {{ page.next.title }}"
+            role="button"
+            tabindex="0"
+          >
+            <div class="nav-content text-end flex-grow-1">
+              <small class="nav-label d-block text-muted mb-1">Next</small>
+              <span class="nav-title fw-medium">{{ page.next.title }}</span>
+            </div>
+            <div class="nav-icon ms-3">
+              <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

@@ -9,7 +9,6 @@ Brand new SEACrowd website in Jekyll and Boostrap 5.3.
 1. **Fork the repository** on GitHub
 2. **Edit files directly** in the GitHub web interface
 3. **Submit a pull request** with your changes
-4. All editing can be done through GitHub.
 
 ### Site settings
 
@@ -34,9 +33,37 @@ In `_bibliography/`:
   Batch value must be synced between this .bib file and [\_data/apprentices.yml](_data/apprentices.yml),
   such as "24-25" for batch 2024-2025.
 - Add `venue` to bib to render venue/publisher more efficiently.
-  Common venues are in [\_data/venues.yml](_data/venues.yml)
-- .bib accept custom fields: award, code, poster, preview (the image path relative to /assets/images/pub_preview),
-  resources, selected, slides, video. For all fields, see [bib.html](_layouts/bib.html).
+- .bib accept custom fields: arxiv/pdf, award, code, demo, post, poster,
+  resources, selected, slides, talk, video, website. For all fields, see [bib.html](_layouts/bib.html).
+
+### Blog Posts
+
+Create new blog posts in `_posts/` using the format: `YYYY-MM-DD-title.md`
+
+**Frontmatter:**
+
+```yaml
+---
+layout: post
+title: "Your Post Title"
+date: 2024-10-01
+description: "Brief description for SEO and previews"
+tags: [tag1, tag2] # Optional
+category: research # Optional, array or string separated by commas
+featured: true # Optional: shows in featured section
+authors: [Author Name] # Optional array
+thumbnail: image.jpg # Optional: image filename in assets/images/post/
+---
+```
+
+**Writing tips:**
+
+- Use clear heading hierarchy (h1 for title, h2-h6 for sections)
+- Add alt text to images: `![Alt text](image.jpg)`
+- Use code blocks with language specification: ```python
+- Keep descriptions under 160 characters for SEO
+
+**Starter template:** Copy from `_posts/_template.md`
 
 ### News & Updates
 
@@ -102,10 +129,12 @@ See [Makefile](Makefile) for all development commands:
 - `make restart` - Restart without cache
 - `make rebuild` - Rebuild containers without cache (if changes not reflected)
 - `make clean` - Remove local Jekyll caches
+- `make install && make serve` - Install gems locally if you have Ruby and serve
 - `make format` - Format code (requires npm)
 
 ### Setup Notes
 
 - Docker automates Jekyll restarts for `_config.yml` and `_layouts/bib.html` changes
 - Manual Ruby setup requires [rbenv](https://github.com/rbenv/rbenv) (see Makefile comments)
+  or globally installed ruby >= 3.4.5
 - Site runs on [http://localhost:4000](http://localhost:4000)

@@ -6,106 +6,103 @@ $sea-green: #009639;
 $sea-white: #ffffff;
 $sea-black: #111111;
 
-$sea-gray-100: #f1f3f5;
-$sea-gray-200: #e9ecef;
-$sea-gray-300: #dee2e6;
-$sea-gray-400: #ced4da;
-$sea-gray-500: #adb5bd;
-$sea-gray-600: #6c757d;
-$sea-gray-700: #495057;
-$sea-gray-800: #343a40;
-$sea-gray-900: #212529;
+:root {
+  /* SEACrowd Brand Colors as CSS Custom Properties */
+  --sea-red: #{$sea-red};
+  --sea-blue: #{$sea-blue};
+  --sea-yellow: #{$sea-yellow};
+  --sea-green: #{$sea-green};
+  --sea-white: #{$sea-white};
+  --sea-black: #{$sea-black};
 
-:root,
-[data-bs-theme="light"] {
-  // Body
-  --bs-body-bg: #{$sea-white};
-  --bs-body-bg-rgb: 255, 255, 255;
-  --bs-body-color: #{$sea-black};
-  --bs-body-color-rgb: 17, 17, 17;
+  /* Core Theme Color Mapping */
+  --bs-primary: var(--sea-red);
+  --bs-secondary: var(--sea-blue);
+  --bs-success: var(--sea-green);
+  --bs-danger: color-mix(in srgb, var(--sea-red) 80%, black 20%);
+  --bs-warning: var(--sea-yellow);
+  --bs-info: color-mix(in srgb, var(--sea-blue) 60%, white 40%);
+  --bs-light: var(--sea-white);
+  --bs-dark: var(--sea-black);
 
-  // Secondary (muted text, dividers, disabled states)
-  --bs-secondary-color: #{$sea-gray-700};
-  --bs-secondary-color-rgb: 73, 80, 87;
-  --bs-secondary-bg: #{$sea-gray-100};
-  --bs-secondary-bg-rgb: 248, 249, 250;
-
-  // Tertiary (lighter text, hover/well backgrounds)
-  --bs-tertiary-color: #{$sea-gray-900};
-  --bs-tertiary-color-rgb: 33, 37, 41;
-  --bs-tertiary-bg: #{$sea-gray-200};
-  --bs-tertiary-bg-rgb: 233, 236, 239;
-
-  // Emphasis (strong foreground for headings, emphasis text)
-  --bs-emphasis-color: #{$sea-black};
-  --bs-emphasis-color-rgb: 17, 17, 17;
-
-  // Border
-  --bs-border-color: #dee2e6;
-  --bs-border-color-rgb: 222, 226, 230;
-
-  // Primary theme set
-  --bs-primary: #{$sea-red};
-  --bs-primary-rgb: 239, 51, 64;
-  --bs-primary-bg-subtle: #fce5e7;
-  --bs-primary-border-subtle: #f5a3a9;
-  --bs-primary-text-emphasis: #a3161f;
-
-  --bs-secondary: #{$sea-blue};
+  /* RGB versions for opacity utilities */
+  --bs-primary-rgb: 228, 6, 20;
   --bs-secondary-rgb: 5, 46, 171;
-  --bs-secondary-bg-subtle: #e6ebf7;
-  --bs-secondary-border-subtle: #99addf;
-  --bs-secondary-text-emphasis: #001a66;
-
-  --bs-success: #{$sea-green};
   --bs-success-rgb: 0, 150, 57;
-  --bs-success-bg-subtle: #e0f5e8;
-  --bs-success-border-subtle: #93d4a9;
-  --bs-success-text-emphasis: #004d1e;
-
-  --bs-warning: #{$sea-yellow};
-  --bs-warning-rgb: 255, 209, 0;
-  --bs-warning-bg-subtle: #fff8db;
-  --bs-warning-border-subtle: #ffe26e;
-  --bs-warning-text-emphasis: #7a6600;
-
-  --bs-danger: #b22222;
-  --bs-danger-rgb: 178, 34, 34;
-  --bs-danger-bg-subtle: #f7e0e0;
-  --bs-danger-border-subtle: #d88a8a;
-  --bs-danger-text-emphasis: #5a0f0f;
-
-  --bs-info: #{$sea-blue};
-  --bs-info-rgb: 5, 46, 171;
-  --bs-info-bg-subtle: #e6ebf7;
-  --bs-info-border-subtle: #99addf;
-  --bs-info-text-emphasis: #001a66;
-
-  --bs-light: #{$sea-white};
+  --bs-danger-rgb: 183, 5, 16;
+  --bs-warning-rgb: 242, 223, 101;
+  --bs-info-rgb: 96, 165, 250;
   --bs-light-rgb: 255, 255, 255;
-  --bs-light-bg-subtle: #f8f9fa;
-  --bs-light-border-subtle: #e9ecef;
-  --bs-light-text-emphasis: #495057;
-
-  --bs-dark: #{$sea-black};
   --bs-dark-rgb: 17, 17, 17;
-  --bs-dark-bg-subtle: #343a40;
-  --bs-dark-border-subtle: #495057;
-  --bs-dark-text-emphasis: #e9ecef;
+
+  /* Body & Text Colors */
+  --bs-body-color: var(--sea-black);
+  --bs-body-bg: var(--sea-white);
+  --bs-secondary-color: rgba(17, 17, 17, 0.75);
+  --bs-secondary-bg: #e9ecef;
+  --bs-tertiary-color: rgba(17, 17, 17, 0.5);
+  --bs-tertiary-bg: #f8f9fa;
+  --bs-emphasis-color: var(--sea-black);
+  --bs-body-color-rgb: 17, 17, 17;
+  --bs-body-bg-rgb: 255, 255, 255;
+
+  /* Border Colors */
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(17, 17, 17, 0.175);
+
+  /* Subtle Background & Text Emphasis Colors */
+  --bs-primary-text-emphasis: #021244;
+  --bs-secondary-text-emphasis: #5b0208;
+  --bs-success-text-emphasis: #003c17;
+  --bs-danger-text-emphasis: #5b0208;
+  --bs-warning-text-emphasis: #615728;
+
+  --bs-primary-bg-subtle: #ccd5f6;
+  --bs-secondary-bg-subtle: #f9cccc; /* ADDED */
+  --bs-success-bg-subtle: #ccf0d8;
+  --bs-danger-bg-subtle: #f9cccc;
+  --bs-warning-bg-subtle: #fcf8e0;
 }
 
 [data-bs-theme="dark"] {
-  --bs-body-bg: #{$sea-black};
-  --bs-body-bg-rgb: 17, 17, 17;
-  --bs-body-color: #{$sea-white};
+  /* Keep core theme colors the same */
+  --bs-primary: var(--sea-blue);
+  --bs-success: var(--sea-green);
+  --bs-danger: var(--sea-red);
+  --bs-warning: var(--sea-yellow);
+  --bs-info: var(--sea-blue);
+  --bs-light: var(--sea-black);
+  --bs-dark: var(--sea-white);
+
+  /* Invert Body & Text Colors */
+  --bs-body-color: var(--sea-white);
+  --bs-body-bg: var(--sea-black);
+  --bs-secondary-color: rgba(255, 255, 255, 0.75);
+  --bs-secondary-bg: #343a40;
+  --bs-tertiary-color: rgba(255, 255, 255, 0.5);
+  --bs-tertiary-bg: #212529;
+  --bs-emphasis-color: var(--sea-white);
   --bs-body-color-rgb: 255, 255, 255;
+  --bs-body-bg-rgb: 17, 17, 17;
 
-  --bs-secondary-color: #{$sea-gray-200};
-  --bs-secondary-bg: #{$sea-gray-900};
+  /* Invert Border Colors */
+  --bs-border-color: #495057;
+  --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
 
-  --bs-tertiary-color: #{$sea-gray-100};
-  --bs-tertiary-bg: #{$sea-gray-700};
+  /* Adjust Link Colors for better contrast on dark BG */
+  --bs-link-color: #6983dd;
+  --bs-link-color-rgb: 105, 131, 221;
+  --bs-link-hover-color: #879eeb;
+  --bs-link-hover-color-rgb: 135, 158, 235;
 
-  --bs-emphasis-color: #{$sea-white};
-  --bs-border-color: #444;
+  /* Invert Subtle Background & Text Emphasis Colors */
+  --bs-primary-text-emphasis: #6983dd;
+  --bs-success-text-emphasis: #66c489;
+  --bs-danger-text-emphasis: #eb6870;
+  --bs-warning-text-emphasis: #f5e893;
+
+  --bs-primary-bg-subtle: #010e35;
+  --bs-success-bg-subtle: #002d11;
+  --bs-danger-bg-subtle: #450206;
+  --bs-warning-bg-subtle: #49431e;
 }

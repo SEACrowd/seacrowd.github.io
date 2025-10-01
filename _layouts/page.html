@@ -1,7 +1,16 @@
 ---
 layout: default
 ---
-<div>
+<header>
+  {% if page.thumbnail %}
+    <img
+      src="/assets/images/{{ page['thumbnail'] }}"
+      class="img-fluid rounded mb-4 w-100"
+      alt="{{ page.title }}"
+      style="max-height: 400px; object-fit: cover;"
+    >
+  {% endif %}
+
   {% if page.title %}
     <h1 class="page-title">{{ page.title }}</h1>
   {% endif %}
@@ -10,6 +19,6 @@ layout: default
       {{ page.description }}
     </p>
   {% endif %}
+</header>
 
-  <div class="page-body">{{ content }}</div>
-</div>
+{{ content }}

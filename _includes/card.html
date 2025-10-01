@@ -1,3 +1,14 @@
+{% assign thumbnail = include.item.thumbnail | default: site.thumbnail %}
+{% if include.type %}
+  {% assign img_src = '/assets/images/'
+    | append: include.type
+    | append: '/'
+    | append: thumbnail
+  %}
+{% else %}
+  {% assign img_src = '/assets/images/' | append: thumbnail %}
+{% endif %}
+
 <article
   class="card card-clickable h-100"
   aria-labelledby="card-title-{{ include.item.title | slugify }}"
@@ -10,8 +21,8 @@
     <div class="row g-0 h-100">
       <div class="col-md-4 p-3">
         <img
-          src="/assets/images/{% if include.type == 'project' %}project/{% endif %}{% if include.item.header-img %}{{ include.item.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-          class="img-fluid {% if include.type == 'project' %}rounded{% endif %} w-100 object-fit-cover"
+          src="{{ img_src }}"
+          class="img-fluid rounded w-100 object-fit-cover"
           alt="{{ include.item.title }}"
           style="height: 180px;"
         >

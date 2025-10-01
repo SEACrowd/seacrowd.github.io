@@ -1,29 +1,31 @@
 ---
 title: SEA-VL Phase 2
-header-img: seavl-phase2-banner.png
-description: Large-scale Multimodal Models for Southeast Asia.
+thumbnail: seavl-phase2-banner.png
+description: Develop and benchmark an open-source state-of-the-art vision language model (VLM) for Southeast Asia
 fromDate: 2025-03-01
 toDate: 2025-11-08
+status: ongoing
+keywords:
+  [
+    "SEA-VL",
+    "vision language model",
+    "Southeast Asia",
+    "AI",
+    "VLM",
+    "machine learning",
+    "cultural AI",
+    "image recognition",
+    "multilingual AI"
+  ]
 ---
 
 <div class="alert alert-warning text-center" role="alert">
-  <strong>This is an ongoing project.</strong><br>
   This page will be updated as new information is released. For faster updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>.
 </div>
 
-## About the Project
+After the success of [SEA-VL Phase 1](https://seacrowd.github.io/seavl-dataset/), we are proud to launch **SEA-VL Phase 2**!
 
-After the success of [SEA-VL Phase 1](https://seacrowd.github.io/seavl-dataset/), we are proud to
-launch **SEA-VL Phase 2**!
-
-For Phase 2, we have an even bigger ambition:
-
-> Build an open-source state-of-the-art vision language model (VLM) for Southeast Asia
-
-We believe it’s high time to create a model that truly understands Southeast Asia culture and
-language, the way we see it. We want the model to reflect the visual and linguistic richness of the
-SEA region. This effort requires diverse contributions: high-quality data curation and annotation,
-prompting, model training, evaluation, and more.
+We believe it's high time to create a model that truly understands Southeast Asian culture and language. We want the model to reflect the visual and linguistic richness of the SEA region through diverse contributions: high-quality data curation, annotation, prompting, model training, and evaluation.
 
 ## Contribution Guide
 

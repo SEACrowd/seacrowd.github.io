@@ -1,18 +1,11 @@
 ---
 title: SEACrowd Catalogue Project
-header-img: seacrowd-catalog.png
-description: The first comprehensive catalog and benchmark for all Southeast Asian datasets.
+thumbnail: seacrowd-catalog.png
+description: Compile the first comprehensive catalog and benchmark for 500+ Southeast Asian datasets.
 fromDate: 2023-06-01
 toDate: 2024-11-07
+status: completed
 ---
-
-This is an archive of the original SEACrowd Project, completed in November 2024 with a paper
-published at EMNLP 2024.
-
-<div class="alert alert-success text-center" role="alert">
-  <strong>This project has been completed.</strong><br>
-  Thank you for your contributions!
-</div>
 
 **Paper**: [EMNLP 2024](https://aclanthology.org/2024.emnlp-main.296/)  
 **Project Link:** [Catalogue](https://seacrowd.github.io/seacrowd-catalogue/)  

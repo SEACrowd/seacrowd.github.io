@@ -1,41 +1,61 @@
 FROM ruby:3.4.5-slim
 
 ARG BUILD_ENV=production
-ARG INSTALL_DEV_DEPS=false
 ARG PORT=4000
 
 WORKDIR /site
 
-# Install base dependencies for Ruby gems
+# Install base dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  git \
   build-essential \
+  git \
   curl \
   gnupg \
+  sudo \
   && rm -rf /var/lib/apt/lists/*
 
-# Conditionally install Node.js (modern NodeSource repo)
-RUN if [ "$INSTALL_DEV_DEPS" = "true" ]; then \
-  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
-  | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg \
-  && echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" \
-  > /etc/apt/sources.list.d/nodesource.list \
-  && apt-get update && apt-get install -y --no-install-recommends nodejs \
+# Install Node.js only for development
+RUN if [ "$BUILD_ENV" = "development" ]; then \
+  apt-get update && apt-get install -y --no-install-recommends \
+  ca-certificates curl gnupg \
+  && mkdir -p /etc/apt/keyrings \
+  && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
+  && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" > /etc/apt/sources.list.d/nodesource.list \
+  && apt-get update && apt-get install -y nodejs \
   && rm -rf /var/lib/apt/lists/*; \
   fi
 
-COPY Gemfile Gemfile.lock ./
-RUN bundle config set path /usr/local/bundle \
+# Create non-root user
+RUN groupadd -r jekyll && useradd -r -g jekyll -m -d /home/jekyll jekyll
+RUN chown jekyll:jekyll /site
+
+# Allow jekyll user to use sudo without password for chown
+RUN echo 'jekyll ALL=(ALL) NOPASSWD: /bin/chown' >> /etc/sudoers
+
+# Create cache directory with proper ownership
+RUN mkdir -p /site/.jekyll-cache && chown -R jekyll:jekyll /site/.jekyll-cache
+
+# Copy and setup entrypoint script
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+USER jekyll
+
+# Install Ruby dependencies
+COPY --chown=jekyll:jekyll Gemfile Gemfile.lock ./
+RUN bundle config set --local path vendor/bundle \
   && bundle install --jobs=4 --retry=3
 
-# Copy Node deps only if dev tools are enabled
-COPY package.json package-lock.json* ./
-RUN if [ "$INSTALL_DEV_DEPS" = "true" ]; then npm install --only=dev; fi
+# Install Node deps only for development
+COPY --chown=jekyll:jekyll package*.json ./
+RUN if [ "$BUILD_ENV" = "development" ]; then npm install --only=dev; fi
 
-COPY . .
+# Copy source files for production (development uses volume mounts)
+COPY --chown=jekyll:jekyll . .
 
 EXPOSE ${PORT}
 
+# Health check for production
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
   CMD curl -f http://localhost:${PORT}/ || exit 1
 
@@ -43,9 +63,11 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
 ENV BUILD_ENV=${BUILD_ENV}
 ENV PORT=${PORT}
 
-# Environment-aware Jekyll command with bundle check fallback
-CMD bundle check || bundle install --jobs=4 --retry=3 && \
-  if [ "$BUILD_ENV" = "development" ]; then \
+# Set entrypoint
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
+# Runtime command based on environment
+CMD if [ "$BUILD_ENV" = "development" ]; then \
   bundle exec jekyll serve --host 0.0.0.0 --port ${PORT} --config _config.yml,_config_dev.yml; \
   else \
   bundle exec jekyll serve --host 0.0.0.0 --port ${PORT}; \

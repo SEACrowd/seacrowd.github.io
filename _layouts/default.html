@@ -70,7 +70,7 @@
       | condense_spaces
       | truncate: 150
     %}
-    {% assign page_image = page['header-img']
+    {% assign page_image = page.thumbnail
       | default: 'assets/images/banner.png'
     %}
 
@@ -123,7 +123,8 @@
 
   <body
     id="page-top"
-    class="d-flex flex-column min-vh-100 pt-2"
+    class="d-flex flex-column min-vh-100"
+    style="padding-top: 70px;"
   >
     {% include navbar.html %}
     <main class="flex-grow-1">
@@ -169,7 +170,9 @@
           icon: "#"
         }
 
-        anchors.add("h2, h3, h4, h5, h6")
+        anchors.add(
+          "h2:not(.card h2):not(.accordion h2), h3:not(.card h3):not(.accordion h3):not(.accordion-header), h4:not(.card h4):not(.accordion h4), h5:not(.card h5):not(.accordion h5), h6:not(.card h6):not(.accordion h6)"
+        )
       })
     </script>
     <script defer>

@@ -1,19 +1,13 @@
 ---
 title: SEA-VL Phase 1
-header-img: seavl-banner.png
-description: The first culturally-relevant vision-language dataset for Southeast Asia.
+thumbnail: seavl-banner.png
+description: Build the first culturally-relevant vision-language dataset for Southeast Asia.
 fromDate: 2024-03-01
 toDate: 2025-02-28
+status: completed
 ---
 
-This is an archive of the SEA-VL Phase 1 project, which culminated in a paper in ACL 2025.
-
-<div class="alert alert-success text-center" role="alert">
-  <strong>This project has been completed.</strong><br>
-  Thank you for your contributions!
-</div>
-
-**Paper**: [ACL 2025](), [arXiv](https://arxiv.org/abs/2503.07920)  
+**Paper**: [ACL 2025](https://aclanthology.org/2025.acl-long.916/), [arXiv](https://arxiv.org/abs/2503.07920)  
 **HuggingFace Collection**:
 [Link](https://huggingface.co/collections/SEACrowd/sea-vl-multicultural-vl-dataset-for-southeast-asia-67cf223d0c341d4ba2b236e7)
 

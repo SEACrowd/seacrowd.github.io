@@ -8,7 +8,7 @@ description: Updates on SEACrowd and SEA AI research. Be sure to check here peri
   {% assign sortedNews = site.news | sort: 'date' | reverse %}
   {% for article in sortedNews %}
     <div class="col-12">
-      {% include card.html item=article type="news" %}
+      {% include card.html item=article %}
     </div>
   {% endfor %}
 </div>

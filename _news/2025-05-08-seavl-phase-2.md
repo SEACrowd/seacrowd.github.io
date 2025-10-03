@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Call for Contributors - SEAVL Phase 2
-tags:
-  - news
-header-img: project/seavl-phase2-banner.png
+category: project
+thumbnail: project/seavl-phase2-banner.png
 date: 2025-05-08
 ---
 

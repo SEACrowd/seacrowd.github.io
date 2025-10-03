@@ -1,0 +1,101 @@
+{%- assign show_limit = 5 -%}
+{%- assign today = site.time | date: '%Y-%m-%d' -%}
+
+{%- assign ongoing_projects = '' | split: '' -%}
+{%- assign completed_projects = '' | split: '' -%}
+
+{%- for project in site.projects -%}
+  {%- assign is_ongoing = false -%}
+  {%- assign is_completed = false -%}
+
+  {%- if project.status -%}
+    {%- if project.status == 'ongoing' -%}
+      {%- assign is_ongoing = true -%}
+    {%- elsif project.status == 'completed' -%}
+      {%- assign is_completed = true -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- if project.toDate -%}
+      {%- assign project_end_date = project.toDate | date: '%Y-%m-%d' -%}
+      {%- if project_end_date < today -%}
+        {%- assign is_completed = true -%}
+      {%- else -%}
+        {%- assign is_ongoing = true -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign is_ongoing = true -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if is_ongoing -%}
+    {%- assign ongoing_projects = ongoing_projects | push: project -%}
+  {%- endif -%}
+  {%- if is_completed -%}
+    {%- assign completed_projects = completed_projects | push: project -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign ongoing_projects = ongoing_projects | sort: 'fromDate' | reverse -%}
+{%- assign completed_projects = completed_projects
+  | sort: 'toDate'
+  | reverse
+-%}
+
+<aside id="project-navigation" class="my-5 container row">
+  <section class="col-md-6">
+    <h4 class="project-aside-title">Ongoing Projects</h4>
+    <ul class="list-unstyled">
+      {%- for project in ongoing_projects limit: show_limit -%}
+        <li
+          class="mb-2 text-muted"
+          data-from-date="{{ project.fromDate | default: '' }}"
+          data-to-date="{{ project.toDate | default: '' }}"
+          data-status="{{ project.status | default: '' }}"
+        >
+          <a
+            href="{{ project.url | relative_url }}"
+          >
+            {{ project.title }}
+          </a>
+        </li>
+      {%- else -%}
+        <li>No ongoing projects found.</li>
+      {%- endfor -%}
+      {%- if ongoing_projects.size > show_limit -%}
+        <li class="text-muted">
+          ... and {{ ongoing_projects.size | minus: show_limit }} more
+        </li>
+      {%- endif -%}
+    </ul>
+  </section>
+
+  <section class="col-md-6">
+    <h4 class="project-aside-title">Completed Projects</h4>
+    <ul class="list-unstyled">
+      {%- for project in completed_projects limit: show_limit -%}
+        <li
+          class="mb-2"
+          data-from-date="{{ project.fromDate | default: '' }}"
+          data-to-date="{{ project.toDate | default: '' }}"
+          data-status="{{ project.status | default: '' }}"
+        >
+          <a
+            href="{{ project.url | relative_url }}"
+          >
+            {{ project.title }}
+          </a>
+          <small class="text-muted">
+            (Completed {{ project.toDate | date: '%b %Y' }})
+          </small>
+        </li>
+      {%- else -%}
+        <li>No completed projects found.</li>
+      {%- endfor -%}
+      {%- if completed_projects.size > show_limit -%}
+        <li class="text-muted">
+          ... and {{ completed_projects.size | minus: show_limit }} more
+        </li>
+      {%- endif -%}
+    </ul>
+  </section>
+</aside>

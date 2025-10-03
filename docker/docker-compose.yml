@@ -5,20 +5,20 @@ services:
       dockerfile: docker/Dockerfile
       args:
         BUILD_ENV: development
-        INSTALL_DEV_DEPS: true
         PORT: ${JEKYLL_PORT:-4000}
     image: seacrowd-jekyll:dev-0.7
     ports:
       - "${JEKYLL_PORT:-4000}:${JEKYLL_PORT:-4000}"
-      - "${LIVERELOAD_PORT:-35729}:35729" # LiveReload port
+      - "${LIVERELOAD_PORT:-35729}:35729"
     volumes:
+      # Source code mount for live development (exclude copied files)
+      - ..:/site:Z
+      # Persistent volumes for dependencies and cache
       - jekyll_vendor:/site/vendor
-      - jekyll_bundle:/usr/local/bundle
       - jekyll_cache:/site/.jekyll-cache
       - node_modules:/site/node_modules
     environment:
       - JEKYLL_ENV=development
-      - BUNDLE_PATH=/usr/local/bundle
       - PORT=${JEKYLL_PORT:-4000}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${JEKYLL_PORT:-4000}/"]
@@ -28,27 +28,20 @@ services:
       start_period: 30s
     develop:
       watch:
-        - action: sync
-          path: ..
-          target: /site
-          ignore:
-            - _site/
-            - .git/
-            - vendor/
-            - node_modules/
-            - .bundle/
-            - .jekyll-cache/
-            - .sass-cache/
-            - Gemfile.lock
-            - docker/
-            - scripts/
         - action: rebuild
           path: ../_config.yml
         - action: rebuild
           path: ../_config_dev.yml
+        - action: rebuild
+          path: ../Gemfile
+        - action: rebuild
+          path: ../Gemfile.lock
+        - action: rebuild
+          path: ../package.json
+        - action: rebuild
+          path: ../package-lock.json
 
 volumes:
   jekyll_vendor:
-  jekyll_bundle:
   jekyll_cache:
   node_modules:

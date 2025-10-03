@@ -22,7 +22,7 @@ down:
 restart:
 	docker compose -f docker/docker-compose.yml down
 	docker volume rm -f seacrowd-website_jekyll_cache || true
-	docker volume rm -f docker_jekyll_cache || true  
+	docker volume rm -f docker_jekyll_cache || true
 	rm -rf .jekyll-cache/ _site/ .sass-cache/
 	docker compose -f docker/docker-compose.yml up --watch
 
@@ -47,7 +47,7 @@ install:
 
 # Serve site manually with Ruby
 serve:
-	bundle exec jekyll serve --config _config.yml,_config_dev.yml
+	bundle exec jekyll serve --config _config.yml,_config_dev.yml --watch
 
 # Format code (requires npm)
 format:

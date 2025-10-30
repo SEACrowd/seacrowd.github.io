@@ -10,13 +10,13 @@
 {% endif %}
 
 <article
-  class="card card-clickable h-100"
+  class="card card-clickable h-100 position-relative"
   aria-labelledby="card-title-{{ include.item.title | slugify }}"
   aria-describedby="card-desc-{{ include.item.title | slugify }}"
 >
   <a
     href="{{ include.item.url | relative_url }}"
-    class="text-reset"
+    class="stretched-link text-reset"
   >
     <div class="row g-0 h-100">
       <div class="col-md-4 p-3">

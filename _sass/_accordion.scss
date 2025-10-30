@@ -1,0 +1,64 @@
+@use "variables";
+
+.accordion {
+  /* Resets Bootstrap's default negative margin */
+  --bs-accordion-inner-border-radius: var(--bs-border-radius);
+  --bs-accordion-border-radius: var(--bs-border-radius);
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.accordion-item:first-of-type {
+  border-top: none;
+}
+
+.accordion-item:last-of-type {
+  border-bottom: none;
+}
+
+.accordion-button {
+  font-weight: 500;
+  padding: 1.25rem 1rem;
+}
+
+/* State: Open/Active */
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--bs-body-color);
+  box-shadow: none;
+}
+
+/* State: Focus & Hover */
+.accordion-button:hover {
+  background-color: var(--bs-tertiary-bg);
+}
+
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* Default Icon (Plus) */
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  /* This is a theme-aware PLUS icon with a thinner 1.5px stroke. */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 5v14'/%3e%3cpath d='M5 12h14'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Open Icon (Cross) */
+.accordion-button:not(.collapsed)::after {
+  /* The plus icon is rotated 45 degrees to create the 'x' shape. */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 5v14'/%3e%3cpath d='M5 12h14'/%3e%3c/svg%3e");
+  transform: rotate(45deg);
+}

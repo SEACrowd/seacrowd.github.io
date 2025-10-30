@@ -53,150 +53,51 @@
     <div class="bibliography-buttons">
       {% if entry.abstract %}
         <details class="bibliography-abstract">
-          <summary class="btn btn-outline-primary btn-sm">Abstract</summary>
-          <div class="abstract-content">{{ entry.abstract }}</div>
+          <summary class="btn btn-outline-primary">Abstract</summary>
+          <p class="abstract-content">{{ entry.abstract }}</p>
         </details>
       {% endif %}
-      {% if entry.doi %}
-        <a
-          href="https://doi.org/{{ entry.doi }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-secondary btn-sm"
-        >
-          DOI
-        </a>
-      {% endif %}
-      {% if entry.pdf %}
-        {% if entry.pdf contains 'http' %}
+      {% assign buttons = 'doi|DOI,pdf|PDF,code|Code,resources|Resources,video|Video,slides|Slides,poster|Poster,website|Website,arxiv|arXiv,talk|Talk,post|Post,demo|Demo'
+        | split: ','
+      %}
+      {% for button in buttons %}
+        {% assign parts = button | split: '|' %}
+        {% assign field = parts[0] %}
+        {% assign label = parts[1] %}
+        {% if entry[field] %}
+          {% assign url = entry[field] %}
+          {% if field == 'doi' %}
+            {% assign url = 'https://doi.org/' | append: entry.doi %}
+          {% elsif field == 'arxiv' %}
+            {% assign url = 'https://arxiv.org/abs/' | append: entry.arxiv %}
+          {%
+            elsif field == "pdf" and entry.pdf contains 'http' ==
+            false
+          %}
+            {% assign url = entry.pdf
+              | prepend: '/assets/pdf/'
+              | relative_url
+            %}
+          {%
+            elsif field == "video" and entry.video contains 'http'
+            == false
+          %}
+            {% assign url = entry.video
+              | prepend: '/assets/video/'
+              | relative_url
+            %}
+          {% endif %}
+
           <a
-            href="{{ entry.pdf }}"
+            href="{{ url }}"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-outline-warning btn-sm"
+            class="btn btn-outline-accent"
           >
-            PDF
-          </a>
-        {% else %}
-          <a
-            href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}"
-            target="_blank"
-            class="btn btn-outline-info btn-sm"
-          >
-            PDF
+            {{ label }}
           </a>
         {% endif %}
-      {% endif %}
-      {% if entry.code %}
-        <a
-          href="{{ entry.code }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-secondary btn-sm"
-        >
-          Code
-        </a>
-      {% endif %}
-      {% if entry.resources %}
-        <a
-          href="{{ entry.resources }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-secondary btn-sm"
-        >
-          Resources
-        </a>
-      {% endif %}
-      {% if entry.video %}
-        {% if entry.video contains 'http' %}
-          <a
-            href="{{ entry.video }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-secondary btn-sm"
-          >
-            Video
-          </a>
-        {% else %}
-          <a
-            href="{{ entry.video | prepend: '/assets/video/' | relative_url }}"
-            target="_blank"
-            class="btn btn-outline-secondary btn-sm"
-          >
-            Video
-          </a>
-        {% endif %}
-      {% endif %}
-      {% if entry.slides %}
-        <a
-          href="{{ entry.slides }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-secondary btn-sm"
-        >
-          Slides
-        </a>
-      {% endif %}
-      {% if entry.poster %}
-        <a
-          href="{{ entry.poster }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-info btn-sm"
-        >
-          Poster
-        </a>
-      {% endif %}
-      {% if entry.website %}
-        <a
-          href="{{ entry.website }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-info btn-sm"
-        >
-          Website
-        </a>
-      {% endif %}
-      {% if entry.arxiv %}
-        <a
-          href="https://arxiv.org/abs/{{ entry.arxiv }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-secondary btn-sm"
-        >
-          arXiv
-        </a>
-      {% endif %}
-      {% if entry.talk %}
-        <a
-          href="{{ entry.talk }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-info btn-sm"
-        >
-          Talk
-        </a>
-      {% endif %}
-      {% if entry.post %}
-        <a
-          href="{{ entry.post }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-primary btn-sm"
-        >
-          Post
-        </a>
-      {% endif %}
-      {% if entry.demo %}
-        <a
-          href="{{ entry.demo }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-success btn-sm"
-        >
-          Demo
-        </a>
-      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </article>

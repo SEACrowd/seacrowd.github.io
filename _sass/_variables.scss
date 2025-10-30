@@ -1,13 +1,12 @@
-// SEACrowd Brand Colors
-$sea-red: #e40614;
-$sea-blue: #052eab;
-$sea-yellow: #f2df65;
+// ASEAN flag colors
+$sea-red: #ed2939;
+$sea-blue: #0042a6;
+$sea-yellow: #f9e300;
 $sea-green: #009639;
 $sea-white: #ffffff;
 $sea-black: #111111;
 
 :root {
-  /* SEACrowd Brand Colors as CSS Custom Properties */
   --sea-red: #{$sea-red};
   --sea-blue: #{$sea-blue};
   --sea-yellow: #{$sea-yellow};
@@ -15,94 +14,215 @@ $sea-black: #111111;
   --sea-white: #{$sea-white};
   --sea-black: #{$sea-black};
 
+  /* Generic Theme Variables */
+  --primary: var(--sea-red);
+  --primary-foreground: var(--sea-white);
+  --secondary: var(--sea-blue);
+  --secondary-foreground: var(--sea-white);
+  --accent: var(--sea-yellow);
+  --accent-foreground: var(--sea-black);
+  --background: var(--sea-white);
+  --foreground: var(--sea-black);
+  --muted: color-mix(in oklch, var(--foreground) 50%, var(--background));
+  --muted-foreground: color-mix(
+    in oklch,
+    var(--foreground) 60%,
+    var(--background)
+  );
+  --border: color-mix(in oklch, var(--foreground) 15%, var(--background));
+  --ring: color-mix(in oklch, var(--sea-red) 60%, white 40%);
+
   /* Core Theme Color Mapping */
-  --bs-primary: var(--sea-red);
-  --bs-secondary: var(--sea-blue);
+  --bs-primary: var(--primary);
+  --bs-secondary: var(--secondary);
   --bs-success: var(--sea-green);
-  --bs-danger: color-mix(in srgb, var(--sea-red) 80%, black 20%);
-  --bs-warning: var(--sea-yellow);
-  --bs-info: color-mix(in srgb, var(--sea-blue) 60%, white 40%);
-  --bs-light: var(--sea-white);
-  --bs-dark: var(--sea-black);
+  --bs-danger: color-mix(in oklch, var(--primary) 80%, black 20%);
+  --bs-warning: var(--accent);
+  --bs-info: color-mix(in oklch, var(--secondary) 60%, white 40%);
+  --bs-light: var(--background);
+  --bs-dark: var(--foreground);
 
   /* RGB versions for opacity utilities */
-  --bs-primary-rgb: 228, 6, 20;
-  --bs-secondary-rgb: 5, 46, 171;
-  --bs-success-rgb: 0, 150, 57;
-  --bs-danger-rgb: 183, 5, 16;
-  --bs-warning-rgb: 242, 223, 101;
-  --bs-info-rgb: 96, 165, 250;
-  --bs-light-rgb: 255, 255, 255;
-  --bs-dark-rgb: 17, 17, 17;
+  --bs-primary-rgb: from var(--primary) r g b;
+  --bs-secondary-rgb: from var(--secondary) r g b;
+  --bs-success-rgb: from var(--sea-green) r g b;
+  --bs-danger-rgb: from var(--bs-danger) r g b;
+  --bs-warning-rgb: from var(--accent) r g b;
+  --bs-info-rgb: from var(--bs-info) r g b;
+  --bs-light-rgb: from var(--background) r g b;
+  --bs-dark-rgb: from var(--foreground) r g b;
 
   /* Body & Text Colors */
-  --bs-body-color: var(--sea-black);
-  --bs-body-bg: var(--sea-white);
-  --bs-secondary-color: rgba(17, 17, 17, 0.75);
-  --bs-secondary-bg: #e9ecef;
-  --bs-tertiary-color: rgba(17, 17, 17, 0.5);
-  --bs-tertiary-bg: #f8f9fa;
-  --bs-emphasis-color: var(--sea-black);
-  --bs-body-color-rgb: 17, 17, 17;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-color: var(--foreground);
+  --bs-body-bg: var(--background);
+  --bs-secondary-color: color-mix(in oklch, var(--foreground) 75%, transparent);
+  --bs-secondary-bg: color-mix(
+    in oklch,
+    var(--foreground) 8%,
+    var(--background)
+  );
+  --bs-tertiary: var(--accent);
+  --bs-tertiary-color: color-mix(in oklch, var(--foreground) 50%, transparent);
+  --bs-tertiary-bg: color-mix(
+    in oklch,
+    var(--foreground) 4%,
+    var(--background)
+  );
+  --bs-emphasis-color: var(--foreground);
+  --bs-body-color-rgb: from var(--foreground) r g b;
+  --bs-body-bg-rgb: from var(--background) r g b;
 
   /* Border Colors */
-  --bs-border-color: #dee2e6;
-  --bs-border-color-translucent: rgba(17, 17, 17, 0.175);
+  --bs-border-color: var(--border);
+  --bs-border-color-translucent: color-mix(
+    in oklch,
+    var(--foreground) 17.5%,
+    transparent
+  );
 
   /* Subtle Background & Text Emphasis Colors */
-  --bs-primary-text-emphasis: #021244;
-  --bs-secondary-text-emphasis: #5b0208;
-  --bs-success-text-emphasis: #003c17;
-  --bs-danger-text-emphasis: #5b0208;
-  --bs-warning-text-emphasis: #615728;
+  --bs-primary-text-emphasis: oklch(from var(--primary) calc(l - 0.4) c h);
+  --bs-secondary-text-emphasis: oklch(from var(--secondary) calc(l - 0.4) c h);
+  --bs-success-text-emphasis: oklch(from var(--sea-green) calc(l - 0.4) c h);
+  --bs-danger-text-emphasis: oklch(from var(--bs-danger) calc(l - 0.4) c h);
+  --bs-warning-text-emphasis: oklch(from var(--accent) calc(l - 0.4) c h);
+  --bs-tertiary-text-emphasis: oklch(from var(--accent) calc(l - 0.4) c h);
 
-  --bs-primary-bg-subtle: #ccd5f6;
-  --bs-secondary-bg-subtle: #f9cccc; /* ADDED */
-  --bs-success-bg-subtle: #ccf0d8;
-  --bs-danger-bg-subtle: #f9cccc;
-  --bs-warning-bg-subtle: #fcf8e0;
+  --bs-primary-bg-subtle: color-mix(
+    in oklch,
+    var(--primary) 20%,
+    var(--background)
+  );
+  --bs-secondary-bg-subtle: color-mix(
+    in oklch,
+    var(--secondary) 20%,
+    var(--background)
+  );
+  --bs-success-bg-subtle: color-mix(
+    in oklch,
+    var(--sea-green) 20%,
+    var(--background)
+  );
+  --bs-danger-bg-subtle: color-mix(
+    in oklch,
+    var(--bs-danger) 20%,
+    var(--background)
+  );
+  --bs-warning-bg-subtle: color-mix(
+    in oklch,
+    var(--accent) 20%,
+    var(--background)
+  );
+  --bs-tertiary-bg-subtle: color-mix(
+    in oklch,
+    var(--accent) 20%,
+    var(--background)
+  );
 }
 
 [data-bs-theme="dark"] {
+  /* Dark theme generic variables */
+  --primary: var(--sea-blue);
+  --primary-foreground: var(--sea-white);
+  --secondary: var(--sea-red);
+  --secondary-foreground: var(--sea-white);
+  --accent: var(--sea-yellow);
+  --accent-foreground: var(--sea-black);
+  --background: var(--sea-black);
+  --foreground: var(--sea-white);
+  --muted: color-mix(in oklch, var(--foreground) 50%, var(--background));
+  --muted-foreground: color-mix(
+    in oklch,
+    var(--foreground) 60%,
+    var(--background)
+  );
+  --border: color-mix(in oklch, var(--foreground) 25%, var(--background));
+  --ring: var(--sea-blue);
+
   /* Keep core theme colors the same */
-  --bs-primary: var(--sea-blue);
+  --bs-primary: var(--primary);
+  --bs-secondary: var(--secondary);
   --bs-success: var(--sea-green);
   --bs-danger: var(--sea-red);
-  --bs-warning: var(--sea-yellow);
+  --bs-warning: var(--accent);
   --bs-info: var(--sea-blue);
-  --bs-light: var(--sea-black);
-  --bs-dark: var(--sea-white);
+  --bs-light: var(--background);
+  --bs-dark: var(--foreground);
 
   /* Invert Body & Text Colors */
-  --bs-body-color: var(--sea-white);
-  --bs-body-bg: var(--sea-black);
-  --bs-secondary-color: rgba(255, 255, 255, 0.75);
-  --bs-secondary-bg: #343a40;
-  --bs-tertiary-color: rgba(255, 255, 255, 0.5);
-  --bs-tertiary-bg: #212529;
-  --bs-emphasis-color: var(--sea-white);
-  --bs-body-color-rgb: 255, 255, 255;
-  --bs-body-bg-rgb: 17, 17, 17;
+  --bs-body-color: var(--foreground);
+  --bs-body-bg: var(--background);
+  --bs-secondary-color: color-mix(in oklch, var(--foreground) 75%, transparent);
+  --bs-secondary-bg: color-mix(
+    in oklch,
+    var(--foreground) 20%,
+    var(--background)
+  );
+  --bs-tertiary: var(--accent);
+  --bs-tertiary-color: color-mix(in oklch, var(--foreground) 50%, transparent);
+  --bs-tertiary-bg: color-mix(
+    in oklch,
+    var(--foreground) 12%,
+    var(--background)
+  );
+  --bs-emphasis-color: var(--foreground);
+  --bs-body-color-rgb: from var(--foreground) r g b;
+  --bs-body-bg-rgb: from var(--background) r g b;
 
   /* Invert Border Colors */
-  --bs-border-color: #495057;
-  --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+  --bs-border-color: var(--border);
+  --bs-border-color-translucent: color-mix(
+    in oklch,
+    var(--foreground) 15%,
+    transparent
+  );
 
   /* Adjust Link Colors for better contrast on dark BG */
-  --bs-link-color: #6983dd;
-  --bs-link-color-rgb: 105, 131, 221;
-  --bs-link-hover-color: #879eeb;
-  --bs-link-hover-color-rgb: 135, 158, 235;
+  --bs-link-color: oklch(from var(--primary) calc(l + 0.2) calc(c * 0.8) h);
+  --bs-link-color-rgb: from var(--bs-link-color) r g b;
+  --bs-link-hover-color: oklch(from var(--bs-link-color) calc(l + 0.1) c h);
+  --bs-link-hover-color-rgb: from var(--bs-link-hover-color) r g b;
 
   /* Invert Subtle Background & Text Emphasis Colors */
-  --bs-primary-text-emphasis: #6983dd;
-  --bs-success-text-emphasis: #66c489;
-  --bs-danger-text-emphasis: #eb6870;
-  --bs-warning-text-emphasis: #f5e893;
+  --bs-primary-text-emphasis: oklch(
+    from var(--primary) calc(l + 0.2) calc(c * 0.8) h
+  );
+  --bs-success-text-emphasis: oklch(
+    from var(--sea-green) calc(l + 0.2) calc(c * 0.8) h
+  );
+  --bs-danger-text-emphasis: oklch(
+    from var(--bs-danger) calc(l + 0.2) calc(c * 0.8) h
+  );
+  --bs-warning-text-emphasis: oklch(
+    from var(--accent) calc(l + 0.1) calc(c * 0.8) h
+  );
+  --bs-tertiary-text-emphasis: oklch(
+    from var(--accent) calc(l + 0.1) calc(c * 0.8) h
+  );
 
-  --bs-primary-bg-subtle: #010e35;
-  --bs-success-bg-subtle: #002d11;
-  --bs-danger-bg-subtle: #450206;
-  --bs-warning-bg-subtle: #49431e;
+  --bs-primary-bg-subtle: color-mix(
+    in oklch,
+    var(--primary) 25%,
+    var(--background)
+  );
+  --bs-success-bg-subtle: color-mix(
+    in oklch,
+    var(--sea-green) 25%,
+    var(--background)
+  );
+  --bs-danger-bg-subtle: color-mix(
+    in oklch,
+    var(--bs-danger) 25%,
+    var(--background)
+  );
+  --bs-warning-bg-subtle: color-mix(
+    in oklch,
+    var(--accent) 25%,
+    var(--background)
+  );
+  --bs-tertiary-bg-subtle: color-mix(
+    in oklch,
+    var(--accent) 25%,
+    var(--background)
+  );
 }

@@ -7,7 +7,7 @@ layout: default
       src="{{ '/assets/images/project/' | append: page.thumbnail | relative_url }}"
       class="img-fluid rounded mb-4 w-100"
       alt="{{ page.title | escape }}"
-      style="max-height: 400px; object-fit: cover;"
+      style="max-height: 400px; object-fit: cover"
     >
   {% endif %}
 
@@ -19,23 +19,23 @@ layout: default
         <i class="fas fa-signal" aria-hidden="true"></i>
         {%- case page.status -%}
           {%- when 'ongoing' -%}
-            {%- assign badge_class = 'bg-success' -%}
+            {%- assign badge_class = 'bg-success text-white' -%}
           {%- when 'completed' -%}
-            {%- assign badge_class = 'bg-dark' -%}
+            {%- assign badge_class = 'bg-dark text-white' -%}
           {%- else -%}
-            {%- assign badge_class = 'bg-secondary' -%}
+            {%- assign badge_class = 'bg-secondary text-dark' -%}
         {%- endcase -%}
         <span class="badge {{ badge_class }} me-1">
           {{- page.status | capitalize -}}
         </span>
       </span>
     {%- endif -%}
-
     {%- if page.fromDate or page.toDate -%}
       <span class="meta-item">
         <i class="fas fa-calendar" aria-hidden="true"></i>
         {% if page.fromDate and page.toDate %}
-          {{ page.fromDate | date: '%b %-d, %Y' }} &ndash;
+          {{ page.fromDate | date: '%b %-d,
+      %Y' }} &ndash;
           {{ page.toDate | date: '%b %-d, %Y' }}
         {% elsif page.fromDate %}
           From {{ page.fromDate | date: '%b %-d, %Y' }}
@@ -44,7 +44,6 @@ layout: default
         {% endif %}
       </span>
     {%- endif -%}
-
     {%- if page.category -%}
       <span class="meta-item">
         <i class="fas fa-folder" aria-hidden="true"></i>
@@ -62,10 +61,7 @@ layout: default
   {%- endunless -%}
 </header>
 
-<article class="container-md content my-5 mx-auto">
-  {{ content }}
-</article>
+<article class="container-md content my-5 mx-auto">{{ content }}</article>
 
 {% include social-share.html %}
-
 {% include projects-aside.html %}

@@ -11,7 +11,7 @@ description: Papers that we have published so far as a community.
   <button class="btn btn-primary filter-btn active" data-filter="all">
     All
   </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="main">
+  <button class="btn btn-outline-secondary filter-btn" data-filter="main">
     Main
   </button>
   <button class="btn btn-outline-secondary filter-btn" data-filter="affiliated">
@@ -59,10 +59,10 @@ description: Papers that we have published so far as a community.
 
         filterButtons.forEach((btn) => {
           btn.classList.remove("btn-primary", "active")
-          btn.classList.add("btn-outline-primary")
+          btn.classList.add("btn-outline-secondary")
         })
 
-        this.classList.remove("btn-outline-primary")
+        this.classList.remove("btn-outline-secondary")
         this.classList.add("btn-primary", "active")
 
         publicationSections.forEach((section) => {

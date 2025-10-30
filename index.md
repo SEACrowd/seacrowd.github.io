@@ -25,9 +25,13 @@ We commit to a three-pronged approach to reaching our vision:
 
 {% if site.news and site.news.size > 0 %}
 {% assign recentNews = site.news | sort: 'date' | reverse | limit: 5 %}
+
 {% for article in recentNews %}
-{{ article.date | date: "%b %-d, %Y" }} -
-<a href="{{ article.url }}">{{ article.title }}</a>
+
+  <div class="news-item">
+    <div class="news-date text-muted">{{ article.date | date: "%b %-d, %Y" }}</div>
+      {{ article.content | markdownify }}
+  </div>
 {% endfor %}
 {% else %}
 No recent news available.

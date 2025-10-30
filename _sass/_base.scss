@@ -1,56 +1,52 @@
-// ========================================
-// Base Typography and Global Styles
-// ========================================
-
-@import "variables";
+@use "variables";
 
 ::selection {
-  background-color: var(--sea-yellow);
-  color: var(--sea-black);
+  background-color: var(--accent);
+  color: var(--foreground);
 }
 
 body {
   line-height: 1.6;
 }
 
-// Font size hierarchy following Bootstrap's scale
+// Font size hierarchy
 h1 {
-  font-size: 2.5rem; // 40px
+  font-size: 2.5rem;
   font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 2rem; // 32px
+  font-size: 2rem;
   font-weight: 500;
   margin-top: 1.75rem;
   margin-bottom: 1.25rem;
 }
 
 h3 {
-  font-size: 1.75rem; // 28px
+  font-size: 1.75rem;
   font-weight: 500;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: 1.5rem; // 24px
+  font-size: 1.5rem;
   font-weight: 500;
   margin-top: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 h5 {
-  font-size: 1.25rem; // 20px
+  font-size: 1.25rem;
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 h6 {
-  font-size: 1rem; // 16px
+  font-size: 1rem;
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -65,7 +61,6 @@ i {
   font-weight: 300;
 }
 
-// Better spacing for lists
 ul,
 ol {
   margin-bottom: 1.25rem;
@@ -78,7 +73,7 @@ ol {
 
 a {
   transition: color 0.3s ease;
-  color: var(--bs-secondary);
+  color: var(--secondary);
   text-decoration: none;
 
   &:hover {
@@ -103,8 +98,8 @@ a.page-link {
 blockquote {
   margin: 2rem 0;
   padding-left: 1.5rem;
-  border-left: 4px solid var(--bs-border-color);
-  color: var(--bs-secondary);
+  border-left: 4px solid var(--border);
+  color: var(--secondary);
   font-style: italic;
 
   p:last-child {
@@ -118,49 +113,6 @@ img {
 
 .MathJax_Display {
   font-size: 80%;
-}
-
-// ========================================
-// Overrides Bootstrap .card
-// ========================================
-
-.card {
-  position: relative;
-  border: 1px solid transparent; // reserve space to avoid layout shift
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  margin-bottom: 1.5rem;
-  transition:
-    box-shadow 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease;
-
-  &:hover {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  &:focus-within {
-    outline: 2px solid var(--bs-primary);
-    outline-offset: 2px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  }
-}
-
-// Clickable card subtle variation
-.card-clickable {
-  cursor: pointer;
-
-  &:hover {
-    border: 1px solid rgba(var(--bs-primary-rgb), 0.3); // lighter border
-    background-color: rgba(var(--bs-primary-rgb), 0.03); // very subtle tint
-  }
-
-  &:focus {
-    outline: 2px solid var(--bs-primary);
-    outline-offset: 2px;
-    border: 1px solid var(--bs-primary);
-    background-color: rgba(var(--bs-primary-rgb), 0.05);
-  }
 }
 
 .card-meta,
@@ -178,75 +130,4 @@ img {
       opacity: 0.8;
     }
   }
-}
-
-/*
- * ===================================================================
- * Accordion Style (minimalist style with +/x Icons)
- * ===================================================================
- */
-
-.accordion {
-  /* Resets Bootstrap's default negative margin */
-  --bs-accordion-inner-border-radius: var(--bs-border-radius);
-  --bs-accordion-border-radius: var(--bs-border-radius);
-}
-
-.accordion-item {
-  border: none;
-  border-bottom: 1px solid var(--bs-border-color);
-}
-
-.accordion-item:first-of-type {
-  /* Optional: removes top border if you don't want it */
-  border-top: none;
-}
-
-.accordion-item:last-of-type {
-  /* Removes the final bottom border for a cleaner look */
-  border-bottom: none;
-}
-
-.accordion-button {
-  font-weight: 500;
-  padding: 1.25rem 1rem;
-}
-
-/* State: Open/Active */
-.accordion-button:not(.collapsed) {
-  background-color: transparent;
-  color: var(--bs-body-color);
-  box-shadow: none;
-}
-
-/* State: Focus & Hover */
-.accordion-button:hover {
-  background-color: var(--bs-tertiary-bg);
-}
-
-.accordion-button:focus {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-/* Default Icon (Plus) */
-.accordion-button::after {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-left: auto;
-  content: "";
-  /* This is a theme-aware PLUS icon with a thinner 1.5px stroke. */
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 5v14'/%3e%3cpath d='M5 12h14'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-size: 1.25rem;
-  background-position: center;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* Open Icon (Cross) */
-.accordion-button:not(.collapsed)::after {
-  /* The plus icon is rotated 45 degrees to create the 'x' shape. */
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M12 5v14'/%3e%3cpath d='M5 12h14'/%3e%3c/svg%3e");
-  transform: rotate(45deg);
 }

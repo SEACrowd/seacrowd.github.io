@@ -1,8 +1,7 @@
 ---
-layout: page
 title: SEACrowd forms legal entity in Indonesia
 category: info
-thumbnail: post/sign-holy.jpg
+thumbnail: sign-holy.jpg
 date: 2024-08-22
 ---
 

@@ -23,7 +23,10 @@
                 href="{% if key == 'email' %}mailto:{{ site.social[key] }}{% else %}{{ site.social[key] }}{% endif %}"
                 class="social-link"
                 title="{{ key | replace: '_',' ' | capitalize }}"
-                {% unless key == 'email' %}
+                {%
+                  unless key=""
+                  ="email"
+                %}
                   target="_blank"
                 {% endunless %}
                 rel="me external nofollow noopener noreferrer"
@@ -55,8 +58,8 @@
 
     <div class="small text-muted mt-4">
       <p class="mb-1">
-        © 2023 - <span id="current-year"></span> {{ site.name }}. All rights
-        reserved.
+        © 2023 - <span id="current-year"></span> {{ site.name }}. SEACrowd is a
+        registered non-profit in Jakarta, Indonesia. All rights reserved.
       </p>
       <p class="mb-0">
         Powered by

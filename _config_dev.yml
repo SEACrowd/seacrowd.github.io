@@ -20,3 +20,7 @@ watch: true
 sass:
   style: expanded
   sourcemap: "development"
+
+# Force regeneration
+incremental: false
+regenerate: true

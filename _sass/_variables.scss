@@ -43,14 +43,17 @@ $sea-black: #111111;
   --bs-dark: var(--foreground);
 
   /* RGB versions for opacity utilities */
-  --bs-primary-rgb: from var(--primary) r g b;
-  --bs-secondary-rgb: from var(--secondary) r g b;
-  --bs-success-rgb: from var(--sea-green) r g b;
-  --bs-danger-rgb: from var(--bs-danger) r g b;
-  --bs-warning-rgb: from var(--accent) r g b;
-  --bs-info-rgb: from var(--bs-info) r g b;
-  --bs-light-rgb: from var(--background) r g b;
-  --bs-dark-rgb: from var(--foreground) r g b;
+  --bs-primary-rgb: #{red($sea-red)}, #{green($sea-red)}, #{blue($sea-red)};
+  --bs-secondary-rgb:
+    #{red($sea-blue)}, #{green($sea-blue)}, #{blue($sea-blue)};
+  --bs-success-rgb:
+    #{red($sea-green)}, #{green($sea-green)}, #{blue($sea-green)};
+  --bs-danger-rgb: #{red($sea-red)}, #{green($sea-red)}, #{blue($sea-red)};
+  --bs-warning-rgb:
+    #{red($sea-yellow)}, #{green($sea-yellow)}, #{blue($sea-yellow)};
+  --bs-info-rgb: #{red($sea-blue)}, #{green($sea-blue)}, #{blue($sea-blue)};
+  --bs-light-rgb: #{red($sea-white)}, #{green($sea-white)}, #{blue($sea-white)};
+  --bs-dark-rgb: #{red($sea-black)}, #{green($sea-black)}, #{blue($sea-black)};
 
   /* Body & Text Colors */
   --bs-body-color: var(--foreground);

@@ -12,9 +12,11 @@
   href: "/posts/"
 - name: "Join Us"
   children:
-    - name: "Volunteers"
+    - name: "Volunteer"
       href: "/contribute"
     - name: "Apprenticeship"
       href: "/apprenticeship"
 - name: "About"
   href: "/about"
+- name: "Donate"
+  href: "/donate"

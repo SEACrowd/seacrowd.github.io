@@ -13,7 +13,7 @@ Brand new SEACrowd website in Jekyll and Boostrap 5.3.
 ### Site settings
 
 - [\_config.yml](_config.yml) changes site settings
-- [\_data/navigation.yml](_data/navigation.yml) changes structure of navigation bar
+- [\_data/navbar.yml](_data/navbar.yml) changes structure of navigation bar
 
 ### Profile Updates (Team & Apprentices)
 
@@ -67,9 +67,10 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 
 ### News & Updates
 
-- Create new updates in `_news/` using the format: `YYYY-MM-DD-title.md`
+- Create new updates in `_news/`. Format recommended is `YYYY-MM-DD-title.md`,
+  but it doesn't matter
 - Follow existing examples in the `_news/` directory
-- Include frontmatter with title, date, (optionally) tags
+- Include frontmatter with title, date, and write in markdown.
 
 ### Project Information
 
@@ -121,7 +122,7 @@ make serve    # Run development server
 
 ### Available Commands
 
-See [Makefile](Makefile) for all development commands:
+See [Makefile](./Makefile) for all development commands:
 
 - `make dev` - Development server with live reload, and
   pre-commit hook for code formatting

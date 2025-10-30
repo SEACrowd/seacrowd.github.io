@@ -22,3 +22,7 @@
       href: "/apprenticeship"
     - name: "Projects"
       href: "/projects"
+- title: "For Donors"
+  links:
+    - name: "Donate"
+      href: "/donate"

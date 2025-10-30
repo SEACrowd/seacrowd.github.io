@@ -1,7 +1,10 @@
+{% comment %} Active nav logic - shared variables {% endcomment %}
+{% assign clean_page_url = page.url | remove: '.html' | remove: '/' %}
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container-md px-3">
     <a class="navbar-brand" href="/">
-      <img src="/assets/images/logo-wide.png" alt="SEACrowd Logo" height="32">
+      <img src="/assets/images/logo-wide.png" alt="SEACrowd Logo" height="28">
     </a>
     <button
       class="navbar-toggler border-0"
@@ -40,7 +43,7 @@
                 {% for child in nav.children %}
                   <li>
                     <a
-                      class="dropdown-item {% if page.permalink == child.href or page.url == child.href %}active{% endif %}"
+                      class="dropdown-item {% assign clean_child_href = child.href | remove: '.html' | remove: '/' %}{% if page.url == child.href or page.permalink == child.href or clean_page_url == clean_child_href or page.url contains child.href %}active{% endif %}"
                       href="{{ child.href }}"
                     >
                       {{ child.name }}
@@ -55,7 +58,7 @@
           {% else %}
             <li class="nav-item">
               <a
-                class="nav-link {% if page.permalink == nav.href or page.url == nav.href %}active{% endif %}"
+                class="nav-link {% assign clean_nav_href = nav.href | remove: '.html' | remove: '/' %}{% if page.url == nav.href or page.permalink == nav.href or clean_page_url == clean_nav_href or page.url contains nav.href %}active{% endif %}"
                 href="{{ nav.href }}"
               >
                 {{ nav.name }}

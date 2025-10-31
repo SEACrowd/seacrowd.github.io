@@ -3,7 +3,7 @@ title: Events
 permalink: /events/
 ---
 
-The latest events from the organization, our partners, and the rest of the SEA community.
+The latest events from SEACrowd, our partners, and the rest of the Southeast Asia community.
 
 <div id="events-alert" class="alert alert-info text-center" role="alert">
   Explore moments captured from our community events in our <a href="https://photos.app.goo.gl/chgNTwJkFH7K1kBAA">Google Photos Album</a>!
@@ -36,7 +36,7 @@ The latest events from the organization, our partners, and the rest of the SEA c
 
 ### Community Events
 
-- **The One Year Community Retrospective.** Birds-of-a-Feather Session @ ACL 2025.
+- **[The One Year Community Retrospective](https://docs.google.com/presentation/d/e/2PACX-1vTrvmerKogXYUiANGjKFMSHTZTODm1cU6XYzFXKdbylJPDs9QrvOTUYcWg9zg5smKOzosPJQJDCuaev/pub?start=false&loop=false&delayms=3000).** Birds-of-a-Feather Session @ ACL 2025.
 - [**Where are we now? SEA AI in the Post-Training Era.**](https://docs.google.com/presentation/d/e/2PACX-1vT-8kzyB3xlOQxybX8li5XL-6YXl7BHo1KoBxnkwoKNnyhyZUP3rALVxZfxYk7C476IOI-Zt9SBAO2l/pub?start=false&loop=false&delayms=3000)
   Birds-of-a-Feather Session @ NAACL 2025.
 - [**Community and Grassroots-driven Building for SEA.**](https://docs.google.com/presentation/d/e/2PACX-1vQEQQagN5jFYup2UKGMmFQ2aE_bkNwkIPeT7XQQKFrURHGGIFVPxCHkc4j2edgKEWpvs7xyCrbMsrIm/pub?start=false&loop=false&delayms=3000)

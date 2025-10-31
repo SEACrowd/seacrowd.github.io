@@ -1,0 +1,35 @@
+collections:
+  - title: "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark"
+    url: "https://huggingface.co/collections/SEACrowd/seacrowd-a-multilingual-multimodal-data-hub-and-benchmark-s"
+    tags:
+      - "NLP"
+      - "Multimodal"
+    description: "Comprehensive collection of Southeast Asian language datasets and benchmarks for NLP tasks."
+
+  - title: "SEA-VL: Multicultural VL Dataset for Southeast Asia"
+    url: "https://huggingface.co/collections/SEACrowd/sea-vl-multicultural-vl-dataset-for-southeast-asia"
+    tags:
+      - "Vision-Language"
+      - "Southeast Asia"
+    description: "Vision-language datasets capturing the cultural diversity of Southeast Asian contexts."
+
+resources:
+  - title: "Models"
+    url: "https://huggingface.co/SEACrowd/models"
+    icon: "fas fa-robot"
+    description: "Explore our pre-trained models and fine-tuned variants for Southeast Asian languages."
+
+  - title: "Datasets"
+    url: "https://huggingface.co/SEACrowd/datasets"
+    icon: "fas fa-database"
+    description: "Access our comprehensive collection of Southeast Asian language and cultural datasets."
+
+  - title: "Spaces"
+    url: "https://huggingface.co/SEACrowd/spaces"
+    icon: "fas fa-play-circle"
+    description: "Try out interactive demos and applications built with our models and datasets."
+
+collections_button:
+  text: "View More Collections"
+  url: "https://huggingface.co/SEACrowd/collections"
+  icon: "fas fa-external-link-alt"

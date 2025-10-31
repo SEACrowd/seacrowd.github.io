@@ -23,7 +23,7 @@ keywords:
   This page will be updated as new information is released. For faster updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>.
 </div>
 
-After the success of [SEA-VL Phase 1](https://seacrowd.github.io/seavl-dataset/), we are proud to launch **SEA-VL Phase 2**!
+After the success of [SEA-VL Phase 1](/projects/2025-seavl-phase-1), we are proud to launch **SEA-VL Phase 2**!
 
 We believe it's high time to create a model that truly understands Southeast Asian culture and language. We want the model to reflect the visual and linguistic richness of the SEA region through diverse contributions: high-quality data curation, annotation, prompting, model training, and evaluation.
 
@@ -37,10 +37,8 @@ We believe it's high time to create a model that truly understands Southeast Asi
 **How to contribute:** SEA-VL Phase 2 has five main tasks. Choose any task that aligns with your interests or expertise.
 
 <div class="alert alert-info" role="alert">
-  <strong>📖 Complete guidelines:</strong> <a href="https://docs.google.com/document/d/e/2PACX-1vRRJmadtbTdjumIFyhx5MdpRwMOk0Al7WSUReYyhbD-3NpGxu8PlRPTNgobFPJSDelqjhWmOIJSW1lu/pub" class="alert-link">Read the full contributor guidelines</a>
+  📖 Read <a href="https://docs.google.com/document/d/e/2PACX-1vRRJmadtbTdjumIFyhx5MdpRwMOk0Al7WSUReYyhbD-3NpGxu8PlRPTNgobFPJSDelqjhWmOIJSW1lu/pub" class="alert-link">the full contributor guidelines</a> and ask questions in our <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>
 </div>
-
-**Questions?** Join our [Discord](https://discord.gg/XXRHFuvkTA) for support.
 
 ### Task 1: Submit a culturally-relevant image with description for SEA
 

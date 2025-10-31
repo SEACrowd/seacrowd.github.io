@@ -12,7 +12,7 @@ thumbnail: banner.png
 # Social Links
 social:
   email: "seacrowd.research@gmail.com"
-  github: "https://github.com/seacrowd_ai"
+  github: "https://github.com/seacrowd"
   discord: "https://discord.gg/XXRHFuvkTA"
   twitter: "https://twitter.com/seacrowd"
   facebook: "https://www.facebook.com/seacrowd2025"
@@ -52,6 +52,7 @@ collections:
   news:
     output: true
     permalink: /news/:title.html
+    sort_by: name
   projects:
     output: true
     permalink: /projects/:title.html

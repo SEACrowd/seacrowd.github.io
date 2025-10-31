@@ -13,7 +13,7 @@ form: https://www.paypal.com/paypalme/seacrowd
 
 **The problem is urgent**: Despite representing 8.5% of the world's population, Southeast Asia remains dramatically underrepresented in AI development. Most AI systems are built for English and a handful of major languages, leaving hundreds of millions without access to AI that understands their language, culture, and context.
 
-**We're changing that**: Our work includes [SEA-VL](https://aclanthology.org/2025.acl-long.916/), the largest vision-language dataset for the region, and comprehensive language resources that are freely available to researchers worldwide.
+**We're changing that**: Our work includes [SEA-VL](https://aclanthology.org/2025.acl-long.916/), the largest vision-language dataset for the region, and comprehensive [resources](/resources) that are freely available to researchers worldwide.
 
 ## Your Impact
 
@@ -29,7 +29,7 @@ Your support directly funds:
   - Hosting [workshops and conferences](/events) to strengthen regional AI expertise
 
 - 🌐 **Global Accessibility**
-  - Ensuring our models remain open-source and freely available
+  - Ensuring our [models](https://huggingface.co/SEACrowd/models) and [datasets](https://huggingface.co/SEACrowd/datasets) remain open-source and freely available
   - Breaking down barriers to AI access for Southeast Asian communities
 
 ## How to Donate

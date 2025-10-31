@@ -1,4 +1,3 @@
 *.xsl -linguist-detectable
 *.bib linguist-documentation
-*.csl linguist-documentation
 *.tex linguist-documentation

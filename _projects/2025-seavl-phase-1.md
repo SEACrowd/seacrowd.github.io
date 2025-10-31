@@ -40,18 +40,17 @@ We combined several approaches to balance scale with cultural fidelity:
 - **Image Generation** — Still fails to reflect SEA cultures authentically and poses licensing
   challenges
 
-For in-depth information on each approach, check out our [paper](https://arxiv.org/abs/2503.07920) .
+For in-depth information on each approach, check out our [paper](https://arxiv.org/abs/2503.07920).
 
 ### What's Next?
 
 We extend our deepest thanks to the contributors across Southeast Asia who made this possible.
 
-This is only the beginning: Phase 2 is on the horizon, and we invite researchers, practitioners, and
+This is only the beginning: [Phase 2](/projects/2025-seavl-phase-2) is on the horizon, and we invite researchers, practitioners, and
 community members to collaborate with us. Stay tuned on our Discord!
 
 - [SEACrowd on Hugging Face](https://huggingface.co/SEACrowd)
 - [Join our Discord](https://discord.gg/XXRHFuvkTA)
 - [GitHub](https://github.com/SEACrowd)
-- [SEA-VL Launch Page](https://seacrowd.github.io/seavl-launch/)
 
 Together, let’s build AI that reflects the full spectrum of culture across Southeast Asia.

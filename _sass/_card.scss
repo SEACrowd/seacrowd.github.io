@@ -21,7 +21,6 @@
   box-shadow:
     0 20px 25px -5px color-mix(in oklch, var(--ring) 10%, transparent),
     0 10px 10px -5px color-mix(in oklch, var(--ring) 4%, transparent);
-  transform: translateY(-2px);
 }
 
 .card-clickable:active,

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // ASEAN flag colors
 $sea-red: #ed2939;
 $sea-blue: #0042a6;
@@ -43,17 +45,31 @@ $sea-black: #111111;
   --bs-dark: var(--foreground);
 
   /* RGB versions for opacity utilities */
-  --bs-primary-rgb: #{red($sea-red)}, #{green($sea-red)}, #{blue($sea-red)};
+  --bs-primary-rgb:
+    #{color.channel($sea-red, "red")}, #{color.channel($sea-red, "green")},
+    #{color.channel($sea-red, "blue")};
   --bs-secondary-rgb:
-    #{red($sea-blue)}, #{green($sea-blue)}, #{blue($sea-blue)};
+    #{color.channel($sea-blue, "red")}, #{color.channel($sea-blue, "green")},
+    #{color.channel($sea-blue, "blue")};
   --bs-success-rgb:
-    #{red($sea-green)}, #{green($sea-green)}, #{blue($sea-green)};
-  --bs-danger-rgb: #{red($sea-red)}, #{green($sea-red)}, #{blue($sea-red)};
+    #{color.channel($sea-green, "red")}, #{color.channel($sea-green, "green")},
+    #{color.channel($sea-green, "blue")};
+  --bs-danger-rgb:
+    #{color.channel($sea-red, "red")}, #{color.channel($sea-red, "green")},
+    #{color.channel($sea-red, "blue")};
   --bs-warning-rgb:
-    #{red($sea-yellow)}, #{green($sea-yellow)}, #{blue($sea-yellow)};
-  --bs-info-rgb: #{red($sea-blue)}, #{green($sea-blue)}, #{blue($sea-blue)};
-  --bs-light-rgb: #{red($sea-white)}, #{green($sea-white)}, #{blue($sea-white)};
-  --bs-dark-rgb: #{red($sea-black)}, #{green($sea-black)}, #{blue($sea-black)};
+    #{color.channel($sea-yellow, "red")},
+    #{color.channel($sea-yellow, "green")},
+    #{color.channel($sea-yellow, "blue")};
+  --bs-info-rgb:
+    #{color.channel($sea-blue, "red")}, #{color.channel($sea-blue, "green")},
+    #{color.channel($sea-blue, "blue")};
+  --bs-light-rgb:
+    #{color.channel($sea-white, "red")}, #{color.channel($sea-white, "green")},
+    #{color.channel($sea-white, "blue")};
+  --bs-dark-rgb:
+    #{color.channel($sea-black, "red")}, #{color.channel($sea-black, "green")},
+    #{color.channel($sea-black, "blue")};
 
   /* Body & Text Colors */
   --bs-body-color: var(--foreground);

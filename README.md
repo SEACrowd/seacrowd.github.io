@@ -13,7 +13,8 @@ Brand new SEACrowd website in Jekyll and Boostrap 5.3.
 ### Site settings
 
 - [\_config.yml](_config.yml) changes site settings
-- [\_data/navbar.yml](_data/navbar.yml) changes structure of navigation bar
+- [\_data/navbar.yml](_data/navbar.yml) changes content of navigation bar
+- [\_data/footer.yml](_data/footer.yml) changes content of footer
 
 ### Profile Updates (Team & Apprentices)
 
@@ -27,7 +28,8 @@ Brand new SEACrowd website in Jekyll and Boostrap 5.3.
 In `_bibliography/`:
 
 - [main.bib](_bibliography/main.bib): SEACrowd publication
-- [affiliate.bib](_bibliography/affiliate.bib): publication by SEACrowd members and affliates
+- [affiliated.bib](_bibliography/affiliated.bib): publication by SEACrowd members and affliates
+- [tutorials.bib](_bibliography/tutorials.bib): tutorials (counted as affiliated)
 - [apprenticeship.bib](_bibliography/apprenticeship.bib): publication by SEACrowd apprentices and mentors.
   To assign a publication to a batch, add "batch" key.
   Batch value must be synced between this .bib file and [\_data/apprentices.yml](_data/apprentices.yml),
@@ -58,7 +60,7 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 
 **Writing tips:**
 
-- Use clear heading hierarchy (h1 for title, h2-h6 for sections)
+- Use h2-h6, and clear heading hierarchy. Heading 1 is reserved for post title.
 - Add alt text to images: `![Alt text](image.jpg)`
 - Use code blocks with language specification: ```python
 - Keep descriptions under 160 characters for SEO
@@ -67,16 +69,14 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 
 ### News & Updates
 
-- Create new updates in `_news/`. Format recommended is `YYYY-MM-DD-title.md`,
-  but it doesn't matter
-- Follow existing examples in the `_news/` directory
-- Include frontmatter with title, date, and write in markdown.
+- Create new updates in `_news/` with file name `YYYY-MM-DD-title.md`
+- **Add empty frontmatter** and write the content in markdown. Recommended 300 characters max. Frontmatter is very important for Jekyll to read the file.
 
 ### Project Information
 
 - Create new project in `_projects/` with format: `YYYY-MM-project-name.md`
 - Add project details, objectives, and outcomes
-- Include relevant images in the `assets/` folder
+- Include relevant images in the `assets/images/project` folder
 - Update [\_data/contributors.csv](_data/contributors.csv) for contributor acknowledgments
 
 ### Apprenticeship program
@@ -109,7 +109,7 @@ JEKYLL_PORT=4001 LIVERELOAD_PORT=35730 make dev
 
 or create `.env` file from `.env.example`.
 
-- Make exists on most systems, but if yours doesn't have it, copy corresponding commands in Makefile.
+- Make exists on most systems, but if yours doesn't have it, copy corresponding commands in [Makefile](./Makefile).
   You can check for this using `make -v`
 - If `docker compose` (compose plugin of Docker) doesn't work, try `docker-compose` (separate build).
 
@@ -135,7 +135,6 @@ See [Makefile](./Makefile) for all development commands:
 
 ### Setup Notes
 
-- Docker automates Jekyll restarts for `_config.yml` and `_layouts/bib.html` changes
 - Manual Ruby setup requires [rbenv](https://github.com/rbenv/rbenv) (see Makefile comments)
   or globally installed ruby >= 3.4.5
 - Site runs on [http://localhost:4000](http://localhost:4000)

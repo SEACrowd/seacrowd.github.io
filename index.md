@@ -24,12 +24,24 @@ We commit to a three-pronged approach to reaching our vision:
 ## Recent News
 
 {% if site.news and site.news.size > 0 %}
-{% assign recentNews = site.news | sort: 'date' | reverse | limit: 5 %}
+{% assign sortedNews = site.news | sort: 'path' | reverse %}
+{% assign recentNews = sortedNews | slice: 0, 5 %}
 
 {% for article in recentNews %}
+{% assign filename = article.path | split: '/' | last | remove: '.md' %}
+{% assign date_parts = filename | split: '-' %}
+{% if date_parts.size >= 3 %}
+{% assign year = date_parts[0] %}
+{% assign month = date_parts[1] %}
+{% assign day = date_parts[2] %}
+{% assign date_string = year | append: '-' | append: month | append: '-' | append: day %}
+{% assign article_date = date_string | date: "%b %-d, %Y" %}
+{% else %}
+{% assign article_date = "Date not available" %}
+{% endif %}
 
   <div class="news-item">
-    <div class="news-date text-muted">{{ article.date | date: "%b %-d, %Y" }}</div>
+    <div class="news-date text-muted">{{ article_date }}</div>
       {{ article.content | markdownify }}
   </div>
 {% endfor %}

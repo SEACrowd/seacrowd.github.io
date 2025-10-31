@@ -67,10 +67,8 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 
 ### News & Updates
 
-- Create new updates in `_news/`. Format recommended is `YYYY-MM-DD-title.md`,
-  but it doesn't matter
-- Follow existing examples in the `_news/` directory
-- Include frontmatter with title, date, and write in markdown.
+- Create new updates in `_news/` with file name `YYYY-MM-DD-title.md`
+- **Add empty frontmatter** and write the content in markdown. Recommended 300 characters max. Frontmatter is very important for Jekyll to read the file.
 
 ### Project Information
 

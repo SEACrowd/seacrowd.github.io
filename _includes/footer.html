@@ -1,4 +1,4 @@
-<footer class="bg-light border-top py-4 mt-4">
+<footer class="bg-light border-top mt-4 py-4">
   <div class="container">
     <div class="row g-4">
       <div class="col-lg-4 col-md-4">
@@ -6,7 +6,7 @@
           src="/assets/images/logo-wide.png"
           alt="{{ site.name }}"
           class="img-fluid"
-          style="max-height: 30px"
+          style="max-height: 28px"
         >
         <p class="text-muted small mb-3">{{ site.description }}</p>
 
@@ -23,12 +23,7 @@
                 href="{% if key == 'email' %}mailto:{{ site.social[key] }}{% else %}{{ site.social[key] }}{% endif %}"
                 class="social-link"
                 title="{{ key | replace: '_',' ' | capitalize }}"
-                {%
-                  unless key=""
-                  ="email"
-                %}
-                  target="_blank"
-                {% endunless %}
+                target="_blank"
                 rel="me external nofollow noopener noreferrer"
               >
                 <i

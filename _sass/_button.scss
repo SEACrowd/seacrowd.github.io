@@ -1,64 +1,22 @@
-.btn {
-  /* Layout & Sizing */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem; /* Increased padding for better touch targets */
-
-  /* Typography */
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  line-height: 1.5; /* Ensures consistent vertical alignment */
-
-  /* Appearance */
-  border-radius: 0.5rem;
-  /* Set border here to prevent layout shifts on hover for outline buttons */
-  border: 1px solid;
-  cursor: pointer;
-
-  /* Transitions */
-  transition:
-    color 150ms ease-in-out,
-    background-color 150ms ease-in-out,
-    border-color 150ms ease-in-out,
-    box-shadow 150ms ease-in-out;
-
-  /* Accessibility & Focus State */
-  /* Hide the default outline, we'll use a better box-shadow */
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-
-  /* Only show the focus ring on keyboard focus, not on mouse click */
-  &:focus-visible {
-    /* Use the button's specific focus ring color, defaulting to primary */
-    box-shadow: 0 0 0 2px var(--btn-focus-ring);
-  }
-}
-
-/* ========================================================================
-   3. Variant Styling Logic
-   - Uses local --btn variables to apply styles.
-   - This section defines *how* buttons behave, not what color they are.
-   ======================================================================== */
-
 /* --- Solid Buttons --- */
 .btn:not([class*="btn-outline-"]) {
   background-color: var(--btn-bg);
   color: var(--btn-color);
   border-color: var(--btn-bg);
+  transition: all 0.2s ease-in-out;
 
   &:hover,
   &:focus-visible {
     background-color: var(--btn-bg-hover);
     border-color: var(--btn-bg-hover);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   &:active,
   &:focus {
     background-color: var(--btn-bg-active);
     border-color: var(--btn-bg-active);
+    transform: scale(95%);
   }
 }
 
@@ -80,12 +38,7 @@
     background-color: var(--btn-bg-hover) !important;
     border-color: var(--btn-bg-hover) !important;
     color: var(--btn-color) !important;
-  }
-
-  /* Ensure Bootstrap's focus/active states don't override */
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 0.2rem var(--btn-focus-ring) !important;
+    box-shadow: 0 0 0 0.2rem var(--btn-focus-ring);
   }
 }
 
@@ -116,8 +69,8 @@
   --btn-bg: var(--accent);
   --btn-color: var(--accent-foreground);
   --btn-border: var(--accent);
-  --btn-bg-hover: oklch(from var(--accent) calc(l - 0.05) c h);
-  --btn-bg-active: oklch(from var(--accent) calc(l - 0.1) c h);
+  --btn-bg-hover: oklch(from var(--accent) calc(l - 0.08) calc(c + 0.02) h);
+  --btn-bg-active: oklch(from var(--accent) calc(l - 0.15) calc(c + 0.03) h);
   --btn-focus-ring: color-mix(in oklch, var(--accent) 50%, transparent);
 }
 

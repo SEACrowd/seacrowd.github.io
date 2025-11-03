@@ -4,10 +4,10 @@ layout: default
 <header>
   {% if page.thumbnail %}
     <img
-      src="/assets/images/post/{{ page['thumbnail'] }}"
+      src="/assets/images/posts/{{ page.thumbnail }}"
       class="img-fluid rounded mb-4 w-100"
       alt="{{ page.title }}"
-      style="max-height: 400px; object-fit: cover;"
+      style="max-height: 400px; object-fit: cover"
     >
   {% endif %}
   <h1 class="page-title">{{ page.title }}</h1>
@@ -52,15 +52,11 @@ layout: default
               {% break %}
             {% endif %}
           {% endfor %}
-
           {% if author_link %}
-            <a href="{{ author_link }}">
-              {{- author -}}
-            </a>
+            <a href="{{ author_link }}">{{- author -}}</a>
           {% else %}
             {{ author }}
           {% endif %}
-
           {% unless forloop.last %}
             {% if forloop.index == display_authors.size
               and display_authors.size > 1
@@ -86,9 +82,7 @@ layout: default
     </div>
   {% endif %}
 </header>
-<article class="container-md content my-5 mx-auto">
-  {{ content }}
-</article>
+<article class="container-md content my-5 mx-auto">{{ content }}</article>
 
 {% include social-share.html %}
 

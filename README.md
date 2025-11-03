@@ -54,7 +54,7 @@ tags: [tag1, tag2] # Optional
 category: research # Optional, array or string separated by commas
 featured: true # Optional: shows in featured section
 authors: [Author Name] # Optional array
-thumbnail: image.jpg # Optional: image filename in assets/images/post/
+thumbnail: image.jpg # Optional: image filename in assets/images/posts/
 ---
 ```
 
@@ -76,7 +76,7 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 
 - Create new project in `_projects/` with format: `YYYY-MM-project-name.md`
 - Add project details, objectives, and outcomes
-- Include relevant images in the `assets/images/project` folder
+- Include relevant images in the `assets/images/projects` folder
 - Update [\_data/contributors.csv](_data/contributors.csv) for contributor acknowledgments
 
 ### Apprenticeship program
@@ -90,6 +90,42 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 - Update static pages in `_pages/` directory
 - Modify content in `events.md`, `resources.md`, `publications.md`, etc.
 - ⚠️ All `_pages/*.md` should start with heading 2 (##)
+
+### Using the Carousel Component
+
+Use `{% include carousel.html %}` to add image carousels to any page:
+
+```liquid
+{%
+  include carousel.html
+  id="uniqueCarouselId"
+  height="400"
+  duration="5"
+  items=site.data.carousel_items
+%}
+```
+
+**Parameters:**
+
+- `id` (optional): Unique carousel identifier, defaults to "mediaCarousel"
+- `height` (optional): Height in pixels, defaults to 400
+- `duration` (optional): Auto-advance interval in seconds
+- `items` (required): Array of carousel items
+
+**Item structure:**
+
+```yaml
+# In _data/carousel_items.yml or frontmatter
+- image: "image1.jpg" # Auto-prepends /assets/images/ if no path
+  caption: "Simple caption" # Shows as badge
+  alt: "Image description"
+
+- image: "/assets/images/custom/image2.jpg" # Custom path
+  description: "Rich description with markdown support"
+  button_text: "Learn More"
+  button_url: "/about"
+  alt: "Another image"
+```
 
 ## Development
 

@@ -1,8 +1,34 @@
 ---
 layout: default
+title: "SEACrowd - Advancing AI for Southeast Asia"
+description: "A grassroots-led community of researchers from Southeast Asia advancing Artificial Intelligence tools, resources, and capabilities for the region. Building world-class AI in linguistic and cultural context."
+keywords:
+  [
+    "Southeast Asia",
+    "AI",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Research Community",
+    "SIGSEA",
+    "NLP",
+    "Natural Language Processing"
+  ]
+carousel:
+  - image: "events/coling2025.jpg"
+    description: Help build Southeast Asia’s culturally-aware vision-language model
+    button_text: Learn more
+    button_url: "/projects/2025-seavl-phase-2"
+  - image: "posts/emnlp-2024-bof.jpg"
+    description: Help build Southeast Asia’s culturally-aware image dataset
+    button_text: View finished project
+    button_url: "/projects/2025-seavl-phase-1"
+  - image: "projects/seacrowd-catalog.png"
+    description: Compile the first catalog and benchmark for 500+ Southeast Asian datasets
+    button_text: View finished project
+    button_url: "/projects/2024-seacrowd"
 ---
 
-![](/assets/images/post/emnlp-2024-bof.jpg)
+{% include carousel.html items=page.carousel height="400" duration="8" %}
 
 ## Our Vision
 
@@ -11,6 +37,8 @@ Intelligence (AI) tools, resources, and capabilities for the region.
 
 We envision a future where AI ecosystems in SEA are mature and competitive with the rest of the
 world, wherein people from SEA can use world-class AI in their own linguistic and cultural context.
+
+{% include video.html video_id="k5_Fod7HN9c" caption="Learn more about SEACrowd's mission and impact" %}
 
 ## Our Mission
 

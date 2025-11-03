@@ -10,11 +10,11 @@ For resources associated with our papers and preprints, please visit our [public
 
 ## HuggingFace Collections
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mb-3">
   {% for collection in site.data.resources.collections %}
   <div class="col-lg-6">
     <article class="card card-clickable h-100 position-relative">
-      <a href="{{ collection.url }}" class="stretched-link text-reset" target="_blank">
+      <a href="{{ collection.url }}" class="stretched-link text-reset" target="_blank" rel="noopener noreferrer nofollow">
         <div class="card-body">
           <h3 class="card-title mt-0">{{ collection.title }}</h3>
           <div class="card-meta text-muted small mb-2">
@@ -37,7 +37,7 @@ For resources associated with our papers and preprints, please visit our [public
 </div>
 
 <div class="text-center mb-5">
-  <a href="{{ site.data.resources.collections_button.url }}" class="btn btn-outline-primary" target="_blank">
+  <a href="{{ site.data.resources.collections_button.url }}" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer nofollow">
     <i class="{{ site.data.resources.collections_button.icon }} me-2"></i>
     {{ site.data.resources.collections_button.text }}
   </a>
@@ -49,7 +49,7 @@ For resources associated with our papers and preprints, please visit our [public
   {% for resource in site.data.resources.resources %}
   <div class="col-lg-4">
     <article class="card card-clickable h-100 position-relative">
-      <a href="{{ resource.url }}" class="stretched-link text-reset" target="_blank">
+      <a href="{{ resource.url }}" class="stretched-link text-reset" target="_blank" rel="noopener noreferrer nofollow">
         <div class="card-body text-center">
           <i class="{{ resource.icon }} fa-2x text-secondary mb-2"></i>
           <h5 class="card-title">{{ resource.title }}</h5>

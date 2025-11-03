@@ -30,9 +30,9 @@ def hello_world():
 
 ## Images
 
-Add images to `assets/images/post/` and reference them like:
+Add images to `assets/images/posts/` and reference them like:
 
-![Description of image]({{ '/assets/images/post/your-image.jpg' | relative_url }})
+![Description of image]({{ '/assets/images/posts/your-image.jpg' | relative_url }})
 
 ## Links
 

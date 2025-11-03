@@ -14,13 +14,13 @@ contributing to AI in SEA even more.
 
 <div class="row g-3 my-4">
   <div class="col-sm-4">
-    <img src="/assets/images/post/sign-holy.jpg" alt="Holy signing documents" class="img-fluid">
+    <img src="/assets/images/posts/sign-holy.jpg" alt="Holy signing documents" class="img-fluid">
   </div>
   <div class="col-sm-4">
-    <img src="/assets/images/post/sign-aji.jpg" alt="Aji signing documents" class="img-fluid">
+    <img src="/assets/images/posts/sign-aji.jpg" alt="Aji signing documents" class="img-fluid">
   </div>
   <div class="col-sm-4">
-    <img src="/assets/images/post/sign-sabil.jpg" alt="Sabil signing documents" class="img-fluid">
+    <img src="/assets/images/posts/sign-sabil.jpg" alt="Sabil signing documents" class="img-fluid">
   </div>
 </div>
 

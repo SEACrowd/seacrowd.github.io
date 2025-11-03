@@ -54,7 +54,7 @@ tags: [tag1, tag2] # Optional
 category: research # Optional, array or string separated by commas
 featured: true # Optional: shows in featured section
 authors: [Author Name] # Optional array
-thumbnail: image.jpg # Optional: image filename in assets/images/post/
+thumbnail: image.jpg # Optional: image filename in assets/images/posts/
 ---
 ```
 
@@ -76,7 +76,7 @@ thumbnail: image.jpg # Optional: image filename in assets/images/post/
 
 - Create new project in `_projects/` with format: `YYYY-MM-project-name.md`
 - Add project details, objectives, and outcomes
-- Include relevant images in the `assets/images/project` folder
+- Include relevant images in the `assets/images/projects` folder
 - Update [\_data/contributors.csv](_data/contributors.csv) for contributor acknowledgments
 
 ### Apprenticeship program

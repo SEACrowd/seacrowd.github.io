@@ -18,7 +18,7 @@ carousel:
     description: Help build Southeast Asia’s culturally-aware vision-language model
     button_text: Learn more
     button_url: "/projects/2025-seavl-phase-2"
-  - image: "post/emnlp-2024-bof.jpg"
+  - image: "posts/emnlp-2024-bof.jpg"
     description: Help build Southeast Asia’s culturally-aware image dataset
     button_text: View finished project
     button_url: "/projects/2025-seavl-phase-2"

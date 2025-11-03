@@ -32,14 +32,20 @@
     // Scroll to top when clicked
     scrollToTopBtn.addEventListener("click", function () {
       const target =
-        document.querySelector(".page-title") ||
-        document.querySelector("h1") ||
-        document.getElementById("page-top")
+        document.querySelector(".page-title") || document.querySelector("h1")
 
       if (target) {
-        target.scrollIntoView({ behavior: "smooth" })
+        // Get the target position and account for sticky navbar + banner
+        const targetRect = target.getBoundingClientRect()
+        const offsetTop = window.pageYOffset + targetRect.top - 70
+
+        window.scrollTo({
+          top: Math.max(0, offsetTop),
+          behavior: "smooth"
+        })
       } else {
-        window.scrollTo({ top: 0, behavior: "smooth" })
+        // Scroll to position after the sticky navbar and donation banner
+        window.scrollTo({ top: 70, behavior: "smooth" })
       }
     })
   })

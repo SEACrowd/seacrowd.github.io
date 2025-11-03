@@ -1,0 +1,150 @@
+<div
+  id="{{ include.id | default: 'mediaCarousel' }}"
+  class="carousel slide mb-4"
+  data-bs-ride="carousel"
+  {% if include.duration %}
+    data-bs-interval="{{ include.duration | times: 1000 }}"
+  {% endif %}
+>
+  {% if include.items.size > 1 %}
+    <div class="carousel-indicators">
+      {% for item in include.items %}
+        <button
+          type="button"
+          data-bs-target="#{{ include.id | default: 'mediaCarousel' }}"
+          data-bs-slide-to="{{ forloop.index0 }}"
+          {% if forloop.first %}
+            class="active"
+            aria-current="true"
+          {% endif %}
+          aria-label="Slide {{ forloop.index }}"
+        ></button>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div
+    class="carousel-inner rounded shadow"
+    style="height: {{ include.height | default: '400' }}px;"
+  >
+    {% for item in include.items %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        {% assign image_path = item.image %}
+        {% unless image_path contains 'http'
+          or image_path contains '/assets/'
+        %}
+          {% assign image_path = '/assets/images/' | append: item.image %}
+        {% endunless %}
+
+        <img
+          src="{{ image_path }}"
+          class="d-block w-100 h-100"
+          alt="{{ item.alt | default: item.caption | default: 'Carousel image' }}"
+          style="object-fit: cover"
+        >
+
+        {% if item.description %}
+          <div class="carousel-caption-custom text-start">
+            <p class="small mb-2">{{ item.description }}</p>
+            {% if item.button_text and item.button_url %}
+              <a href="{{ item.button_url }}" class="btn btn-primary btn-sm">
+                {{ item.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        {% elsif item.caption %}
+          <div class="carousel-caption d-md-block">
+            <div class="caption-badge">
+              <small>{{ item.caption }}</small>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if include.items.size > 1 %}
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#{{ include.id | default: 'mediaCarousel' }}"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#{{ include.id | default: 'mediaCarousel' }}"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  {% endif %}
+</div>
+
+<style>
+  /* Custom carousel caption positioning - always visible in container */
+  .carousel-caption-custom {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    max-width: 350px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-out;
+    z-index: 10;
+    color: white;
+  }
+
+  /* Show overlay on active slide or hover */
+  .carousel-item.active .carousel-caption-custom,
+  .carousel-item:hover .carousel-caption-custom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Caption badge for simple captions */
+  .caption-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Ensure carousel item fills container (good for transitions) */
+  .carousel-item {
+    height: 100%;
+    background-color: #000; /* fallback */
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .carousel-caption-custom {
+      left: 1rem !important;
+      right: 1rem !important;
+      bottom: 1rem !important;
+      max-width: calc(100% - 2rem) !important;
+      padding: 0.75rem;
+    }
+
+    .caption-badge {
+      max-width: calc(100vw - 4rem);
+    }
+  }
+
+  .carousel:hover {
+    --bs-carousel-transition-duration: 0.6s;
+  }
+</style>

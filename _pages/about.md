@@ -14,6 +14,8 @@ Intelligence tools, resources, and capabilities for the region.
 We envision AI ecosystems in Southeast Asia that are mature, competitive globally, and enable people
 to use world-class AI in their own linguistic and cultural contexts.
 
+{% include video.html video_id="k5_Fod7HN9c" caption="Discover how SEACrowd is building AI for Southeast Asia" %}
+
 ## Our Mission
 
 We advance our vision through three key initiatives:

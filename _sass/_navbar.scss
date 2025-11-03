@@ -33,11 +33,18 @@
 }
 
 .dropdown-menu {
+  --bs-dropdown-font-size: 0.875rem;
+  --bs-dropdown-color: var(--muted-foreground);
+  --bs-dropdown-bg: var(--background);
   --bs-dropdown-link-color: var(--foreground);
   --bs-dropdown-link-hover-color: var(--accent-foreground);
   --bs-dropdown-link-hover-bg: var(--accent);
   --bs-dropdown-link-active-color: var(--primary-foreground);
   --bs-dropdown-link-active-bg: var(--primary);
+  --bs-dropdown-link-disabled-color: var(--muted-foreground);
+  --bs-dropdown-item-padding-x: 1rem;
+  --bs-dropdown-item-padding-y: 0.25rem;
+  --bs-dropdown-header-color: var(--muted-foreground);
 }
 
 // Custom hamburger menu

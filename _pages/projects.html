@@ -35,7 +35,7 @@ description: A collection of projects that SEACrowd worked or has been working o
         style="display: none"
       {% endunless %}
     >
-      {% include card.html item=project type="project" %}
+      {% include card.html item=project type="projects" %}
     </div>
   {% endfor %}
 </div>
@@ -57,8 +57,7 @@ description: A collection of projects that SEACrowd worked or has been working o
     {% endcomment %}
     {% assign showInCompleted = false %}
     {% comment %}
-      Priority
-      1: Check status field for "completed"
+      Priority 1: Check status field for "completed"
     {% endcomment %}
     {% if project.status == 'completed' %}
       {% assign showInCompleted = true %}
@@ -81,7 +80,7 @@ description: A collection of projects that SEACrowd worked or has been working o
         style="display: none"
       {% endunless %}
     >
-      {% include card.html item=project type="project" %}
+      {% include card.html item=project type="projects" %}
     </div>
   {% endfor %}
 </div>

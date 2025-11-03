@@ -12,11 +12,10 @@
       class="profile-thumbnail"
       src="{{ 'assets/images/' | append: image_path | append: '/' | append: profile_image | relative_url }}"
       alt="{{ current_profile.name }}"
-      style="display: block; margin: 0 auto 0.25rem auto"
     >
   {% endif %}
 
-  <p class="name m-1">{{ current_profile.name }}</p>
+  <p class="name mb-0">{{ current_profile.name }}</p>
 
   {% if current_profile.job and current_profile.job != '' %}
     <p class="text-muted small m-1">{{ current_profile.job }}</p>

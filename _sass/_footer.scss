@@ -21,17 +21,18 @@
 .social-link {
   color: var(--muted-foreground);
   font-size: 1.2rem;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-out;
   text-decoration: none;
   display: inline-block;
 
   &:hover,
   &:focus {
     color: var(--primary);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
   }
 
   &:active {
     color: var(--primary);
+    transform: translateY(0);
   }
 }

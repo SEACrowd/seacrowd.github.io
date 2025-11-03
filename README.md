@@ -91,6 +91,42 @@ thumbnail: image.jpg # Optional: image filename in assets/images/posts/
 - Modify content in `events.md`, `resources.md`, `publications.md`, etc.
 - ⚠️ All `_pages/*.md` should start with heading 2 (##)
 
+### Using the Carousel Component
+
+Use `{% include carousel.html %}` to add image carousels to any page:
+
+```liquid
+{%
+  include carousel.html
+  id="uniqueCarouselId"
+  height="400"
+  duration="5"
+  items=site.data.carousel_items
+%}
+```
+
+**Parameters:**
+
+- `id` (optional): Unique carousel identifier, defaults to "mediaCarousel"
+- `height` (optional): Height in pixels, defaults to 400
+- `duration` (optional): Auto-advance interval in seconds
+- `items` (required): Array of carousel items
+
+**Item structure:**
+
+```yaml
+# In _data/carousel_items.yml or frontmatter
+- image: "image1.jpg" # Auto-prepends /assets/images/ if no path
+  caption: "Simple caption" # Shows as badge
+  alt: "Image description"
+
+- image: "/assets/images/custom/image2.jpg" # Custom path
+  description: "Rich description with markdown support"
+  button_text: "Learn More"
+  button_url: "/about"
+  alt: "Another image"
+```
+
 ## Development
 
 ### Quick Start

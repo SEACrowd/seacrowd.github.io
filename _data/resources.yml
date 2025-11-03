@@ -13,6 +13,11 @@ collections:
       - "Southeast Asia"
     description: "Vision-language datasets capturing the cultural diversity of Southeast Asian contexts."
 
+collections_button:
+  text: "View more collections"
+  url: "https://huggingface.co/SEACrowd/collections"
+  icon: "fas fa-external-link-alt"
+
 resources:
   - title: "Models"
     url: "https://huggingface.co/SEACrowd/models"
@@ -28,8 +33,3 @@ resources:
     url: "https://huggingface.co/SEACrowd/spaces"
     icon: "fas fa-play-circle"
     description: "Try out interactive demos and applications built with our models and datasets."
-
-collections_button:
-  text: "View More Collections"
-  url: "https://huggingface.co/SEACrowd/collections"
-  icon: "fas fa-external-link-alt"

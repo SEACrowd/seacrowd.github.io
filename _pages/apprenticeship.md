@@ -2,7 +2,7 @@
 title: Apprenticeship Program
 permalink: /apprenticeship.html
 form: ""
-openDate: 2024-08-15T00:00:00-12:00
+openDate: 2025-11-15T00:00:00-12:00
 closeDate: 2024-09-01T11:59:00+12:00
 ---
 

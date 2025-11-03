@@ -107,10 +107,10 @@ class ApprenticeshipDateManager {
     const alerts = {
       upcoming: {
         title: "Applications will open soon!",
-        content: `Applications open on ${this.formatDate(this.openDate, {
+        content: `Applications will open on ${this.formatDate(this.openDate, {
           includeTime: true,
           includeTZ: true
-        })} (${this.formatDaysText(dUntilOpen, "until")}).`
+        })} (${this.formatDaysText(dUntilOpen, "until")}). Dates are subject to change.`
       },
       open: {
         title: "Applications for the apprenticeship program are now open!",
@@ -134,7 +134,7 @@ class ApprenticeshipDateManager {
             includeTime: true,
             includeTZ: true
           }
-        )}.<br> Information for the next application opening will be released soon.`
+        )}`
       }
     }
 

@@ -24,7 +24,7 @@
           src="{{ img_src }}"
           class="img-fluid rounded w-100 object-fit-cover"
           alt="{{ include.item.title }}"
-          style="height: 180px;"
+          style="height: 180px"
         >
       </div>
 
@@ -43,7 +43,7 @@
         </h3>
 
         <div class="card-meta text-muted small mb-2">
-          {% if include.type == 'project' %}
+          {% if include.type == 'projects' %}
             {% if include.item.fromDate or include.item.toDate %}
               <span class="meta-item">
                 <i class="fas fa-calendar" aria-hidden="true"></i>
@@ -64,20 +64,17 @@
                 {{ include.item.date | date: '%b %-d, %Y' }}
               </span>
             {% endif %}
-
             {% if include.item.category %}
               <span class="meta-item">
                 <i class="fas fa-folder" aria-hidden="true"></i>
                 {{ include.item.category }}
               </span>
             {% endif %}
-
-            {% if include.type == 'post' and include.item.content %}
+            {% if include.type == 'posts' and include.item.content %}
               <span class="meta-item">
                 {% include reading-time.html content=include.item.content %}
               </span>
             {% endif %}
-
             {% if include.item.authors and include.item.authors.size > 0 %}
               <span class="meta-item">
                 <i class="fas fa-user" aria-hidden="true"></i>
@@ -119,7 +116,7 @@
           {% if include.item.description %}
             {{ include.item.description }}
           {% else %}
-            {% if include.type == 'post' %}
+            {% if include.type == 'posts' %}
               {{ include.item.excerpt }}
             {% else %}
               {{

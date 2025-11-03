@@ -70,22 +70,24 @@
             {% assign url = 'https://doi.org/' | append: entry.doi %}
           {% elsif field == 'arxiv' %}
             {% assign url = 'https://arxiv.org/abs/' | append: entry.arxiv %}
-          {%
-            elsif field == "pdf" and entry.pdf contains 'http' ==
-            false
-          %}
-            {% assign url = entry.pdf
-              | prepend: '/assets/pdf/'
-              | relative_url
-            %}
-          {%
-            elsif field == "video" and entry.video contains 'http'
-            == false
-          %}
-            {% assign url = entry.video
-              | prepend: '/assets/video/'
-              | relative_url
-            %}
+          {% elsif field == 'pdf' %}
+            {% if entry.pdf contains 'http' %}
+              {% assign url = entry.pdf %}
+            {% else %}
+              {% assign url = entry.pdf
+                | prepend: '/assets/pdf/'
+                | relative_url
+              %}
+            {% endif %}
+          {% elsif field == 'video' %}
+            {% if entry.video contains 'http' %}
+              {% assign url = entry.video %}
+            {% else %}
+              {% assign url = entry.video
+                | prepend: '/assets/video/'
+                | relative_url
+              %}
+            {% endif %}
           {% endif %}
 
           <a

@@ -1,0 +1,86 @@
+# Primary Mentors
+- name: Alham Fikri Aji
+  position: primary_mentor
+  affiliation: MBZUAI, Asst. Prof.
+  site: https://afaji.github.io/
+  avatar: alham_fikri.png
+
+- name: Samuel Cahyawijaya
+  position: primary_mentor
+  affiliation: Cohere, Member of Technical Staff
+  site: https://www.linkedin.com/in/samuelcahyawijaya
+  avatar: samuel_cahyawijaya.jpg
+
+- name: Ekapol Chuangsuwanich
+  position: primary_mentor
+  affiliation: Chulalongkorn University
+  site: https://ekapolc.github.io/
+  avatar: ekapol.png
+
+- name: Fajri Koto
+  position: primary_mentor
+  affiliation: MBZUAI, Asst. Prof.
+  site: https://www.fajrikoto.com/
+  avatar: fajri_koto.png
+
+- name: Peerat Limkonchotiwat
+  position: primary_mentor
+  affiliation: AI Singapore, Research Fellow
+  site: https://mrpeerat.github.io/
+  avatar: peerat_limkonchotiwat.jpg
+
+- name: Genta Indra Winata
+  position: primary_mentor
+  affiliation: Capital One AI Foundation, Senior Applied Scientist
+  site: https://gentawinata.com/
+  avatar: genta_indra_winata.jpg
+
+# Secondary Mentors
+- name: Farid Adilazuarda
+  position: secondary_mentor
+  affiliation: University of Edinburgh, PhD Student
+  site: https://faridlazuarda.github.io/
+  avatar: farid_adilazuarda.png
+
+- name: M. Dehan Al-Kautsar
+  position: secondary_mentor
+  affiliation: MBZUAI, NLP Researcher
+  site: https://www.linkedin.com/in/dehanalkautsar
+  avatar: dehan_alkautsar.jpg
+
+- name: David Anugraha
+  position: secondary_mentor
+  affiliation: Stanford University, MS Student
+  site: https://www.linkedin.com/in/david-anugraha
+  avatar: david_anugraha.jpg
+
+- name: Patomporn Payoungkhamdee
+  position: secondary_mentor
+  affiliation: VISTEC, PhD Student
+  site: https://www.linkedin.com/in/patomp/
+  avatar: patomporn.jpg
+
+- name: M. Reza Qorib
+  position: secondary_mentor
+  affiliation: NUS, Research Fellow
+  site: https://mrqorib.github.io/
+  avatar: reza_qorib.jpg
+
+- name: Pume Tuchinda
+  position: secondary_mentor
+  affiliation: VISTEC, Research Assistant
+  site: https://www.linkedin.com/in/pumetuchinda/
+  avatar: pume_tuchinda.jpg
+
+# Organizers & Research Managers
+- name: Aye Hninn Khine
+  position: organizer
+  affiliation: KMUTT, SEACrowd
+  site: https://ayehninnkhine.github.io/
+  avatar: aye_hninn_khine.avif
+
+- name: Holy Lovenia
+  position: organizer
+  affiliation: SEACrowd
+  site: https://holylovenia.github.io/
+  avatar: holy_lovenia.png

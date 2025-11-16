@@ -1,4 +1,4 @@
-<div class="col-md-4 col-sm-6 text-center p-3">
+<div class="{{ include.col_class | default: 'col-md-4 col-sm-6' }} text-center p-3">
   {% assign image_path = include.image_path | default: 'people' %}
   {% assign current_profile = include.profile | default: profile %}
   {% assign profile_image = current_profile.avatar
@@ -7,9 +7,10 @@
   {% assign profile_site = current_profile.site
     | default: current_profile.website
   %}
+  {% assign img_size = include.img_size | default: 'profile-thumbnail' %}
   {% if profile_image and profile_image != '' %}
     <img
-      class="profile-thumbnail"
+      class="{{ img_size }}"
       src="{{ 'assets/images/' | append: image_path | append: '/' | append: profile_image | relative_url }}"
       alt="{{ current_profile.name }}"
     >
@@ -21,12 +22,10 @@
     <p class="text-muted small m-1">{{ current_profile.job }}</p>
   {% endif %}
   {% if current_profile.affiliation and current_profile.affiliation != '' %}
-    <p class="affiliation text-muted small mb-1">
-      {{ current_profile.affiliation }}
-    </p>
+    <i class="text-muted small mb-1"> {{ current_profile.affiliation }} </i>
   {% endif %}
 
-  <div class="social-links mt-1">
+  <div class="social-links mt-2">
     {% if profile_site and profile_site != '' %}
       <a
         href="{{ profile_site }}"

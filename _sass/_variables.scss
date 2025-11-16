@@ -16,6 +16,15 @@ $sea-black: #111111;
   --sea-white: #{$sea-white};
   --sea-black: #{$sea-black};
 
+  /* Typography */
+  --font-family-sans:
+    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  --font-family-mono:
+    "GeistMono", "SF Mono", Monaco, Inconsolata, "Roboto Mono",
+    "Source Code Pro", monospace;
+
   /* Generic Theme Variables */
   --primary: var(--sea-red);
   --primary-foreground: var(--sea-white);

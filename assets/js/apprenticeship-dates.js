@@ -110,7 +110,7 @@ class ApprenticeshipDateManager {
         content: `Applications will open on ${this.formatDate(this.openDate, {
           includeTime: true,
           includeTZ: true
-        })} (${this.formatDaysText(dUntilOpen, "until")}). Dates are subject to change.`
+        })} (${this.formatDaysText(dUntilOpen, "until")}).`
       },
       open: {
         title: "Applications for the apprenticeship program are now open!",

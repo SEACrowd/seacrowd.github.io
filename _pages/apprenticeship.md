@@ -6,9 +6,9 @@ openDate: 2025-11-17T00:00:00-12:00
 closeDate: 2025-12-17T11:59:00-12:00
 ---
 
-**Program Duration:** Feb 1 - Jun 30, 2026 (4 months)
+**[Application link](https://forms.gle/GCv3cyCRqzj4PqfA9)**.
 
-SEACrowd Apprentice Program is a **remote research program** that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
+SEACrowd Apprentice Program is a **remote research program** (Feb 1 - Jun 30, 2026) that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
 
 Each mentee will join a team of 2–3 mentors and 2+ fellow mentees to execute a research project over four months. The program emphasizes hands-on experience, mentorship, and peer learning, culminating in a research report, which can turn into paper submission to top AI/ML/NLP conferences as arranged by the team.
 

@@ -1,12 +1,46 @@
 @use "variables";
 
+@font-face {
+  font-family: "Geist";
+  src: url("/assets/fonts/Geist%5Bwght%5D.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/assets/fonts/Geist-Italic%5Bwght%5D.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeistMono";
+  src: url("/assets/fonts/GeistMono%5Bwght%5D.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeistMono";
+  src: url("/assets/fonts/GeistMono-Italic%5Bwght%5D.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 ::selection {
   background-color: var(--accent);
   color: var(--foreground);
 }
 
 body {
-  line-height: 1.6;
+  font-family: var(--font-family-sans);
 }
 
 // Font size hierarchy
@@ -54,7 +88,7 @@ h6 {
 
 p {
   margin-bottom: 1.25rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 i {
@@ -109,6 +143,13 @@ blockquote {
 
 img {
   max-width: 100%;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-family-mono);
 }
 
 .MathJax_Display {

@@ -3,7 +3,6 @@
 {% assign author_limit = site.pub_show_max_authors %}
 {% assign total_shown = author_limit | times: 2 %}
 {% assign formatted_authors = '' | split: '' %}
-
 {% for author in authors %}
   {% assign author_clean = author | strip %}
   {% assign parts = author_clean | split: ', ' %}
@@ -20,7 +19,7 @@
   {% assign formatted_authors = formatted_authors | push: formatted_name %}
 {% endfor %}
 
-<div class="bibliography-authors">
+<div class="bibliography-authors text-muted">
   {% if authors.size <= total_shown %}
     {{ formatted_authors | join: ', ' }}
   {% else %}

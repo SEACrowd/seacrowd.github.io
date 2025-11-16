@@ -15,6 +15,7 @@
   job: Research Steering & SIGSEA Secretary
   site: https://www.fajrikoto.com/
   scholar: https://scholar.google.com/citations?user=RA9l3s4AAAAJ&hl=id
+  affiliation: MBZUAI, Asst. Prof.
 
 - name: Frederikus Hudi
   position: coreteam
@@ -23,6 +24,7 @@
   sortorder: 0
   job: Treasurer
   site: https://jp.linkedin.com/in/fhudi
+  affiliation: NAIST, PhD Student
 
 - name: Onno P. Kampman
   position: coreteam
@@ -49,6 +51,7 @@
   job: Research Steering Head
   site: https://afaji.github.io/
   scholar: https://scholar.google.com/citations?user=0Cyfqv4AAAAJ&hl=en&oi=ao
+  affiliation: MBZUAI, Asst. Prof.
 
 - name: Jan Christian Blaise Cruz
   position: coreteam
@@ -57,6 +60,7 @@
   sortorder: 1
   job: Communications Head
   site: https://blaisecruz.com/
+  affiliation: MBZUAI, PhD Student
 
 - name: Jennifer Santoso
   position: coreteam
@@ -75,6 +79,7 @@
   job: Research Steering
   site: https://samuelcahyawijaya.github.io/
   scholar: https://scholar.google.com/citations?user=w5w_WZEAAAAJ&hl=en
+  affiliation: Cohere, Member of Technical Staff
 
 - name: Aye Hninn Khine
   position: coreteam
@@ -83,6 +88,7 @@
   sortorder: 2
   job: Communications and Funding
   site: https://ayehninnkhine.github.io/
+  affiliation: KMUTT
 
 - name: Carlos Rafael Catalan
   position: coreteam
@@ -91,6 +97,7 @@
   sortorder: 2
   job: Communications
   site: https://scholar.google.com/citations?user=mU6Qvs4AAAAJ&hl=en
+  affiliation: Samsung Research Philippines
 
 - name: Genta Indra Winata
   position: coreteam
@@ -99,6 +106,7 @@
   sortorder: 2
   job: Communications
   site: https://gentawinata.com/
+  affiliation: Capital One AI Foundations, Senior Applied Scientist
 
 - name: Joseph Marvin Imperial
   position: coreteam
@@ -107,6 +115,7 @@
   sortorder: 2
   job: Communications
   site: https://www.josephimperial.com/
+  affiliation: University of Bath, PhD Student
 
 - name: Patricia Nicole Monderin
   position: coreteam
@@ -123,6 +132,7 @@
   sortorder: 2
   job: Communications
   site: https://mrpeerat.github.io/
+  affiliation: AI Singapore, Research Fellow
 
 - name: Ruochen Zhang
   position: coreteam
@@ -131,6 +141,7 @@
   sortorder: 2
   job: Communications
   site: https://www.ruochenzhang.com/
+  affiliation: Brown Uni, PhD Student
 
 - name: My Chiffon Nguyen
   position: coreteam

@@ -1,18 +1,34 @@
 ---
-title: Apprentice Program
+title: SEACrowd 2026 Apprentice Program
 permalink: /apprenticeship.html
 form: https://forms.gle/GCv3cyCRqzj4PqfA9
 openDate: 2025-11-17T00:00:00-12:00
 closeDate: 2025-12-17T11:59:00-12:00
 ---
 
-SEACrowd’s 3–4 month apprenticeship (Feb 1 - Jun 30, 2026) pairs experienced researchers with early-career or prospective researchers across Southeast Asia to build models, datasets, and publishable research—with a clear path toward PhD admissions, jobs, and stronger SEA regional capacity. Small, mentored teams work on scoped projects with structured milestones and community support.
+**Program Duration:** Feb 1 - Jun 30, 2026 (4 months)
 
-Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees’ first-authored research papers published at the prestigious [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html).
+SEACrowd Apprentice Program is a **remote research program** that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
 
-For SEACrowd Apprentice 2026, we offer five cutting-edge research topics relevant to linguistic enrichment, inference optimization, knowledge retention, multilingual agentic systems, and multimodal distillation. [See project topics for SEACrowd Apprentice 2026 here.](https://docs.google.com/document/d/e/2PACX-1vSpPtzQYD8flrz9w01uLSADHvXBDtI5WE6ogbnwnpFfl9Y-89SCLsp252tZAYLYa6pimxCBj27UfbR7/pub)
+Each mentee will join a team of 2–3 mentors and 2+ fellow mentees to execute a research project over four months. The program emphasizes hands-on experience, mentorship, and peer learning, culminating in a research report, which can turn into paper submission to top AI/ML/NLP conferences as arranged by the team.
 
-## Who can apply?
+### 2025 Success Story
+
+Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html).
+
+### 2026 Research Topics
+
+We offer five cutting-edge research projects:
+
+1. **Multilingual Agentic for Underrepresented Regions** - Developing evaluation frameworks for agent-based language models in low-resource languages
+2. **CoRaL: Contextual Relevance and Linguistic Enrichment** - Multi-dimensional data curation framework for low-resource language training corpora
+3. **Reasoning Agentic LLM Router** - Skill-based routing mechanisms to reduce inference costs while maintaining performance
+4. **Selective Memory Layer Finetuning** - Architectural solutions for continual learning using memory layers
+5. **Knowledge Distillation in Multilingual Vision-Text Models** - Creating compact vision-language embeddings for edge devices
+
+[View detailed project topics →](https://docs.google.com/document/d/e/2PACX-1vSpPtzQYD8flrz9w01uLSADHvXBDtI5WE6ogbnwnpFfl9Y-89SCLsp252tZAYLYa6pimxCBj27UfbR7/pub)
+
+## Who Can Apply
 
 **Anyone** who meets at least one of the following:
 
@@ -24,98 +40,70 @@ We are excited to welcome Southeast Asian fellows from diverse fields who share 
 
 There are no formal eligibility or age limits. We’re a growth-first programme and value potential, motivation, and effort more than credentials.
 
-### What increases your chances?
+### What Increases Your Chances
 
 - Bachelor’s degree with a publication or Master’s degree.
 - Clear AI research goals (pre-PhD programs, early-year PhD, or prior collaboration with mentors).
 - Fit with project topics, capability, motivation, and mentors (assessed via application + interview).
 
-## Team structure and communication mode
+## What You'll Gain
 
-- 2–3 mentors, 3+ mentees.
-- Applicants may indicate interest in being project lead; first authorship is reserved for project leads who fulfill the role in practice.
-- All discussions will be conducted remotely.
+- **Certificate of achievement** upon completion
+- **Letter of recommendation** for PhD/job applications (for strong contributors)
+- **Potential publication** at top ML/AI/NLP venues (first authorship reserved for project leads)
+- **Mentorship** from experienced AI researchers
+- **Peer network** with similar research interests
+- **Hands-on experience** in collaborative AI research
 
-## Why join the SEACrowd Apprentice program?
+Check out [previous batch publications](/apprenticeship#past-apprentice-research)!
 
-By joining SEACrowd Apprentice program, you will gain the following benefits:
+## Application Process
 
-- Certificate of achievement upon completion
-- Letter of Recommendation for PhD/job applications (for strong contributors) from your project's primary mentor
-- Potential research paper published in top venue (with first authorship for true project leads)
-- Mentorship, peer network, and real AI research outputs that matter
+- **[Apply here](https://forms.gle/GCv3cyCRqzj4PqfA9):** Nov 17 - Dec 17, 2025 (23:59 UTC-12)
+- **Selection:** mid-Dec 2025 - Jan 19, 2026
+  - Round 1: Application screening
+  - Round 2: Online interview
+- **Team announcement:** mid-Jan 2026
 
-The SEACrowd Apprentice Program 2024–25 was a huge success, and our alumni encourage aspiring students, early-career researchers, and anyone passionate about AI to take part. Our alumni highlight that the program:
+## Program Schedule
 
-- Offers hands-on experience in collaborative AI research
-- Connects participants with peers who share similar research interests
-- Provides guidance and mentorship from experienced AI researchers
-- Opens doors to cutting-edge research opportunities, including the potential for publication at top venues
+- **Kickoff:** Feb 1, 2026
+- **Mid-term milestone:** End of Mar / early Apr (internal review)
+- **End-term milestone:** End of Jun (SEACrowd-wide + external committee)
 
-Check out [previous batch publications](/apprenticeship#publications)!
+Publications are encouraged when ready, not tied to specific conference deadlines.
 
-Join us and take a meaningful step toward advancing your journey in AI research!
-
-## Application process
-
-<div id="apprenticeship-alert">
-  <div class="alert alert-secondary text-center" role="alert">
-    <strong>Loading application status...</strong>
-  </div>
-</div>
-
-- [Mentee Registration](https://forms.gle/GCv3cyCRqzj4PqfA9): **Nov 17 2025** to **Dec 17 2025 at 23:59 (UTC-12)**
-- Mentee Selection: **mid-Dec 2025** to **Jan 19 2026 at 23:59 (UTC-12)**
-  - Round 1 (application screening via mentee registration)
-  - Round 2 (online interview)
-- Decision, team announcement, opening session: **mid-Jan 2026**
-- Project run: **Feb 1 2026** to **Jun 30 2026**
-
-## Estimated timeline
-
-Duration: **4 months (Feb–Jun 2026)** with two checkpoints.
-
-- **Mid-term milestone** (end of Mar / early Apr) with internal review.
-- **End-term milestone** (end of Jun) with SEACrowd-wide + external committee.
-
-Project duration is not tied to any specific conference deadline; publications are encouraged when ready.
-
-## People
+## Who You'll Work With
 
 ### Primary Mentors
 
-- [Alham Fikri Aji](https://afaji.github.io/) (MBZUAI)
-- [Samuel Cahyawijaya](https://www.linkedin.com/in/samuelcahyawijaya) (Cohere)
-- [Ekapol Chuangsuwanich](https://ekapolc.github.io/) (Chulalongkorn University)
-- [Fajri Koto](https://www.fajrikoto.com/) (MBZUAI)
-- [Peerat Limkonchotiwat](https://mrpeerat.github.io/) (AI Singapore)
-- [Genta Indra Winata](https://gentawinata.com/) (Capital One)
+<div class="row g-2">
+  {% for profile in site.data.mentors %}
+    {% if profile.position == "primary_mentor" %}
+      {% include person.html %}
+    {% endif %}
+  {% endfor %}
+</div>
 
 ### Secondary Mentors
 
-- [Farid Adilazuarda](https://faridlazuarda.github.io/) (University of Edinburgh)
-- [M. Dehan Al-Kautsar](https://www.linkedin.com/in/dehanalkautsar) (MBZUAI)
-- [David Anugraha](https://www.linkedin.com/in/david-anugraha) (Stanford University)
-- [Patomporn Payoungkhamdee](https://www.linkedin.com/in/patomp/) (VISTEC)
-- [M. Reza Qorib](https://mrqorib.github.io/) (CMU)
-- [Pume Tuchinda](https://www.linkedin.com/in/pumetuchinda/) (VISTEC)
+<div class="row g-2">
+  {% for profile in site.data.mentors %}
+    {% if profile.position == "secondary_mentor" %}
+      {% include person.html %}
+    {% endif %}
+  {% endfor %}
+</div>
 
 ### Organizers & Research Managers
 
-- [Aye Hninn Khine](https://ayehninnkhine.github.io/) (KMUTT, SEACrowd)
-- [Holy Lovenia](https://holylovenia.github.io/) (SEACrowd)
-
-<script src="{{ '/assets/js/apprenticeship-dates.js' | relative_url }}"></script>
-<script>
-  // Initialize the apprenticeship date manager with page data
-  document.addEventListener('DOMContentLoaded', function() {
-    initApprenticeshipManager(
-      "{{ page.openDate | date: '%Y-%m-%dT%H:%M:%S%z' }}",
-      "{{ page.closeDate | date: '%Y-%m-%dT%H:%M:%S%z' }}",
-      "{{ page.form }}"
-    );
-  });
-</script>
+<div class="row g-2">
+  {% for profile in site.data.mentors %}
+    {% if profile.position == "organizer" %}
+      {% include person.html %}
+    {% endif %}
+  {% endfor %}
+</div>
 
 ## Past Apprentice Research
 

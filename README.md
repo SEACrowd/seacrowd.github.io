@@ -21,7 +21,7 @@ Brand new SEACrowd website in Jekyll and Boostrap 5.3.
 - Edit [\_data/team.yml](_data/team.yml) to add/update team members
 - Add profile images to [assets/images/people](/assets/images/people)
 - Similarly, [\_data/apprentices.yml](_data/apprentices.yml) stores apprentices
-  by batch (e.g., "24-25") and [assets/images/apprentices](/assets/images/apprentices)
+  by batch (e.g., "2025") and [assets/images/apprentices](/assets/images/apprentices)
 
 ### Publication (including apprenticeship research)
 
@@ -33,7 +33,7 @@ In `_bibliography/`:
 - [apprenticeship.bib](_bibliography/apprenticeship.bib): publication by SEACrowd apprentices and mentors.
   To assign a publication to a batch, add "batch" key.
   Batch value must be synced between this .bib file and [\_data/apprentices.yml](_data/apprentices.yml),
-  such as "24-25" for batch 2024-2025.
+  such as "2025" for batch 2024-2025.
 - Add `venue` to bib to render venue/publisher more efficiently.
 - .bib accept custom fields: arxiv/pdf, award, code, demo, post, poster,
   resources, selected, slides, talk, video, website. For all fields, see [bib.html](_layouts/bib.html).

@@ -3,8 +3,7 @@ title: SEA-VL Phase 2
 thumbnail: seavl-phase2-banner.png
 description: Develop and benchmark an open-source state-of-the-art vision language model (VLM) for Southeast Asia
 fromDate: 2025-03-01
-toDate: 2025-11-08
-status: completed
+status: ongoing
 keywords:
   [
     "SEA-VL",
@@ -20,7 +19,7 @@ keywords:
 ---
 
 <div class="alert alert-warning text-center" role="alert">
-  This page will be updated as new information is released. For faster updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>.
+  Open contributions for tasks 3, 4, and 5 are closed. For updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>.
 </div>
 
 After the success of [SEA-VL Phase 1](/projects/2025-seavl-phase-1), we are proud to launch **SEA-VL Phase 2**!
@@ -73,7 +72,7 @@ Contributors for this task must first pass this
 to learn more and to apply for the screening test. You will receive a link to the annotation
 platform if you pass the screening test.
 
-### Task 3: Translate Benchmark Datasets
+### Task 3: Translate Benchmark Datasets [CLOSED]
 
 To ensure the proper evaluation and testing of vision language capabilities, we need help
 translating prompts from existing vision language model benchmarks, such as the Aya Vision Benchmark
@@ -87,7 +86,7 @@ We need **three (03)** contributors per language for this task. Go to this
 [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog)
 to contribute.
 
-### Task 4: Submit Visual Questions for Multicultural Images
+### Task 4: Submit Visual Questions for Multicultural Images [CLOSED]
 
 To evaluate the visual understanding of the models we will train, we need to compile a dataset of
 high-quality questions derived from cultural images from SEA.
@@ -101,7 +100,7 @@ Go to this
 [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog)
 to contribute.
 
-### Task 5: Submit High-Quality Text Prompts for Image Generation
+### Task 5: Submit High-Quality Text Prompts for Image Generation [CLOSED]
 
 To evaluate the image generation capabilities of the models we will train, we need to compile a
 dataset of high-quality English-only prompts at three complexity levels.

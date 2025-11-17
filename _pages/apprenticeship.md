@@ -6,7 +6,7 @@ openDate: 2025-11-17T00:00:00-12:00
 closeDate: 2025-12-17T11:59:00-12:00
 ---
 
-**[Application link](https://forms.gle/GCv3cyCRqzj4PqfA9)**.
+Apply **[here](https://forms.gle/GCv3cyCRqzj4PqfA9)** by Dec 17, 2025 (UTC-12).
 
 SEACrowd Apprentice Program is a **remote research program** (Feb 1 - Jun 30, 2026) that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
 
@@ -14,7 +14,7 @@ Each mentee will join a team of 2–3 mentors and 2+ fellow mentees to execute a
 
 ### 2025 Success Story
 
-Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html).
+Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their publications](/apprenticeship#past-apprentice-research)!
 
 ### 2026 Research Topics
 

@@ -15,13 +15,13 @@ keywords:
   ]
 carousel:
   - image: "events/coling2025.jpg"
-    description: Help build Southeast Asia’s culturally-aware vision-language model
+    description: Apply to our SEACrowd 2026 Apprentice Program for mentored and collaborative AI research, with potential publication opportunities.
     button_text: Learn more
-    button_url: "/projects/2025-seavl-phase-2"
+    button_url: "/apprenticeship"
   - image: "posts/emnlp-2024-bof.jpg"
-    description: Help build Southeast Asia’s culturally-aware image dataset
-    button_text: View finished project
-    button_url: "/projects/2025-seavl-phase-1"
+    description: Help build Southeast Asia’s culturally-aware evaluation benchmarks for vision-language models
+    button_text: View ongoing project
+    button_url: "/projects/2025-seavl-phase-2"
   - image: "projects/seacrowd-catalog.png"
     description: Compile the first catalog and benchmark for 500+ Southeast Asian datasets
     button_text: View finished project

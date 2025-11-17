@@ -47,7 +47,7 @@ We commit to a three-pronged approach to reaching our vision:
 - spearheading grassroots-led model training and dataset building to improve AI resources for SEA
 - creating a community of like-minded researchers via the
   [ACL Special Interest Group SIGSEA](https://www.sigsea.org/)
-- supporting early-career researchers through the [SEACrowd Apprenticeship Program](/apprenticeship)
+- supporting early-career researchers through the [SEACrowd Apprentice Program](/apprenticeship)
 
 ## Recent News
 

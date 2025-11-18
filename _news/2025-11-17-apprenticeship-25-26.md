@@ -1,4 +1,4 @@
 ---
 ---
 
-Our [apprenticeship program](/apprenticeship) are open in Nov 17 2025.
+Our [2026 apprentice program](/apprenticeship) is now open until Dec 17 2025 (UTC-12).

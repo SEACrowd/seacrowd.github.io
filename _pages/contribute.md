@@ -15,7 +15,7 @@ background and interests.
 
 ### Get Started
 
-1. Read about our [ongoing projects](/projects/#ongoing-propjects)
+1. Read about our [ongoing projects](/projects/#ongoing-projects)
 2. Join our [Discord]({{ site.social.discord }}) to connect with the community
 3. Subscribe to our [mailing list]({{ site.social.google_group }}) for updates
 

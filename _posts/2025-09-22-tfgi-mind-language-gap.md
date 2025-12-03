@@ -2,7 +2,7 @@
 title: "Mind the Language Gap: Building an Inclusive AI Future for Southeast Asia"
 description: "Southeast Asia's AI future depends on closing the language gap, ensuring that the region's rich linguistic and cultural diversity is reflected in the data and models driving technological progress. Grassroots initiatives like SEACrowd show that inclusive, community-driven AI is not only possible but essential for equitable digital development."
 date: 2025-09-22
-featured: true
+featured: false
 thumbnail: tfgi-language-gap/thumbnail.jpg
 authors:
   - Onno P. Kampman

@@ -43,10 +43,23 @@ body {
   font-family: var(--font-family-sans);
 }
 
-// Font size hierarchy
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
 h1 {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -56,52 +69,87 @@ h2 {
   font-weight: 500;
   margin-top: 1.75rem;
   margin-bottom: 1.25rem;
+  color: var(--secondary);
 }
 
 h3 {
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-size: 1.6rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  color: color-mix(in oklch, var(--foreground) 75%, white 25%);
   margin-top: 1.25rem;
   margin-bottom: 0.75rem;
 }
 
 h5 {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  &::first-letter {
+    font-size: 1.25em;
+  }
 }
 
 h6 {
   font-size: 1rem;
-  font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  &::first-letter {
+    font-size: 1.15em;
+  }
 }
 
 p {
   margin-bottom: 1.25rem;
   line-height: 1.6;
+  text-wrap: pretty;
 }
 
 i {
   font-weight: 300;
 }
 
-ul,
+ul:not(.list-unstyled),
 ol {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   line-height: 1.6;
+  max-width: 70ch;
+  padding-left: 1.5rem;
 
   li {
+    &::marker {
+      color: var(--muted-foreground);
+    }
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+
+  ul,
+  ol {
+    margin-top: 0.25rem;
     margin-bottom: 0.25rem;
+  }
+}
+
+.not-prose ul,
+.not-prose ol {
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: inherit;
+  max-width: none;
+  padding-left: 0;
+
+  li::marker {
+    color: inherit;
   }
 }
 
@@ -133,7 +181,7 @@ blockquote {
   margin: 2rem 0;
   padding-left: 1.5rem;
   border-left: 4px solid var(--border);
-  color: var(--secondary);
+  color: var(--muted-foreground);
   font-style: italic;
 
   p:last-child {

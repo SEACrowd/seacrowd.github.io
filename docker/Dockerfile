@@ -44,6 +44,9 @@ USER jekyll
 # Install Ruby dependencies
 COPY --chown=jekyll:jekyll Gemfile Gemfile.lock ./
 RUN bundle config set --local path vendor/bundle \
+  && bundle lock --add-platform ruby \
+  && bundle lock --add-platform x86_64-linux \
+  && bundle lock --add-platform aarch64-linux \
   && bundle install --jobs=4 --retry=3
 
 # Install Node deps only for development

@@ -12,7 +12,7 @@ services:
       - "${LIVERELOAD_PORT:-35729}:35729"
     volumes:
       # Source code mount for live development (exclude copied files)
-      - ..:/site:Z
+      - ..:/site
       # Persistent volumes for dependencies and cache
       - jekyll_vendor:/site/vendor
       - jekyll_cache:/site/.jekyll-cache

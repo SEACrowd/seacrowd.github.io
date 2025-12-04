@@ -1,0 +1,60 @@
+{% comment %}
+  Usage:
+  {% capture content %}
+  Your **markdown** content here
+  {% endcapture %}
+
+  {% include collapsible.html
+     id="unique-id"
+     title="Section Title"
+     content=content
+     parent="accordion-id"
+     open=false
+  %}
+
+  Parameters:
+  - id (required): Unique identifier for the collapsible section
+  - title (required): The clickable header text
+  - content (required): Content shown when expanded. Supports full markdown.
+  - parent (optional): ID of parent accordion for exclusive expand/collapse behavior
+  - open (optional): Set to true to have the section expanded by default. Default is false.
+{% endcomment %}
+
+{% assign collapse_id = include.id %}
+{% assign collapsed_class = 'collapsed' %}
+{% assign show_class = '' %}
+
+{% if include.open == true %}
+  {% assign collapsed_class = '' %}
+  {% assign show_class = 'show' %}
+{% endif %}
+
+<div class="accordion-item">
+  <h3 class="accordion-header" id="heading-{{ collapse_id }}">
+    <button
+      class="accordion-button {{ collapsed_class }}"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#{{ collapse_id }}"
+      aria-expanded="{% if include.open %}true{% else %}false{% endif %}"
+      aria-controls="{{ collapse_id }}"
+      {% if include.parent %}
+        data-bs-parent="#{{ include.parent }}"
+      {% endif %}
+    >
+      {{ include.title }}
+    </button>
+  </h3>
+  <div
+    id="{{ collapse_id }}"
+    class="accordion-collapse collapse {{ show_class }}"
+    aria-labelledby="heading-{{ collapse_id }}"
+    {% if include.parent %}
+      data-bs-parent="#{{ include.parent }}"
+    {% endif %}
+  >
+    <div class="accordion-body">
+      {{ include.content | markdownify }}
+    </div>
+  </div>
+</div>

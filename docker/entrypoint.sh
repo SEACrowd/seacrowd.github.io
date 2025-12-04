@@ -14,5 +14,9 @@ if [ -d "/site/node_modules" ]; then
     sudo chown -R jekyll:jekyll /site/node_modules
 fi
 
+if [ -d "/site/_site" ]; then
+    sudo chown -R jekyll:jekyll /site/_site
+fi
+
 # Execute the original command
 exec "$@"

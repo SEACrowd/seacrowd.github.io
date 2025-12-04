@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<header class="container-md">
+<header>
   {% if page.thumbnail %}
     <img
       src="{{ '/assets/images/projects/' | append: page.thumbnail | relative_url }}"
@@ -61,7 +61,7 @@ layout: default
   {%- endunless -%}
 </header>
 
-<article class="container-md content my-5 mx-auto">{{ content }}</article>
+<article class="project-content my-5 mx-auto">{{ content }}</article>
 
 {% include social-share.html %}
 {% include projects-aside.html %}

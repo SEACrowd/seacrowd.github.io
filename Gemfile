@@ -7,4 +7,6 @@ group :jekyll_plugins do
     gem 'jekyll-scholar'
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate-v2', '~> 3.0'
+    gem 'jekyll-feed'
+    gem 'jekyll-toc'
 end

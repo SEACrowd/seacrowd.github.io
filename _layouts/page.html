@@ -4,13 +4,12 @@ layout: default
 <header>
   {% if page.thumbnail %}
     <img
-      src="/assets/images/{{ page['thumbnail'] }}"
-      class="img-fluid rounded mb-4 w-100"
+      src="/assets/images/{{ page.thumbnail }}"
+      class="img-fluid rounded w-100"
       alt="{{ page.title }}"
-      style="max-height: 400px; object-fit: cover;"
+      style="max-height: 330px; object-fit: cover"
     >
   {% endif %}
-
   {% if page.title %}
     <h1 class="page-title">{{ page.title }}</h1>
   {% endif %}

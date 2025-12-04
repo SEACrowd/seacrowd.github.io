@@ -25,12 +25,30 @@
       id="tab-{{ batch_key | replace: '-', '' }}"
       role="tabpanel"
     >
-      <h3>Apprentices</h3>
-      <div class="row">
-        {%- for apprentice in batch_data -%}
-          {% include person.html profile=apprentice image_path='apprentices' %}
-        {%- endfor -%}
-      </div>
+      <h3>Teams</h3>
+
+      {%- for project in batch_data -%}
+        <div>
+          <h4>{{ project.title }}</h4>
+          <p>
+            <strong>Mentors: </strong>
+            {%- for mentor in project.mentors -%}
+              {{ mentor.name -}}
+              {%- unless forloop.last -%}
+                ,
+              {% endunless %}
+            {%- endfor -%}
+            <br>
+            <strong>Mentees: </strong>
+            {%- for mentee in project.mentees -%}
+              {{ mentee.name -}}
+              {%- unless forloop.last -%}
+                ,
+              {% endunless %}
+            {%- endfor -%}
+          </p>
+        </div>
+      {%- endfor -%}
 
       <h3>Publications</h3>
       {% bibliography --file apprenticeship --query @*[batch={{ batch_key }}] %}

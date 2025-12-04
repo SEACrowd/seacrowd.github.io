@@ -1,4 +1,3 @@
-// Modern image zoom using medium-zoom
 document.addEventListener("DOMContentLoaded", function () {
   // Use CSS selector to exclude images we don't want to zoom
   const images = document.querySelectorAll(

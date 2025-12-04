@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Mind the Language Gap: Building an Inclusive AI Future for Southeast Asia"
 description: "Southeast Asia's AI future depends on closing the language gap, ensuring that the region's rich linguistic and cultural diversity is reflected in the data and models driving technological progress. Grassroots initiatives like SEACrowd show that inclusive, community-driven AI is not only possible but essential for equitable digital development."
 date: 2025-09-22
@@ -120,7 +121,7 @@ Governments can treat linguistic datasets as public digital goods and fund open-
 
 Language inclusion must be [participatory](https://arxiv.org/pdf/2506.07506). Co-governance models—where contributors shape data practices and evaluation—build awareness, trust, and ownership. Investing in mentorship, transparency, and shared control ensures SEA’s digital future reflects its full diversity.
 
-# Conclusion
+## Conclusion
 
 Southeast Asia’s digital future depends on closing the language gap in AI. The region’s linguistic diversity is a strategic asset, yet current systems exclude many communities. This article outlined the barriers—like missing datasets and weak incentives—and showcased efforts like SEACrowd, Typhoon, and Nusa Collection that chart a new path. Policymakers must treat local language data as essential infrastructure, while industry and communities build AI that genuinely reflects SEA voices. Inclusive AI is not optional—it is a strategic imperative to ensure digital transformation benefits everyone. By investing in linguistic inclusion, SEA doesn’t just close a gap-it leads the world in building AI that truly belongs to everyone.
 

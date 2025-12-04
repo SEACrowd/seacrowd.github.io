@@ -7,12 +7,20 @@ pagination:
   enabled: true
 ---
 {% if paginator.posts.size > 0 %}
-  {% assign featured_posts = paginator.posts | where: 'featured', 'true' %}
+  {% assign featured_posts = paginator.posts
+    | where: 'featured', 'true'
+    | sort: 'date'
+    | reverse
+  %}
   {% assign regular_posts = paginator.posts | where: 'featured', null %}
   {% assign false_featured = paginator.posts | where: 'featured', false %}
-  {% assign regular_posts = regular_posts | concat: false_featured %}
+  {% assign regular_posts = regular_posts
+    | concat: false_featured
+    | sort: 'date'
+    | reverse
+  %}
   {% if featured_posts.size > 0 %}
-    <h2>
+    <h2 class="text-primary">
       <i
         class="fas fa-thumbtack fa-sm text-primary me-2"
         aria-label="Featured post"
@@ -24,11 +32,10 @@ pagination:
         {% include card.html item=post type="posts" %}
       {% endfor %}
     </div>
-    {% if regular_posts.size > 0 %}
-      <hr>
-    {% endif %}
+    {% if regular_posts.size > 0 %} {% endif %}
   {% endif %}
   {% if regular_posts.size > 0 %}
+    <h2>All posts</h2>
     <div class="row">
       {% for post in regular_posts %}
         <div class="col-md-12 mb-4">
@@ -42,9 +49,7 @@ pagination:
   {% endif %}
 {% else %}
   <div class="no-posts text-center py-5">
-    <h3 class="text-muted">No posts yet</h3>
-    <p class="text-muted">
-      Check back soon for updates from the SEACrowd community!
-    </p>
+    <h3>No posts yet</h3>
+    <p class="text-muted">Check back soon for updates from us!</p>
   </div>
 {% endif %}

@@ -6,7 +6,7 @@ description: "What we learned from running the first SEACrowd Apprentice Program
 tags: [apprenticeship, restropection]
 featured: true
 authors: [Samuel Cahyawijaya]
-thumbnail: retrospective-review.jpg
+thumbnail: retrospective-review.png
 ---
 
 I'm Samuel Cahyawijaya, a Member of Technical Staff at [Cohere](https://cohere.com/) and one of the initiators of [SEACrowd](/about).

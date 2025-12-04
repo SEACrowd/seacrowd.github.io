@@ -32,11 +32,13 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      toc: true
   - scope:
       path: ""
       type: "news"
     values:
       layout: "post"
+      toc: true
   - scope:
       path: ""
       type: "projects"
@@ -46,6 +48,10 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+    values:
+      toc: true
 
 # Collections
 collections:
@@ -76,6 +82,12 @@ plugins:
   - jekyll-scholar
   - jekyll-sitemap
   - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-toc
+
+toc:
+  min_level: 2
+  max_level: 3
 
 # Jekyll Scholar
 scholar:

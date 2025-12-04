@@ -28,7 +28,7 @@ restart:
 
 # Rebuild Docker containers (no cache)
 rebuild:
-	docker compose -f docker/docker-compose.yml down
+	docker compose -f docker/docker-compose.yml down -v
 	docker compose -f docker/docker-compose.yml build --no-cache
 	docker compose -f docker/docker-compose.yml up --watch
 

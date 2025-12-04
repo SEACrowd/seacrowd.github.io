@@ -39,8 +39,15 @@
   color: var(--foreground);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-sans);
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 main {
@@ -48,7 +55,11 @@ main {
   margin: 0 auto;
 }
 
-h1,
+main:has(.post-layout) {
+  max-width: 100%;
+  margin: 0;
+}
+
 h2,
 h3,
 h4,

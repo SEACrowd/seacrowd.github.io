@@ -6,7 +6,7 @@ description: "What we learned from running the first SEACrowd Apprentice Program
 tags: [apprenticeship, restropection]
 featured: true
 authors: [Samuel Cahyawijaya]
-thumbnail: placeholder.jpg
+thumbnail: retrospective-review.jpg
 ---
 
 I'm Samuel Cahyawijaya, a Member of Technical Staff at [Cohere](https://cohere.com/) and one of the initiators of [SEACrowd](/about).
@@ -20,7 +20,7 @@ TLDR;
 - We ran our first SEACrowd Apprentice Program cohort focused on real research.
 - Along the way, we hit hard problems: uneven commitment, skill gaps inside teams, mentor bandwidth issues, and losing momentum over a long timeline.
 - We're changing the structure for **[Batch 2026](/apprenticeship)** with clearer selection, midterm and end-term milestones, external evaluations, and better-matched teams.
-- [Applications are open](/apprenticeship) until Dec 17, 2025 11:59PM UTC-12. Go to our page for more details.
+- [Application is open](/apprenticeship) until Dec 17, 2025 11:59PM UTC-12. Go to our page for more details.
 
 ## About SEACrowd
 

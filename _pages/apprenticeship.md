@@ -2,21 +2,22 @@
 title: SEACrowd 2026 Apprentice Program
 permalink: /apprenticeship.html
 form: https://forms.gle/GCv3cyCRqzj4PqfA9
-openDate: 2025-11-17T00:00:00-12:00
-closeDate: 2025-12-17T11:59:00-12:00
+thumbnail: apprenticeship.png
 ---
 
 Apply **[here](https://forms.gle/GCv3cyCRqzj4PqfA9)** by Dec 17, 2025 (UTC-12).
 
 SEACrowd Apprentice Program is a **remote research program** (Feb 1 - Jun 30, 2026) that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
 
-Each mentee will join a team of 2–3 mentors and 2+ fellow mentees to execute a research project over four months. The program emphasizes hands-on experience, mentorship, and peer learning, culminating in a research report, which can turn into paper submission to top AI/ML/NLP conferences as arranged by the team.
+Each mentee will join a team of 2–3 mentors (at least 1 [primary mentor](#primary-mentors) and 1 [secondary mentor](#secondary-mentors)) and 2+ fellow mentees to execute a research project over four months. The program emphasizes hands-on experience, mentorship, and peer learning, culminating in a research report, which can turn into paper submission to top AI/ML/NLP conferences as arranged by the team.
 
-### 2025 Success Story
+## 2025 Success Story
 
 Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their publications](/apprenticeship#past-apprentice-research)!
 
-### 2026 Research Topics
+We shared their journey and our learnings from running the first cohort in our [Retrospective blog post](/posts/apprentice-retrospection).
+
+## 2026 Research Topics
 
 We offer five cutting-edge research projects:
 
@@ -30,15 +31,15 @@ We offer five cutting-edge research projects:
 
 ## Who Can Apply
 
-**Anyone** who meets at least one of the following:
-
-- Your affiliation is from Southeast Asia (SEA).
-- You were born in SEA.
-- You are especially doing SEA-related research.
-
-We are excited to welcome Southeast Asian fellows from diverse fields who share [our vision](/about#our-vision).
-
 There are no formal eligibility or age limits. We’re a growth-first programme and value potential, motivation, and effort more than credentials.
+
+We welcome **anyone** who meets at least one of the following:
+
+- Your affiliation (e.g., school, organization, company) is from Southeast Asia (SEA).
+- You were born in SEA.
+- You are doing or have done SEA-related research.
+
+and share [our vision](/about#our-vision).
 
 ### What Increases Your Chances
 

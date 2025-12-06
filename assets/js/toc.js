@@ -39,7 +39,7 @@
 
           // Optionally scroll the TOC to keep active link visible
           if (newActiveLink.offsetTop < tocNav.scrollTop) {
-            tocNav.scrollTop = newActiveLink.offsetTop - 30
+            tocNav.scrollTop = newActiveLink.offsetTop
           } else if (
             newActiveLink.offsetTop + newActiveLink.offsetHeight >
             tocNav.scrollTop + tocNav.clientHeight
@@ -47,8 +47,7 @@
             tocNav.scrollTop =
               newActiveLink.offsetTop +
               newActiveLink.offsetHeight -
-              tocNav.clientHeight +
-              30
+              tocNav.clientHeight
           }
         }
       }

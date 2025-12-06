@@ -16,6 +16,9 @@ verbose: true
 trace: true
 watch: true
 
+# Force polling for Docker on macOS (fixes file watching issues)
+force_polling: true
+
 # Faster Sass compilation in dev
 sass:
   style: expanded

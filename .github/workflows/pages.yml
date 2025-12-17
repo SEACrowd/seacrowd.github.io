@@ -2,13 +2,13 @@ name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]   # deploy on pushes to main
-  workflow_dispatch:      # allow manual runs from the Actions tab
+    branches: ["main"]         # Run on pushes to main
+  workflow_dispatch:           # Allow manual runs from Actions tab
 
 permissions:
-  contents: read          # to read the repo
-  pages: write            # to deploy to Pages
-  id-token: write         # to verify the deployment
+  contents: read               # Read repo contents
+  pages: write                 # Deploy to Pages
+  id-token: write              # Verify the deployment
 
 concurrency:
   group: "pages"
@@ -26,7 +26,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        # Official Jekyll builder for Pages; uses your Gemfile + plugins
+        # Uses your Gemfile and Gemfile.lock, including plugins
         uses: actions/jekyll-build-pages@v1
 
       - name: Upload artifact

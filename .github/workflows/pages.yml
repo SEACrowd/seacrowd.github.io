@@ -1,0 +1,45 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]   # deploy on pushes to main
+  workflow_dispatch:      # allow manual runs from the Actions tab
+
+permissions:
+  contents: read          # to read the repo
+  pages: write            # to deploy to Pages
+  id-token: write         # to verify the deployment
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        # Official Jekyll builder for Pages; uses your Gemfile + plugins
+        uses: actions/jekyll-build-pages@v1
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

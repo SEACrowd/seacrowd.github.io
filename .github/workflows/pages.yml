@@ -22,15 +22,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle install --jobs 4 --retry 3
+
+      - name: Build site with Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build --trace --strict_front_matter
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Jekyll
-        # Uses your Gemfile and Gemfile.lock, including plugins
-        uses: actions/jekyll-build-pages@v1
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
   deploy:
     needs: build

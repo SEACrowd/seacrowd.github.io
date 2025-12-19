@@ -15,7 +15,7 @@ keywords:
   ]
 carousel:
   - image: "events/coling2025.jpg"
-    description: Apply to our SEACrowd 2026 Apprentice Program for mentored and collaborative AI research, with potential publication opportunities.
+    description: Our SEACrowd 2026 Apprentice Program is closed. Thank you to all applicants! Stay tuned for announcements.
     button_text: Learn more
     button_url: "/apprenticeship"
   - image: "posts/emnlp-2024-bof.jpg"

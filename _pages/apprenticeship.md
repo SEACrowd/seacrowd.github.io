@@ -5,7 +5,7 @@ form: https://forms.gle/GCv3cyCRqzj4PqfA9
 thumbnail: apprenticeship.png
 ---
 
-Apply **[here](https://forms.gle/GCv3cyCRqzj4PqfA9)** by Dec 17, 2025 (UTC-12).
+**The application was closed on Dec 17, 2025 at 23:59 (UTC-12). Announcements will be made through emails. Next cohort applications will open in late 2026. Stay tuned!**
 
 SEACrowd Apprentice Program is a **remote research program** (Feb 1 - Jun 30, 2026) that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
 
@@ -60,7 +60,7 @@ Check out [previous batch publications](/apprenticeship#past-apprentice-research
 
 ## Application Process
 
-- **[Apply here](https://forms.gle/GCv3cyCRqzj4PqfA9):** Nov 17 - Dec 17, 2025 (23:59 UTC-12)
+- **[General Application](https://forms.gle/GCv3cyCRqzj4PqfA9):** Nov 17 - Dec 17, 2025 (23:59 UTC-12)
 - **Selection:** mid-Dec 2025 - Jan 19, 2026
   - Round 1: Application screening
   - Round 2: Online interview

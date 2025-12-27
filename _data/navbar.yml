@@ -1,20 +1,22 @@
+- name: "About"
+  href: "/about"
+- name: "Apprenticeship"
+  href: "/apprenticeship"
+- name: "Projects"
+  href: "/projects/"
 - name: "Research"
   children:
-    - name: "Projects"
-      href: "/projects/"
     - name: "Publications"
       href: "/publications"
     - name: "Resources"
       href: "/resources/"
-- name: "Events"
-  href: "/events/"
+
 - name: "Blog"
   href: "/posts/"
-- name: "Apprenticeship"
-  href: "/apprenticeship"
-- name: "Volunteer"
+
+- name: "Get Involved"
   href: "/contribute"
-- name: "Support Us"
+
+- name: "Donate"
   href: "/donate"
-- name: "About"
-  href: "/about"
+  cta: true

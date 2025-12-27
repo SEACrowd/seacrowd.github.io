@@ -150,26 +150,6 @@
   >
     {% include navbar.html %}
 
-    <div
-      id="donation-banner"
-      class="position-fixed w-100 bg-secondary py-2 d-flex align-items-center justify-content-center"
-      style="top: 55px; z-index: 1020; font-size: 0.8rem"
-    >
-      <div class="d-flex align-items-center justify-content-center">
-        <i class="fas fa-heart me-2 text-white"></i>
-        <a href="/donate" class="text-white text-decoration-underline">
-          Support our research and programs by making a donation!
-        </a>
-      </div>
-      <button
-        type="button"
-        class="btn-close position-absolute end-0 me-2 ms-2"
-        data-bs-theme="dark"
-        onclick="document.getElementById('donation-banner').remove()"
-        aria-label="Close"
-      ></button>
-    </div>
-
     <main class="flex-grow-1">
       <div class="my-2">{{ content }}</div>
     </main>

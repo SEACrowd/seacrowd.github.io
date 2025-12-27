@@ -2,13 +2,13 @@ name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]         # Run on pushes to main
-  workflow_dispatch:           # Allow manual runs from Actions tab
+    branches: ["main"] # Run on pushes to main
+  workflow_dispatch: # Allow manual runs from Actions tab
 
 permissions:
-  contents: read               # Read repo contents
-  pages: write                 # Deploy to Pages
-  id-token: write              # Verify the deployment
+  contents: read # Read repo contents
+  pages: write # Deploy to Pages
+  id-token: write # Verify the deployment
 
 concurrency:
   group: "pages"
@@ -25,7 +25,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: "3.2"
           bundler-cache: true
 
       - name: Install dependencies

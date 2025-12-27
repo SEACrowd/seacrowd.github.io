@@ -23,7 +23,7 @@ layout: default
           {%- when 'completed' -%}
             {%- assign badge_class = 'bg-dark text-white' -%}
           {%- else -%}
-            {%- assign badge_class = 'bg-secondary text-dark' -%}
+            {%- assign badge_class = 'bg-secondary text-white' -%}
         {%- endcase -%}
         <span class="badge {{ badge_class }} me-1">
           {{- page.status | capitalize -}}

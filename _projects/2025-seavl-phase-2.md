@@ -19,7 +19,7 @@ keywords:
 ---
 
 <div class="alert alert-warning text-center" role="alert">
-  Open contributions for tasks 3, 4, and 5 are closed. For updates, please consider joining us on <a href="https://discord.gg/XXRHFuvkTA" class="alert-link">Discord</a>.
+  Open contributions for tasks 2, 3, 4, and 5 are closed. For faster updates, please consider joining us on <a href="{{ site.social.discord }}" class="alert-link">Discord</a>.
 </div>
 
 After the success of [SEA-VL Phase 1](/projects/2025-seavl-phase-1), we are proud to launch **SEA-VL Phase 2**!
@@ -279,7 +279,7 @@ there!
     </h3>
     <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
       <div class="accordion-body">
-        Join our <a href="https://discord.gg/XXRHFuvkTA">Discord server</a>, ask us on #sea-vl or #discussion-forum, and we'll be happy to help!
+        Join our <a href="{{ site.social.discord }}">Discord server</a>, ask us on #sea-vl or #discussion-forum, and we'll be happy to help!
       </div>
     </div>
   </div>

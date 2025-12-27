@@ -124,7 +124,7 @@ For multilingual research in SEA, where many languages are under-documented, thi
 {% capture project3_content %}
 👥 **Mentees:** Muhammad Dehan Al Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
 
-→ [Dataset on HuggingFace](https://huggingface.co/datasets/SEACrowd/SEADialogues) | [Paper](https://arxiv.org/abs/2508.07069)
+→ [View dataset on HuggingFace](https://huggingface.co/datasets/SEACrowd/SEADialogues) && [Read paper](https://arxiv.org/abs/2508.07069)
 
 #### The problem
 

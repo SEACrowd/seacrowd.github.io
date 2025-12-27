@@ -38,12 +38,7 @@ Your support directly funds:
 
 Support our mission with a secure donation through PayPal:
 
-<div class="text-center my-4">
-  <a href="{{page.form}}" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener">
-    <i class="fab fa-paypal me-2"></i>
-    Donate Now via PayPal
-  </a>
-</div>
+[Donate Now via PayPal]({{page.form}}){: .btn .btn-outline-primary .text-center}
 
 _Choose between one-time or recurring donations to maximize your impact._
 
@@ -57,7 +52,7 @@ _Choose between one-time or recurring donations to maximize your impact._
 - GPU server access for model training and evaluation
 - Storage resources for large-scale datasets
 
-**Ready to help?** Email us at [seacrowd.research@gmail.com](mailto:seacrowd.research@gmail.com) with the subject line "Compute Donation."
+**Ready to help?** Email us at [{{site.social.email}}](mailto:{{site.social.email?subject=Compute%20Resource%20Donation}}) with the subject line "Compute Donation."
 
 ## Recognition & Impact
 
@@ -92,4 +87,4 @@ SEACrowd is a **registered non-profit organization in Indonesia**, ensuring your
 
 **Every contribution, as little as $10, brings us closer to an AI future that includes everyone.**
 
-Ready to make a difference? [**Donate now**]({{ page.form }}) or contact us at [seacrowd.research@gmail.com](mailto:seacrowd.research@gmail.com) for partnership opportunities.
+Ready to make a difference? [**Donate now**]({{ page.form }}) or contact us at [{{site.social.email}}](mailto:{{site.social.email}}) for partnership opportunities.

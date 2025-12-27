@@ -24,44 +24,79 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         {% for nav in site.data.navbar %}
+          {% assign is_active = false %}
+          {% if nav.href %}
+            {% assign clean_nav_href = nav.href
+              | remove: '.html'
+              | remove: '/'
+            %}
+            {% if page.url == nav.href
+              or page.permalink == nav.href
+              or clean_page_url == clean_nav_href
+              or page.url contains nav.href
+            %}
+              {% assign is_active = true %}
+            {% endif %}
+          {% endif %}
+
           {% if nav.children %}
+            {% comment %} Check if any child is active {% endcomment %}
+            {% for child in nav.children %}
+              {% assign clean_child_href = child.href
+                | remove: '.html'
+                | remove: '/'
+              %}
+              {% if page.url == child.href
+                or page.permalink == child.href
+                or clean_page_url == clean_child_href
+                or page.url contains child.href
+              %}
+                {% assign is_active = true %}
+              {% endif %}
+            {% endfor %}
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle {% if is_active %}active{% endif %}"
                 href="#"
-                id="dropdown{{ forloop.index }}"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 {{ nav.name }}
               </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="dropdown{{ forloop.index }}"
-              >
+              <ul class="dropdown-menu">
                 {% for child in nav.children %}
+                  {% assign clean_child_href = child.href
+                    | remove: '.html'
+                    | remove: '/'
+                  %}
                   <li>
                     <a
-                      class="dropdown-item {% assign clean_child_href = child.href | remove: '.html' | remove: '/' %}{% if page.url == child.href or page.permalink == child.href or clean_page_url == clean_child_href or page.url contains child.href %}active{% endif %}"
+                      class="dropdown-item {% if page.url == child.href or page.permalink == child.href or clean_page_url == clean_child_href or page.url contains child.href %}active{% endif %}"
                       href="{{ child.href }}"
                     >
                       {{ child.name }}
-                      {% if child.href == '/apprenticeship.html' %}
-                        {% include apprenticeship-badge.html %}
-                      {% endif %}
+                      {% if child.href == '/apprenticeship' -%}
+                        {%- include apprenticeship-badge.html -%}
+                      {%- endif %}
                     </a>
                   </li>
                 {% endfor %}
               </ul>
             </li>
+          {% elsif nav.cta %}
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary btn-sm px-3" href="{{ nav.href }}">
+                {{- nav.name -}}
+              </a>
+            </li>
           {% else %}
             <li class="nav-item">
               <a
-                class="nav-link {% assign clean_nav_href = nav.href | remove: '.html' | remove: '/' %}{% if page.url == nav.href or page.permalink == nav.href or clean_page_url == clean_nav_href or page.url contains nav.href %}active{% endif %}"
+                class="nav-link {% if is_active %}active{% endif %}"
                 href="{{ nav.href }}"
               >
-                {{ nav.name }}
+                {{- nav.name -}}
               </a>
             </li>
           {% endif %}

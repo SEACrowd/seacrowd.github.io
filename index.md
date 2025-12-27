@@ -15,9 +15,9 @@ keywords:
   ]
 carousel:
   - image: "events/coling2025.jpg"
-    description: Our SEACrowd 2026 Apprentice Program is closed. Thank you to all applicants! Stay tuned for announcements.
-    button_text: Learn more
-    button_url: "/apprenticeship"
+    description: Our SEACrowd 2026 Apprentice Program is closed. Thank you to all applicants! Watch emails for updates.
+    button_text: Register interest
+    button_url: "https://groups.google.com/u/0/g/seacrowd"
   - image: "posts/emnlp-2024-bof.jpg"
     description: Help build Southeast Asia’s culturally-aware evaluation benchmarks for vision-language models
     button_text: View ongoing project

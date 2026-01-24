@@ -8,9 +8,29 @@ thumbnail: tfgi-language-gap/thumbnail.jpg
 authors:
   - Onno P. Kampman
   - Holy Lovenia
+category: perspectives
 tags:
-  - opinion
   - cross-posting
+challenges:
+  - title: "Data Scarcity"
+    open: true
+    content: |
+      Most SEA languages lack the large, high-quality datasets needed to train robust models. Where data exists, it is often scattered across informal sources and hard to standardise. The problem is worse for languages with strong oral traditions, which may have little or no digital footprint. Building quality datasets requires more than literal translation, which risks producing awkward "translationese"; it demands deep cultural grounding. A 2024 study by SEACrowd showed that popular global models underperform on SEA language tasks., particularly in generating natural-sounding text. Even when technically included, model performance for languages with limited digital presence fall behind, mirroring the hierarchy of data availability. Small language groups, already excluded from services, risk further marginalisation when AI tools bypass them.
+
+      ![Culturally-unaware image generation of 'people eating chicken pastel', a popular dish in the Philippines, using Stable Diffusion 3.5 Large](/assets/images/posts/tfgi-language-gap/culturally-unaware-ai.png)
+
+      _Culturally-unaware image generation of "people eating chicken pastel", a popular dish in the Philippines, using stability.ai's AI model [Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large)._
+  - title: "Fragmented Development"
+    content: |
+      National AI strategies often prioritise infrastructure, data governance, and economic competitiveness, sidelining linguistic inclusion. Policy approaches vary widely between countries, and without regional coordination or data-sharing frameworks (e.g., common formats, ethical standards, pooled compute resources), efforts remain siloed. Some promising local initiatives are beginning to emerge. Thailand's [Typhoon](https://opentyphoon.ai) model, an accessible Thai-centric Large Language Model (LLM), was also trained on informal language to capture stylistic nuances that global models often overlook. Indonesia's [NusaCrowd](https://aclanthology.org/2023.findings-acl.868/) curated high-quality open datasets for low-resource languages, including widely spoken Javanese and Sundanese, as well as endangered tongues like Lampung and Buginese, capturing the breadth of linguistic diversity and cultural contexts such as code-switching and shifting levels of formality. Yet, without sustained investment and alignment with broader ASEAN strategies, their long-term support and interoperability remain limited. Regional collaboration is especially crucial in Southeast Asia, where many languages—like Malay, Khmer, and Hmong—cross national borders, and individual countries may lack the capacity to build full-stack AI pipelines independently.
+  - title: "Limited Market Incentives"
+    content: |
+      Because big tech companies prioritise mainstream languages with existing commercial value, indigenous and low-resource languages are rarely incorporated into their models or business strategies. Meanwhile, local startups, academic labs, and grassroots groups often lack the computing power and funding needed to build language-specific tools. The region also faces a shortage of skilled NLP researchers and data engineers experienced in low-resource AI development, leaving the ecosystem under-resourced.
+
+      For perspective, [SEA-LION, Southeast Asia's flagship open-source LLM project](https://arxiv.org/abs/2504.05747), was built by **31 authors**—compared to **199** for [China's DeepSeek-RI](https://arxiv.org/abs/2501.12948), and a staggering **3,295** contributors behind [Google's latest Gemini model](https://arxiv.org/abs/2507.06261).
+  - title: "Gaps in Accessibility and Trust"
+    content: |
+      In much of Southeast Asia, AI adoption is constrained by foundational infrastructure challenges: limited connectivity, unreliable power, costly or low-spec devices, and insufficient digital literacy. Even when tools are available, widespread usage is not guaranteed. Poor localisation—beyond mere translation—can result in awkward tone, cultural mismatches, or unfamiliar interfaces. In the region, this may manifest as overly formal language, failure to interpret code-switching (the blending of languages), or disregard for indirect communication norms. When tools feel extractive or culturally alien, they risk eroding user trust.
 ---
 
 _Originally posted as a perspectives piece on [Tech for Good Institute](https://techforgoodinstitute.org/blog/perspectives/mind-the-language-gap-building-an-inclusive-ai-future-for-southeast-asia/)_
@@ -30,60 +50,7 @@ As AI becomes more embedded in commerce, education, and governance, how can the 
 
 Southeast Asia's push for inclusive AI faces four interconnected challenges: data scarcity, fragmented development, limited market incentives, and gaps in trust.
 
-<div class="accordion accordion-flush" id="challengesAccordion">
-
-{% capture challenge1_content %}
-Most SEA languages lack the large, high-quality datasets needed to train robust models. Where data exists, it is often scattered across informal sources and hard to standardise. The problem is worse for languages with strong oral traditions, which may have little or no digital footprint. Building quality datasets requires more than literal translation, which risks producing awkward "translationese"; it demands deep cultural grounding. A 2024 study by SEACrowd showed that popular global models underperform on SEA language tasks., particularly in generating natural-sounding text. Even when technically included, model performance for languages with limited digital presence fall behind, mirroring the hierarchy of data availability. Small language groups, already excluded from services, risk further marginalisation when AI tools bypass them.
-
-![Culturally-unaware image generation of 'people eating chicken pastel', a popular dish in the Philippines, using Stable Diffusion 3.5 Large](/assets/images/posts/tfgi-language-gap/culturally-unaware-ai.png)
-
-_Culturally-unaware image generation of "people eating chicken pastel", a popular dish in the Philippines, using stability.ai's AI model [Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large)._
-{% endcapture %}
-
-{% capture challenge2_content %}
-National AI strategies often prioritise infrastructure, data governance, and economic competitiveness, sidelining linguistic inclusion. Policy approaches vary widely between countries, and without regional coordination or data-sharing frameworks (e.g., common formats, ethical standards, pooled compute resources), efforts remain siloed. Some promising local initiatives are beginning to emerge. Thailand's [Typhoon](https://opentyphoon.ai) model, an accessible Thai-centric Large Language Model (LLM), was also trained on informal language to capture stylistic nuances that global models often overlook. Indonesia's [NusaCrowd](https://aclanthology.org/2023.findings-acl.868/) curated high-quality open datasets for low-resource languages, including widely spoken Javanese and Sundanese, as well as endangered tongues like Lampung and Buginese, capturing the breadth of linguistic diversity and cultural contexts such as code-switching and shifting levels of formality. Yet, without sustained investment and alignment with broader ASEAN strategies, their long-term support and interoperability remain limited. Regional collaboration is especially crucial in Southeast Asia, where many languages—like Malay, Khmer, and Hmong—cross national borders, and individual countries may lack the capacity to build full-stack AI pipelines independently.
-{% endcapture %}
-
-{% capture challenge3_content %}
-Because big tech companies prioritise mainstream languages with existing commercial value, indigenous and low-resource languages are rarely incorporated into their models or business strategies. Meanwhile, local startups, academic labs, and grassroots groups often lack the computing power and funding needed to build language-specific tools. The region also faces a shortage of skilled NLP researchers and data engineers experienced in low-resource AI development, leaving the ecosystem under-resourced.
-
-For perspective, [SEA-LION, Southeast Asia's flagship open-source LLM project](https://arxiv.org/abs/2504.05747), was built by **31 authors**—compared to **199** for [China's DeepSeek-RI](https://arxiv.org/abs/2501.12948), and a staggering **3,295** contributors behind [Google's latest Gemini model](https://arxiv.org/abs/2507.06261).
-{% endcapture %}
-
-{% capture challenge4_content %}
-In much of Southeast Asia, AI adoption is constrained by foundational infrastructure challenges: limited connectivity, unreliable power, costly or low-spec devices, and insufficient digital literacy. Even when tools are available, widespread usage is not guaranteed. Poor localisation—beyond mere translation—can result in awkward tone, cultural mismatches, or unfamiliar interfaces. In the region, this may manifest as overly formal language, failure to interpret code-switching (the blending of languages), or disregard for indirect communication norms. When tools feel extractive or culturally alien, they risk eroding user trust.
-{% endcapture %}
-
-{% include collapsible.html
-   id="collapseDataScarcity"
-   title="Data Scarcity"
-   content=challenge1_content
-   parent="challengesAccordion"
-   open=true
-%}
-{% include collapsible.html
-   id="collapseFragmentedDev"
-   title="Fragmented Development"
-   content=challenge2_content
-   parent="challengesAccordion"
-   open=false
-%}
-{% include collapsible.html
-   id="collapseMarketIncentives"
-   title="Limited Market Incentives"
-   content=challenge3_content
-   parent="challengesAccordion"
-   open=false
-%}
-{% include collapsible.html
-   id="collapseAccessibilityTrust"
-   title="Gaps in Accessibility and Trust"
-   content=challenge4_content
-   parent="challengesAccordion"
-   open=false
-%}
-
-</div>
+{% include faq.html id="challenges-accordion" items=page.challenges class="accordion accordion-flush" %}
 
 ## Opportunities and Solutions: Building Inclusive AI from the Ground Up
 

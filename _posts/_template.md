@@ -7,7 +7,7 @@ tags: [research, tutorial, announcement] # Optional: relevant tags
 category: research # Optional: category for organization
 featured: false # Optional: set to true to show in featured section
 authors: [Your Name] # Optional: list of authors
-thumbnail: placeholder.jpg # Optional: image filename in assets/images/post/
+thumbnail: placeholder.jpg # Optional: image filename in assets/images/posts/
 ---
 
 Write your blog post content here using Markdown. This template provides a starting point with proper frontmatter configuration.

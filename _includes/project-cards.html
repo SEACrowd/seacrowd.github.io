@@ -1,0 +1,111 @@
+{% comment %}
+  Usage:
+  {% include project-cards.html projects=projects batch_key=batch_key %}
+{% endcomment %}
+
+{% assign projects = include.projects | default: site.apprentice_projects %}
+{% if projects and projects.size > 0 %}
+  <div class="project-grid">
+    {% for project in projects %}
+      {% assign project_id = 'project-'
+        | append: include.batch_key
+        | append: '-'
+        | append: project.title
+        | slugify
+      %}
+      {% assign mentor_names = project.mentors | map: 'name' | join: ', ' %}
+      {% assign mentee_names = project.mentees | map: 'name' | join: ', ' %}
+      {% capture project_preview %}
+{{ project.summary | default: project.content | markdownify }}
+      {% endcapture %}
+      {% assign summary_text = project_preview
+        | strip_html
+        | strip_newlines
+        | truncate: 160
+      %}
+      <div
+        class="card card-clickable project-card h-100"
+        role="button"
+        tabindex="0"
+        data-bs-toggle="modal"
+        data-bs-target="#project-modal-{{ project_id }}"
+      >
+        <div class="project-card-header">
+          <h4 class="project-card-title">{{ project.title }}</h4>
+          {% if mentor_names != '' %}
+            <p class="project-card-meta">Mentors: {{ mentor_names }}</p>
+          {% endif %}
+        </div>
+        <p class="project-card-summary">{{ summary_text }}</p>
+      </div>
+
+      <div
+        class="modal fade project-modal"
+        id="project-modal-{{ project_id }}"
+        tabindex="-1"
+        aria-hidden="true"
+        aria-labelledby="project-modal-title-{{ project_id }}"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="project-modal-title-{{ project_id }}">
+                {{ project.title }}
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body project-modal-body">
+              {% if project.summary %}
+                <p class="project-modal-summary">{{ project.summary }}</p>
+              {% endif %}
+              {% if mentor_names != '' %}
+                <p class="project-modal-meta">
+                  <strong>Mentors:</strong> {{ mentor_names }}
+                </p>
+              {% endif %}
+              {% if mentee_names != '' %}
+                <p class="project-modal-meta">
+                  <strong>Mentees:</strong> {{ mentee_names }}
+                </p>
+              {% endif %}
+              {% if project.links and project.links.size > 0 %}
+                <div class="project-modal-links">
+                  <strong>Resources:</strong>
+                  <ul>
+                    {%- for link in project.links -%}
+                      <li>
+                        <a href="{{ link.url }}">{{ link.label }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {% endif %}
+              <div class="project-modal-proposal">
+                <h6>Project proposal</h6>
+                {{ project.content }}
+              </div>
+            </div>
+            <div class="modal-footer project-modal-actions">
+              <span
+                class="project-copy-status me-auto"
+                aria-live="polite"
+              ></span>
+              <button
+                class="btn btn-primary btn-sm"
+                type="button"
+                data-copy-markdown
+              >
+                Copy as Markdown
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

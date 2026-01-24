@@ -35,12 +35,6 @@ defaults:
       toc: true
   - scope:
       path: ""
-      type: "news"
-    values:
-      layout: "post"
-      toc: true
-  - scope:
-      path: ""
       type: "projects"
     values:
       layout: "project"
@@ -56,12 +50,16 @@ defaults:
 # Collections
 collections:
   news:
-    output: true
-    permalink: /news/:title.html
-    sort_by: name
+    output: false
   projects:
     output: true
     permalink: /projects/:title.html
+  people:
+    output: true
+    permalink: /people/:title.html
+    sort_by: name
+  apprentice_projects:
+    output: false
 
 include:
   - _pages
@@ -142,6 +140,7 @@ exclude:
   - "*.lock"
   - "*-lock.*"
   - README.md
+  - TODOS.md
   - LICENSE
   - scripts/
   - "*.log"

@@ -1,0 +1,5 @@
+- year: 2026
+  label: current
+  style_class: bg-success
+  current: true
+- year: 2025

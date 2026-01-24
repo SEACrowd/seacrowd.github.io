@@ -3,9 +3,67 @@ title: SEACrowd 2026 Apprentice Program
 permalink: /apprenticeship.html
 form: https://forms.gle/GCv3cyCRqzj4PqfA9
 thumbnail: apprenticeship.png
+faq:
+  - title: "What are the key dates for the 2026 Apprentice Program?"
+    content: |
+      - **Applications:** Nov 17 – Dec 17, 2025 (23:59 UTC-12)
+      - **Selection:** mid-Dec 2025 – Jan 19, 2026 (screening + interview)
+      - **Team announcement:** mid-Jan 2026
+      - **Program dates:** Feb 1 – Jun 30, 2026
+  - title: "Are the key dates flexible?"
+    content: |
+      We list the official milestones above. Since the program is remote and part-time, we expect conflicts to be manageable. Any major conflicts should be disclosed in your application, or smoothed out with your team if you're selected.
+  - title: "Who is eligible to apply?"
+    content: |
+      There are **no formal eligibility or age limits**. You can apply if you meet at least one of the following:
+
+      - Your affiliation (school, organization, or company) is from Southeast Asia (SEA)
+      - You were born and raised in SEA (living there more than 10 years)
+      - You are doing or have done SEA-related research
+  - title: "I wasn't born in Southeast Asia and am not working/studying in Southeast Asia, how do I qualify?"
+    content: |
+      You can still qualify if your work connects to Southeast Asia. One clear way is to do research related to Southeast Asia, particularly in Machine Learning or Natural Language Processing.
+
+      Examples include work on SEA languages, regional datasets, or SEA-specific social or cultural AI challenges.
+  - title: "Am I qualified if I speak a language spoken in Southeast Asia, like Thai/Hokkien Chinese/etc?"
+    content: |
+      This alone does not qualify you for the program. 
+
+      However, speaking a language from Southeast Asia can help, especially if it informs your research interests. We encourage you to highlight any relevant language skills and how they connect to your research goals in your application.
+  - title: "What if I have no prior research experience or publications in AI/ML/NLP?"
+    content: |
+      Prior research experience or publications are **not required** but can strengthen your application. We value strong foundational knowledge in ML, potential, motivation, and fit with project topics and mentors more than credentials. If you have relevant experience, be sure to highlight it in your application.
+  - title: "Is this program full-time? / What's the time commitment?"
+    content: |
+      We expect mentees to commit **at least 10 hours per week** (hard minimum). This includes time for meetings, research, coding, writing, and collaboration with mentors and peers. The recommended commitment is **15–20 hours per week** for a more immersive experience.
+  - title: "Is the program remote or in-person?"
+    content: |
+      The SEACrowd Apprentice Program is a **remote research program**.
+  - title: "Is this program free?"
+    content: |
+      Yes, the program is completely **free to join** for all selected mentees. We provide compute necessary for research projects.
+  - title: "Do I get paid? / Is there a stipend?"
+    content: |
+      The program is **unpaid**. We do not pay mentors either. However, mentees gain valuable research experience, mentorship, networking opportunities, and potential publication avenues.
+  - title: "What if I need financial support to participate?"
+    content: |
+      Unfortunately, we do not have funds to provide stipends or financial support at this time. We recommend seeking external funding sources, scholarships, or institutional support if needed. Otherwise, we welcome you to apply in future cohorts when you have the necessary resources or when we may have funding available.
+  - title: "Is research publication guaranteed?"
+    content: |
+      While we encourage and support publication efforts, **we cannot guarantee that every project will result in a publication**. Successful publication depends on various factors, including the quality of the research, relevance to conference/journal themes, and acceptance by peer reviewers.
+  - title: "Do you provide certificates of completion?"
+    content: |
+      Yes, all mentees who complete the program will receive a **Certificate of Achievement**.
+  - title: "Can I get a letter of recommendation?"
+    content: |
+      Strong contributors may receive **letters of recommendation** from their mentors upon successful completion of the program. This is typically reserved for mentees who demonstrate significant effort, growth, and contribution to their projects.
+
+  - title: "I have a question not covered here"
+    content: |
+      Email us at [seacrowd.research@gmail.com](mailto:{{ seacrowd.research@gmail.com }}).
 ---
 
-**The application was closed on Dec 17, 2025 at 23:59 (UTC-12). Updates will be sent to applicants from our email [{{ site.social.email }}](mailto:{{site.social.email}}).**
+**The application for 2026 Apprentice Program was closed on Dec 17, 2025 at 23:59 (Anywhere on Earth, UTC-12).**
 
 If you would like to be notified of future apprentice batches, please join our [Google Group]({{ site.social.google_group }}) or follow us on [X/Twitter]({{ site.social.twitter }}), [Facebook]({{ site.social.facebook }}), or [LinkedIn]({{ site.social.linkedin }}).
 
@@ -40,7 +98,7 @@ There are no formal eligibility or age limits. We’re a growth-first programme 
 We welcome **anyone** who meets at least one of the following:
 
 - Your affiliation (e.g., school, organization, company) is from Southeast Asia (SEA).
-- You were born in SEA.
+- You were born and raised in SEA (living there more than 10 years).
 - You are doing or have done SEA-related research.
 
 and share [our vision](/about#our-vision).
@@ -86,8 +144,8 @@ Publications are encouraged when ready, not tied to specific conference deadline
 
 <div class="row g-2">
   {% for profile in site.data.mentors %}
-    {% if profile.position == "primary_mentor" %}
-      {% include person.html %}
+    {% if profile.role == "primary_mentor" %}
+      {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}
 </div>
@@ -96,8 +154,8 @@ Publications are encouraged when ready, not tied to specific conference deadline
 
 <div class="row g-2">
   {% for profile in site.data.mentors %}
-    {% if profile.position == "secondary_mentor" %}
-      {% include person.html %}
+    {% if profile.role == "secondary_mentor" %}
+      {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}
 </div>
@@ -106,11 +164,15 @@ Publications are encouraged when ready, not tied to specific conference deadline
 
 <div class="row g-2">
   {% for profile in site.data.mentors %}
-    {% if profile.position == "organizer" %}
-      {% include person.html %}
+    {% if profile.role == "organizer" %}
+      {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}
 </div>
+
+## FAQs
+
+{% include faq.html id="apprenticeship-faqs" %}
 
 ## Past Apprentice Research
 

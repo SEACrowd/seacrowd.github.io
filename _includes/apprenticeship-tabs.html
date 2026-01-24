@@ -1,57 +1,120 @@
+{% assign batches = site.data.apprentice_batches %}
+{% if batches == null or batches.size == 0 %}
+  {% assign batch_years = site.apprentice_projects
+    | map: 'batch'
+    | uniq
+    | sort
+    | reverse
+  %}
+  {% assign batches = '' | split: '' %}
+  {% for year in batch_years %}
+    {% assign batches = batches | push: year %}
+  {% endfor %}
+{% endif %}
+{% assign default_batch = batches | where: 'current', true | first %}
+{% if default_batch == null %}
+  {% assign default_batch = batches.first %}
+{% endif %}
+{% assign default_batch_key = default_batch.year | default: default_batch %}
+
 <ul class="nav nav-tabs" id="apprenticeshipTabs" role="tablist">
-  {%- for batch in site.data.apprentices -%}
-    {%- assign batch_key = batch[0] -%}
+  {%- for batch in batches -%}
+    {%- assign batch_key = batch.year | default: batch -%}
+    {%- assign batch_label = batch.label | default: '' -%}
+    {%- assign batch_style_class = batch.style_class
+      | default: 'badge bg-secondary'
+    -%}
+    {%- if batch_label == '' and forloop.first -%}
+      {%- assign batch_label = 'current' -%}
+    {%- endif -%}
+    {%- assign is_current = false -%}
+    {%- if batch.current == true or batch_label == 'current' -%}
+      {%- assign is_current = true -%}
+    {%- endif -%}
+    {%- assign label_class = batch_style_class | append: ' badge ms-2' -%}
+    {%- assign is_active = false -%}
+    {%- if batch_key == default_batch_key -%}
+      {%- assign is_active = true -%}
+    {%- endif -%}
     <li class="nav-item" role="presentation">
       <button
-        class="nav-link {% if forloop.first %}active{% endif %}"
+        class="nav-link {% if is_active %}active{% endif %}"
         id="tab-{{ batch_key | replace: '-', '' }}-tab"
         data-bs-toggle="tab"
         data-bs-target="#tab-{{ batch_key | replace: '-', '' }}"
+        data-batch="{{ batch_key }}"
+        data-current="{% if is_current %}true{% else %}false{% endif %}"
         type="button"
         role="tab"
       >
         Batch {{ batch_key }}
+        {% if batch_label != '' %}
+          <span
+            class="{% if is_active %}{{ label_class }}{% else %}badge bg-light text-muted border ms-2{% endif %}"
+          >
+            {{ batch_label }}
+          </span>
+        {% endif %}
       </button>
     </li>
   {%- endfor -%}
 </ul>
 
 <div class="tab-content" id="apprenticeshipTabsContent">
-  {%- for batch in site.data.apprentices -%}
-    {%- assign batch_key = batch[0] -%}
-    {%- assign batch_data = batch[1] -%}
+  {%- for batch in batches -%}
+    {%- assign batch_key = batch.year | default: batch -%}
+    {%- assign projects = site.apprentice_projects
+      | where: 'batch', batch_key
+      | sort: 'order'
+    -%}
     <div
-      class="tab-pane fade {% if forloop.first %}show active{% endif %}"
+      class="tab-pane fade {% if batch_key == default_batch_key %}show active{% endif %}"
       id="tab-{{ batch_key | replace: '-', '' }}"
       role="tabpanel"
     >
-      <h3>Teams</h3>
+      <h3>Projects</h3>
 
-      {%- for project in batch_data -%}
-        <div>
-          <h4>{{ project.title }}</h4>
-          <p>
-            <strong>Mentors: </strong>
-            {%- for mentor in project.mentors -%}
-              {{ mentor.name -}}
-              {%- unless forloop.last -%}
-                ,
-              {% endunless %}
-            {%- endfor -%}
-            <br>
-            <strong>Mentees: </strong>
-            {%- for mentee in project.mentees -%}
-              {{ mentee.name -}}
-              {%- unless forloop.last -%}
-                ,
-              {% endunless %}
-            {%- endfor -%}
-          </p>
-        </div>
-      {%- endfor -%}
+      {% if projects.size == 0 %}
+        <p class="text-muted">
+          Projects for this batch will be announced soon.
+        </p>
+      {% else %}
+        {% include project-cards.html projects=projects batch_key=batch_key %}
+      {% endif %}
 
       <h3>Publications</h3>
       {% bibliography --file apprenticeship --query @*[batch={{ batch_key }}] %}
     </div>
   {%- endfor -%}
 </div>
+
+<script src="{{ '/assets/js/project-modal.js' | relative_url }}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.getElementById("apprenticeshipTabs")
+    if (!tabs) return
+
+    const params = new URLSearchParams(window.location.search)
+    const batchParam = params.get("batch")
+    const fallback =
+      tabs.querySelector("button[data-current='true']") ||
+      tabs.querySelector("button[data-bs-toggle='tab']")
+
+    const targetBatch = batchParam || (fallback && fallback.dataset.batch)
+    if (targetBatch && window.bootstrap && bootstrap.Tab) {
+      const target = tabs.querySelector(`button[data-batch='${targetBatch}']`)
+      if (target) new bootstrap.Tab(target).show()
+    }
+
+    tabs.querySelectorAll("button[data-bs-toggle='tab']").forEach((button) => {
+      button.addEventListener("shown.bs.tab", (event) => {
+        const batch = event.target.dataset.batch
+        const isCurrent = event.target.dataset.current === "true"
+        const url = new URL(window.location)
+        if (isCurrent) url.searchParams.delete("batch")
+        else url.searchParams.set("batch", batch)
+        window.history.replaceState({}, "", url)
+      })
+    })
+  })
+</script>

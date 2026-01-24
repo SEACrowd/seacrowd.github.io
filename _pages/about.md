@@ -40,11 +40,16 @@ We advance our vision through three key initiatives:
 Our leadership team drives SEACrowd's mission and coordinates community efforts. For the full list
 of contributors and ways to get involved, visit our [contribute page](/contribute.html).
 
-{% assign people_by_sortorder = site.data.team | group_by: 'sortorder' %}
-{% assign people_sorted = '' | split: '' %} {% assign sortorders = '-1,0,1,2' | split: ',' %}
-{% for sortorder in sortorders %} {% for group in people_by_sortorder %}
-{% if group.name == sortorder %} {% assign group_sorted = group.items | sort: 'name' %}
-{% assign people_sorted = people_sorted | concat: group_sorted %} {% endif %} {% endfor %}
+{% assign people_by_sortorder = site.people | group_by: 'sortorder' %}
+{% assign people_sorted = '' | split: '' %}
+{% assign sortorders = '-1,0,1,2' | split: ',' %}
+{% for sortorder in sortorders %}
+{% for group in people_by_sortorder %}
+{% if group.name == sortorder %}
+{% assign group_sorted = group.items | sort: 'name' %}
+{% assign people_sorted = people_sorted | concat: group_sorted %}
+{% endif %}
+{% endfor %}
 {% endfor %}
 
 <div class="row g-4">

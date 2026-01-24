@@ -51,7 +51,7 @@ layout: default
             {% assign display_authors = page.authors | slice: 0, max_authors %}
             {% for author in display_authors %}
               {% assign author_link = null %}
-              {% for team_member in site.data.team %}
+              {% for team_member in site.people %}
                 {% assign name_lower = team_member.name | downcase %}
                 {% assign author_lower = author | downcase %}
                 {% if name_lower == author_lower

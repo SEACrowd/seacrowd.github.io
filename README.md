@@ -138,12 +138,12 @@ To add FAQ entries to any page, use the following structure in the frontmatter:
 faq:
   - title: "What is SEACrowd?"
     content: |
-      "SEACrowd is a community of researchers from Southeast Asia advancing AI.
+      SEACrowd is a community of researchers from Southeast Asia advancing AI.
 
-      We focus on developing datasets, models, and resources tailored for the region."
+      We focus on developing datasets, models, and resources tailored for the region.
   - title: "How can I contribute?"
     content: |
-      "You can contribute by submitting pull requests on our GitHub repository, participating in our apprenticeship program, or donating resources."
+      You can contribute by submitting pull requests on our GitHub repository, participating in our apprenticeship program, or donating resources.
 ```
 
 Place the accordion component in the page content where you want the FAQ to appear:

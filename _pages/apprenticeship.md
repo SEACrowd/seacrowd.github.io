@@ -39,6 +39,11 @@ faq:
   - title: "Is this program full-time? / What's the time commitment?"
     content: |
       We expect mentees to commit **at least 10 hours per week** (hard minimum). This includes time for meetings, research, coding, writing, and collaboration with mentors and peers. The recommended commitment is **15–20 hours per week** for a more immersive experience.
+  - title: "What if I have other commitments (school, work, etc)?"
+    content: |
+      We understand that mentees may have other commitments. The program is designed to be flexible and part-time. We recommend discussing your availability and commitments with your mentors and team members to ensure a manageable workload.
+
+      However, we cannot accommodate mentees who cannot commit the minimum required time.
   - title: "Is the program remote or in-person?"
     content: |
       The SEACrowd Apprentice Program is a **remote research program**.
@@ -53,7 +58,7 @@ faq:
       Unfortunately, we do not have funds to provide stipends or financial support at this time. We recommend seeking external funding sources, scholarships, or institutional support if needed. Otherwise, we welcome you to apply in future cohorts when you have the necessary resources or when we may have funding available.
   - title: "How to communicate during the program?"
     content: |
-      We use English as the primary language for all program communications, documentation, and deliverables. Communication channels will be team dependent, but we expect most teams to use platforms like Slack and Discord for day-to-day communication, and Google Meet / Zoom / Microsoft Teams for weekly meetings.
+      We use English as the primary language for all program communications, documentation, and deliverables. Communication channels will be team dependent, but we expect teams to primarily use Discord for day-to-day communication, and Google Meet / Zoom / Microsoft Teams for meetings. How frequent meetings are will be up to each team to decide, but likely weekly or bi-weekly check-ins with mentors.
   - title: "Can I get accepted to work on multiple projects?"
     content: |
       No, mentees can only be accepted to work on one project per cohort to ensure focus and commitment.
@@ -62,7 +67,9 @@ faq:
       Once accepted, mentees are expected to commit to their assigned project for the duration of the program. Switching projects is generally not allowed, as it can disrupt team dynamics and project continuity. If you have significant concerns, please discuss them with the program organizers.
   - title: "Can I propose my own project?"
     content: |
-      For the 2026 cohort, we are only accepting applications for the predefined research topics listed on the program page. However, we encourage you to suggest new project ideas for future cohorts by reaching out to us via email at seacrowd.research@gmail.com. 
+      For the 2026 cohort, we are only accepting applications for the predefined research topics listed on the program page. The topics typically come from our mentors and organizers based on research gaps in Southeast Asia and their expertise, so we can ensure quality mentorship and project scope.
+
+      However, we encourage you to suggest new project ideas for future cohorts by reaching out to us via email at seacrowd.research@gmail.com. 
 
       You can also reach out to other mentors & collaborators in research communities like [Cohere Labs Open Science Community](https://labscommunity.cohere.com/get-started), [Eleuther AI](https://www.eleuther.ai/), [Masakhane](https://www.masakhane.io/), or [Nous Research](https://nousresearch.com/).
   - title: "Is research publication guaranteed?"

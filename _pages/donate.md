@@ -52,7 +52,7 @@ _Choose between one-time or recurring donations to maximize your impact._
 - GPU server access for model training and evaluation
 - Storage resources for large-scale datasets
 
-**Ready to help?** Email us at [{{site.social.email}}](mailto:{{site.social.email?subject=Compute%20Resource%20Donation}}) with the subject line "Compute Donation."
+**Ready to help?** Email us at [{{site.social.email}}](mailto:{{site.social.email}}?subject=Compute%20Resource%20Donation) with the subject line "Compute Donation."
 
 ## Recognition & Impact
 

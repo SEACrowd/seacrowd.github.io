@@ -7,6 +7,81 @@ tags: [apprenticeship, restropection]
 featured: true
 authors: [Samuel Cahyawijaya]
 thumbnail: retrospective-review.png
+projects:
+  - title: "Project 1: Language Surgery in Multilingual Large Language Models"
+    content: |
+      👥 **Mentees:** Joanito Agili Lopo, Muhammad Ravi Shulthan Habibi, Tack Hwa Wong
+
+      → [Read paper, published at MRL 2025](https://aclanthology.org/2025.mrl-main.30/)
+
+      #### The problem
+
+      Multilingual LLMs support many languages, but anyone who's tried prompting them in under-resourced languages has probably seen this:
+
+      You prompt in one language. The model partly responds in another (often English), drifts into mixed-language output, or drops in quality compared to high-resource languages like English or Chinese.
+
+      So, we wanted to understand:
+
+      - How do multilingual LLMs organize languages internally?
+      - Can we influence which language they "think in" or generate at inference time without retraining the model?
+
+      #### The approach
+
+      The team studied how multilingual LLMs organize languages in their latent space (the internal continuous representation). Specifically, they looked at how representations shift when the model handles different languages, and how those representations relate across languages.
+
+      They developed **Inference-Time Language Control (ITLC)**, a method for nudging models to produce more consistent language outputs from cross-lingual prompts, _without_ retraining.
+
+      #### Why this matters
+
+      Low-resource languages often get 1) less stable outputs, 2) higher rates of language switching, and 3) lower average quality.
+
+      ITLC offers a way to get more stable behavior in underrepresented languages using existing models where retraining is expensive or impractical. It also helps us understand how languages are arranged inside these models.
+  - title: "Project 2: Entropy2Vec — Crosslingual Language Modeling Entropy"
+    content: |
+      👥 **Mentees:** Patrick Amadeus Irawan, Ryandito Diandaru, Belati Jagad Bintang Syuhada, Randy Zakya Suchrady
+
+      → [Read paper, published at MRL 2025](https://aclanthology.org/2025.mrl-main.29/)
+
+      #### The problem
+
+      Linguistic typology—mapping how languages relate to each other—has traditionally come from decades of manual documentation, linguistic expertise, or resources like [Ethnologue](https://www.ethnologue.com/) and [Glottolog](https://glottolog.org/)).
+
+      Modern LLMs, meanwhile, have learned behavior across many languages through large-scale training with rich, internal knowledge about which tokens are likely in which contexts.
+
+      Given the ability of LLMs to learn multiple languages through the large-scale training, we believe that this knowledge could provide a fine-grained representation that captures the dynamic across different languages as we know in linguistic typology. But **can the internal language knowledge of LLMs can actually reflect the linguistic typological relationships similar to those in Ethnologue and Glottolog?**
+
+      #### The approach
+
+      The team extracted language representations from cross-lingual language modeling **entropy** collected from a diverse set of monolingual language models (LMs). Entropy is a measure of how unexpected the next token is, according to the model; if a model shows similar prediction patterns in two languages, those languages might be structurally similar.
+
+      They built **Entropy2Vec**, a language embedding where each language is a continuous vector in a latent space, and distances between vectors match linguistic typology relationships. Instead of understanding low-level handcrafted features like word order, syntax, or morphological complexity, they used the model's own internal knowledge (i.e., how it predicts next tokens) to recover typological structure.
+
+      #### Why this matters
+
+      The learned language vectors mimic typological structure (i.e., languages that are close in the typology tree end up close in the embedding space) and can regularize fine-tuning to improve adaptability to unseen languages.
+
+      For multilingual research in SEA, where many languages are under-documented, this line of work opens the door to:
+
+      - reusing existing models to infer structural relationships
+      - inform better transfer learning strategies
+      - helping models generalize better to languages with very little data
+  - title: "Project 3: SEADialogues — Culturally Grounded Dialogue Dataset"
+    content: |
+      👥 **Mentees:** Muhammad Dehan Al Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
+
+      → [View dataset on HuggingFace](https://huggingface.co/datasets/SEACrowd/SEADialogues) && [Read paper](https://arxiv.org/abs/2508.07069)
+
+      #### The problem
+
+      Even as LLMs improve, underrepresented languages perform worse and frequently fail to align with local norms, values, and expectations in multi-turn conversations.
+
+      #### The approach
+
+      The team built a culturally grounded, multi-turn dialogue dataset for SEA languages. They collected, curated, and annotated conversations that reflect real cultural practices—local forms of politeness, family structures, community dynamics. The resulting dataset is suitable for both training and evaluating value-aware conversational models.
+
+      #### Why this matters
+
+      SEADialogues provides a targeted resource for improving conversational AI in SEA languages, a benchmark for evaluating value alignment in culturally rich settings, and a starting point for future work on dialogue safety and social norms in SEA contexts.
 ---
 
 I'm Samuel Cahyawijaya, a Member of Technical Staff at [Cohere](https://cohere.com/) and one of the initiators of [SEACrowd](/about).
@@ -60,107 +135,7 @@ Looking back at the first cohort, I'm genuinely proud of what the teams pulled o
 
 Click on each project below to have a closer look!
 
-<div class="accordion" id="projects-accordion">
-
-{% capture project1_content %}
-👥 **Mentees:** Joanito Agili Lopo, Muhammad Ravi Shulthan Habibi, Tack Hwa Wong
-
-→ [Read paper, published at MRL 2025](https://aclanthology.org/2025.mrl-main.30/)
-
-#### The problem
-
-Multilingual LLMs support many languages, but anyone who's tried prompting them in under-resourced languages has probably seen this:
-
-You prompt in one language. The model partly responds in another (often English), drifts into mixed-language output, or drops in quality compared to high-resource languages like English or Chinese.
-
-So, we wanted to understand:
-
-- How do multilingual LLMs organize languages internally?
-- Can we influence which language they "think in" or generate at inference time without retraining the model?
-
-#### The approach
-
-The team studied how multilingual LLMs organize languages in their latent space (the internal continuous representation). Specifically, they looked at how representations shift when the model handles different languages, and how those representations relate across languages.
-
-They developed **Inference-Time Language Control (ITLC)**, a method for nudging models to produce more consistent language outputs from cross-lingual prompts, _without_ retraining.
-
-#### Why this matters
-
-Low-resource languages often get 1) less stable outputs, 2) higher rates of language switching, and 3) lower average quality.
-
-ITLC offers a way to get more stable behavior in underrepresented languages using existing models where retraining is expensive or impractical. It also helps us understand how languages are arranged inside these models.
-{% endcapture %}
-
-{% capture project2_content %}
-👥 **Mentees:** Patrick Amadeus Irawan, Ryandito Diandaru, Belati Jagad Bintang Syuhada, Randy Zakya Suchrady
-
-→ [Read paper, published at MRL 2025](https://aclanthology.org/2025.mrl-main.29/)
-
-#### The problem
-
-Linguistic typology—mapping how languages relate to each other—has traditionally come from decades of manual documentation, linguistic expertise, or resources like [Ethnologue](https://www.ethnologue.com/) and [Glottolog](https://glottolog.org/)).
-
-Modern LLMs, meanwhile, have learned behavior across many languages through large-scale training with rich, internal knowledge about which tokens are likely in which contexts.
-
-Given the ability of LLMs to learn multiple languages through the large-scale training, we believe that this knowledge could provide a fine-grained representation that captures the dynamic across different languages as we know in linguistic typology. But **can the internal language knowledge of LLMs can actually reflect the linguistic typological relationships similar to those in Ethnologue and Glottolog?**
-
-#### The approach
-
-The team extracted language representations from cross-lingual language modeling **entropy** collected from a diverse set of monolingual language models (LMs). Entropy is a measure of how unexpected the next token is, according to the model; if a model shows similar prediction patterns in two languages, those languages might be structurally similar.
-
-They built **Entropy2Vec**, a language embedding where each language is a continuous vector in a latent space, and distances between vectors match linguistic typology relationships. Instead of understanding low-level handcrafted features like word order, syntax, or morphological complexity, they used the model's own internal knowledge (i.e., how it predicts next tokens) to recover typological structure.
-
-#### Why this matters
-
-The learned language vectors mimic typological structure (i.e., languages that are close in the typology tree end up close in the embedding space) and can regularize fine-tuning to improve adaptability to unseen languages.
-
-For multilingual research in SEA, where many languages are under-documented, this line of work opens the door to:
-
-- reusing existing models to infer structural relationships
-- inform better transfer learning strategies
-- helping models generalize better to languages with very little data
-  {% endcapture %}
-
-{% capture project3_content %}
-👥 **Mentees:** Muhammad Dehan Al Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
-
-→ [View dataset on HuggingFace](https://huggingface.co/datasets/SEACrowd/SEADialogues) && [Read paper](https://arxiv.org/abs/2508.07069)
-
-#### The problem
-
-Even as LLMs improve, underrepresented languages perform worse and frequently fail to align with local norms, values, and expectations in multi-turn conversations.
-
-#### The approach
-
-The team built a culturally grounded, multi-turn dialogue dataset for SEA languages. They collected, curated, and annotated conversations that reflect real cultural practices—local forms of politeness, family structures, community dynamics. The resulting dataset is suitable for both training and evaluating value-aware conversational models.
-
-#### Why this matters
-
-SEADialogues provides a targeted resource for improving conversational AI in SEA languages, a benchmark for evaluating value alignment in culturally rich settings, and a starting point for future work on dialogue safety and social norms in SEA contexts.
-{% endcapture %}
-
-{% include collapsible.html
-   id="collapseProject1"
-   title="Project 1: Language Surgery in Multilingual Large Language Models"
-   content=project1_content
-   parent="projects-accordion"
-%}
-{% include collapsible.html
-   id="collapseProject2"
-   title="Project 2: Entropy2Vec — Crosslingual Language Modeling Entropy"
-   content=project2_content
-   parent="projects-accordion"
-   open=false
-%}
-{% include collapsible.html
-   id="collapseProject3"
-   title="Project 3: SEADialogues — Culturally Grounded Dialogue Dataset"
-   content=project3_content
-   parent="projects-accordion"
-   open=false
-%}
-
-</div>
+{% include faq.html id="projects-accordion" items=page.projects %}
 
 ## What We Learned (and What We're Changing)
 

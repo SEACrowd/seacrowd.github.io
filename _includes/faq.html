@@ -1,0 +1,76 @@
+{% comment %}
+  Usage (page front matter):
+  ---
+  faq:
+    - title: "Question?"
+      content: |
+        Markdown **answer** here.
+    - title: "Another question?"
+      content: |
+        Another answer.
+      open: true
+  ---
+
+  {% include faq.html id="my-faq" %}
+
+  Options:
+  - id (optional): Base accordion id. Defaults to page slug/title.
+  - items (optional): Array of FAQ items. Defaults to page.faq.
+  - data (optional): Name of _data file (without extension).
+{% endcomment %}
+
+{% assign faq_items = include.items | default: page.faq %}
+{% if include.data %}
+  {% assign faq_items = site.data[include.data] %}
+{% endif %}
+
+{% assign base_id = include.id
+  | default: page.slug
+  | default: page.title
+  | default: 'faq'
+%}
+{% assign accordion_id = base_id | slugify %}
+{% assign accordion_class = include.class | default: 'accordion' %}
+
+{% if faq_items %}
+  <div class="{{ accordion_class }}" id="{{ accordion_id }}">
+    {% for item in faq_items %}
+      {% assign item_id = accordion_id | append: '-' | append: forloop.index %}
+      {% assign is_open = item.open | default: false %}
+      {% if include.mode == 'projects' %}
+        {% assign mentor_names = item.mentors | map: 'name' | join: ', ' %}
+        {% assign mentee_names = item.mentees | map: 'name' | join: ', ' %}
+        {% capture item_content %}
+{% if item.summary %}{{ item.summary }}
+{% endif %}
+**Mentors:** {{ mentor_names }}
+**Mentees:** {{ mentee_names }}
+{% if item.links and item.links.size > 0 %}
+**Resources:**
+{%- for link in item.links -%}
+- [{{ link.label }}]({{ link.url }})
+{%- endfor -%}
+{% endif %}
+{{ item.content }}
+      {% endcapture %}
+        {%
+          include collapsible.html
+          id=item_id
+          title=item.title
+          content=item_content
+          parent=accordion_id
+          open=is_open
+        %}
+      {% else %}
+        {%
+          include collapsible.html
+          id=item_id
+          title=item.title
+          content=item.content
+          parent=accordion_id
+          open=is_open
+        %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

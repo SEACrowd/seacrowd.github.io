@@ -37,40 +37,14 @@
     {% for item in faq_items %}
       {% assign item_id = accordion_id | append: '-' | append: forloop.index %}
       {% assign is_open = item.open | default: false %}
-      {% if include.mode == 'projects' %}
-        {% assign mentor_names = item.mentors | map: 'name' | join: ', ' %}
-        {% assign mentee_names = item.mentees | map: 'name' | join: ', ' %}
-        {% capture item_content %}
-{% if item.summary %}{{ item.summary }}
-{% endif %}
-**Mentors:** {{ mentor_names }}
-**Mentees:** {{ mentee_names }}
-{% if item.links and item.links.size > 0 %}
-**Resources:**
-{%- for link in item.links -%}
-- [{{ link.label }}]({{ link.url }})
-{%- endfor -%}
-{% endif %}
-{{ item.content }}
-      {% endcapture %}
-        {%
-          include collapsible.html
-          id=item_id
-          title=item.title
-          content=item_content
-          parent=accordion_id
-          open=is_open
-        %}
-      {% else %}
-        {%
-          include collapsible.html
-          id=item_id
-          title=item.title
-          content=item.content
-          parent=accordion_id
-          open=is_open
-        %}
-      {% endif %}
+      {%
+        include collapsible.html
+        id=item_id
+        title=item.title
+        content=item.content
+        parent=accordion_id
+        open=is_open
+      %}
     {% endfor %}
   </div>
 {% endif %}

@@ -77,7 +77,7 @@ Each mentee will join a team of 2–3 mentors (at least 1 [primary mentor](#prim
 
 Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their publications](/apprenticeship#past-apprentice-research)!
 
-We shared their journey and our learnings from running the first cohort in our [Retrospective blog post](/posts/apprentice-retrospection).
+We shared their journey and our learnings from running the first cohort in our [Retrospective blog post](/posts/apprentice-program-retrospection).
 
 ## 2026 Research Topics
 

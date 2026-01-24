@@ -1,4 +1,6 @@
-<div class="{{ include.col_class | default: 'col-md-4 col-sm-6' }} text-center p-3">
+<div
+  class="{{ include.col_class | default: 'col-md-4 col-sm-6' }} text-center p-3"
+>
   {% assign image_path = include.image_path | default: 'people' %}
   {% assign current_profile = include.profile | default: profile %}
   {% assign profile_image = current_profile.avatar
@@ -8,10 +10,23 @@
     | default: current_profile.website
   %}
   {% assign img_size = include.img_size | default: 'profile-thumbnail' %}
+  {% assign image_src = '' %}
+  {% if profile_image contains '://' %}
+    {% assign image_src = profile_image %}
+  {% elsif profile_image contains '/' %}
+    {% assign image_src = profile_image | relative_url %}
+  {% elsif profile_image and profile_image != '' %}
+    {% assign image_src = 'assets/images/'
+      | append: image_path
+      | append: '/'
+      | append: profile_image
+      | relative_url
+    %}
+  {% endif %}
   {% if profile_image and profile_image != '' %}
     <img
-      class="{{ img_size }}"
-      src="{{ 'assets/images/' | append: image_path | append: '/' | append: profile_image | relative_url }}"
+      class="{{ img_size }} avatar mb-2"
+      src="{{ image_src }}"
       alt="{{ current_profile.name }}"
     >
   {% endif %}

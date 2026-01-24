@@ -1,0 +1,67 @@
+<div class="{{ include.col_class | default: 'col-12 col-md-6 d-flex' }}">
+  {% assign current_profile = include.profile | default: include %}
+  {% assign profile_name = include.name | default: current_profile.name %}
+  {% assign profile_affiliation = include.affiliation
+    | default: current_profile.affiliation
+  %}
+  {% assign profile_position = include.position
+    | default: current_profile.position
+  %}
+  {% assign profile_site = include.website
+    | default: include.site
+    | default: current_profile.site
+  %}
+  {% assign profile_extra = include.extra | default: current_profile.extra %}
+  {% assign profile_image = include.avatar
+    | default: current_profile.avatar
+    | default: current_profile.image
+  %}
+  {% assign image_src = '' %}
+  {% if profile_image contains '://' %}
+    {% assign image_src = profile_image %}
+  {% elsif profile_image contains '/' %}
+    {% assign image_src = profile_image | relative_url %}
+  {% elsif profile_image and profile_image != '' %}
+    {% assign image_src = 'assets/images/people/'
+      | append: profile_image
+      | relative_url
+    %}
+  {% endif %}
+
+  <div class="card card-clickable mentor-card h-100 position-relative w-100">
+    <div class="row g-2 h-100 align-items-center">
+      <div class="col-4 d-flex align-items-center justify-content-center">
+        {% if image_src != '' %}
+          <img
+            class="mentor-thumbnail avatar"
+            src="{{ image_src }}"
+            alt="{{ profile_name }}"
+            width="80"
+            height="80"
+          >
+        {% endif %}
+      </div>
+      <div class="col-8 d-flex flex-column justify-content-center">
+        <div class="fw-bold">{{ profile_name }}</div>
+        {% if profile_affiliation and profile_affiliation != '' %}
+          <div class="text-muted small">{{ profile_affiliation }}</div>
+        {% endif %}
+        {% if profile_position and profile_position != '' %}
+          <div class="text-muted small">{{ profile_position }}</div>
+        {% endif %}
+        {% if profile_extra and profile_extra != '' %}
+          <div class="small">{{ profile_extra }}</div>
+        {% endif %}
+      </div>
+    </div>
+    {% if profile_site and profile_site != '' %}
+      <a
+        href="{{ profile_site }}"
+        class="stretched-link"
+        target="_blank"
+        rel="noopener"
+        aria-label="{{ profile_name }} website"
+      ></a>
+    {% endif %}
+  </div>
+</div>

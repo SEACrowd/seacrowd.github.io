@@ -144,28 +144,28 @@ Publications are encouraged when ready, not tied to specific conference deadline
 
 <div class="row g-2">
   {% for profile in site.data.mentors %}
-    {% if profile.position == "primary_mentor" %}
-      {% include person.html %}
+    {% if profile.role == "primary_mentor" %}
+      {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}
 </div>
 
 ### Secondary Mentors
 
-<div class="row g-2 gx-1">
+<div class="row g-2">
   {% for profile in site.data.mentors %}
-    {% if profile.position == "secondary_mentor" %}
-      {% include person.html %}
+    {% if profile.role == "secondary_mentor" %}
+      {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}
 </div>
 
 ### Organizers & Research Managers
 
-<div class="row g-2 gx-1">
+<div class="row g-2">
   {% for profile in site.data.mentors %}
-    {% if profile.position == "organizer" %}
-      {% include person.html %}
+    {% if profile.role == "organizer" %}
+      {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}
 </div>

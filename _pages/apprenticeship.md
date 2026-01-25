@@ -30,12 +30,20 @@ faq:
       This alone does not qualify you for the program. 
 
       However, speaking a language from Southeast Asia can help, especially if it informs your research interests. We encourage you to highlight any relevant language skills and how they connect to your research goals in your application.
+  - title: "Can I apply as a group/team?"
+    content: |
+      No, applications are individual. However, during the selection process, we may consider team dynamics and try to group mentees with complementary skills and interests.
   - title: "What if I have no prior research experience or publications in AI/ML/NLP?"
     content: |
       Prior research experience or publications are **not required** but can strengthen your application. We value strong foundational knowledge in ML, potential, motivation, and fit with project topics and mentors more than credentials. If you have relevant experience, be sure to highlight it in your application.
   - title: "Is this program full-time? / What's the time commitment?"
     content: |
       We expect mentees to commit **at least 10 hours per week** (hard minimum). This includes time for meetings, research, coding, writing, and collaboration with mentors and peers. The recommended commitment is **15–20 hours per week** for a more immersive experience.
+  - title: "What if I have other commitments (school, work, etc)?"
+    content: |
+      We understand that mentees may have other commitments. The program is designed to be flexible and part-time. We recommend discussing your availability and commitments with your mentors and team members to ensure a manageable workload.
+
+      However, we cannot accommodate mentees who cannot commit the minimum required time.
   - title: "Is the program remote or in-person?"
     content: |
       The SEACrowd Apprentice Program is a **remote research program**.
@@ -44,10 +52,26 @@ faq:
       Yes, the program is completely **free to join** for all selected mentees. We provide compute necessary for research projects.
   - title: "Do I get paid? / Is there a stipend?"
     content: |
-      The program is **unpaid**. We do not pay mentors either. However, mentees gain valuable research experience, mentorship, networking opportunities, and potential publication avenues.
+      The program is **unpaid**. However, mentees gain valuable research experience, mentorship, networking opportunities, and potential publication avenues.
   - title: "What if I need financial support to participate?"
     content: |
       Unfortunately, we do not have funds to provide stipends or financial support at this time. We recommend seeking external funding sources, scholarships, or institutional support if needed. Otherwise, we welcome you to apply in future cohorts when you have the necessary resources or when we may have funding available.
+  - title: "How to communicate during the program?"
+    content: |
+      We use English as the primary language for all program communications, documentation, and deliverables. Communication channels will be team dependent, but we expect teams to primarily use Discord for day-to-day communication, and Google Meet / Zoom / Microsoft Teams for meetings. How frequent meetings are will be up to each team to decide, but likely weekly or bi-weekly check-ins with mentors.
+  - title: "Can I get accepted to work on multiple projects?"
+    content: |
+      No, mentees can only be accepted to work on one project per cohort to ensure focus and commitment.
+  - title: "What if I want to switch projects after being accepted?"
+    content: |
+      Once accepted, mentees are expected to commit to their assigned project for the duration of the program. Switching projects is generally not allowed, as it can disrupt team dynamics and project continuity. If you have significant concerns, please discuss them with the program organizers.
+  - title: "Can I propose my own project?"
+    content: |
+      For the 2026 cohort, we are only accepting applications for the predefined research topics listed on the program page. The topics typically come from our mentors and organizers based on research gaps in Southeast Asia and their expertise, so we can ensure quality mentorship and project scope.
+
+      However, we encourage you to suggest new project ideas for future cohorts by reaching out to us via email at seacrowd.research@gmail.com. 
+
+      You can also reach out to other mentors & collaborators in research communities like [Cohere Labs Open Science Community](https://labscommunity.cohere.com/get-started), [Eleuther AI](https://www.eleuther.ai/), [Masakhane](https://www.masakhane.io/), or [Nous Research](https://nousresearch.com/).
   - title: "Is research publication guaranteed?"
     content: |
       While we encourage and support publication efforts, **we cannot guarantee that every project will result in a publication**. Successful publication depends on various factors, including the quality of the research, relevance to conference/journal themes, and acceptance by peer reviewers.
@@ -57,7 +81,14 @@ faq:
   - title: "Can I get a letter of recommendation?"
     content: |
       Strong contributors may receive **letters of recommendation** from their mentors upon successful completion of the program. This is typically reserved for mentees who demonstrate significant effort, growth, and contribution to their projects.
+  - title: "What if I need to leave the program early?"
+    content: |
+      We understand that unforeseen circumstances may arise. If you need to leave the program early, please inform your mentors and the program organizers as soon as possible. We encourage open communication to manage expectations and ensure a smooth transition for your team. 
 
+      You will not receive a certificate of completion or letter of recommendation if you leave early, but you will likely be credited for any contributions made up to that point.
+  - title: "What if I'm not selected this time?"
+    content: |
+      If you're not selected for this cohort, we encourage you to apply again in future cohorts. We also recommend joining our [Google Group]({{ site.social.google_group }}) and following us on [X/Twitter]({{ site.social.twitter }}), [Facebook]({{ site.social.facebook }}), or [LinkedIn]({{ site.social.linkedin }}) to stay updated on future opportunities.
   - title: "I have a question not covered here"
     content: |
       Email us at [seacrowd.research@gmail.com](mailto:{{ seacrowd.research@gmail.com }}).

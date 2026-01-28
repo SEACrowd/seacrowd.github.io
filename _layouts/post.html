@@ -10,12 +10,14 @@ layout: default
   <div class="post-main">
     <header class="post-header">
       {% if page.thumbnail %}
-        <img
-          src="/assets/images/posts/{{ page.thumbnail }}"
-          class="post-thumbnail img-fluid rounded w-100 mb-4"
-          alt="{{ page.title }}"
-          style="max-height: 330px; object-fit: cover"
-        >
+        <div class="post-thumbnail-frame mb-2">
+          <img
+            src="/assets/images/posts/{{ page.thumbnail }}"
+            class="post-thumbnail img-fluid rounded w-100"
+            alt="{{ page.title }}"
+            style="max-height: 330px; object-fit: cover"
+          >
+        </div>
       {% endif %}
       <h1 class="page-title">{{ page.title }}</h1>
       <div class="post-meta text-muted mb-4">

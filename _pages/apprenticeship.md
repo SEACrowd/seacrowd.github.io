@@ -67,11 +67,9 @@ faq:
       Once accepted, mentees are expected to commit to their assigned project for the duration of the program. Switching projects is generally not allowed, as it can disrupt team dynamics and project continuity. If you have significant concerns, please discuss them with the program organizers.
   - title: "Can I propose my own project?"
     content: |
-      For the 2026 cohort, we are only accepting applications for the predefined research topics listed on the program page. The topics typically come from our mentors and organizers based on research gaps in Southeast Asia and their expertise, so we can ensure quality mentorship and project scope.
+      For the 2026 cohort, we are only accepting applications for the predefined research topics listed on the program page. You can suggest ideas for the topic that you’ve chosen, but you cannot propose an entirely new project. The topics typically come from our mentors and organizers based on research gaps in Southeast Asia and their expertise, so we can ensure quality mentorship and project scope.
 
-      However, we encourage you to suggest new project ideas for future cohorts by reaching out to us via email at seacrowd.research@gmail.com. 
-
-      You can also reach out to other mentors & collaborators in research communities like [Cohere Labs Open Science Community](https://labscommunity.cohere.com/get-started), [Eleuther AI](https://www.eleuther.ai/), [Masakhane](https://www.masakhane.io/), or [Nous Research](https://nousresearch.com/).
+      However, we encourage you to suggest new project ideas for future cohorts by reaching out to us via email at seacrowd.research@gmail.com. You can also reach out to other mentors & collaborators in research communities like [Cohere Labs Open Science Community](https://labscommunity.cohere.com/get-started), [Eleuther AI](https://www.eleuther.ai/), [Masakhane](https://www.masakhane.io/), or [Nous Research](https://nousresearch.com/).
   - title: "Is research publication guaranteed?"
     content: |
       While we encourage and support publication efforts, **we cannot guarantee that every project will result in a publication**. Successful publication depends on various factors, including the quality of the research, relevance to conference/journal themes, and acceptance by peer reviewers.
@@ -83,15 +81,16 @@ faq:
       Strong contributors may receive **letters of recommendation** from their mentors upon successful completion of the program. This is typically reserved for mentees who demonstrate significant effort, growth, and contribution to their projects.
   - title: "What if I need to leave the program early?"
     content: |
-      We understand that unforeseen circumstances may arise. If you need to leave the program early, please inform your mentors and the program organizers as soon as possible. We encourage open communication to manage expectations and ensure a smooth transition for your team. 
-
-      You will not receive a certificate of completion or letter of recommendation if you leave early, but you will likely be credited for any contributions made up to that point.
+      We expect you to retain your commitment to the project, but we understand that unforeseen circumstances may arise. If you need to leave the program early, please inform your mentors and the program organizers as soon as possible. We encourage open communication to manage expectations and ensure a smooth transition for your team.
+  - title: Can I add someone else's name to my paper? / Can I look for external collaborators?
+    content: |
+      By default, only mentees and mentors directly involved in the project should be listed as authors on any resulting publications. Any exceptions must be discussed and agreed upon by the entire team and mentors beforehand.
   - title: "What if I'm not selected this time?"
     content: |
       If you're not selected for this cohort, we encourage you to apply again in future cohorts. We also recommend joining our [Google Group]({{ site.social.google_group }}) and following us on [X/Twitter]({{ site.social.twitter }}), [Facebook]({{ site.social.facebook }}), or [LinkedIn]({{ site.social.linkedin }}) to stay updated on future opportunities.
   - title: "I have a question not covered here"
     content: |
-      Email us at [seacrowd.research@gmail.com](mailto:{{ seacrowd.research@gmail.com }}).
+      Email us at [seacrowd.research@gmail.com](mailto:{{ seacrowd.research@gmail.com }}) or join our [Discord](https://discord.gg/XXRHFuvkTA) and ask in the #apprentice-program channel.
 ---
 
 **The application for 2026 Apprentice Program was closed on Dec 17, 2025 at 23:59 (Anywhere on Earth, UTC-12).**

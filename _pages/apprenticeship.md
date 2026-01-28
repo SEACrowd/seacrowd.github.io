@@ -84,7 +84,7 @@ faq:
       We expect you to retain your commitment to the project, but we understand that unforeseen circumstances may arise. If you need to leave the program early, please inform your mentors and the program organizers as soon as possible. We encourage open communication to manage expectations and ensure a smooth transition for your team.
   - title: Can I add someone else's name to my paper? / Can I look for external collaborators?
     content: |
-      By default, only mentees and mentors directly involved in the project should be listed as authors on any resulting publications. Any exceptions must be discussed and agreed upon by the entire team and mentors beforehand.
+      No. Author list is agreed upon the beginning of the project. Anyone who doesn't contribute to the paper will not be on the author list.
   - title: "What if I'm not selected this time?"
     content: |
       If you're not selected for this cohort, we encourage you to apply again in future cohorts. We also recommend joining our [Google Group]({{ site.social.google_group }}) and following us on [X/Twitter]({{ site.social.twitter }}), [Facebook]({{ site.social.facebook }}), or [LinkedIn]({{ site.social.linkedin }}) to stay updated on future opportunities.

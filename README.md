@@ -132,25 +132,32 @@ Use `{% include carousel.html %}` to add image carousels to any page:
 
 ### Adding FAQ Entries / General Accordions
 
-To add FAQ entries to any page, use the following structure in the frontmatter:
+To add FAQ entries (use component {% include faq.html %}) to any page, use the following structure in the frontmatter:
 
 ```yaml
 faq:
-  - title: "What is SEACrowd?"
+  - title: "Question?"
     content: |
-      SEACrowd is a community of researchers from Southeast Asia advancing AI.
+      Markdown **answer** here.
 
-      We focus on developing datasets, models, and resources tailored for the region.
-  - title: "How can I contribute?"
+      You can write multiple paragraphs too.
+  - title: "Another question?"
     content: |
-      You can contribute by submitting pull requests on our GitHub repository, participating in our apprenticeship program, or donating resources.
+      Another answer.
+    open: true # (optional) to have this item open by default
 ```
 
 Place the accordion component in the page content where you want the FAQ to appear:
 
 ```liquid
-{% include faq.html items=page.faq %}
+{% include faq.html id="your-optional-id" %}
 ```
+
+Options:
+
+- id (optional): Base accordion id. Defaults to page slug/title.
+- items (optional): Array of FAQ items. Defaults to page.faq.
+- data (optional): Name of \_data file (without extension).
 
 For an example, see [\_pages/apprenticeship.md](_pages/apprenticeship.md).
 

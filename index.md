@@ -15,7 +15,7 @@ keywords:
   ]
 carousel:
   - image: "events/coling2025.jpg"
-    description: Our SEACrowd 2026 Apprentice Program is closed. There will be kick-off meeting soon. Register your interest to join future cohorts!
+    description: Our SEACrowd 2026 Apprentice Program is closed. Register your interest to join future cohorts!
     button_text: Register interest
     button_url: "https://groups.google.com/u/0/g/seacrowd"
   - image: "posts/emnlp-2024-bof.jpg"

@@ -21,15 +21,11 @@ Long before the Spaniards arrived in the 16th century, Tagalog was already the m
 
 _<a href="https:/64.media.tumblr.com/tumblr_lutfskLZxZ1qkow7co1_r1_1280.png">Fig 1</a>. An example of the pre-colonial Baybayin script._
 
-<!-- https:/64.media.tumblr.com/tumblr_lutfskLZxZ1qkow7co1_r1_1280.png -->
-
 Spanish colonization (1565-1898) systematically sidelined Baybayin, but distinctively, it colonized the script without replacing the tongue. As the friars prioritized evangelization over assimilation, they used the Latin alphabet to [translate religious texts into local dialects](https:/hiphilangsci.net/2013/07/10/early-writing-and-printing-in-the-philippines/) rather than teaching Spanish to the masses. With official documents and church texts shifting to Latin-based Tagalog—and the Latin script proving more practical for new Spanish-influenced sounds—Baybayin quickly lost relevance and faded from use.
 
 <img src="/assets/images/posts/filipino-tagalog/3_thomasite.jpg" alt="The Thomasites" width="500"/>
 
 _<a href="https:/blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidMLgbsFg5RsnKUiorIfVb8K4s0p-v8Z-xGuN_OwbTz-z6hZJ_6BsOWBv0kMrhUZDqG8h9BH1dLwrr-aZi8qozAj_EXTpa-dI3oKlm5xrCqoY9N9N9ZFaSV-nkGsN-K_DDIzFpQxvZHEB5/s1600/thomasite.jpg">Fig 2</a>. A female Thomasite teacher instructing Filipino students_
-
-<!-- https:/blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidMLgbsFg5RsnKUiorIfVb8K4s0p-v8Z-xGuN_OwbTz-z6hZJ_6BsOWBv0kMrhUZDqG8h9BH1dLwrr-aZi8qozAj_EXTpa-dI3oKlm5xrCqoY9N9N9ZFaSV-nkGsN-K_DDIzFpQxvZHEB5/s1600/thomasite.jpg -->
 
 Following the Spanish-American War in 1898 up until the end of the American occupation in 1946, the United States utilized a radically different strategy: [assimilation through mass education](https:/en.wikipedia.org/wiki/Thomasites#:~:text=Our,schools). Unlike the exclusive nature of Spanish rule, the Americans established a public schooling system through [Act No. 704 of 1901](https:/elibrary.judiciary.gov.ph/thebookshelf/showdocs/28/15605#:~:text=SEC%2E%2014,teachers), that enforced English as the sole medium of instruction. By making English the new entry point for commerce and bureaucracy, the Americans effectively institutionalized a foreign language in mere decades, reshaping the linguistic landscape far more aggressively than Spain and pushing Tagalog into a new role during [the rise of nationalism](https:/ncca.gov.ph/about-culture-and-arts/in-focus/andres-bonifacio-and-the-1896-revolution).
 
@@ -115,19 +111,14 @@ In practice, this means we're already working with Filipino, even though the met
 
 Just as Indonesian serves as an anchor for regional languages like Javanese or Sundanese, Filipino can serve as the pivot language for Philippine NLP. Because it shares core grammar and cognates with [Cebuano, Hiligaynon](https:/www.researchgate.net/publication/396574502_Morphological_Analysis_of_Tagalog_Hiligaynon_and_Cebuano_Languages), Waray, Kapampangan, Bikol, and many others, a strong Filipino model creates a foundation that accelerates progress for every other language in the country.
 
-| English | Tagalog (Pivot) | Cebuano | Ilocano | Kapampangan |
+| English   | Tagalog (Pivot) | Cebuano | Ilocano | Kapampangan |
+| :-------- | :-------------- | :------ | :------ | :---------- |
+| **Eye**   | Mata            | Mata    | Mata    | Mata        |
+| **Two**   | Dalawa          | Duha    | Dua     | Adwa        |
+| **House** | Bahay           | Balay   | Balay   | Bale        |
+| **New**   | Bago            | Bag-o   | Baro    | Bayu        |
 
-| :--- | :--- | :--- | :--- | :--- |
-
-| **Eye** | Mata | Mata | Mata | Mata |
-
-| **Two** | Dalawa | Duha | Dua | Adwa |
-
-| **House** | Bahay | Balay | Balay | Bale |
-
-| **New** | Bago | Bag-o | Baro | Bayu |
-
-_Fig 5. A lexical comparison showing high similarity (cognates) across major Philippine languages._
+_Table 1. A lexical comparison showing high similarity (cognates) across major Philippine languages._
 
 This allows researchers to utilize [transfer learning](https:/www.geeksforgeeks.org/nlp/transfer-learning-in-nlp/), by effectively “recycling” what an AI learns from the data rich Filipino language and applying it to regional languages that have less data. Instead of building models from scratch for every dialect and language, a good Filipino system can accelerate the creation of translation tools and datasets for the rest of the archipelago.
 
@@ -141,7 +132,7 @@ But the same technology could be their lifeline. If Filipino serves as a true pi
 
 <img src="/assets/images/posts/filipino-tagalog/6_bridge.jpg" alt="Dataset Card Screenshot" width="500"/>
 
-_<a href="https:/gttp./assets/images/posts/filipino-tagalog/.tshiftcdn.com/270079/x/0/san-juanico-bridge-in-leyte.jpg">Fig 6</a>. The San Juanico Bridge spans the strait between Samar and Leyte—a symbol of connection in an archipelago of over 7,600 islands._
+_<a href="https:/gttp./assets/images/posts/filipino-tagalog/.tshiftcdn.com/270079/x/0/san-juanico-bridge-in-leyte.jpg">Fig 5</a>. The San Juanico Bridge spans the strait between Samar and Leyte—a symbol of connection in an archipelago of over 7,600 islands._
 
 <!-- https:/gttp./assets/images/posts/filipino-tagalog/.tshiftcdn.com/270079/x/0/san-juanico-bridge-in-leyte.jpg -->
 

@@ -115,17 +115,12 @@ In practice, this means we're already working with Filipino, even though the met
 
 Just as Indonesian serves as an anchor for regional languages like Javanese or Sundanese, Filipino can serve as the pivot language for Philippine NLP. Because it shares core grammar and cognates with [Cebuano, Hiligaynon](https:/www.researchgate.net/publication/396574502_Morphological_Analysis_of_Tagalog_Hiligaynon_and_Cebuano_Languages), Waray, Kapampangan, Bikol, and many others, a strong Filipino model creates a foundation that accelerates progress for every other language in the country.
 
-| English | Tagalog (Pivot) | Cebuano | Ilocano | Kapampangan |
-
-| :--- | :--- | :--- | :--- | :--- |
-
-| **Eye** | Mata | Mata | Mata | Mata |
-
-| **Two** | Dalawa | Duha | Dua | Adwa |
-
-| **House** | Bahay | Balay | Balay | Bale |
-
-| **New** | Bago | Bag-o | Baro | Bayu |
+| English   | Tagalog (Pivot) | Cebuano | Ilocano | Kapampangan |
+| :-------- | :-------------- | :------ | :------ | :---------- |
+| **Eye**   | Mata            | Mata    | Mata    | Mata        |
+| **Two**   | Dalawa          | Duha    | Dua     | Adwa        |
+| **House** | Bahay           | Balay   | Balay   | Bale        |
+| **New**   | Bago            | Bag-o   | Baro    | Bayu        |
 
 _Fig 5. A lexical comparison showing high similarity (cognates) across major Philippine languages._
 

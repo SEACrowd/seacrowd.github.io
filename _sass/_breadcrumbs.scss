@@ -1,17 +1,20 @@
 .breadcrumb-nav {
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: 300;
-  margin-top: 56px;
 }
 
 .breadcrumb-content {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  display: inline;
   color: var(--bs-secondary);
+}
+
+.breadcrumb-separator {
+  margin: 0 0.3rem;
+  color: var(--bs-secondary-bg);
+  font-weight: 300;
 }
 
 .breadcrumb-link {
@@ -25,11 +28,6 @@
   }
 }
 
-.breadcrumb-separator {
-  color: var(--bs-secondary-bg);
-  font-weight: 300;
-}
-
 .breadcrumb-current {
   color: var(--bs-secondary);
   font-weight: 400;
@@ -38,9 +36,5 @@
 @media (max-width: 40em) {
   .breadcrumb-nav {
     font-size: 0.65rem;
-  }
-
-  .breadcrumb-content {
-    gap: 0.3rem;
   }
 }

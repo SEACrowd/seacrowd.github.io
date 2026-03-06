@@ -1,8 +1,10 @@
 ---
 title: SEACrowd 2026 Apprentice Program
 permalink: /apprenticeship.html
+description: A part-time, remote research program that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research.
 form: https://forms.gle/GCv3cyCRqzj4PqfA9
 thumbnail: apprenticeship.png
+hero: true
 faq:
   - title: "What are the key dates for the 2026 Apprentice Program?"
     content: |
@@ -93,15 +95,15 @@ faq:
       Email us at [seacrowd.research@gmail.com](mailto:{{ seacrowd.research@gmail.com }}) or join our [Discord](https://discord.gg/XXRHFuvkTA) and ask in the #apprentice-program channel.
 ---
 
-**The application for 2026 Apprentice Program was closed on Dec 17, 2025 at 23:59 (Anywhere on Earth, UTC-12).**
-
-If you would like to be notified of future apprentice batches, please join our [Google Group]({{ site.social.google_group }}) or follow us on [X/Twitter]({{ site.social.twitter }}), [Facebook]({{ site.social.facebook }}), or [LinkedIn]({{ site.social.linkedin }}).
-
----
-
-SEACrowd Apprentice Program is a **remote research program** (Feb 1 - Jun 30, 2026) that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. Small, mentored teams work on scoped projects with structured milestones and community support, creating a clear path toward PhD admissions, jobs, and stronger SEA regional capacity.
-
-Each mentee will join a team of 2–3 mentors (at least 1 [primary mentor](#primary-mentors) and 1 [secondary mentor](#secondary-mentors)) and 2+ fellow mentees to execute a research project over four months. The program emphasizes hands-on experience, mentorship, and peer learning, culminating in a research report, which can turn into paper submission to top AI/ML/NLP conferences as arranged by the team.
+<section class="hero">
+  <h1 class="hero-title">Connecting rising talent<br>with expertise in Southeast Asian AI</h1>
+  <p class="hero-subtitle"> {{ page.description }}</p>
+  <div class="hero-actions">
+    <a href="{{ site.social.google_group }}" class="btn btn-primary btn-lg">Follow for Updates</a>
+    <a href="/mentors" class="btn btn-outline-secondary btn-lg disabled">Apply as a Mentor (2027)</a>
+  </div>
+  <p class="hero-status">Applications for 2026 were already closed</p>
+</section>
 
 ## 2025 Success Story
 

@@ -3,7 +3,7 @@
   {% assign crumbs = '' | split: '' %}
   {% for c in raw_crumbs %}
     {% assign stripped = c | strip %}
-    {% if stripped != '' %}
+    {% if stripped != '' and stripped != 'index.html' %}
       {% assign crumbs = crumbs | push: stripped %}
     {% endif %}
   {% endfor %}

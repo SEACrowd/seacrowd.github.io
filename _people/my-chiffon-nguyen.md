@@ -4,6 +4,6 @@ position: "coreteam"
 avatar: "my_chiffon_nguyen.jpg"
 twitter: ""
 sortorder: 2
-job: "Communications"
+job: "Communications (Web Design & Content)"
 site: "https://mychiffonn.com/"
 ---

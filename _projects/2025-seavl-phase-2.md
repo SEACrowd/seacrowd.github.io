@@ -3,7 +3,8 @@ title: SEA-VL Phase 2
 thumbnail: seavl-phase2-banner.png
 description: Develop and benchmark an open-source state-of-the-art vision language model (VLM) for Southeast Asia
 fromDate: 2025-03-01
-status: ongoing
+toDate: 2026-01-31
+status: completed
 keywords:
   [
     "SEA-VL",
@@ -17,10 +18,6 @@ keywords:
     "multilingual AI"
   ]
 ---
-
-<div class="alert alert-warning text-center" role="alert">
-  Open contributions for tasks 2, 3, 4, and 5 are closed. For faster updates, please consider joining us on <a href="{{ site.social.discord }}" class="alert-link">Discord</a>.
-</div>
 
 After the success of [SEA-VL Phase 1](/projects/2025-seavl-phase-1), we are proud to launch **SEA-VL Phase 2**!
 
@@ -119,10 +116,6 @@ Example prompts for the Indonesian culture:
 Go to this
 [form](https://docs.google.com/forms/d/e/1FAIpQLSdbcxgN_sOqDResVkcj3s7IkYTWI8WDV6dZw0mZOIkH7puNSg/viewform?usp=dialog)
 to contribute.
-
-### Task 6: Submit High-Quality Text Prompts
-
-_(To be opened at a later date)_
 
 ## Contribution Point System for Tasks
 

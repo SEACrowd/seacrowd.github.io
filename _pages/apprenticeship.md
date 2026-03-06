@@ -27,7 +27,7 @@ faq:
       Examples include work on SEA languages, regional datasets, or SEA-specific social or cultural AI challenges.
   - title: "Am I qualified if I speak a language spoken in Southeast Asia, like Thai/Hokkien Chinese/etc?"
     content: |
-      This alone does not qualify you for the program. 
+      This alone does NOT qualify you for the program. 
 
       However, speaking a language from Southeast Asia can help, especially if it informs your research interests. We encourage you to highlight any relevant language skills and how they connect to your research goals in your application.
   - title: "Can I apply as a group/team?"
@@ -125,7 +125,7 @@ We offer five cutting-edge research projects:
 
 There are no formal eligibility or age limits. We’re a growth-first programme and value potential, motivation, and effort more than credentials.
 
-We welcome **anyone** who meets at least one of the following:
+We welcome anyone who can **commit 10+ hours/week** to the program and meets **at least one** of the following:
 
 - Your affiliation (e.g., school, organization, company) is from Southeast Asia (SEA).
 - You were born and raised in SEA (living there more than 10 years).
@@ -136,14 +136,14 @@ and share [our vision](/about#our-vision).
 ### What Increases Your Chances
 
 - Bachelor’s degree with a publication or Master’s degree.
-- Clear AI research goals (pre-PhD programs, early-year PhD, or prior collaboration with mentors).
-- Fit with project topics, capability, motivation, and mentors (assessed via application + interview).
+- Clear AI research goals (pre-doctoral programs, early-year PhD, or prior collaboration with mentors).
+- Fit with project topic, capability, motivation, mentors (assessed via application + interview).
 
 ## What You'll Gain
 
 - **Certificate of achievement** upon completion
 - **Letter of recommendation** for PhD/job applications (for strong contributors)
-- **Potential publication** at top ML/AI/NLP venues (first authorship reserved for project leads)
+- **Potential publication** at top ML/AI/NLP venues. The order of authorship is determined by your actual contribution, and usually first authorship is reserved for project lead.
 - **Mentorship** from experienced AI researchers
 - **Peer network** with similar research interests
 - **Hands-on experience** in collaborative AI research

@@ -1,7 +1,16 @@
 ---
 title: SEACrowd 2026 Apprentice Program
 permalink: /apprenticeship.html
-description: A part-time, remote research program that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research.
+description: A part-time, remote research program that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. 10+ hours/week Feb 1 - Jun 30, 2026.
+keywords:
+  [
+    apprenticeship program,
+    research mentorship,
+    fellowship,
+    AI research,
+    Southeast Asia,
+    machine learning
+  ]
 form: https://forms.gle/GCv3cyCRqzj4PqfA9
 thumbnail: apprenticeship.png
 hero: true
@@ -96,18 +105,14 @@ faq:
 ---
 
 <section class="hero">
-  <h1 class="hero-title">Connecting rising talent<br>with expertise in Southeast Asian AI</h1>
+  <h1 class="hero-title">Connecting rising talent in AI research<br>with expertise in Southeast Asia</h1>
   <p class="hero-subtitle"> {{ page.description }}</p>
   <div class="hero-actions">
-    <a href="{{ site.social.google_group }}" class="btn btn-primary btn-lg">Follow for Updates</a>
-    <a href="/mentors" class="btn btn-outline-secondary btn-lg disabled">Apply as a Mentor (2027)</a>
+    <a href="{{ site.social.google_group }}" class="btn btn-primary">Follow for Updates</a>
+    <a href="/mentors" class="btn btn-outline-secondary disabled">Apply as a Mentor (2027)</a>
   </div>
   <p class="hero-status">Applications for 2026 were already closed</p>
 </section>
-
-## 2025 Success Story
-
-Our first cohort (2024-2025) featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their projects](/apprentice-projects/2025/) and [our retrospective post](/posts/apprentice-program-retrospection) running the first cohort.
 
 ## 2026 Research Topics
 
@@ -149,6 +154,10 @@ and share [our vision](/about#our-vision).
 - **Hands-on experience** in collaborative AI research
 
 Check out [previous batch projects and publications](/apprentice-projects/)!
+
+## 2025 Success Story
+
+Our first cohort (2024-2025) featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their projects](/apprentice-projects/2025/) and [our retrospective post](/posts/apprentice-program-retrospection) running the first cohort.
 
 ## Application Process
 

@@ -1,8 +1,7 @@
 {% comment %}
-  Usage:
-  {% include project-cards.html projects=projects batch_key=batch_key %}
+  Usage: {% include project-cards.html projects=projects
+  batch_key=batch_key %}
 {% endcomment %}
-
 {% assign projects = include.projects | default: site.apprentice_projects %}
 {% if projects and projects.size > 0 %}
   <div class="project-grid">
@@ -15,9 +14,8 @@
       %}
       {% assign mentor_names = project.mentors | map: 'name' | join: ', ' %}
       {% assign mentee_names = project.mentees | map: 'name' | join: ', ' %}
-      {% capture project_preview %}
-{{ project.summary | default: project.content | markdownify }}
-      {% endcapture %}
+      {% capture project_preview %} {{ project.summary | default: project.content | markdownify
+  }} {% endcapture %}
       {% assign summary_text = project_preview
         | strip_html
         | strip_newlines
@@ -32,11 +30,26 @@
       >
         <div class="project-card-header">
           <h4 class="project-card-title">{{ project.title }}</h4>
-          {% if mentor_names != '' %}
-            <p class="project-card-meta">Mentors: {{ mentor_names }}</p>
-          {% endif %}
         </div>
         <p class="project-card-summary">{{ summary_text }}</p>
+        {% if mentor_names != '' or mentee_names != '' %}
+          <div class="project-card-team">
+            {% if mentor_names != '' %}
+              <p class="project-card-role project-card-role--mentor">
+                <span class="project-card-role-label">Mentors</span>
+                {{ mentor_names }}
+              </p>
+            {% endif %}
+            {% if project.mentees and project.mentees.size > 0 %}
+              <p class="project-card-role project-card-role--mentee">
+                <span class="project-card-role-label"
+                  >Mentees ({{ project.mentees.size }})</span
+                >
+                {{ mentee_names }}
+              </p>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
 
       <div
@@ -63,15 +76,35 @@
               {% if project.summary %}
                 <p class="project-modal-summary">{{ project.summary }}</p>
               {% endif %}
-              {% if mentor_names != '' %}
-                <p class="project-modal-meta">
-                  <strong>Mentors:</strong> {{ mentor_names }}
-                </p>
-              {% endif %}
-              {% if mentee_names != '' %}
-                <p class="project-modal-meta">
-                  <strong>Mentees:</strong> {{ mentee_names }}
-                </p>
+              {% if mentor_names != '' or mentee_names != '' %}
+                <div class="project-modal-team">
+                  {% if project.mentors and project.mentors.size > 0 %}
+                    <div class="project-modal-role project-modal-role--mentor">
+                      <strong class="project-modal-role-label">Mentors:</strong>
+                      <div class="d-flex flex-wrap gap-1 mt-1">
+                        {%- for person in project.mentors -%}
+                          <span class="badge rounded-pill project-modal-pill">
+                            {{- person.name -}}
+                          </span>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if project.mentees and project.mentees.size > 0 %}
+                    <div class="project-modal-role project-modal-role--mentee">
+                      <strong class="project-modal-role-label"
+                        >Mentees ({{ project.mentees.size }}):</strong
+                      >
+                      <div class="d-flex flex-wrap gap-1 mt-1">
+                        {%- for person in project.mentees -%}
+                          <span class="badge rounded-pill project-modal-pill">
+                            {{- person.name -}}
+                          </span>
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
               {% endif %}
               {% if project.links and project.links.size > 0 %}
                 <div class="project-modal-links">

@@ -3,6 +3,13 @@ batch: 2026
 order: 2
 title: "CoRaL: Contextual Relevance and Linguistic Enrichment"
 summary: "A multi-dimensional data curation framework to balance quality, relevance, and cultural coverage in low-resource corpora."
+mentors:
+  - name: "Fajri Koto"
+  - name: "M Dehan Al-Kautsar"
+mentees:
+  - name: "Thanh-Nhi Nguyen"
+  - name: "Feliks Victor Parningotan Samosir"
+  - name: "Michael Christlambert Sinanta"
 ---
 
 Low-resource language corpora often suffer from noise, domain imbalance, and linguistic mixing, making naive filtering harmful to both quantity and cultural representation.

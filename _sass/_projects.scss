@@ -14,8 +14,27 @@
   color: var(--muted-foreground);
 }
 
-.project-modal-meta {
-  margin-bottom: 0.35rem;
+.project-modal-role {
+  margin-bottom: 0.25rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-modal-role-label {
+  color: var(--primary);
+}
+
+.project-modal-role--mentee .project-modal-role-label {
+  color: var(--secondary);
+}
+
+.project-modal-pill {
+  font-weight: 400;
+  color: var(--foreground);
+  background-color: var(--bs-tertiary-bg);
+  border: 1px solid var(--border);
 }
 
 .project-modal-links ul {

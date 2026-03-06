@@ -1,0 +1,40 @@
+---
+title: Apprentice Projects
+permalink: /apprentice-projects/
+---
+{% assign batches = site.data.apprentice_batches %}
+{% if batches == null or batches.size == 0 %}
+  {% assign batch_years = site.apprentice_projects
+    | map: 'batch'
+    | uniq
+    | sort
+    | reverse
+  %}
+  {% assign default_batch = batch_years.first %}
+{% else %}
+  {% assign default_batch_obj = batches | where: 'current', true | first %}
+  {% if default_batch_obj == null %}
+    {% assign default_batch_obj = batches.first %}
+  {% endif %}
+  {% assign default_batch = default_batch_obj.year
+    | default: default_batch_obj
+  %}
+{% endif %}
+
+{% assign projects = site.apprentice_projects
+  | where: 'batch', default_batch
+  | sort: 'order'
+%}
+
+{% include apprentice-project-tabs.html active_batch=default_batch %}
+
+<h3>Projects</h3>
+
+{% if projects.size > 0 %}
+  {% include project-cards.html projects=projects batch_key=default_batch %}
+{% else %}
+  <p class="text-muted">Projects for this batch will be announced soon.</p>
+{% endif %}
+
+<h3>Publications</h3>
+{% bibliography --file apprenticeship --query @*[batch={{ default_batch }}] %}

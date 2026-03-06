@@ -1,7 +1,7 @@
 ---
 batch: 2026
 order: 1
-title: "Multilingual Agentic for Underrepresented Regions"
+title: "Multilingual Agentic Benchmarking for Underrepresented Regions"
 summary: "Build an environment and evaluation benchmark for agentic LLMs in low-resource languages and underrepresented regions."
 mentors:
   - name: "Samuel Cahyawijaya"

@@ -105,9 +105,7 @@ Each mentee will join a team of 2–3 mentors (at least 1 [primary mentor](#prim
 
 ## 2025 Success Story
 
-Our 2025 cohort featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their publications](/apprenticeship#past-apprentice-research)!
-
-We shared their journey and our learnings from running the first cohort in our [Retrospective blog post](/posts/apprentice-program-retrospection).
+Our first cohort (2024-2025) featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their projects](/apprentice-projects/2025/) and [our retrospective post](/posts/apprentice-program-retrospection) running the first cohort.
 
 ## 2026 Research Topics
 
@@ -119,7 +117,7 @@ We offer five cutting-edge research projects:
 4. **Selective Memory Layer Finetuning** - Architectural solutions for continual learning using memory layers
 5. **Knowledge Distillation in Multilingual Vision-Text Models** - Creating compact vision-language embeddings for edge devices
 
-[View detailed project topics →](https://docs.google.com/document/d/e/2PACX-1vSpPtzQYD8flrz9w01uLSADHvXBDtI5WE6ogbnwnpFfl9Y-89SCLsp252tZAYLYa6pimxCBj27UfbR7/pub)
+[View 2026 projects →](/apprentice-projects/2026/)
 
 ## Who Can Apply
 
@@ -148,7 +146,7 @@ and share [our vision](/about#our-vision).
 - **Peer network** with similar research interests
 - **Hands-on experience** in collaborative AI research
 
-Check out [previous batch publications](/apprenticeship#past-apprentice-research)!
+Check out [previous batch projects and publications](/apprentice-projects/)!
 
 ## Application Process
 
@@ -203,7 +201,3 @@ Publications are encouraged when ready, not tied to specific conference deadline
 ## FAQs
 
 {% include faq.html id="apprenticeship-faqs" %}
-
-## Past Apprentice Research
-
-{% include apprenticeship-tabs.html %}

@@ -24,5 +24,5 @@ We will test this empirically by systematically finetuning different components 
 **Relevant publications:**
 
 - Empirical Study on Updating Key-Value Memories in Transformer Feed-Forward Layers
-- Memory Layers at Scale | Research - AI at Meta
+- [Memory Layers at Scale](https://arxiv.org/abs/2412.09764)
 - Continual Learning via Sparse Memory Finetuning

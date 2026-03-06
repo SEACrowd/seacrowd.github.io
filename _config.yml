@@ -39,6 +39,11 @@ defaults:
     values:
       layout: "project"
   - scope:
+      path: ""
+      type: "apprentice_projects"
+    values:
+      layout: "apprentice-project"
+  - scope:
       path: "assets"
     values:
       sitemap: false
@@ -59,7 +64,8 @@ collections:
     permalink: /people/:title.html
     sort_by: name
   apprentice_projects:
-    output: false
+    output: true
+    permalink: /apprentice-projects/:path.html
 
 include:
   - _pages

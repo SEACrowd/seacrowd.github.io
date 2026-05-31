@@ -1,17 +1,19 @@
 ---
-date: 2026-01-27
-title: "SEACrowd Apprentice Program: Mid-Term Progress 2026 Update & Call for Mentor for 2027"
-description: "We’re at the mid-term point of our SEACrowd Apprentice Program 2026 cohort, and the energy is electric! Five mentored teams with a total of 21 mentees from Southeast Asian have made remarkable progress across cutting-edge research projects focused on language model and AI. This post shares our exciting mid-term achievements, introduces the 2026 project teams, and opens the door for mentors to join our 2027 batch. (Read time: 10 minutes).]
+date: 2026-05-31
+title: "SEACrowd Apprentice Program: Mid-Term Progress 2026 & Call for Mentor 2027"
+description: "Celebrate mid-term wins with our SEACrowd 2026 cohort! Discover how 21 regional mentees are advancing LLM and AI innovation, meet the active project teams, and find out how to apply as a mentor for the 2027 batch."
 category: Apprenticeship
 tags: [apprenticeship, restropection]
 featured: true
 authors: [Mentors of SEACrowd Apprentice Programs 2026]
-thumbnail: retrospective-review.png
+thumbnail: mid-report-2026.png
 ---
 
 ##### TL;DR
 
-We’re at the mid-term point of our SEACrowd Apprentice Program 2026 cohort, and the energy is electric! Five mentored teams with a total of 21 mentees from Southeast Asian have made remarkable progress across cutting-edge research projects focused on language model and AI. This post shares our exciting mid-term achievements, introduces the 2026 project teams, and opens the door for mentors to join our 2027 batch. (Read time: 10 minutes).
+We’re at the mid-term point of our SEACrowd Apprentice Program 2026 cohort, and the energy is electric! Five mentored teams with a total of 21 mentees from Southeast Asian have made remarkable progress across cutting-edge research projects focused on language model and AI. This post shares our exciting mid-term achievements, introduces the 2026 project teams, and opens the door for mentors to join our 2027 batch.
+
+Interested on Mentoring the 2027 SEACrowd Apprentice Program? Fill the interest form **[here](https://docs.google.com/forms/d/1fxB2IUJSBqKkNEF5GH6gIRkM0-HIZ5_nzyTf8b990p4/edit">2027 SEACrowd Apprentice Program I)**
 
 ## Background
 
@@ -128,7 +130,9 @@ If you’ve been inspired by the progress of our 2026 cohort, we invite you to j
 
 We’re currently looking for quality mentors the 2027 SEACrowd Apprentice Program. If you’re an experienced researcher or practitioner in AI/ML/NLP with a passion for mentoring and Southeast Asian development, we want to hear from you!
 
-**Interested on Mentoring the 2027 SEACrowd Apprentice Program? Fill the form here:** https://docs.google.com/forms/d/1fxB2IUJSBqKkNEF5GH6gIRkM0-HIZ5_nzyTf8b990p4/edit
+**Interested on Mentoring the 2027 SEACrowd Apprentice Program? Fill the form here:**
+<h4 style="text-align: center; font-weight: black; font-family: courier;"><a href="https://docs.google.com/forms/d/1fxB2IUJSBqKkNEF5GH6gIRkM0-HIZ5_nzyTf8b990p4/edit">2027 SEACrowd Apprentice Program Interest Form</a></h4>
+
 
 **Program Details:** The 2027 program will run from February to June 2027, following the same successful structure as our 2026 cohort with remote collaboration, structured milestones, and community support.
 
@@ -143,8 +147,8 @@ We’re making structural improvements for 2027 based on our learnings, but the 
 If you’re inspired by this progress and want to be part of shaping the future of AI in Southeast Asia - whether as a mentor or supporter - we invite you to join us on this journey.
 
 **Connect with us:**
--   Website: https://seacrowd.org
--   Discord: https://discord.gg/wdERfHQjcA
+-   Website: [https://seacrowd.org](https://seacrowd.org)
+-   Discord: [https://discord.gg/wdERfHQjcA](https://discord.gg/wdERfHQjcA)
 -   Email: seacrowd.research@gmail.com
     
 Let’s continue building AI for Southeast Asia, by Southeast Asians!

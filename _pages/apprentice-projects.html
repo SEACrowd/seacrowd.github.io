@@ -4,7 +4,7 @@ permalink: /apprentice-projects/
 ---
 {% assign batches = site.data.apprentice_batches %}
 {% if batches == null or batches.size == 0 %}
-  {% assign batch_years = site.apprentice_projects
+  {% assign batch_years = site['apprentice-projects']
     | map: 'batch'
     | uniq
     | sort
@@ -21,7 +21,7 @@ permalink: /apprentice-projects/
   %}
 {% endif %}
 
-{% assign projects = site.apprentice_projects
+{% assign projects = site['apprentice-projects']
   | where: 'batch', default_batch
   | sort: 'order'
 %}

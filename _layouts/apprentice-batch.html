@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign projects = site.apprentice_projects
+{% assign projects = site['apprentice-projects']
   | where: 'batch', page.batch
   | sort: 'order'
 %}

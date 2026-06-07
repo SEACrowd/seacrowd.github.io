@@ -6,7 +6,7 @@ summary: "Explore memory-layer finetuning strategies to improve continual learni
 mentors:
   - name: "Alham Fikri Aji"
   - name: "Farid Adilazuarda"
-  - name: "Muhammad Reza Qorib"
+  - name: "M. Reza Qorib"
 mentees:
   - name: "Faeyza Rishad Ardi"
   - name: "Izaaz Inhar"

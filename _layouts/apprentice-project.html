@@ -57,7 +57,7 @@ layout: default
     {{ content }}
   </div>
 
-  {% assign batch_projects = site.apprentice_projects
+  {% assign batch_projects = site['apprentice-projects']
     | where: 'batch', page.batch
     | sort: 'order'
   %}

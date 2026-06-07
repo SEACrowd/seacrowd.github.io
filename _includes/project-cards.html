@@ -2,7 +2,7 @@
   Usage: {% include project-cards.html projects=projects
   batch_key=batch_key %}
 {% endcomment %}
-{% assign projects = include.projects | default: site.apprentice_projects %}
+{% assign projects = include.projects | default: site['apprentice-projects'] %}
 {% if projects and projects.size > 0 %}
   <div class="project-grid">
     {% for project in projects %}

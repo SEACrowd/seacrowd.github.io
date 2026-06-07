@@ -5,7 +5,7 @@ title: "CoRaL: Contextual Relevance and Linguistic Enrichment"
 summary: "A multi-dimensional data curation framework to balance quality, relevance, and cultural coverage in low-resource corpora."
 mentors:
   - name: "Fajri Koto"
-  - name: "M Dehan Al-Kautsar"
+  - name: "M. Dehan Al-Kautsar"
 mentees:
   - name: "Thanh-Nhi Nguyen"
   - name: "Feliks Victor Parningotan Samosir"

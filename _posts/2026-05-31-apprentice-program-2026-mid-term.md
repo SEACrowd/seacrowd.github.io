@@ -126,7 +126,7 @@ Click on a mentor to read their reflection on the program.
 
 <div class="accordion" id="mentor-voices-accordion">
 {% for voice in page.mentor_voices %}
-  {% assign mentor = site.data.mentors | where: "name", voice.name | first %}
+  {% assign mentor = site.mentors | where: "name", voice.name | first %}
   <div class="accordion-item">
     <h3 class="accordion-header" id="mentor-voice-heading-{{ forloop.index }}">
       <button

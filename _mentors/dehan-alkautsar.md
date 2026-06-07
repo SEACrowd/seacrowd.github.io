@@ -1,5 +1,5 @@
 ---
-name: "M. Dehan Al-Kautsar"
+name: "Muhammad Dehan Al Kautsar"
 role: secondary_mentor
 position: NLP Researcher
 affiliation: MBZUAI

@@ -36,7 +36,7 @@ faq:
       You can still qualify if your work connects to Southeast Asia. One clear way is to do research related to Southeast Asia, particularly in Machine Learning or Natural Language Processing.
 
       Examples include work on SEA languages, regional datasets, or SEA-specific social or cultural AI challenges.
-  - title: "Am I qualified if I speak a language spoken in Southeast Asia, like Thai/Hokkien Chinese/etc?"
+  - title: "Am I qualified if I speak a language spoken in Southeast Asia, like Thai or Hokkien?"
     content: |
       This alone does NOT qualify you for the program. 
 
@@ -204,7 +204,7 @@ Publications are encouraged when ready, not tied to specific conference deadline
 <div class="row g-2">
   {% for profile in site.mentors %}
     {% if profile.role == "organizer" %}
-      {% include mentor.html profile=profile %}
+      {% include mentor.html profile=profile no_link=true %}
     {% endif %}
   {% endfor %}
 </div>

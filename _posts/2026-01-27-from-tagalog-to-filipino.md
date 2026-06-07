@@ -4,7 +4,6 @@ title: "From Tagalog to Filipino: Deciphering Language and Identity"
 description: "Is it Tagalog or Filipino? We explore how a regional language became a national standard, and why this evolution matters for training robust, inclusive NLP models."
 tags: [linguistics, nlp, filipino, tagalog, history, data-culture]
 category: "Society & AI"
-featured: true
 authors: [Isaiah Flores]
 thumbnail: filipino-tagalog/1_baybayin_script.jpg
 ---

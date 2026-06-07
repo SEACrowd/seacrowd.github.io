@@ -72,6 +72,7 @@ collections:
   mentors:
     output: true
     permalink: /mentors/:name/
+    sort_by: name
   apprentice-projects:
     output: true
 

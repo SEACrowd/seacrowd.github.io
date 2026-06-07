@@ -109,9 +109,9 @@ faq:
   <p class="hero-subtitle"> {{ page.description }}</p>
   <div class="hero-actions">
     <a href="{{ site.social.google_group }}" class="btn btn-primary">Follow for Updates</a>
-    <a href="/mentors" class="btn btn-outline-secondary disabled">Apply as a Mentor (2027)</a>
+    <a href="/mentors" class="btn btn-outline-secondary">Apply as a Mentor (2027)</a>
   </div>
-  <p class="hero-status">Applications for 2026 were already closed</p>
+  <p class="hero-status">Mentee application for 2026 is closed. We expect to open batch 2027 application in Q4 2026.</p>
 </section>
 
 ## 2026 Research Topics
@@ -182,7 +182,7 @@ Publications are encouraged when ready, not tied to specific conference deadline
 ### Primary Mentors
 
 <div class="row g-2">
-  {% for profile in site.data.mentors %}
+  {% for profile in site.mentors %}
     {% if profile.role == "primary_mentor" %}
       {% include mentor.html profile=profile %}
     {% endif %}
@@ -192,7 +192,7 @@ Publications are encouraged when ready, not tied to specific conference deadline
 ### Secondary Mentors
 
 <div class="row g-2">
-  {% for profile in site.data.mentors %}
+  {% for profile in site.mentors %}
     {% if profile.role == "secondary_mentor" %}
       {% include mentor.html profile=profile %}
     {% endif %}
@@ -202,7 +202,7 @@ Publications are encouraged when ready, not tied to specific conference deadline
 ### Organizers & Research Managers
 
 <div class="row g-2">
-  {% for profile in site.data.mentors %}
+  {% for profile in site.mentors %}
     {% if profile.role == "organizer" %}
       {% include mentor.html profile=profile %}
     {% endif %}

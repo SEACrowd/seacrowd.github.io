@@ -91,12 +91,12 @@ Over 2024-2025, I served as a lead mentor for the **[SEACrowd Apprentice Program
 
 This post shares what we built, what was hard, what we're changing, and how you can [join Batch 2026](/apprenticeship).
 
-TLDR;
-
-- We ran our first SEACrowd Apprentice Program cohort focused on real research.
-- Along the way, we hit hard problems: uneven commitment, skill gaps inside teams, mentor bandwidth issues, and losing momentum over a long timeline.
-- We're changing the structure for **[Batch 2026](/apprenticeship)** with clearer selection, midterm and end-term milestones, external evaluations, and better-matched teams.
-- [Application is open](/apprenticeship) until Dec 17, 2025 11:59PM UTC-12. Go to our page for more details.
+> **TL;DR**
+>
+> - We ran our first SEACrowd Apprentice Program cohort focused on real research.
+> - Along the way, we hit hard problems: uneven commitment, skill gaps inside teams, mentor bandwidth issues, and losing momentum over a long timeline.
+> - We're changing the structure for **[Batch 2026](/apprenticeship)** with clearer selection, midterm and end-term milestones, external evaluations, and better-matched teams.
+> - [Application is open](/apprenticeship) until Dec 17, 2025 11:59PM UTC-12. Go to our page for more details.
 
 ## About SEACrowd
 

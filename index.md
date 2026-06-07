@@ -15,13 +15,13 @@ keywords:
   ]
 carousel:
   - image: "events/coling2025.jpg"
-    description: Our SEACrowd 2026 Apprentice Program is closed. Register your interest to join future cohorts!
+    description: We're looking for research mentors for our SEACrowd 2027 Apprentice Program.
     button_text: Register interest
-    button_url: "https://groups.google.com/u/0/g/seacrowd"
+    button_url: "https://docs.google.com/forms/d/e/1FAIpQLSf55CiCS5ld9ZDGBZ4Lr9lcu5DPG0ElVCtIJ_YzpQxmdJ3QbA/viewform"
   - image: "posts/emnlp-2024-bof.jpg"
-    description: Help build Southeast Asia’s culturally-aware evaluation benchmarks for vision-language models
-    button_text: View ongoing project
-    button_url: "/projects/2025-seavl-phase-2"
+    description: See our preprint "Anthropogenic Regional Adaptation in Multimodal Vision-Language Model", building Southeast Asia's culturally-aware VLMs
+    button_text: Read arxiv preprint
+    button_url: "https://arxiv.org/abs/2604.11490"
   - image: "projects/seacrowd-catalog.png"
     description: Compile the first catalog and benchmark for 500+ Southeast Asian datasets
     button_text: View finished project

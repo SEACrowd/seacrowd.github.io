@@ -3,7 +3,8 @@ title: SEA-VL Phase 2
 thumbnail: seavl-phase2-banner.png
 description: Develop and benchmark an open-source state-of-the-art vision language model (VLM) for Southeast Asia
 fromDate: 2025-03-01
-status: ongoing
+toDate: 2025-12-31
+status: finished
 keywords:
   [
     "SEA-VL",

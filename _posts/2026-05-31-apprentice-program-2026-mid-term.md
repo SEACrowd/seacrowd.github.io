@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2026-05-31
-title: "SEACrowd Apprentice Program: Mid-Term Progress 2026 & Call for Mentor 2027"
-description: "Celebrate mid-term wins with our SEACrowd 2026 cohort! Discover how 21 regional mentees are advancing LLM and AI innovation, meet the active project teams, and find out how to apply as a mentor for the 2027 batch."
+title: "SEACrowd Apprentice Program 2026: Progress & Call for Mentors 2027"
+description: "Celebrate mid-term wins with our 2026 cohort of 21 mentees advancing AI research in five teams, and find out how to apply as a mentor for the 2027 batch."
 category: Apprenticeship
 tags: [apprenticeship, restropection]
 featured: true

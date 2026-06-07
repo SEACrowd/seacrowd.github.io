@@ -7,40 +7,51 @@ layout: default
   {% if page.summary %}
     <p class="text-muted">{{ page.summary }}</p>
   {% endif %}
+
   {% assign mentor_names = page.mentors | map: 'name' %}
   {% assign mentee_names = page.mentees | map: 'name' %}
   {% if mentor_names.size > 0 or mentee_names.size > 0 %}
-    <div class="project-modal-team">
+    <div class="project-team">
       {% if page.mentors and page.mentors.size > 0 %}
-        <div class="project-modal-role project-modal-role--mentor">
-          <strong class="project-modal-role-label">Mentors:</strong>
+        <div class="project-team-role project-team-role--mentor">
+          <strong class="project-team-role-label">Mentors:</strong>
           <div class="d-flex flex-wrap gap-1 mt-1">
             {%- for person in page.mentors -%}
-              <span class="badge rounded-pill project-modal-pill">
-                {{- person.name -}}
-              </span>
+              {% assign mentor_page = site.mentors
+                | where: 'name', person.name
+                | first
+              %}
+              {% if mentor_page %}
+                <a
+                  href="{{ mentor_page.url | relative_url }}"
+                  class="project-tag project-tag--mentor"
+                >
+                  {{- person.name -}}
+                </a>
+              {% else %}
+                <span class="project-tag">{{- person.name -}}</span>
+              {% endif %}
             {%- endfor -%}
           </div>
         </div>
       {% endif %}
       {% if page.mentees and page.mentees.size > 0 %}
-        <div class="project-modal-role project-modal-role--mentee">
-          <strong class="project-modal-role-label"
+        <div class="project-team-role project-team-role--mentee">
+          <strong class="project-team-role-label"
             >Mentees ({{ page.mentees.size }}):</strong
           >
           <div class="d-flex flex-wrap gap-1 mt-1">
             {%- for person in page.mentees -%}
-              <span class="badge rounded-pill project-modal-pill">
-                {{- person.name -}}
-              </span>
+              <span class="project-tag">{{- person.name -}}</span>
             {%- endfor -%}
           </div>
         </div>
       {% endif %}
     </div>
   {% endif %}
+
   {% if page.links and page.links.size > 0 %}
-    <div class="project-modal-links">
+    <div class="project-links">
       <strong>Resources:</strong>
       <ul>
         {%- for link in page.links -%}
@@ -52,8 +63,8 @@ layout: default
     </div>
   {% endif %}
 
-  <div class="project-modal-proposal">
-    <h6>Project proposal</h6>
+  <div class="project-proposal">
+    <p class="project-proposal-label">Project Proposal</p>
     {{ content }}
   </div>
 
@@ -68,7 +79,7 @@ layout: default
     {% if found and next_project == null %}
       {% assign next_project = p %}
     {% endif %}
-    {% if p.url == page.url %} {% assign found = true %} {% endif %}
+    {% if p.url == page.url %}{% assign found = true %}{% endif %}
     {% unless found %}
       {% assign prev_project = p %}
     {% endunless %}

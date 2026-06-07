@@ -21,16 +21,16 @@ links:
     url: "https://arxiv.org/abs/2508.07069"
 ---
 
-#### The problem
+## The problem
 
 Underrepresented languages often perform worse and fail to align with local norms and expectations in multi-turn conversations.
 
-#### The approach
+## The approach
 
 The team built a culturally grounded, multi-turn dialogue dataset for SEA languages. They collected, curated, and annotated conversations that reflect local cultural practices.
 
 The dataset supports both training and evaluation of value-aware conversational models.
 
-#### Why this matters
+## Why this matters
 
 SEADialogues provides a targeted resource for improving conversational AI in SEA languages, a benchmark for evaluating value alignment, and a starting point for future work on dialogue safety and social norms in SEA contexts.

@@ -20,7 +20,7 @@ links:
     url: "https://sigtyp.github.io/ws2025-mrl.html"
 ---
 
-#### The problem
+## The problem
 
 Multilingual LLMs can drift into the wrong language or mix languages, especially when prompted in under-resourced languages.
 
@@ -29,13 +29,13 @@ We wanted to understand:
 - How multilingual LLMs organize languages internally
 - Whether we can steer which language the model generates without retraining
 
-#### The approach
+## The approach
 
 The team studied how multilingual LLMs organize languages in their latent space and how representations shift across languages.
 
 They developed Inference-Time Language Control (ITLC), a method for nudging models toward more consistent language outputs without retraining.
 
-#### Why this matters
+## Why this matters
 
 Low-resource languages often see less stable outputs, more language switching, and lower quality.
 

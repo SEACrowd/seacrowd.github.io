@@ -40,7 +40,13 @@
     {% assign link_is_internal = false %}
   {% endif %}
 
-  <div class="card card-clickable mentor-card h-100 position-relative w-100">
+  {% assign card_clickable = false %}
+  {% unless include.no_link %}
+    {% if profile_link and profile_link != '' -%}
+      {%- assign card_clickable = true -%}
+    {%- endif %}
+  {% endunless %}
+  <div class="card {% if card_clickable %}card-clickable {% endif %}mentor-card h-100 position-relative w-100">
     <div class="row g-2 h-100 align-items-center">
       <div class="col-4 d-flex align-items-center justify-content-center">
         {% if image_src != '' %}
@@ -66,16 +72,18 @@
         {% endif %}
       </div>
     </div>
-    {% if profile_link and profile_link != '' %}
-      <a
-        href="{{ profile_link }}"
-        class="stretched-link"
-        {% unless link_is_internal %}
-          target="_blank"
-          rel="noopener"
-        {% endunless %}
-        aria-label="{{ profile_name }} profile"
-      ></a>
-    {% endif %}
+    {% unless include.no_link %}
+      {% if profile_link and profile_link != '' %}
+        <a
+          href="{{ profile_link }}"
+          class="stretched-link"
+          {% unless link_is_internal %}
+            target="_blank"
+            rel="noopener"
+          {% endunless %}
+          aria-label="{{ profile_name }} profile"
+        ></a>
+      {% endif %}
+    {% endunless %}
   </div>
 </div>

@@ -30,7 +30,7 @@
 {% endif %}
 
 <div class="accordion-item">
-  <h3 class="accordion-header" id="heading-{{ collapse_id }}">
+  <div class="accordion-header" id="heading-{{ collapse_id }}">
     <button
       class="accordion-button {{ collapsed_class }}"
       type="button"
@@ -44,7 +44,7 @@
     >
       {{ include.title }}
     </button>
-  </h3>
+  </div>
   <div
     id="{{ collapse_id }}"
     class="accordion-collapse collapse {{ show_class }}"

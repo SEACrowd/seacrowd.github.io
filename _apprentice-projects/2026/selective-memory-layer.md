@@ -3,6 +3,16 @@ batch: 2026
 order: 4
 title: "Selective Memory Layer Finetuning"
 summary: "Explore memory-layer finetuning strategies to improve continual learning without catastrophic forgetting."
+mentors:
+  - name: "Alham Fikri Aji"
+  - name: "Farid Adilazuarda"
+  - name: "M. Reza Qorib"
+mentees:
+  - name: "Faeyza Rishad Ardi"
+  - name: "Izaaz Inhar"
+  - name: "Phudish Prateepamornkul"
+  - name: "Quang Minh Nguyen"
+  - name: "Tri Vo"
 ---
 
 We tackle continual learning from an architectural perspective. Instead of LoRA, whose parameters grow with the number of tasks or languages, we explore memory layers where the model can store or learn context by injecting key-value information during inference.
@@ -14,5 +24,5 @@ We will test this empirically by systematically finetuning different components 
 **Relevant publications:**
 
 - Empirical Study on Updating Key-Value Memories in Transformer Feed-Forward Layers
-- Memory Layers at Scale | Research - AI at Meta
+- [Memory Layers at Scale](https://arxiv.org/abs/2412.09764)
 - Continual Learning via Sparse Memory Finetuning

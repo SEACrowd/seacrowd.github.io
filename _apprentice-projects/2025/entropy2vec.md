@@ -20,19 +20,19 @@ links:
     url: "https://sigtyp.github.io/ws2025-mrl.html"
 ---
 
-#### The problem
+## The problem
 
 Linguistic typology is traditionally built from manual documentation and expert analysis.
 
 LLMs, however, learn language behavior at scale. We asked whether internal language knowledge in LLMs can reflect typological relationships similar to those in resources like Ethnologue and Glottolog.
 
-#### The approach
+## The approach
 
 The team extracted language representations from cross-lingual language modeling entropy across monolingual language models.
 
 They built Entropy2Vec, a language embedding space where distances between vectors align with typological structure, using model prediction patterns rather than handcrafted linguistic features.
 
-#### Why this matters
+## Why this matters
 
 The learned embeddings can recover typological structure and help regularize fine-tuning to improve transfer to unseen languages.
 

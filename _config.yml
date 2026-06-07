@@ -39,6 +39,17 @@ defaults:
     values:
       layout: "project"
   - scope:
+      path: ""
+      type: "mentors"
+    values:
+      layout: mentor
+      toc: false
+  - scope:
+      path: ""
+      type: "apprentice-projects"
+    values:
+      layout: "apprentice-project"
+  - scope:
       path: "assets"
     values:
       sitemap: false
@@ -58,8 +69,12 @@ collections:
     output: true
     permalink: /people/:title.html
     sort_by: name
-  apprentice_projects:
-    output: false
+  mentors:
+    output: true
+    permalink: /mentors/:name/
+    sort_by: name
+  apprentice-projects:
+    output: true
 
 include:
   - _pages

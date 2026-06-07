@@ -1,0 +1,57 @@
+{% comment %}
+  Tab navigation for apprentice project batch pages.
+  Each tab is a link to /apprentice-projects/{batch}/.
+  Usage: {% include apprentice-project-tabs.html active_batch=page.batch %}
+{% endcomment %}
+{% assign batches = site.data.apprentice_batches %}
+{% if batches == null or batches.size == 0 %}
+  {% assign batch_years = site['apprentice-projects']
+    | map: 'batch'
+    | uniq
+    | sort
+    | reverse
+  %}
+  {% assign batches = '' | split: '' %}
+  {% for year in batch_years %}
+    {% assign batches = batches | push: year %}
+  {% endfor %}
+{% endif %}
+
+{% assign active_str = include.active_batch | append: '' %}
+
+<ul class="nav nav-tabs mb-4" role="tablist">
+  {%- for batch in batches -%}
+    {%- assign batch_key = batch.year | default: batch -%}
+    {%- assign key_str = batch_key | append: '' -%}
+    {%- assign is_active = false -%}
+    {%- if active_str == key_str -%}
+      {%- assign is_active = true -%}
+    {%- endif -%}
+    {%- assign batch_label = batch.label | default: '' -%}
+    {%- assign batch_style_class = batch.style_class
+      | default: 'badge bg-secondary'
+    -%}
+    {%- if batch_label == '' and forloop.first -%}
+      {%- assign batch_label = 'current' -%}
+    {%- endif -%}
+    {%- assign label_class = batch_style_class | append: ' badge ms-2' -%}
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link {% if is_active %}active{% endif %}"
+        href="{{ '/apprentice-projects/' | append: batch_key | append: '/' | relative_url }}"
+        {% if is_active %}
+          aria-current="page"
+        {% endif %}
+      >
+        Batch {{ batch_key }}
+        {%- if batch_label != '' -%}
+          <span
+            class="{% if is_active %}{{ label_class }}{% else %}badge bg-light text-muted border ms-2{% endif %}"
+          >
+            {{- batch_label -}}
+          </span>
+        {%- endif -%}
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>

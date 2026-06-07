@@ -1,0 +1,132 @@
+---
+layout: default
+---
+<div class="my-4">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  {% if page.summary %}
+    <p class="text-muted">{{ page.summary }}</p>
+  {% endif %}
+
+  {% assign mentor_names = page.mentors | map: 'name' %}
+  {% assign mentee_names = page.mentees | map: 'name' %}
+  {% if mentor_names.size > 0 or mentee_names.size > 0 %}
+    <div class="project-team">
+      {% if page.mentors and page.mentors.size > 0 %}
+        <div class="project-team-role project-team-role--mentor">
+          <strong class="project-team-role-label">Mentors:</strong>
+          <div class="d-flex flex-wrap gap-1 mt-1">
+            {%- for person in page.mentors -%}
+              {% assign mentor_page = site.mentors
+                | where: 'name', person.name
+                | first
+              %}
+              {% if mentor_page %}
+                <a
+                  href="{{ mentor_page.url | relative_url }}"
+                  class="project-tag project-tag--mentor"
+                >
+                  {{- person.name -}}
+                </a>
+              {% else %}
+                <span class="project-tag">{{- person.name -}}</span>
+              {% endif %}
+            {%- endfor -%}
+          </div>
+        </div>
+      {% endif %}
+      {% if page.mentees and page.mentees.size > 0 %}
+        <div class="project-team-role project-team-role--mentee">
+          <strong class="project-team-role-label"
+            >Mentees ({{ page.mentees.size }}):</strong
+          >
+          <div class="d-flex flex-wrap gap-1 mt-1">
+            {%- for person in page.mentees -%}
+              <span class="project-tag">{{- person.name -}}</span>
+            {%- endfor -%}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if page.links and page.links.size > 0 %}
+    <div class="project-links">
+      <strong>Resources:</strong>
+      <ul>
+        {%- for link in page.links -%}
+          <li>
+            <a href="{{ link.url }}">{{ link.label }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {% endif %}
+
+  <div class="project-proposal">
+    <p class="project-proposal-label">Project Proposal</p>
+    {{ content }}
+  </div>
+
+  {% assign batch_projects = site['apprentice-projects']
+    | where: 'batch', page.batch
+    | sort: 'order'
+  %}
+  {% assign prev_project = null %}
+  {% assign next_project = null %}
+  {% assign found = false %}
+  {% for p in batch_projects %}
+    {% if found and next_project == null %}
+      {% assign next_project = p %}
+    {% endif %}
+    {% if p.url == page.url %}{% assign found = true %}{% endif %}
+    {% unless found %}
+      {% assign prev_project = p %}
+    {% endunless %}
+  {% endfor %}
+
+  <nav
+    class="post-navigation my-5"
+    role="navigation"
+    aria-label="Project navigation"
+  >
+    <div class="row g-3">
+      <div class="col-md-6">
+        {% if prev_project %}
+          <a
+            href="{{ prev_project.url | relative_url }}"
+            class="post-nav-link post-nav-prev d-flex align-items-center p-3 h-100 text-decoration-none border rounded-3"
+            aria-label="Go to previous project: {{ prev_project.title }}"
+          >
+            <div class="nav-icon me-3">
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="nav-content text-start">
+              <small class="nav-label d-block text-muted mb-1">Previous</small>
+              <span class="nav-title fw-medium">
+                {{- prev_project.title -}}
+              </span>
+            </div>
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-md-6">
+        {% if next_project %}
+          <a
+            href="{{ next_project.url | relative_url }}"
+            class="post-nav-link post-nav-next d-flex align-items-center p-3 h-100 text-decoration-none border rounded-3"
+            aria-label="Go to next project: {{ next_project.title }}"
+          >
+            <div class="nav-content text-end flex-grow-1">
+              <small class="nav-label d-block text-muted mb-1">Next</small>
+              <span class="nav-title fw-medium">{{ next_project.title }}</span>
+            </div>
+            <div class="nav-icon ms-3">
+              <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</div>

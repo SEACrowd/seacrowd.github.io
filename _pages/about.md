@@ -8,7 +8,7 @@ permalink: /about.html
 
 ## Our Vision
 
-We are a **grassroots-led community of researchers from Southeast Asia** advancing Artificial
+We are a **grassroots-led community of researchers from Southeast Asia (SEA)** advancing Artificial
 Intelligence tools, resources, and capabilities for the region.
 
 We envision AI ecosystems in Southeast Asia that are mature, competitive globally, and enable people

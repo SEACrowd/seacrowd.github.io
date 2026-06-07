@@ -27,8 +27,26 @@
       | relative_url
     %}
   {% endif %}
+  {% comment %}
+    Collection items (site.mentors) have .url; fall back
+    to external site.
+  {% endcomment %}
+  {% assign profile_internal_url = current_profile.url | default: '' %}
+  {% if profile_internal_url != '' %}
+    {% assign profile_link = profile_internal_url | relative_url %}
+    {% assign link_is_internal = true %}
+  {% else %}
+    {% assign profile_link = profile_site %}
+    {% assign link_is_internal = false %}
+  {% endif %}
 
-  <div class="card card-clickable mentor-card h-100 position-relative w-100">
+  {% assign card_clickable = false %}
+  {% unless include.no_link %}
+    {% if profile_link and profile_link != '' -%}
+      {%- assign card_clickable = true -%}
+    {%- endif %}
+  {% endunless %}
+  <div class="card {% if card_clickable %}card-clickable {% endif %}mentor-card h-100 position-relative w-100">
     <div class="row g-2 h-100 align-items-center">
       <div class="col-4 d-flex align-items-center justify-content-center">
         {% if image_src != '' %}
@@ -54,14 +72,18 @@
         {% endif %}
       </div>
     </div>
-    {% if profile_site and profile_site != '' %}
-      <a
-        href="{{ profile_site }}"
-        class="stretched-link"
-        target="_blank"
-        rel="noopener"
-        aria-label="{{ profile_name }} website"
-      ></a>
-    {% endif %}
+    {% unless include.no_link %}
+      {% if profile_link and profile_link != '' %}
+        <a
+          href="{{ profile_link }}"
+          class="stretched-link"
+          {% unless link_is_internal %}
+            target="_blank"
+            rel="noopener"
+          {% endunless %}
+          aria-label="{{ profile_name }} profile"
+        ></a>
+      {% endif %}
+    {% endunless %}
   </div>
 </div>

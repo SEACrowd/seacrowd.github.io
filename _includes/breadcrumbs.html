@@ -1,0 +1,64 @@
+{% unless page.url == '/' or page.url == '/index.html' %}
+  {% assign raw_crumbs = page.url | split: '/' %}
+  {% assign crumbs = '' | split: '' %}
+  {% for c in raw_crumbs %}
+    {% assign stripped = c | strip %}
+    {% if stripped != '' and stripped != 'index.html' %}
+      {% assign crumbs = crumbs | push: stripped %}
+    {% endif %}
+  {% endfor %}
+  {% if crumbs.size > 0 %}
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="breadcrumb-content">
+        <a href="{{ '/' | relative_url }}" class="breadcrumb-link">Home</a>
+        {% assign path = '' %}
+        {% for crumb in crumbs %}
+          {% assign path = path | append: '/' | append: crumb %}
+          <span class="breadcrumb-separator" aria-hidden="true">/</span>
+          {% if forloop.last %}
+            <span class="breadcrumb-current" aria-current="page">
+              {{-
+                page.title
+                | default: crumb
+                | replace: '-', ' '
+                | replace: '.html', ''
+              -}}
+            </span>
+          {% else %}
+            {% assign label = crumb
+              | replace: '-', ' '
+              | replace: '.html', ''
+              | capitalize
+            %}
+            {% assign crumb_url = null %}
+            {% assign try_html = path | append: '.html' %}
+            {% assign found_page = site.pages
+              | where: 'url', try_html
+              | first
+            %}
+            {% unless found_page %}
+              {% assign try_slash = path | append: '/' %}
+              {% assign found_page = site.pages
+                | where: 'url', try_slash
+                | first
+              %}
+            {% endunless %}
+            {% if found_page %}
+              {% assign crumb_url = found_page.url %}
+            {% endif %}
+            {% if crumb_url %}
+              <a
+                href="{{ crumb_url | relative_url }}"
+                class="breadcrumb-link"
+              >
+                {{- label -}}
+              </a>
+            {% else %}
+              <span class="breadcrumb-current">{{ label }}</span>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+  {% endif %}
+{% endunless %}

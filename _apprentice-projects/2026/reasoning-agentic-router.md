@@ -3,6 +3,13 @@ batch: 2026
 order: 3
 title: "Reasoning Agentic LLM Router"
 summary: "Develop skill-based routing to reduce inference costs while preserving strong generalization."
+mentors:
+  - name: "Genta Indra Winata"
+  - name: "David Anugraha"
+mentees:
+  - name: "Napol Rachatasumrit"
+  - name: "Quyen Le Hoang Tran"
+  - name: "Jaycent Gunawan Ongris"
 ---
 
 Learning to route effectively is crucial for improving the efficiency of LLM inference by leveraging model capabilities. Prior work explores routing strategies, but does not thoroughly examine fine-grained, skill-based routing that can substantially reduce costs while preserving strong generalization.

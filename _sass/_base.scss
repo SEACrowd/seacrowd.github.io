@@ -41,6 +41,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -249,6 +250,8 @@ table {
   border-collapse: collapse;
   font-size: 0.9rem;
   line-height: 1.5;
+  table-layout: fixed;
+  word-wrap: break-word;
 
   thead {
     border-bottom: 2px solid var(--border);

@@ -1,7 +1,13 @@
 - name: "About"
   href: "/about"
 - name: "Apprenticeship"
-  href: "/apprenticeship"
+  children:
+    - name: "Apply as a mentee"
+      href: "/apprenticeship"
+    - name: "Apply as a mentor"
+      href: "/mentors/"
+    - name: "All apprentice projects"
+      href: "/apprentice-projects/"
 - name: "Projects"
   href: "/projects/"
 - name: "Research"
@@ -9,7 +15,7 @@
     - name: "Publications"
       href: "/publications"
     - name: "Resources"
-      href: "/resources/"
+      href: "/resources"
 
 - name: "Blog"
   href: "/posts/"

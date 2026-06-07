@@ -131,16 +131,42 @@
   line-height: 1.3;
 }
 
-.project-card-meta {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--muted-foreground);
-}
-
 .project-card-summary {
   margin: 0;
   color: var(--muted-foreground);
   font-size: 0.9rem;
+}
+
+.project-card-team {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid color-mix(in oklch, var(--border) 50%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.project-card-role {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--muted-foreground);
+}
+
+.project-card-role-label {
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-right: 0.2rem;
+}
+
+.project-card-role--mentor .project-card-role-label {
+  color: var(--primary);
+}
+
+.project-card-role--mentee .project-card-role-label {
+  color: var(--secondary);
 }
 
 .project-card-cta {

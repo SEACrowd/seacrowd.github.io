@@ -1,0 +1,93 @@
+---
+layout: default
+---
+<div class="my-4">
+  {% assign role_label = '' %}
+  {% case page.role %}
+    {% when 'primary_mentor' -%}
+      {%- assign role_label = 'Primary Mentor' %}
+    {% when 'secondary_mentor' -%}
+      {%- assign role_label = 'Secondary Mentor' %}
+    {% when 'organizer' -%}
+      {%- assign role_label = 'Organizer & Research Manager' %}
+  {% endcase %}
+
+  {% assign avatar_src = '' %}
+  {% if page.avatar contains '://' %}
+    {% assign avatar_src = page.avatar %}
+  {% elsif page.avatar contains '/' %}
+    {% assign avatar_src = page.avatar | relative_url %}
+  {% elsif page.avatar and page.avatar != '' %}
+    {% assign avatar_src = 'assets/images/people/'
+      | append: page.avatar
+      | relative_url
+    %}
+  {% endif %}
+
+  {% assign mentor_projects = '' | split: '' %}
+  {% assign mentor_batches = '' | split: '' %}
+  {% for project in site['apprentice-projects'] %}
+    {% assign project_mentor_names = project.mentors | map: 'name' %}
+    {% if project_mentor_names contains page.name %}
+      {% assign mentor_projects = mentor_projects | push: project %}
+      {% unless mentor_batches contains project.batch %}
+        {% assign mentor_batches = mentor_batches | push: project.batch %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign mentor_batches = mentor_batches | sort %}
+  {% assign mentor_projects = mentor_projects | sort: 'order' | sort: 'batch' %}
+
+  <div class="mentor-header">
+    {% if avatar_src != '' %}
+      <img
+        class="mentor-header__avatar"
+        src="{{ avatar_src }}"
+        alt="{{ page.name }}"
+        width="128"
+        height="128"
+      >
+    {% endif %}
+    <div class="mentor-header__info">
+      <h1 class="h2 mb-1">{{ page.name }}</h1>
+      {% if role_label != '' %}
+        <span class="badge bg-secondary mb-2">{{ role_label }}</span>
+      {% endif %}
+      {% if page.position and page.position != '' %}
+        <div class="text-muted small">{{ page.position }}</div>
+      {% endif %}
+      {% if page.affiliation and page.affiliation != '' %}
+        <div class="text-muted small">{{ page.affiliation }}</div>
+      {% endif %}
+      {% if mentor_batches.size > 0 %}
+        <div class="small mt-2">
+          <span class="text-muted">Batches:</span>
+          {% for batch in mentor_batches %}
+            <a href="{{ "/apprentice-projects/" | append: batch | append: "/" | relative_url }}">
+              {{- batch -}}
+            </a>
+            {%- unless forloop.last %} &middot; {% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if page.site and page.site != '' %}
+        <a
+          href="{{ page.site }}"
+          target="_blank"
+          rel="noopener"
+          class="small mt-1 d-inline-block"
+        >
+          <i class="fas fa-external-link-alt me-1" aria-hidden="true"></i
+          >Personal site
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if mentor_projects.size > 0 %}
+    <div class="mentor-projects">
+      <h2>Projects Mentored</h2>
+      {% include project-cards.html projects=mentor_projects %}
+    </div>
+  {% endif %}
+</div>

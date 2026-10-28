@@ -33,9 +33,13 @@ In `_bibliography/`:
   - To assign a publication to a batch, add "batch" key.
   - **Batch value must be synced between this .bib file and [\_data/apprentice_batches.yml](_data/apprentice_batches.yml), and [\_apprentice_projects](_apprentice_projects)
     such as "2025" for batch 2024-2025, or "2026" for batch 2026.**
+  - To show a paper at the end of an apprentice project page, add `project` key with the project's filename without `.md`, which is its URL slug (e.g. `project={sea-clip-tiny}` for `_apprentice-projects/2026/sea-clip-tiny.md`). Name project files after the paper's short name; renaming a file changes its URL.
+  - To show the short venue on the project card, set `venue` in the project's frontmatter as `[workshop] @ [conference] [year]` (e.g. `"MRL @ EMNLP 2025"`), or `[conference] [year]` for main-track papers (e.g. `"ACCV 2026"`).
+- "Copy BibTeX" copies the entry minus site-only fields; see `bibtex_skip_fields` in [\_config.yml](_config.yml).
 - Add `venue` to bib to render venue/publisher more efficiently.
 - .bib accept custom fields: arxiv/pdf, award, code, demo, post, poster,
   resources, selected, slides, talk, video, website. For all fields, see [bib.html](_layouts/bib.html).
+- Build time scales with the number of rendered entries. [\_plugins/scholar_skip_reference.rb](_plugins/scholar_skip_reference.rb) skips jekyll-scholar's unused CiteProc rendering; do not use `{{ reference }}` in [bib.html](_layouts/bib.html) without checking that plugin (it falls back automatically if the word `reference` appears in the layout).
 
 ### Blog Posts
 

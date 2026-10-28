@@ -19,6 +19,9 @@
         <div class="card card-clickable project-card h-100">
           <div class="project-card-header">
             <h4 class="project-card-title">{{ project.title }}</h4>
+            {% if project.venue %}
+              <span class="project-card-venue">{{ project.venue }}</span>
+            {% endif %}
           </div>
           <p class="project-card-summary">{{ summary_text }}</p>
           {% if mentor_names != '' or mentee_names != '' %}

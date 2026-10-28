@@ -1,7 +1,8 @@
 ---
 batch: 2026
 order: 5
-title: "Knowledge Distillation in Multilingual Vision-Text Model"
+title: "SEA-CLIP-Tiny: Efficient Multilingual Text-Vision Embedding for Southeast Asian Languages"
+venue: "ACCV 2026"
 summary: "Distill compact multilingual vision-text embeddings from large multimodal teachers for real-world deployment."
 mentors:
   - name: "Peerat Limkonchotiwat"

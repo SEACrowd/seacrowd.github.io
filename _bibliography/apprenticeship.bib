@@ -1,5 +1,104 @@
+@inproceedings{inhar2026compaction,
+  batch={2026},
+  project={adaptive-kv-memory},
+  title={Beyond Merging and Dropping: Adaptive Online {KV} Cache Compaction},
+  author={Izaaz Inhar and Faeyza Rishad Ardi and Muhammad Reza Qorib and Alham Fikri Aji and Farid Adilazuarda},
+  booktitle={COLM 2026 Workshop on Context Beyond the Window},
+  venue={Context Beyond the Window Workshop @ COLM},
+  year={2026},
+  month=aug,
+  abstract={As Large Language Models (LLMs) increasingly rely on long Chain-of-Thought reasoning,
+  linear Key-Value (KV) cache growth creates severe memory and latency bottlenecks.
+  Existing learnable cache compressions are typically offline and enforce rigid, uniform compression ratios.
+  To address this, we propose an adaptive online compaction method that combines token merging with learnable token dropping.
+  By extending the STILL compactor with Gumbel-Sigmoid gating, our approach dynamically prunes unimportant latent token representations from a dense, merged initialization.
+  This hybrid mechanism enables optimal, heterogeneous cache allocation across layers and heads while retaining reasoning capabilities.
+  Trained sequentially on Open-R1, our compactor reaches stable 8x compression while keeping teacher--student divergence bounded across repeated sequential compaction.
+  On Qwen3-1.7B, our method achieves 27.50\% Avg@4 on AIME 26 and 19.69\% on HMMT-Feb 26,
+  outperforming vanilla STILL by 2.50 and 0.76 percentage points and DMS by 1.67 and 1.51 points, respectively.
+  It reduces peak KV payload by approximately 83\% relative to uncompressed inference and improves throughput by more than 22\% over vanilla STILL.},
+  keywords={Compaction,KV cache optimization,Long Reasoning,Memory},
+  url={https://openreview.net/forum?id=rcR66RU5u1}
+}
+
+@inproceedings{nguyen2026gating,
+  batch={2026},
+  project={adaptive-kv-memory},
+  title={Gating Mechanisms for Continually Adapting Compressed {KV} Memory},
+  author={Quang Minh Nguyen and Phudish Prateepamornkul and Tri Q. Vo and Muhammad Reza Qorib and Alham Fikri Aji and Farid Adilazuarda},
+  booktitle={COLM 2026 Workshop on Context Beyond the Window},
+  venue={Context Beyond the Window Workshop @ COLM},
+  year={2026},
+  month=aug,
+  abstract={Serving large language models over long contexts is expensive because cost scales with the key–value (KV) cache,
+  and accuracy degrades when relevant evidence is buried among distracting tokens.
+  Compressed memories address this problem by distilling a long context into a small, trainable KV cache.
+  Cartridges learn such a cache through a synthetic question-answering objective called self-study.
+  Real deployments, however, are not static: new corpora arrive continually, and a memory with a fixed budget must absorb each one while retaining what it already holds.
+  We study this problem through gating mechanisms that govern what enters a compressed memory and where it is stored.
+  We introduce two mechanisms for the dense Cartridge: a statistical TF–IDF gate that updates only the slots attended to by a new corpus but not by an earlier one,
+  and a learned mixture-of-experts gate that routes each query to a small subset of expert sub-caches.
+  Across two instruction-tuned models (Llama-3.2-3B and Qwen3-4B) in a continual setting,
+  the best routed configurations improve both forgetting and acquisition relative to a dense baseline of equal capacity.
+  However, router analysis shows little corpus-specific specialization,
+  suggesting that routing helps mainly by limiting which parts of the cache can change during an update.},
+  keywords={continual learning,KV cache compression,memory gating,sparse updates,long-context language models},
+  url={https://openreview.net/forum?id=50yXR3Uui7},
+  pdf={https://openreview.net/pdf?id=50yXR3Uui7}
+}
+
+@inproceedings{habibi2026seaclip,
+  batch={2026},
+  project={sea-clip-tiny},
+  title={{SEA-CLIP-Tiny}: Efficient Multilingual Text-Vision Embedding for Southeast Asian Languages},
+  author={Puja Ahmad Habibi and Faiz Assabil Firdaus and Ashvanth S and Ekapol Chuangsuwanich and Pume Tuchinda and Peerat Limkonchotiwat},
+  venue={ACCV},
+  year={2026},
+  month=sep,
+  abstract={Multilingual text-vision embedding models are essential for cross-lingual image-text retrieval,
+  but Southeast Asian languages remain poorly supported due to the region's linguistic diversity and limited data and computing resources.
+  In this paper, we introduce SEA-CLIP-Tiny, a compact multilingual text-vision embedding model for Southeast Asia with fewer than 50M parameters.
+  Our model adapts a CLIP-KD-style framework to Southeast Asian multilingual settings through regional data curation and multilingual teacher guidance.
+  Experiments across seven Southeast Asian languages show that SEA-CLIP-Tiny achieves the strongest average retrieval performance among the evaluated student models,
+  reaching 12.9\%, 31.5\%, and 42.2\% at R@1, R@5, and R@10, respectively.
+  Compared with MobileCLIP2, it improves average R@10 by 12.1 points while using 38.4\% fewer parameters and lower measured CPU latency.
+  These results highlight the importance of region-aware training for efficient multilingual text-vision models in Southeast Asia.},
+  url={https://arxiv.org/abs/2609.30739},
+  pdf={https://arxiv.org/pdf/2609.30739},
+  code={https://github.com/fassabilf/sea-clip-tiny},
+  resources={https://huggingface.co/collections/fassabilf/sea-clip-tiny-accv-2026}
+}
+
+@inproceedings{nguyen2026seataubench,
+  batch={2026},
+  project={seataubench},
+  title={SEATauBench: Progressively Adapting Tool-Agent-User Evaluation Into Low-Resource Southeast Asian Languages},
+  author={My Chiffon Nguyen and Aulia Adila and Saksorn Ruangtanusak and Kittiphat Leesombatwathana and Vissuta Gunawan Lim and Patomporn Payoungkhamdee and Samuel Cahyawijaya},
+  selected={true},
+  equalFirst={5},
+  venue={EMNLP Findings},
+  year={2026},
+  month=aug,
+  abstract={While AI development and evaluation for Southeast Asia (SEA) has grown rapidly,
+  agent capabilities in regional languages are still poorly understood despite its importance to sovereign AI.
+  To fill this gap, we introduce SEATauBench, the first agent-focused evaluation framework for SEA sovereign AI. It
+  adapts $\tau^2$-Bench (Barres et al., 2025) to five languages—Mandarin, Vietnamese, Thai, Indonesian, and Filipino—and evaluates agents cross three progressively localized settings that vary
+  the language of user-agent interaction, tool specifications, and task domains.
+  Across three models, we find that English agent capabilities
+  transfer reasonably well when only the conversation language changes, but quality and robustness degrade sharply as more task contexts are localized, with the largest losses in full domain adaptation.
+  We also highlight the limits of English-only agent assessment for predicting agent capabilities in SEA languages.
+  More broadly, SEATauBench provides a diagnostic benchmark and reusable adaptation pipeline for
+  building reliable multilingual agents for linguistically diverse regions.},
+  keywords={Evaluation/Benchmarking,Agent,Multilingual AI},
+  url={https://arxiv.org/abs/2606.28715},
+  pdf={https://arxiv.org/pdf/2606.28715},
+  code={https://github.com/SEACrowd/SEATauBench},
+  website={http://seataubench.seacrowd.org/}
+}
+
 @misc{kautsarSEADialoguesMultilingualCulturally2025,
   batch = {2025},
+  project = {seadialogues},
   title = {{{SEADialogues}}: {{A Multilingual Culturally Grounded Multi-turn Dialogue Dataset}} on {{Southeast Asian Languages}}},
   shorttitle = {{{SEADialogues}}},
   author = {Kautsar, Muhammad Dehan Al and Candra, Aswin and Hakim, Muhammad Alif Al and Kahfi, Maxalmina Satria and Koto, Fajri and Aji, Alham Fikri and Limkonchotiwat, Peerat and Chuangsuwanich, Ekapol and Winata, Genta Indra},
@@ -19,6 +118,7 @@
 
 @inproceedings{lopo-etal-2025-language,
   batch = {2025},
+  project = {language-surgery},
   title = "Language Surgery in Multilingual Large Language Models",
   author = "Lopo, Joanito Agili  and
     Habibi, Muhammad Ravi Shulthan  and
@@ -52,6 +152,7 @@
 
 @inproceedings{irawan-etal-2025-entropy2vec,
   batch = {2025},
+  project = {entropy2vec},
   title = "{E}ntropy2{V}ec: Crosslingual Language Modeling Entropy as End-to-End Learnable Language Representations",
   author = "Irawan, Patrick Amadeus  and
     Diandaru, Ryandito  and

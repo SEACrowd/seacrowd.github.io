@@ -2,6 +2,7 @@
 batch: 2025
 order: 2
 title: "Entropy2Vec: Crosslingual Language Modeling Entropy as End-to-End Learnable Language Representations"
+venue: "MRL @ EMNLP 2025"
 summary: "Learning language embeddings from model entropy to recover typological structure."
 mentees:
   - name: "Patrick Amadeus Irawan"
@@ -14,9 +15,9 @@ mentors:
   - name: "Fajri Koto"
   - name: "Samuel Cahyawijaya"
 links:
-  - label: "Read paper (MRL 2025)"
+  - label: "Read paper (MRL @ EMNLP 2025)"
     url: "https://aclanthology.org/2025.mrl-main.29/"
-  - label: "MRL 2025 workshop"
+  - label: "MRL @ EMNLP 2025 workshop"
     url: "https://sigtyp.github.io/ws2025-mrl.html"
 ---
 

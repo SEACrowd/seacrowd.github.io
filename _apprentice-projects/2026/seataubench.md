@@ -1,7 +1,8 @@
 ---
 batch: 2026
 order: 1
-title: "Multilingual Agentic Benchmarking for Underrepresented Regions"
+title: "SEATauBench: Progressively Adapting Tool-Agent-User Evaluation Into Low-Resource Southeast Asian Languages"
+venue: "EMNLP Findings 2026"
 summary: "Build an environment and evaluation benchmark for agentic LLMs in low-resource languages and underrepresented regions."
 mentors:
   - name: "Samuel Cahyawijaya"

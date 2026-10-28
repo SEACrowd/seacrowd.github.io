@@ -57,6 +57,13 @@
           <p class="abstract-content">{{ entry.abstract }}</p>
         </details>
       {% endif %}
+      <button
+        type="button"
+        class="btn btn-outline-accent btn-sm"
+        data-copy-bibtex="{{ entry.bibtex | escape }}"
+      >
+        Copy BibTeX
+      </button>
       {% assign buttons = 'doi|DOI,pdf|PDF,code|Code,resources|Resources,video|Video,slides|Slides,poster|Poster,website|Website,arxiv|arXiv,talk|Talk,post|Post,demo|Demo'
         | split: ','
       %}

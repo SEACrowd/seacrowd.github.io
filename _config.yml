@@ -113,6 +113,16 @@ scholar:
   order: descending
   group_by: none
   group_order: ascending
+  # Fields omitted from the "Copy BibTeX" output (site-only metadata)
+  bibtex_skip_fields:
+    - month_numeric
+    - batch
+    - project
+    - selected
+    - equalFirst
+    - code
+    - resources
+    - website
 
 pub_show_max_authors: 8 # first + last authors
 max_authors_card: 2 # Maximum authors to show in card.html

@@ -68,6 +68,16 @@ layout: default
     {{ content }}
   </div>
 
+  {% capture project_publications %}
+    {% bibliography --file apprenticeship --query @*[project={{ page.slug }}] %}
+  {% endcapture %}
+  {% if project_publications contains '<li' %}
+    <section class="project-publications">
+      <h2>Publications</h2>
+      {{ project_publications }}
+    </section>
+  {% endif %}
+
   {% assign batch_projects = site['apprentice-projects']
     | where: 'batch', page.batch
     | sort: 'order'

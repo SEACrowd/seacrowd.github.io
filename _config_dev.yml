@@ -24,6 +24,6 @@ sass:
   style: expanded
   sourcemap: "development"
 
-# Force regeneration
+# Keep incremental off: with --incremental, edits to _layouts/bib.html did not
+# re-render pages that use {% bibliography %} (stale output); bib edits did.
 incremental: false
-regenerate: true

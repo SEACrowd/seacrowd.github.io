@@ -1,7 +1,14 @@
 ---
 title: Apprentice Projects
 permalink: /apprentice-projects/
+layout: null
+sitemap: false
 ---
+{% comment %}
+  Entry point only: forwards to the current batch page, which already lists its
+  projects and publications. Rendering the same list here doubled build time for
+  those entries. Jekyll on GitHub Pages cannot send a 301, so use meta refresh.
+{% endcomment %}
 {% assign batches = site.data.apprentice_batches %}
 {% if batches == null or batches.size == 0 %}
   {% assign batch_years = site['apprentice-projects']
@@ -20,21 +27,28 @@ permalink: /apprentice-projects/
     | default: default_batch_obj
   %}
 {% endif %}
-
-{% assign projects = site['apprentice-projects']
-  | where: 'batch', default_batch
-  | sort: 'order'
+{% assign target = '/apprentice-projects/'
+  | append: default_batch
+  | append: '/'
 %}
-
-{% include apprentice-project-tabs.html active_batch=default_batch %}
-
-<h3>Projects</h3>
-
-{% if projects.size > 0 %}
-  {% include project-cards.html projects=projects batch_key=default_batch %}
-{% else %}
-  <p class="text-muted">Projects for this batch will be announced soon.</p>
-{% endif %}
-
-<h3>Publications</h3>
-{% bibliography --file apprenticeship --query @*[batch={{ default_batch }}] %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Apprentice Projects |
+      {{ site.name }}
+    </title>
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ target | absolute_url }}">
+    <meta http-equiv="refresh" content="0; url={{ target | relative_url }}">
+  </head>
+  <body>
+    <p>
+      Redirecting to
+      <a href="{{ target | relative_url }}"
+        >Batch {{ default_batch }} projects</a
+      >.
+    </p>
+  </body>
+</html>

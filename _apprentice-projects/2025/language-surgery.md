@@ -2,6 +2,7 @@
 batch: 2025
 order: 1
 title: "Language Surgery in Multilingual Large Language Models"
+venue: "MRL @ EMNLP 2025"
 summary: "A technique for controlling language use in multilingual LLMs without retraining."
 mentees:
   - name: "Joanito Agili Lopo"
@@ -14,9 +15,9 @@ mentors:
   - name: "Peerat Limkonchotiwat"
   - name: "Alham Fikri Aji"
 links:
-  - label: "Read paper (MRL 2025)"
+  - label: "Read paper (MRL @ EMNLP 2025)"
     url: "https://aclanthology.org/2025.mrl-main.30/"
-  - label: "MRL 2025 workshop"
+  - label: "MRL @ EMNLP 2025 workshop"
     url: "https://sigtyp.github.io/ws2025-mrl.html"
 ---
 

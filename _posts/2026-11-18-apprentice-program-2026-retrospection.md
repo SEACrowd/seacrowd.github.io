@@ -109,7 +109,14 @@ projects:
       Across seven SEA languages, SEA-CLIP-Tiny outperformed MobileCLIP2 by **+12.1 points on average R@10** while using **38.4% fewer parameters** and running faster on CPU—showing that region-aware distillation beats generic compression.
 ---
 
-I’m Samuel Cahyawijaya, a Member of Technical Staff at [Cohere](https://cohere.com/) and one of the initiators of [SEACrowd](/about).
+<figure class="text-center my-5">
+  <blockquote class="blockquote">
+    <p class="fs-3 fst-italic">“If you are pursuing grad school, this program makes the unreachable goal feel reachable.”</p>
+  </blockquote>
+  <figcaption class="blockquote-footer mt-2">
+    Faiz Assabil Firdaus, <cite title="SEACrowd Apprentice Program 2026">SEACrowd Apprentice 2026 mentee and co-author of SEA-CLIP-Tiny (ACCV 2026)</cite>
+  </figcaption>
+</figure>
 
 When we launched our first **[SEACrowd Apprentice Program](/apprenticeship)** in 2024–25, it started as a simple question: _Could we help early-career talent across Southeast Asia go from "I'm curious about AI research" to actually publishing real work—remotely and part-time?_ That first cohort answered with a clear yes, producing two workshop papers and a new regional dialogue dataset ([read last year's retrospective here](/posts/apprentice-program-retrospection.html)).
 
@@ -190,8 +197,8 @@ One of my favorite parts of SEACrowd is that our mentees don't fit a single mold
 <div class="row g-3 my-2">
   <div class="col-md-6">
     <div class="p-3 border rounded-3 h-100 d-flex flex-column justify-content-between">
-      <p class="mb-3 fst-italic">"If you are pursuing grad school, this program makes the unreachable goal feel reachable."</p>
-      <div class="small"><strong>Faiz Assabil Firdaus</strong> · <span class="badge bg-secondary">Bachelor Student</span></div>
+      <p class="mb-3 fst-italic">"Very nice program! I totally love that we can collaborate on AI research with new people and new cultures. This is a very short and intensive program — we pushed hard for 4 months and got a publication!"</p>
+      <div class="small"><strong>Saksorn Ruangtanusak</strong> · <span class="badge bg-secondary">AI Researcher</span></div>
     </div>
   </div>
   <div class="col-md-6">

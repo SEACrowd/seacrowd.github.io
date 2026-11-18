@@ -7,7 +7,7 @@ category: Apprenticeship
 tags: [apprenticeship, restropection]
 featured: true
 authors: [Samuel Cahyawijaya]
-thumbnail: retrospective-review.png
+thumbnail: retrospective-2026.png
 form: https://docs.google.com/forms/d/1FHgfr7sx8VqZkNrYvgGXl81hwqMqEibYN0nrabfYLRk/viewform
 projects:
   - title: "Project 1: SEATauBench — Evaluating AI Agents in Southeast Asian Languages (EMNLP Findings 2026)"
@@ -118,20 +118,13 @@ projects:
   </figcaption>
 </figure>
 
-When we launched our first **[SEACrowd Apprentice Program](/apprenticeship)** in 2024–25, it started as a simple question: _Could we help early-career talent across Southeast Asia go from "I'm curious about AI research" to actually publishing real work—remotely and part-time?_ That first cohort answered with a clear yes, producing two workshop papers and a new regional dialogue dataset ([read last year's retrospective here](/posts/apprentice-program-retrospection.html)).
+When we launched our first **[SEACrowd Apprentice Program](/apprenticeship)** in 2024–25, it started as a simple question: _Could we help early-career talent across Southeast Asia go from "I'm curious about AI research" to actually publishing real work—remotely and part-time?_ That first cohort answered with a clear yes, producing two workshop papers and a new regional dialogue dataset ([read last year's retrospective here](/posts/apprentice-program-2025-retrospection.html)).
 
 **Batch 2026** was a bigger test: could we scale the program to more teams, run on a tighter schedule, and make the experience even stronger?
 
-From February to June 2026, **20 mentees and 12 mentors** teamed up across **five research projects**. The results blew us away—four research papers accepted at top international venues, glowing feedback from mentees across every background, and a growing wave of new Southeast Asian researchers ready to keep going.
+From February to June 2026, **20 mentees and 12 mentors** teamed up across **five research projects** on multilingual agents, data curation, LLM routing, KV-cache memory, and compact vision-language models. The results blew us away: **four papers accepted** at **EMNLP Findings 2026**, **ACCV 2026**, and the **COLM 2026 Context Beyond the Window Workshop**. Mentees rated their likelihood to recommend the program at **4.79 / 5.0** and their interest in continuing AI research at **4.50 / 5.0**.
 
-This post shares what our teams built, what mentees told us, how we are making Batch 2027 even better, and how you can [apply to Batch 2027]({{ page.form }}).
-
-> **TL;DR**
->
-> - **Big research wins:** Five teams tackled multilingual agents, data curation, LLM routing, KV-cache memory, and compact vision-language models—leading to **4 accepted papers** at **EMNLP Findings 2026**, **ACCV 2026**, and the **COLM 2026 Context Beyond the Window Workshop**.
-> - **Strong mentee impact:** Mentees rated their likelihood to recommend the program at **4.79 / 5.0** and their interest in continuing AI research at **4.50 / 5.0**.
-> - **Honest lessons for 2027:** Based on cohort feedback, we are making compute expectations transparent upfront, listing mentor timezone ranges per project, and removing the confusing primary/secondary mentor split.
-> - **Batch 2027 is opening!** Mentee registration runs from **Friday, November 20 to Sunday, December 13, 2026** ([register here]({{ page.form }})).
+Their feedback also showed us how to improve mentee experience for future iterations. **Mentee registration for Batch 2027 runs from Friday, November 20 to Sunday, December 13, 2026**, and you can [register here]({{ page.form }}).
 
 ## Batch 2026 at a Glance
 
@@ -247,31 +240,13 @@ One of my favorite parts of SEACrowd is that our mentees don't fit a single mold
 
 ## What We Learned (and What We’re Changing)
 
-Our post-program survey and discussions also surfaced three practical pain points. Here is what didn't go smoothly in 2026—and how we are fixing each one for **Batch 2027**:
+Our post-program survey and discussions surfaced three practical pain points. None of them were fatal, but each one made the experience harder than it needed to be, so we are fixing all three for **Batch 2027**.
 
-### 1. Cross-Timezone Meeting Schedules
+The first was scheduling. Mentors and mentees were spread across Southeast Asia, Europe, the Middle East, and North America, and finding a weekly meeting slot that worked for everyone was tough. Applicants also couldn't see a team's timezone spread before they joined. In 2027, every project description will state the **timezone range of its mentor group**, so you can tell upfront whether a team's schedule fits your week.
 
-Because mentors and mentees were spread across Southeast Asia, Europe, the Middle East, and North America, finding weekly meeting slots was tough—and applicants didn't see a team's timezone spread before joining.
+The second was compute. Running LLM and multimodal experiments costs money, and because SEACrowd is a volunteer-run non-profit without a central compute grant, some mentors and mentees ended up covering those costs themselves. We didn't say this clearly enough during applications, and that was our mistake. From now on we will be **explicit during applications** that SEACrowd does not directly provide compute funding, while noting that individual mentors may help cover compute if they are willing and able to.
 
-**So we're changing with:**
-
-- Listing the **timezone range of each mentor group** directly on every 2027 project description so applicants know upfront whether a team's schedule fits their week.
-
-### 2. Compute Budget Transparency
-
-Running LLM and multimodal experiments costs money. Because SEACrowd is a volunteer-run non-profit without a central compute grant, mentors and mentees sometimes had to cover compute costs themselves—something we didn't state clearly enough during applications.
-
-**So we're changing with:**
-
-- Being **explicit upfront during applications** that SEACrowd does not directly provide compute funding, while noting that individual mentors may help cover compute if they are willing and able to do so.
-
-### 3. Confusion Over "Primary" vs. "Secondary" Mentors
-
-We originally split mentors into _primary_ and _secondary_ roles, but in practice this created confusion over who owned decisions and how mentorship duties were divided.
-
-**So we're changing with:**
-
-- **Removing the primary/secondary mentor split altogether.** All mentors on a team will serve on equal footing, keeping multi-mentor support without unnecessary hierarchy.
+The third was the mentor hierarchy. We originally split mentors into _primary_ and _secondary_ roles, but in practice this blurred who owned decisions and how mentorship duties were divided. For 2027 we are **removing the primary/secondary split altogether**. All mentors on a team will serve on equal footing, which keeps the multi-mentor support without the unnecessary hierarchy.
 
 ## So Was It Worth It?
 

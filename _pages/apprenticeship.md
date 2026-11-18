@@ -1,7 +1,7 @@
 ---
-title: SEACrowd 2026 Apprentice Program
+title: SEACrowd 2027 Apprentice Program
 permalink: /apprenticeship.html
-description: A part-time, remote research program that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. 10+ hours/week Feb 1 - Jun 30, 2026.
+description: A part-time, remote research program that pairs experienced researchers with early-career researchers across Southeast Asia to build models, datasets, and publishable research. 10+ hours/week, Feb – Jun 2027.
 keywords:
   [
     apprenticeship program,
@@ -11,16 +11,16 @@ keywords:
     Southeast Asia,
     machine learning
   ]
-form: https://forms.gle/GCv3cyCRqzj4PqfA9
+form: https://docs.google.com/forms/d/1FHgfr7sx8VqZkNrYvgGXl81hwqMqEibYN0nrabfYLRk/viewform
 thumbnail: apprenticeship.png
 hero: true
 faq:
-  - title: "What are the key dates for the 2026 Apprentice Program?"
+  - title: "What are the key dates for the 2027 Apprentice Program?"
     content: |
-      - **Applications:** Nov 17 – Dec 17, 2025 (23:59 UTC-12)
-      - **Selection:** mid-Dec 2025 – Jan 19, 2026 (screening + interview)
-      - **Team announcement:** mid-Jan 2026
-      - **Program dates:** Feb 1 – Jun 30, 2026
+      - **Mentee registration:** Fri, Nov 20 – Sun, Dec 13, 2026
+      - **Selection:** after registration closes (screening + interview)
+      - **Team announcement:** to be announced
+      - **Program dates:** Feb – Jun 2027 (mid-term review in April, final showcase in July)
   - title: "Are the key dates flexible?"
     content: |
       We list the official milestones above. Since the program is remote and part-time, we expect conflicts to be manageable. Any major conflicts should be disclosed in your application, or smoothed out with your team if you're selected.
@@ -60,7 +60,7 @@ faq:
       The SEACrowd Apprentice Program is a **remote research program**.
   - title: "Is this program free?"
     content: |
-      Yes, the program is completely **free to join** for all selected mentees. We provide compute necessary for research projects.
+      Yes, the program is completely **free to join** for all selected mentees. However, SEACrowd is a volunteer-run non-profit and can only provide limited compute funding. We rely on mentors' compute through their institutions, or external grants, and are looking for securing more grants for apprentice projects.
   - title: "Do I get paid? / Is there a stipend?"
     content: |
       The program is **unpaid**. However, mentees gain valuable research experience, mentorship, networking opportunities, and potential publication avenues.
@@ -69,7 +69,7 @@ faq:
       Unfortunately, we do not have funds to provide stipends or financial support at this time. We recommend seeking external funding sources, scholarships, or institutional support if needed. Otherwise, we welcome you to apply in future cohorts when you have the necessary resources or when we may have funding available.
   - title: "How to communicate during the program?"
     content: |
-      We use English as the primary language for all program communications, documentation, and deliverables. Communication channels will be team dependent, but we expect teams to primarily use Discord for day-to-day communication, and Google Meet / Zoom / Microsoft Teams for meetings. How frequent meetings are will be up to each team to decide, but likely weekly or bi-weekly check-ins with mentors.
+      We use English as the primary language for all program communications, documentation, and deliverables. Communication channels will be team dependent, but we expect teams to primarily use Discord for day-to-day communication, and Google Meet / Zoom / Microsoft Teams for meetings. How frequent meetings are will be up to each team to decide, but likely weekly or bi-weekly check-ins with mentors. Because mentors and mentees are spread across time zones, each 2027 project lists the timezone range of its mentor group so you can check that the schedule fits your week.
   - title: "Can I get accepted to work on multiple projects?"
     content: |
       No, mentees can only be accepted to work on one project per cohort to ensure focus and commitment.
@@ -78,7 +78,7 @@ faq:
       Once accepted, mentees are expected to commit to their assigned project for the duration of the program. Switching projects is generally not allowed, as it can disrupt team dynamics and project continuity. If you have significant concerns, please discuss them with the program organizers.
   - title: "Can I propose my own project?"
     content: |
-      For the 2026 cohort, we are only accepting applications for the predefined research topics listed on the program page. You can suggest ideas for the topic that you’ve chosen, but you cannot propose an entirely new project. The topics typically come from our mentors and organizers based on research gaps in Southeast Asia and their expertise, so we can ensure quality mentorship and project scope.
+      For the 2027 cohort, we are only accepting applications for the predefined research topics listed on the program page (to be published on Nov 20, 2026). You can suggest ideas for the topic that you’ve chosen, but you cannot propose an entirely new project. The topics typically come from our mentors and organizers based on research gaps in Southeast Asia and their expertise, so we can ensure quality mentorship and project scope.
 
       However, we encourage you to suggest new project ideas for future cohorts by reaching out to us via email at seacrowd.research@gmail.com. You can also reach out to other mentors & collaborators in research communities like [Cohere Labs Open Science Community](https://labscommunity.cohere.com/get-started), [Eleuther AI](https://www.eleuther.ai/), [Masakhane](https://www.masakhane.io/), or [Nous Research](https://nousresearch.com/).
   - title: "Is research publication guaranteed?"
@@ -108,23 +108,17 @@ faq:
   <h1 class="hero-title">Connecting rising talent in AI research<br>with expertise in Southeast Asia</h1>
   <p class="hero-subtitle"> {{ page.description }}</p>
   <div class="hero-actions">
-    <a href="{{ site.social.google_group }}" class="btn btn-primary">Follow for Updates</a>
+    <a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apply as a Mentee</a>
     <a href="/mentors" class="btn btn-outline-secondary">Apply as a Mentor (2027)</a>
   </div>
-  <p class="hero-status">Mentee application for 2026 is closed. We expect to open batch 2027 application in Q4 2026.</p>
+  <p class="hero-status">Mentee registration for Batch 2027 runs Nov 20 – Dec 13, 2026. Projects will be listed on Nov 20.</p>
 </section>
 
-## 2026 Research Topics
+## 2027 Research Topics
 
-We offer five cutting-edge research projects:
+The Batch 2027 research projects will be listed on this page on **Nov 20, 2026**. Each project description will include the timezone range of its mentor group, so you can check that the team's schedule fits your week before applying.
 
-1. **Multilingual Agentic for Underrepresented Regions** - Developing evaluation frameworks for agent-based language models in low-resource languages
-2. **CoRaL: Contextual Relevance and Linguistic Enrichment** - Multi-dimensional data curation framework for low-resource language training corpora
-3. **Reasoning Agentic LLM Router** - Skill-based routing mechanisms to reduce inference costs while maintaining performance
-4. **Selective Memory Layer Finetuning** - Architectural solutions for continual learning using memory layers
-5. **Knowledge Distillation in Multilingual Vision-Text Models** - Creating compact vision-language embeddings for edge devices
-
-[View 2026 projects →](/apprentice-projects/2026/)
+In the meantime, see what Batch 2026 built: [2026 projects →](/apprentice-projects/2026/)
 
 ## Who Can Apply
 
@@ -155,45 +149,40 @@ and share [our vision](/about#our-vision).
 
 Check out [previous batch projects and publications](/apprentice-projects/)!
 
-## 2025 Success Story
+## Success Stories
 
-Our first cohort (2024-2025) featured three apprentice teams who successfully completed their projects, culminating in mentees' first-authored research papers published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their projects](/apprentice-projects/2025/) and [our retrospective post](/posts/apprentice-program-retrospection) running the first cohort.
+**Batch 2026:** 20 mentees and 12 mentors across five projects produced four accepted papers at EMNLP Findings 2026, ACCV 2026, and the COLM 2026 Context Beyond the Window Workshop, and mentees rated the program 4.79 / 5.0. Read the [2026 retrospective](/posts/apprentice-program-2026-retrospection) and browse [the 2026 projects](/apprentice-projects/2026/).
+
+**Batch 2024-25:** Our first cohort featured three apprentice teams whose mentees' first-authored papers were published at the [5th Multilingual Representation Learning Workshop (2025)](https://sigtyp.github.io/ws2025-mrl.html). Check out [their projects](/apprentice-projects/2025/) and [our first retrospective post](/posts/apprentice-program-2025-retrospection).
 
 ## Application Process
 
-- **General Application:** Nov 17 - Dec 17, 2025 (23:59 UTC-12).
-- **Selection:** mid-Dec 2025 - Jan 19, 2026
+- **Mentee registration:** Fri, Nov 20 – Sun, Dec 13, 2026
+- **Selection:** after registration closes
   - Round 1: Application screening
   - Round 2: Online interview
-- **Team announcement:** mid-Jan 2026
+- **Team announcement:** dates to be announced
 
-[Apply Here]({{ page.form }}){: .btn .btn-outline-primary .disabled}
+<a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apply as a Mentee</a>
 
 ## Program Schedule
 
-- **Kickoff:** Feb 1, 2026
-- **Mid-term milestone:** End of Mar / early Apr (internal review)
-- **End-term milestone:** End of Jun (SEACrowd-wide + external committee)
+- **Kickoff:** Feb 2027
+- **Mid-term review:** April (structured cross-mentor feedback)
+- **Program ends:** June 2027
+- **Final showcase:** July (community-wide presentations)
 
-Publications are encouraged when ready, not tied to specific conference deadlines.
+The program runs on a fixed 5-month window. Publications are encouraged when ready, not tied to specific conference deadlines.
 
 ## Who You'll Work With
 
-### Primary Mentors
+### Mentors
+
+Mentors on a team serve on equal footing, with no primary/secondary split. Batch 2027 mentors will be listed alongside the projects; below are our Batch 2026 mentors.
 
 <div class="row g-2">
   {% for profile in site.mentors %}
-    {% if profile.role == "primary_mentor" %}
-      {% include mentor.html profile=profile %}
-    {% endif %}
-  {% endfor %}
-</div>
-
-### Secondary Mentors
-
-<div class="row g-2">
-  {% for profile in site.mentors %}
-    {% if profile.role == "secondary_mentor" %}
+    {% if profile.role == "primary_mentor" or profile.role == "secondary_mentor" %}
       {% include mentor.html profile=profile %}
     {% endif %}
   {% endfor %}

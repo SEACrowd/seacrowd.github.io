@@ -15,9 +15,9 @@ keywords:
   ]
 carousel:
   - image: "events/coling2025.jpg"
-    description: We're looking for research mentors for our SEACrowd 2027 Apprentice Program.
-    button_text: Register interest
-    button_url: "https://docs.google.com/forms/d/e/1FAIpQLSf55CiCS5ld9ZDGBZ4Lr9lcu5DPG0ElVCtIJ_YzpQxmdJ3QbA/viewform"
+    description: Mentee registration for the SEACrowd 2027 Apprentice Program opens Nov 20 – Dec 13, 2026.
+    button_text: Apply as a mentee
+    button_url: "/apprenticeship"
   - image: "posts/emnlp-2024-bof.jpg"
     description: See our preprint "Anthropogenic Regional Adaptation in Multimodal Vision-Language Model", building Southeast Asia's culturally-aware VLMs
     button_text: Read arxiv preprint

@@ -5,7 +5,6 @@ date: 2025-12-03
 description: "What we learned from running the first SEACrowd Apprentice Program cohort, and how we're improving for Batch 2026."
 category: Apprenticeship
 tags: [apprenticeship, restropection]
-featured: true
 authors: [Samuel Cahyawijaya]
 thumbnail: retrospective-review.png
 projects:

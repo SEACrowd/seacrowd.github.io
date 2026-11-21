@@ -16,7 +16,7 @@ To understand Filipino, we start with its base: Tagalog. As part of the [Austron
 
 Long before the Spaniards arrived in the 16th century, Tagalog was already the main language of Central and Southern Luzon. Continuous trade with Chinese, Indian, and Southeast Asian cultures enriched the vocabulary and ideas embedded in the language. At the time, the Tagalogs used the indigenous Baybayin script for [personal communication, poetry, and short messages](https:/narrastudio.com/blogs/journal/baybayin-the-ancient-filipino-script-lives-on), while longer histories and epics were [preserved through a rich oral tradition](http:/paulmorrow.ca/bayeng1.htm).
 
-<img src="/assets/images/posts/filipino-tagalog/2_baybayin.png" alt="The Baybayin Script" width="500"/>
+<img src="/assets/images/posts/filipino-tagalog/2_baybayin.jpg" alt="The Baybayin Script" width="500"/>
 
 _<a href="https:/64.media.tumblr.com/tumblr_lutfskLZxZ1qkow7co1_r1_1280.png">Fig 1</a>. An example of the pre-colonial Baybayin script._
 
@@ -40,7 +40,7 @@ To create a more inclusive national language, the term “Pilipino” was introd
 
 Today, the linguistic environment is complex. While Filipino is the national language, is it spoken everywhere? Yes and no. Thanks to mass media and the education system, almost all Filipinos understand it. However, in regions like Visayas and Mindanao (⅔ of the major islands of the Philippines), it often serves as a _lingua franca_ for speaking with outsiders (i.e. business), whereas the local vernacular dominates daily life.
 
-<img src="/assets/images/posts/filipino-tagalog/4_langmap.png" alt="Linguistic Map of the Philippines" width="500"/>
+<img src="/assets/images/posts/filipino-tagalog/4_langmap.jpg" alt="Linguistic Map of the Philippines" width="500"/>
 
 _<a href="https:/www.geocurrents.info/wp-content/uploads/2016/01/Maritime-Linkages-Philippine-Languages-Map.png">Fig 3</a>. A map showing the linguistic complexity of the Philippine archipelago._
 

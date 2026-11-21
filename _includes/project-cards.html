@@ -1,49 +1,186 @@
 {% comment %}
-  Usage: {% include project-cards.html projects=projects
-  batch_key=batch_key %}
+  Project list rows: mentor avatars, title, mentors + affiliations, summary, tags.
+  Usage: {% include project-cards.html projects=projects filters=true %}
+  filters=true adds the search / time zone / tag filter bar (needs JS).
 {% endcomment %}
 {% assign projects = include.projects | default: site['apprentice-projects'] %}
 {% if projects and projects.size > 0 %}
-  <div class="project-grid">
+  {% if include.filters %}
+    {% assign all_tags = '' | split: '' %}
     {% for project in projects %}
-      {% assign mentor_names = project.mentors | map: 'name' | join: ', ' %}
-      {% assign mentee_names = project.mentees | map: 'name' | join: ', ' %}
+      {% if project.tags %}
+        {% assign all_tags = all_tags | concat: project.tags %}
+      {% endif %}
+    {% endfor %}
+    {% assign all_tags = all_tags | uniq | sort_natural %}
+    <div class="project-filters" data-project-filters hidden>
+      <div class="project-filters__controls">
+        <input
+          type="search"
+          class="form-control project-filters__search"
+          placeholder="Search projects, mentors, topics"
+          aria-label="Search projects"
+          data-filter-search
+        >
+        <select
+          class="form-select project-filters__tz"
+          aria-label="Mentor time zone"
+          data-filter-tz
+          hidden
+        >
+          <option value="">Any time zone</option>
+        </select>
+        <label class="project-filters__nearby" data-filter-nearby-label hidden>
+          <input type="checkbox" class="form-check-input" data-filter-nearby>
+          Include nearby (±3 h)
+        </label>
+      </div>
+      {% if all_tags.size > 0 %}
+        <div
+          class="project-filters__tags"
+          role="group"
+          aria-label="Filter by tag"
+        >
+          {% for tag in all_tags %}
+            <button
+              type="button"
+              class="project-tag-chip"
+              data-filter-tag="{{ tag | escape }}"
+              aria-pressed="false"
+            >
+              {{- tag -}}
+              <span class="project-tag-chip__count" data-tag-count></span>
+            </button>
+          {% endfor %}
+          <button
+            type="button"
+            class="project-tag-chip project-tag-chip--clear"
+            data-filter-clear
+            hidden
+          >
+            Clear filters
+          </button>
+        </div>
+      {% endif %}
+      <p
+        class="project-filters__status"
+        aria-live="polite"
+        data-filter-status
+      ></p>
+    </div>
+  {% endif %}
+
+  <div
+    class="project-list"
+    {% if include.filters %}
+      data-project-list
+    {% endif %}
+  >
+    {% for project in projects %}
       {% capture project_preview %} {{ project.summary | default: project.content | markdownify
   }} {% endcapture %}
       {% assign summary_text = project_preview
         | strip_html
         | strip_newlines
-        | truncate: 160
+        | truncate: 320
       %}
-      <a href="{{ project.url | relative_url }}" class="text-decoration-none">
-        <div class="card card-clickable project-card h-100">
-          <div class="project-card-header">
-            <h4 class="project-card-title">{{ project.title }}</h4>
-            {% if project.venue %}
-              <span class="project-card-venue">{{ project.venue }}</span>
-            {% endif %}
-          </div>
-          <p class="project-card-summary">{{ summary_text }}</p>
-          {% if mentor_names != '' or mentee_names != '' %}
-            <div class="project-card-team">
-              {% if mentor_names != '' %}
-                <p class="project-card-role project-card-role--mentor">
-                  <span class="project-card-role-label">Mentors</span>
-                  {{ mentor_names }}
-                </p>
+      <article
+        class="project-row position-relative"
+        data-tags="{{ project.tags | join: '|' | escape }}"
+        data-timezone="{{ project.timezone | escape }}"
+      >
+        <div class="project-row__avatars">
+          {% for person in project.mentors %}
+            {% assign mentor_page = site.mentors
+              | where: 'name', person.name
+              | first
+            %}
+            {% assign avatar = mentor_page.avatar %}
+            {% if avatar and avatar != '' %}
+              {% if avatar contains '://' %}
+                {% assign avatar_src = avatar %}
+              {% elsif avatar contains '/' %}
+                {% assign avatar_src = avatar | relative_url %}
+              {% else %}
+                {% assign avatar_src = 'assets/images/people/'
+                  | append: avatar
+                  | relative_url
+                %}
               {% endif %}
-              {% if project.mentees and project.mentees.size > 0 %}
-                <p class="project-card-role project-card-role--mentee">
-                  <span class="project-card-role-label"
-                    >Mentees ({{ project.mentees.size }})</span
-                  >
-                  {{ mentee_names }}
-                </p>
+              <img
+                class="project-row__avatar"
+                src="{{ avatar_src }}"
+                alt="{{ person.name }}"
+                title="{{ person.name }}"
+                width="48"
+                height="48"
+                loading="lazy"
+              >
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="project-row__body">
+          <h3 class="project-row__title">
+            <a
+              href="{{ project.url | relative_url }}"
+              class="stretched-link"
+            >
+              {{- project.title -}}
+            </a>
+            {% if project.venue %}
+              <span class="project-row__venue">{{ project.venue }}</span>
+            {% endif %}
+          </h3>
+          <div class="project-row__mentors">
+            {% for person in project.mentors %}
+              {% assign mentor_page = site.mentors
+                | where: 'name', person.name
+                | first
+              %}
+              <span>
+                <strong>{{ person.name }}</strong>
+                {% if mentor_page.affiliation %}
+                  <span class="project-row__mentor-affiliation">
+                    &middot; {{ mentor_page.affiliation }}
+                  </span>
+                {% endif %}
+              </span>
+            {% endfor %}
+          </div>
+          <p class="project-row__summary">{{ summary_text }}</p>
+          {% if project.mentees and project.mentees.size > 0 %}
+            <p class="project-row__mentees">
+              <strong>Mentees ({{ project.mentees.size }}):</strong>
+              {{ project.mentees | map: 'name' | join: ', ' }}
+            </p>
+          {% endif %}
+          {% if project.tags or project.timezone %}
+            <div class="project-row__tags">
+              {% for tag in project.tags %}
+                <span class="project-row__tag">{{ tag }}</span>
+              {% endfor %}
+              {% if project.timezone %}
+                <span class="project-row__tz" title="Mentor time zone">
+                  <i class="fas fa-clock" aria-hidden="true"></i>
+                  {{ project.timezone }}
+                </span>
               {% endif %}
             </div>
           {% endif %}
         </div>
-      </a>
+      </article>
     {% endfor %}
+    {% if include.filters %}
+      <p class="project-list-empty" data-filter-empty hidden>
+        No projects match your filters.
+      </p>
+    {% endif %}
   </div>
+
+  {% if include.filters %}
+    <script
+      src="{{ '/assets/js/apprentice-project-filter.js' | relative_url }}"
+      defer
+    ></script>
+  {% endif %}
 {% endif %}

@@ -2,6 +2,7 @@
 title: Projects
 permalink: /projects/
 description: A collection of projects that SEACrowd worked or has been working on as a community.
+wide: true
 ---
 {% assign allProjects = site.projects | sort: 'fromDate' | reverse %}
 {% assign today = site.time | date: '%Y-%m-%d' %}
@@ -88,4 +89,4 @@ description: A collection of projects that SEACrowd worked or has been working o
   No completed projects yet.
 </p>
 
-<script src="{{ '/js/project-filter.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/project-filter.js' | relative_url }}"></script>

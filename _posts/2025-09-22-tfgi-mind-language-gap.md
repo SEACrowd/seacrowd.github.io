@@ -17,7 +17,7 @@ challenges:
     content: |
       Most SEA languages lack the large, high-quality datasets needed to train robust models. Where data exists, it is often scattered across informal sources and hard to standardise. The problem is worse for languages with strong oral traditions, which may have little or no digital footprint. Building quality datasets requires more than literal translation, which risks producing awkward "translationese"; it demands deep cultural grounding. A 2024 study by SEACrowd showed that popular global models underperform on SEA language tasks., particularly in generating natural-sounding text. Even when technically included, model performance for languages with limited digital presence fall behind, mirroring the hierarchy of data availability. Small language groups, already excluded from services, risk further marginalisation when AI tools bypass them.
 
-      ![Culturally-unaware image generation of 'people eating chicken pastel', a popular dish in the Philippines, using Stable Diffusion 3.5 Large](/assets/images/posts/tfgi-language-gap/culturally-unaware-ai.png)
+      ![Culturally-unaware image generation of 'people eating chicken pastel', a popular dish in the Philippines, using Stable Diffusion 3.5 Large](/assets/images/posts/tfgi-language-gap/culturally-unaware-ai.jpg)
 
       _Culturally-unaware image generation of "people eating chicken pastel", a popular dish in the Philippines, using stability.ai's AI model [Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large)._
   - title: "Fragmented Development"
@@ -70,7 +70,7 @@ SEACrowd also collaborates with global open source initiatives such as
 [ML Commons](https://mlcommons.org), [Common Crawl](https://commoncrawl.org), and [Masakhane](https://www.masakhane.io)
 to share lessons and enable the global shift toward community-led, [inclusive](https://www.taipeitimes.com/News/editorials/archives/2025/06/29/2003839418) AI development. The Singapore-based [SEA-LION initiative is creating open-source LLMs trained on 11 Southeast Asian languages to capture cultural nuances](https://techforgoodinstitute.org/blog/perspectives/increasing-southeast-asian-representation-in-ai/), while Thailand’s Typhoon model and Indonesia’s [NusaWrites](https://arxiv.org/pdf/2309.10661) are building datasets and models rooted in local context. Together, these efforts offer a powerful alternative to global models that often overlook the region’s linguistic diversity.
 
-![Launch of SEACrowd at EMNLP 2023](/assets/images/posts/tfgi-language-gap/emnlp-2023-launch.png)
+![Launch of SEACrowd at EMNLP 2023](/assets/images/posts/tfgi-language-gap/emnlp-2023-launch.jpg)
 
 _Launch of [SEACrowd](/) at [EMNLP 2023](https://2023.emnlp.org/)._
 

@@ -1,0 +1,22 @@
+{% comment %}
+  Above-the-fold banner: WebP with JPEG fallback, eager + high priority (it is
+  the page's LCP element), explicit size to avoid layout shift.
+  Usage: {% include hero-image.html src="assets/images/apprenticeship/2027-hero" alt="..." %}
+  `src` is the path without extension; both .webp and .jpg must exist.
+{% endcomment %}
+<picture>
+  <source
+    type="image/webp"
+    srcset="{{ include.src | append: '.webp' | relative_url }}"
+  >
+  <img
+    class="program-hero__image"
+    src="{{ include.src | append: '.jpg' | relative_url }}"
+    alt="{{ include.alt | escape }}"
+    width="1200"
+    height="630"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  >
+</picture>

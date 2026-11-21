@@ -1,5 +1,10 @@
-- year: 2026
+- year: 2027
   label: current
   style_class: bg-success
   current: true
+  period: "Feb – Jun 2027"
+  commitment: "10+ hours/week"
+  team_size: "2–5 mentees"
+  registration: "Nov 20 – Dec 13, 2026"
+- year: 2026
 - year: 2025

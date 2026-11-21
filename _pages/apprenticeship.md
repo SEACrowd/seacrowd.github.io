@@ -12,7 +12,9 @@ keywords:
     machine learning
   ]
 form: https://docs.google.com/forms/d/1FHgfr7sx8VqZkNrYvgGXl81hwqMqEibYN0nrabfYLRk/viewform
-thumbnail: apprenticeship.png
+openDate: 2026-11-20T00:00:00-12:00
+closeDate: 2026-12-13T23:59:00-12:00
+thumbnail: assets/images/apprenticeship/2027-hero.jpg
 hero: true
 faq:
   - title: "What are the key dates for the 2027 Apprentice Program?"
@@ -104,21 +106,23 @@ faq:
       Email us at [seacrowd.research@gmail.com](mailto:{{ seacrowd.research@gmail.com }}) or join our [Discord](https://discord.gg/XXRHFuvkTA) and ask in the #apprentice-program channel.
 ---
 
-<section class="hero">
-  <h1 class="hero-title">Connecting rising talent in AI research<br>with expertise in Southeast Asia</h1>
-  <p class="hero-subtitle"> {{ page.description }}</p>
+<section class="program-hero">
+  {% include hero-image.html src="assets/images/apprenticeship/2027-hero" alt="SEACrowd Apprentice Program 2027: a remote, mentored research program for early-career AI researchers across Southeast Asia" %}
   <div class="hero-actions">
     <a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apply as a Mentee</a>
-    <a href="/mentors" class="btn btn-outline-secondary">Apply as a Mentor (2027)</a>
+    <a href="/mentors" class="btn btn-light border disabled" role="button" aria-disabled="true" tabindex="-1">Apply as a Mentor (2027)</a>
   </div>
-  <p class="hero-status">Mentee registration for Batch 2027 runs Nov 20 – Dec 13, 2026. Projects will be listed on Nov 20.</p>
 </section>
 
 ## 2027 Research Topics
 
-The Batch 2027 research projects will be listed on this page on **Nov 20, 2026**. Each project description will include the timezone range of its mentor group, so you can check that the team's schedule fits your week before applying.
+Mentee registration is open until **Dec 13, 2026**. Pick the topics you'd like to work on and [apply]({{ page.form }}){:target="\_blank" rel="noopener noreferrer"}; you can suggest ideas for a topic, but cannot propose an entirely new project.
 
-In the meantime, see what Batch 2026 built: [2026 projects →](/apprentice-projects/2026/)
+{% assign projects_2027 = site['apprentice-projects'] | where: 'batch', 2027 | sort: 'order' %}
+
+<div class="apprentice-topics">
+{% include project-cards.html projects=projects_2027 filters=true %}
+</div>
 
 ## Who Can Apply
 
@@ -163,8 +167,6 @@ Check out [previous batch projects and publications](/apprentice-projects/)!
   - Round 2: Online interview
 - **Team announcement:** dates to be announced
 
-<a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apply as a Mentee</a>
-
 ## Program Schedule
 
 - **Kickoff:** Feb 2027
@@ -173,30 +175,6 @@ Check out [previous batch projects and publications](/apprentice-projects/)!
 - **Final showcase:** July (community-wide presentations)
 
 The program runs on a fixed 5-month window. Publications are encouraged when ready, not tied to specific conference deadlines.
-
-## Who You'll Work With
-
-### Mentors
-
-Mentors on a team serve on equal footing, with no primary/secondary split. Batch 2027 mentors will be listed alongside the projects; below are our Batch 2026 mentors.
-
-<div class="row g-2">
-  {% for profile in site.mentors %}
-    {% if profile.role == "primary_mentor" or profile.role == "secondary_mentor" %}
-      {% include mentor.html profile=profile %}
-    {% endif %}
-  {% endfor %}
-</div>
-
-### Organizers & Research Managers
-
-<div class="row g-2">
-  {% for profile in site.mentors %}
-    {% if profile.role == "organizer" %}
-      {% include mentor.html profile=profile no_link=true %}
-    {% endif %}
-  {% endfor %}
-</div>
 
 ## FAQs
 

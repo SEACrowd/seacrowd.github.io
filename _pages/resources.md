@@ -2,6 +2,7 @@
 layout: page
 title: Resources
 permalink: /resources
+wide: true
 ---
 
 We open-source datasets, dataloaders, models, and other resources from our [projects](/projects) and flagship [apprenticeship program](/apprenticeship). Follow our [HuggingFace](https://huggingface.co/SEACrowd) or [Github](https://github.com/seacrowd) for updates.

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Use CSS selector to exclude images we don't want to zoom
   const images = document.querySelectorAll(
-    "main img:not(a img):not(.card img):not(.card-clickable img):not(.carousel-item img), main .bibliography-preview"
+    "main img:not(a img):not(.card img):not(.card-clickable img):not(.carousel-item img):not(.program-hero img):not(.project-row img):not(.video-facade img), main .bibliography-preview"
   )
 
   if (images.length) {

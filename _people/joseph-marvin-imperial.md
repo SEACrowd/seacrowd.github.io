@@ -1,7 +1,7 @@
 ---
 name: "Joseph Marvin Imperial"
 position: "coreteam"
-avatar: "joseph_marvin_imperial.png"
+avatar: "joseph_marvin_imperial.jpg"
 twitter: ""
 sortorder: 2
 job: "Communications"

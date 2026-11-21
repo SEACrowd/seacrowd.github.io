@@ -28,6 +28,7 @@ ways_to_contribute:
       - '<a href="/apprenticeship">Join our apprenticeship program</a>'
       - "Participate in community discussions"
       - "Learn through collaborative projects"
+wide: true
 ---
 
 ## Join Our Community

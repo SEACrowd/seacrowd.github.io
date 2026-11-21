@@ -7,7 +7,7 @@ description: "AI for Southeast Asia, by Southeast Asians"
 url: https://seacrowd.org
 # baseurl: "" # For Root Domain
 permalink: /posts/:title.html
-thumbnail: banner.png
+thumbnail: og-default.jpg
 
 # Social Links
 social:

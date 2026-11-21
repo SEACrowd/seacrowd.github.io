@@ -1,7 +1,7 @@
 ---
 name: "Jan Christian Blaise Cruz"
 position: "coreteam"
-avatar: "jan_christian_blaise_cruz.png"
+avatar: "jan_christian_blaise_cruz.jpg"
 twitter: ""
 sortorder: 1
 job: "Communications Head"

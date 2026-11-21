@@ -9,6 +9,8 @@ The latest events from SEACrowd, our partners, and the rest of the Southeast Asi
   Explore moments captured from our community events in our <a href="https://photos.app.goo.gl/chgNTwJkFH7K1kBAA">Google Photos Album</a>!
 </div>
 
+<div class="event-list" markdown="1">
+
 ## Workshops
 
 - [The Second Workshop in South East Asian Language Processing @ COLING 2025](https://sealp-workshop.github.io/)
@@ -47,3 +49,5 @@ The latest events from SEACrowd, our partners, and the rest of the Southeast Asi
   Birds-of-a-Feather Session @ ACL 2024.
 - [**Current Status of NLP in South East Asia with Insights from Multilingualism and Language Diversity**](https://aclanthology.org/2023.ijcnlp-tutorials.2/).
   Tutorial @ IJCNLP-AACL 2023.
+
+</div>

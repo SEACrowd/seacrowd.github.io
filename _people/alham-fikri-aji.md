@@ -1,7 +1,7 @@
 ---
 name: "Alham Fikri Aji"
 position: "coreteam"
-avatar: "alham_fikri.png"
+avatar: "alham_fikri.jpg"
 twitter: ""
 sortorder: 1
 job: "Research Steering Head"

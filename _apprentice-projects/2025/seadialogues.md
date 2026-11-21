@@ -4,7 +4,7 @@ order: 3
 title: "SEADialogues: A Multilingual Culturally Grounded Multi-turn Dialogue Dataset on Southeast Asian Languages"
 summary: "A culturally grounded dialogue dataset and benchmark for SEA languages."
 mentees:
-  - name: "Muhammad Dehan Al Kautsar"
+  - name: "Muhammad Dehan Al-Kautsar"
   - name: "Aswin Candra"
   - name: "Muhammad Alif Al Hakim"
   - name: "Maxalmina Satria Kahfi"

@@ -1,6 +1,6 @@
 ---
 title: SEA-VL Phase 1
-thumbnail: seavl-banner.png
+thumbnail: seavl-banner.jpg
 description: Build the first culturally-relevant vision-language dataset for Southeast Asia.
 fromDate: 2024-03-01
 toDate: 2025-02-28

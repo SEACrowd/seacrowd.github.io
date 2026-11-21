@@ -6,7 +6,7 @@ description: "What we learned from running the first SEACrowd Apprentice Program
 category: Apprenticeship
 tags: [apprenticeship, restropection]
 authors: [Samuel Cahyawijaya]
-thumbnail: retrospective-review.png
+thumbnail: retrospective-review.jpg
 projects:
   - title: "Project 1: Language Surgery in Multilingual Large Language Models"
     content: |
@@ -67,7 +67,7 @@ projects:
       - helping models generalize better to languages with very little data
   - title: "Project 3: SEADialogues — Culturally Grounded Dialogue Dataset"
     content: |
-      👥 **Mentees:** Muhammad Dehan Al Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
+      👥 **Mentees:** Muhammad Dehan Al-Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
 
       → [View dataset on HuggingFace](https://huggingface.co/datasets/SEACrowd/SEADialogues) && [Read paper](https://arxiv.org/abs/2508.07069)
 

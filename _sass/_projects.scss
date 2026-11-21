@@ -1,35 +1,5 @@
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-// Project team section (mentors + mentees)
-.project-team {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-team-role {
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.project-team-role-label {
-  color: var(--primary);
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-right: 0.2rem;
-}
-
-.project-team-role--mentee .project-team-role-label {
-  color: var(--secondary);
+.project-mentors {
+  margin-top: 2rem;
 }
 
 // Name tags for team members
@@ -63,103 +33,275 @@
   }
 }
 
-// Resources / links section
-.project-links {
-  margin-bottom: 1.5rem;
+// Dedicated project page
+.project-detail {
+  &__header {
+    margin: 1rem 0 1.5rem;
+  }
 
-  ul {
-    margin-top: 0.4rem;
+  &__lead {
+    max-width: 46rem;
     margin-bottom: 0;
+    font-size: 1.1rem;
+    color: var(--muted-foreground);
+  }
+
+  &__main {
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 0.75rem;
+      font-size: 1.35rem;
+    }
+  }
+
+  &__aside {
+    position: sticky;
+    top: 5.5rem;
+  }
+
+  &__facts {
+    dt {
+      margin-top: 0.75rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    dd {
+      margin: 0.1rem 0 0;
+    }
   }
 }
 
-// Proposal section
-.project-proposal {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid color-mix(in oklch, var(--border) 50%, transparent);
+// Project list (filter bar + rows)
+.project-filters {
+  margin-bottom: 1rem;
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 0.75rem;
+    align-items: center;
+  }
+
+  &__search {
+    flex: 1 1 14rem;
+    min-width: 0;
+  }
+
+  &__tz {
+    flex: 0 1 11rem;
+  }
+
+  &__nearby {
+    font-size: 0.85rem;
+    color: var(--muted-foreground);
+    white-space: nowrap;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  &__status {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    color: var(--muted-foreground);
+  }
 }
 
-.project-proposal-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted-foreground);
-  margin-bottom: 0.5rem;
-}
-
-// Card styles
-.project-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 0.9rem 1rem 0.7rem;
-}
-
-.project-card-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.project-card-title {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.3;
-}
-
-.project-card-venue {
-  align-self: flex-start;
-  padding: 0.1rem 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: var(--primary);
-  border: 1px solid color-mix(in oklch, var(--primary) 40%, transparent);
+.project-tag-chip {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid transparent;
   border-radius: 999px;
+  background: color-mix(in oklch, var(--foreground) 7%, var(--background));
+  color: var(--foreground);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease;
+
+  &:hover {
+    background: color-mix(in oklch, var(--foreground) 12%, var(--background));
+  }
+
+  &[aria-pressed="true"] {
+    background: color-mix(in oklch, var(--primary) 10%, var(--background));
+    border-color: color-mix(in oklch, var(--primary) 55%, transparent);
+    color: var(--primary);
+  }
+
+  &__count {
+    margin-left: 0.25rem;
+    opacity: 0.6;
+  }
+
+  &--clear {
+    background: none;
+    color: var(--muted-foreground);
+    text-decoration: underline;
+  }
 }
 
-.project-card-summary {
-  margin: 0;
-  color: var(--muted-foreground);
-  font-size: 0.9rem;
+.project-list {
+  border-top: 1px solid color-mix(in oklch, var(--border) 70%, transparent);
+  margin-bottom: 1.5rem;
 }
 
-.project-card-team {
-  margin-top: auto;
-  padding-top: 0.5rem;
-  border-top: 1px solid color-mix(in oklch, var(--border) 50%, transparent);
+.project-row {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+  gap: 1rem;
+  padding: 1.1rem 0.9rem;
+  border-bottom: 1px solid color-mix(in oklch, var(--border) 70%, transparent);
+  transition: background 150ms ease;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &:hover,
+  &:focus-within {
+    background: color-mix(in oklch, var(--secondary) 5%, var(--background));
+  }
+
+  &:hover &__title a {
+    color: var(--secondary);
+  }
+
+  &__avatars {
+    flex: 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--background);
+    background: var(--background);
+
+    & + & {
+      margin-top: -0.8rem;
+    }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  &__title {
+    // Keep static so the link's stretched-link ::after is sized by the row
+    position: static;
+    margin: 0 0 0.2rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+
+    a {
+      color: var(--foreground);
+      text-decoration: none;
+    }
+  }
+
+  &__venue {
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
+    color: var(--primary);
+    border: 1px solid color-mix(in oklch, var(--primary) 40%, transparent);
+    border-radius: 999px;
+  }
+
+  &__mentors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1rem 1rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  &__mentor-affiliation {
+    color: var(--muted-foreground);
+  }
+
+  &__summary {
+    margin: 0 0 0.6rem;
+    font-size: 0.92rem;
+    color: color-mix(in oklch, var(--foreground) 82%, var(--background));
+  }
+
+  &__mentees {
+    margin: 0 0 0.6rem;
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  &__tag,
+  &__tz {
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  &__tag {
+    background: color-mix(in oklch, var(--foreground) 7%, var(--background));
+    color: var(--foreground);
+  }
+
+  &__tz {
+    border: 1px solid color-mix(in oklch, var(--border) 90%, transparent);
+    color: var(--muted-foreground);
+  }
 }
 
-.project-card-role {
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.4;
+.project-list-empty {
+  padding: 2rem 0;
+  text-align: center;
   color: var(--muted-foreground);
 }
 
-.project-card-role-label {
-  font-weight: 600;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-right: 0.2rem;
-}
+@media (max-width: 575.98px) {
+  .project-row {
+    gap: 0.75rem;
+    padding: 1rem 0.5rem;
 
-.project-card-role--mentor .project-card-role-label {
-  color: var(--primary);
-}
+    &__avatars {
+      flex-basis: 2.25rem;
+    }
 
-.project-card-role--mentee .project-card-role-label {
-  color: var(--secondary);
-}
-
-.project-card-cta {
-  margin-top: auto;
+    &__avatar {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
 }
 
 // Hidden markdown source (legacy)

@@ -1,7 +1,8 @@
 ---
 title: SEACrowd Apprentice Program Mentors
 permalink: /mentors/
-description: Experienced AI researchers who guide early-career researchers through the SEACrowd Apprentice Program. We're looking for 2027 mentors.
+description: Experienced AI researchers who guide early-career researchers through the SEACrowd Apprentice Program, from scoping a project to publishing it.
+thumbnail: assets/images/apprenticeship/mentors-hero.png
 hero: true
 toc: false
 form: https://docs.google.com/forms/d/e/1FAIpQLSf55CiCS5ld9ZDGBZ4Lr9lcu5DPG0ElVCtIJ_YzpQxmdJ3QbA/viewform
@@ -45,29 +46,55 @@ faq:
       Most projects have **2–5 mentees** per team. If there are multiple mentors on a project, responsibilities are split based on expertise and availability.
   - title: "What support does SEACrowd provide?"
     content: |
-      We handle logistics: mentee recruitment and screening, program communications, mid-term and end-term reviews, and compute resources for experiments. Mentors focus on research guidance; we handle the rest.
+      We handle logistics: mentee recruitment and screening, program communications, and mid-term and end-term reviews. Mentors focus on research guidance; we handle the rest. Compute funding is limited: SEACrowd is a volunteer-run non-profit, so projects rely on mentors' compute through their institutions, or on external grants, and we are working to secure more grants for apprentice projects.
   - title: "I have a question not covered here"
     content: |
       Email us at [seacrowd.research@gmail.com](mailto:seacrowd.research@gmail.com) or join our [Discord](https://discord.gg/XXRHFuvkTA) and ask in the **#apprentice-program** channel.
 ---
 
-<section class="hero">
-  <h1 class="hero-title">
-    Shaping the next generation of<br>
-    AI researchers in Southeast Asia
-  </h1>
-  <p class="hero-subtitle">{{ page.description }}</p>
+<section class="program-hero">
+  <img
+    class="program-hero__image"
+    src="{{ 'assets/images/apprenticeship/mentors-hero.png' | relative_url }}"
+    alt="SEACrowd Apprentice Program Mentors: guide early-career AI researchers across Southeast Asia, from first idea to published paper"
+    width="1200"
+    height="630"
+  >
   <div class="hero-actions">
-    <a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener">
-      Express interest to mentor
-    </a>
-    <a href="{{ "/apprentice-projects/" | relative_url }}" class="btn btn-outline-secondary">
-      See current and past projects
-    </a>
+    <a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Express interest to mentor</a>
+    <a href="{{ '/apprentice-projects/2027/' | relative_url }}" class="btn btn-outline-secondary">See the 2027 projects</a>
   </div>
 </section>
 
-The SEACrowd Apprentice Program is a part-time, remote research program pairing experienced researchers with early-career talent from Southeast Asia to produce models, datasets, and publishable research. Each cohort runs February–June, with mentors working directly with teams of 2–5 mentees on focused AI research projects — from problem scoping and experiment design to shepherding work toward publication. Over two cohorts (2025–2026), our mentors have guided **24 mentees** across **8 projects**, with the first cohort publishing at [MRL @ EMNLP 2025](https://sigtyp.github.io/ws2025-mrl.html){:target="\_blank" rel="noopener"}.
+The SEACrowd Apprentice Program is a part-time, remote research program that pairs experienced researchers with early-career talent from Southeast Asia to produce models, datasets, and publishable research. Each cohort runs February to June. Mentors work directly with teams of 2–5 mentees on focused AI research projects, from problem scoping and experiment design to shepherding the work toward publication.
+
+{% assign all_projects = site['apprentice-projects'] %}
+{% assign all_mentor_names = '' | split: '' %}
+{% assign mentee_total = 0 %}
+{% for project in all_projects %}
+{% assign project_mentees = project.mentees.size | default: 0 %}
+{% assign mentee_total = mentee_total | plus: project_mentees %}
+{% for person in project.mentors %}
+{% unless all_mentor_names contains person.name %}
+{% assign all_mentor_names = all_mentor_names | push: person.name %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+
+<div class="row g-3 my-4 text-center">
+  <div class="col-6 col-md-3">
+    <div class="program-stat"><div class="program-stat__value">{{ site.data.apprentice_batches.size }}</div><div class="program-stat__label">batches since 2025</div></div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="program-stat"><div class="program-stat__value">{{ all_projects.size }}</div><div class="program-stat__label">research projects</div></div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="program-stat"><div class="program-stat__value">{{ all_mentor_names.size }}</div><div class="program-stat__label">mentors</div></div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="program-stat"><div class="program-stat__value">{{ mentee_total }}</div><div class="program-stat__label">mentees in past batches</div></div>
+  </div>
+</div>
 
 <section class="my-4">
   <div class="row g-4">
@@ -116,6 +143,51 @@ The SEACrowd Apprentice Program is a part-time, remote research program pairing 
   </div>
 </section>
 
+{% assign projects_2027 = site['apprentice-projects'] | where: 'batch', 2027 %}
+{% assign mentors_2027 = '' | split: '' %}
+{% for project in projects_2027 %}
+{% for person in project.mentors %}
+{% unless mentors_2027 contains person.name %}
+{% assign mentors_2027 = mentors_2027 | push: person.name %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+
+## Our mentors
+
+**Batch 2027** ({{ mentors_2027.size }} mentors). Mentors on a team serve on equal footing, with no primary/secondary split.
+
+<div class="row g-2">
+  {% for name in mentors_2027 %}
+    {% assign profile = site.mentors | where: "name", name | first %}
+    {% if profile %}
+      {% include mentor.html profile=profile %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+<details class="mt-4">
+  <summary class="fw-semibold">Past mentors (Batch 2025 and 2026)</summary>
+  <div class="row g-2 mt-1">
+    {% assign shown_past = '' %}
+    {% for project in all_projects %}
+      {% if project.batch != 2027 %}
+        {% for person in project.mentors %}
+          {% unless mentors_2027 contains person.name %}
+            {% unless shown_past contains person.name %}
+              {% assign shown_past = shown_past | append: '|' | append: person.name %}
+              {% assign profile = site.mentors | where: "name", person.name | first %}
+              {% if profile %}
+                {% include mentor.html profile=profile %}
+              {% endif %}
+            {% endunless %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</details>
+
 ## What mentors say
 
 <div class="row g-3">
@@ -156,12 +228,32 @@ The SEACrowd Apprentice Program is a part-time, remote research program pairing 
 
 ## How it works
 
-1. **Express interest** — submit [the form]({{ page.form }}){:target="\_blank" rel="noopener"}. We review your background and research ideas.
-2. **We reach out** — if you're not already affiliated with SEACrowd, we match you with one of our researchers. This ensures the project runs smoothly even if one mentor is unavailable, and gives you a built-in connection to the community.
-3. **Develop a proposal** — write a research proposal with clear research questions or hypotheses, scoped so most of the work can be completed within 5 months, with a rough timeline and resource estimate.
-4. **Proposal review** — we screen proposals for impact, tractability, and cost, and mentors for mentorship experience. If interests align, we work with you to develop the proposal further.
-5. **Recruit your mentees** — we help screen candidates for your project, and you decide (via interviews, trial tasks, or similar) who to bring on.
-6. **Program runs Feb – Jun** — we onboard your mentees and provide the team with financial and research support throughout the program.
+<ol class="mentor-steps list-unstyled">
+  <li>
+    <span class="mentor-steps__num">1</span>
+    <div><strong>Express interest.</strong> Submit <a href="{{ page.form }}" target="_blank" rel="noopener">the form</a>. We review your background and research ideas.</div>
+  </li>
+  <li>
+    <span class="mentor-steps__num">2</span>
+    <div><strong>We reach out.</strong> If you're not already affiliated with SEACrowd, we match you with one of our researchers. This ensures the project runs smoothly even if one mentor is unavailable, and gives you a built-in connection to the community.</div>
+  </li>
+  <li>
+    <span class="mentor-steps__num">3</span>
+    <div><strong>Develop a proposal.</strong> Write a research proposal with clear research questions or hypotheses, scoped so most of the work can be completed within 5 months, with a rough timeline and resource estimate.</div>
+  </li>
+  <li>
+    <span class="mentor-steps__num">4</span>
+    <div><strong>Proposal review.</strong> We screen proposals for impact, tractability, and cost, and mentors for mentorship experience. If interests align, we work with you to develop the proposal further.</div>
+  </li>
+  <li>
+    <span class="mentor-steps__num">5</span>
+    <div><strong>Recruit your mentees.</strong> We help screen candidates for your project, and you decide (via interviews, trial tasks, or similar) who to bring on.</div>
+  </li>
+  <li>
+    <span class="mentor-steps__num">6</span>
+    <div><strong>Program runs Feb – Jun.</strong> We onboard your mentees and provide the team with research support and limited compute funding throughout the program.</div>
+  </li>
+</ol>
 
 ## Frequently Asked Questions
 

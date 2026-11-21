@@ -15,10 +15,16 @@ layout: default
 <h3>Projects</h3>
 
 {% if projects.size > 0 %}
-  {% include project-cards.html projects=projects batch_key=page.batch %}
+  {% include project-cards.html projects=projects filters=true %}
 {% else %}
   <p class="text-muted">Projects for this batch will be announced soon.</p>
 {% endif %}
 
-<h3>Publications</h3>
-{% bibliography --file apprenticeship --query @*[batch={{ page.batch }}] %}
+{% capture batch_publications %}
+  {% bibliography --file apprenticeship --query @*[batch={{ page.batch }}] %}
+{% endcapture %}
+{% if batch_publications contains '<li' %}
+  <h3>Publications</h3>
+
+  {{ batch_publications }}
+{% endif %}

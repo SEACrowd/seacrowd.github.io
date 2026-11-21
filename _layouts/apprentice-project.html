@@ -1,82 +1,247 @@
 ---
 layout: default
 ---
-<div class="my-4">
-  <h1 class="page-title">{{ page.title }}</h1>
+{% assign batch_info = site.data.apprentice_batches
+  | where: 'year', page.batch
+  | first
+%}
+{% assign apply_page = site.pages
+  | where: 'permalink', '/apprenticeship.html'
+  | first
+%}
+{% assign is_current = batch_info.current %}
+{% assign batch_url = '/apprentice-projects/'
+  | append: page.batch
+  | append: '/'
+  | relative_url
+%}
 
-  {% if page.summary %}
-    <p class="text-muted">{{ page.summary }}</p>
+{% assign project_mentors = '' | split: '' %}
+{% for person in page.mentors %}
+  {% assign mentor_page = site.mentors | where: 'name', person.name | first %}
+  {% if mentor_page %}
+    {% assign project_mentors = project_mentors | push: mentor_page %}
   {% endif %}
+{% endfor %}
 
-  {% assign mentor_names = page.mentors | map: 'name' %}
-  {% assign mentee_names = page.mentees | map: 'name' %}
-  {% if mentor_names.size > 0 or mentee_names.size > 0 %}
-    <div class="project-team">
-      {% if page.mentors and page.mentors.size > 0 %}
-        <div class="project-team-role project-team-role--mentor">
-          <strong class="project-team-role-label">Mentors:</strong>
-          <div class="d-flex flex-wrap gap-1 mt-1">
-            {%- for person in page.mentors -%}
-              {% assign mentor_page = site.mentors
-                | where: 'name', person.name
-                | first
-              %}
-              {% if mentor_page %}
-                <a
-                  href="{{ mentor_page.url | relative_url }}"
-                  class="project-tag project-tag--mentor"
-                >
-                  {{- person.name -}}
-                </a>
-              {% else %}
-                <span class="project-tag">{{- person.name -}}</span>
-              {% endif %}
-            {%- endfor -%}
-          </div>
-        </div>
+<article class="project-detail my-4">
+  <a href="{{ batch_url }}" class="project-detail__back text-decoration-none">
+    <i class="fas fa-arrow-left me-1" aria-hidden="true"></i>
+    All Batch {{ page.batch }} projects
+  </a>
+
+  <header class="project-detail__header">
+    <h1 class="page-title">
+      {{ page.title }}
+      {% if page.venue %}
+        <span class="project-row__venue">{{ page.venue }}</span>
       {% endif %}
+    </h1>
+    {% if page.tags and page.tags.size > 0 %}
+      <div class="project-row__tags mb-3">
+        {%- for tag in page.tags -%}
+          <span class="project-row__tag">{{ tag }}</span>
+        {%- endfor -%}
+      </div>
+    {% endif %}
+    {% if page.summary %}
+      <p class="project-detail__lead">{{ page.summary }}</p>
+    {% endif %}
+  </header>
+
+  <div class="row g-4">
+    <div class="col-lg-8 project-detail__main">
+      <section>
+        <h2>About the project</h2>
+        {{ content }}
+      </section>
+
+      {% if page.activities and page.activities.size > 0 %}
+        <section>
+          <h2>What mentees potentially work on</h2>
+          <ul>
+            {%- for item in page.activities -%}
+              <li>
+                {{-
+                  item
+                  | markdownify
+                  | remove: '<p>'
+                  | remove: '</p>'
+                  | strip
+                -}}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </section>
+      {% endif %}
+
+      {% if page.requirements and page.requirements.size > 0 %}
+        <section>
+          <h2>Requirements and recommended background</h2>
+          <ul>
+            {%- for item in page.requirements -%}
+              <li>
+                {{-
+                  item
+                  | markdownify
+                  | remove: '<p>'
+                  | remove: '</p>'
+                  | strip
+                -}}
+              </li>
+            {%- endfor -%}
+          </ul>
+          {% if is_current %}
+            <p class="text-muted small">
+              There are no formal eligibility limits. See
+              <a href="{{ '/apprenticeship#who-can-apply' | relative_url }}"
+                >who can apply</a
+              >; you can still apply if you don't match every item.
+            </p>
+          {% endif %}
+        </section>
+      {% endif %}
+
+      {% if is_current
+        and page.activities == null
+        and page.requirements == null
+      %}
+        <p class="text-muted">
+          The mentors have not yet listed what mentees will work on or the
+          recommended background for this project.
+        </p>
+      {% endif %}
+
+      {% if page.publications and page.publications.size > 0 %}
+        <section>
+          <h2>Relevant publications</h2>
+          <ul>
+            {%- for pub in page.publications -%}
+              <li>
+                <a href="{{ pub.url }}" target="_blank" rel="noopener">
+                  {{- pub.title -}}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </section>
+      {% endif %}
+
+      {% if page.links and page.links.size > 0 %}
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            {%- for link in page.links -%}
+              <li>
+                <a href="{{ link.url }}" target="_blank" rel="noopener">
+                  {{- link.label -}}
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </section>
+      {% endif %}
+
+      {% capture project_publications %}
+        {% bibliography --file apprenticeship --query @*[project={{ page.slug }}] %}
+      {% endcapture %}
+      {% if project_publications contains '<li' %}
+        <section class="project-publications">
+          <h2>Publications</h2>
+          {{ project_publications }}
+        </section>
+      {% endif %}
+
+      {% if project_mentors.size > 0 %}
+        <section class="project-mentors">
+          <h2>
+            {% if project_mentors.size == 1 %}Mentor{% else %}Mentors{% endif %}
+          </h2>
+          <div class="row g-2">
+            {% for mentor in project_mentors %}
+              {% include mentor.html profile=mentor %}
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+
       {% if page.mentees and page.mentees.size > 0 %}
-        <div class="project-team-role project-team-role--mentee">
-          <strong class="project-team-role-label"
-            >Mentees ({{ page.mentees.size }}):</strong
-          >
-          <div class="d-flex flex-wrap gap-1 mt-1">
+        <section>
+          <h2>Mentees ({{ page.mentees.size }})</h2>
+          <div class="d-flex flex-wrap gap-1">
             {%- for person in page.mentees -%}
               <span class="project-tag">{{- person.name -}}</span>
             {%- endfor -%}
           </div>
-        </div>
+        </section>
       {% endif %}
     </div>
-  {% endif %}
 
-  {% if page.links and page.links.size > 0 %}
-    <div class="project-links">
-      <strong>Resources:</strong>
-      <ul>
-        {%- for link in page.links -%}
-          <li>
-            <a href="{{ link.url }}">{{ link.label }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  {% endif %}
-
-  <div class="project-proposal">
-    <p class="project-proposal-label">Project Proposal</p>
-    {{ content }}
+    <aside class="col-lg-4">
+      <div class="project-detail__aside">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-muted mb-3">At a glance</h2>
+            <dl class="project-detail__facts mb-0">
+              <dt>Batch</dt>
+              <dd>{{ page.batch }}</dd>
+              {% if is_current and batch_info.period %}
+                <dt>Program</dt>
+                <dd>{{ batch_info.period }}, remote</dd>
+              {% endif %}
+              {% if is_current and batch_info.commitment %}
+                <dt>Time commitment</dt>
+                <dd>{{ batch_info.commitment }}</dd>
+              {% endif %}
+              {% if is_current and batch_info.team_size %}
+                <dt>Team</dt>
+                <dd>{{ batch_info.team_size }}</dd>
+              {% elsif page.mentees and page.mentees.size > 0 %}
+                <dt>Team</dt>
+                <dd>{{ page.mentees.size }} mentees</dd>
+              {% endif %}
+              {% if page.timezone %}
+                <dt>Mentor time zone</dt>
+                <dd>
+                  <i class="fas fa-clock me-1" aria-hidden="true"></i>
+                  {{ page.timezone }}
+                </dd>
+              {% endif %}
+              <dt>
+                {% if project_mentors.size == 1 -%}
+                  Mentor
+                {%- else -%}
+                  Mentors
+                {%- endif %}
+              </dt>
+              <dd>
+                {%- for person in page.mentors -%}
+                  {{ person.name }}
+                  {%- unless forloop.last %}, {% endunless -%}
+                {%- endfor -%}
+              </dd>
+            </dl>
+          </div>
+          {% if is_current and apply_page.form %}
+            <div class="card-footer bg-transparent">
+              <a
+                href="{{ apply_page.form }}"
+                class="btn btn-primary w-100"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Apply as a mentee</a
+              >
+              {% if batch_info.registration %}
+                <p class="small text-muted text-center mt-2 mb-0">
+                  Registration: {{ batch_info.registration }}
+                </p>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </aside>
   </div>
-
-  {% capture project_publications %}
-    {% bibliography --file apprenticeship --query @*[project={{ page.slug }}] %}
-  {% endcapture %}
-  {% if project_publications contains '<li' %}
-    <section class="project-publications">
-      <h2>Publications</h2>
-      {{ project_publications }}
-    </section>
-  {% endif %}
 
   {% assign batch_projects = site['apprentice-projects']
     | where: 'batch', page.batch
@@ -139,4 +304,4 @@ layout: default
       </div>
     </div>
   </nav>
-</div>
+</article>

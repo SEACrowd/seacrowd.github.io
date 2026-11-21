@@ -72,6 +72,10 @@ main:has(.post-layout) {
   padding: 0 0.5rem;
 }
 
+main:has(.project-detail) {
+  max-width: 64rem;
+}
+
 h2,
 h3,
 h4,

@@ -1,12 +1,13 @@
-{% assign thumbnail = include.item.thumbnail | default: site.thumbnail %}
-{% if include.type %}
+{% if include.item.thumbnail and include.type %}
   {% assign img_src = '/assets/images/'
     | append: include.type
     | append: '/'
-    | append: thumbnail
+    | append: include.item.thumbnail
   %}
+{% elsif include.item.thumbnail %}
+  {% assign img_src = '/assets/images/' | append: include.item.thumbnail %}
 {% else %}
-  {% assign img_src = '/assets/images/' | append: thumbnail %}
+  {% assign img_src = '/assets/images/' | append: site.thumbnail %}
 {% endif %}
 
 <article
@@ -24,7 +25,9 @@
           src="{{ img_src }}"
           class="img-fluid rounded w-100 object-fit-cover"
           alt="{{ include.item.title }}"
-          style="height: 180px"
+          width="640"
+          height="400"
+          style="aspect-ratio: 16 / 10; height: auto"
         >
       </div>
 

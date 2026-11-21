@@ -34,7 +34,7 @@ projects:
     content: |
       👥 **Mentees:** Thanh-Nhi Nguyen, Feliks Victor Parningotan Samosir, Michael Christlambert Sinanta
 
-      🧭 **Mentors:** Fajri Koto, Muhammad Dehan Al Kautsar
+      🧭 **Mentors:** Fajri Koto, Muhammad Dehan Al-Kautsar
 
       → [View project page](/apprentice-projects/2026/coral-contextual-relevance)
 

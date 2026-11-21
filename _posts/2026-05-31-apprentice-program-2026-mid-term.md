@@ -31,7 +31,7 @@ mentor_voices:
   - name: M. Reza Qorib
     quote: |
       Working with SEACrowd mentees is a refreshing research experience. The mentees are very passionate about learning and researching new things and sharing new knowledge with the world. Therefore, both mentors and mentees actually learn something new from each other. We collaborate and grow together.
-  - name: M. Dehan Al-Kautsar
+  - name: Muhammad Dehan Al-Kautsar
     quote: |
       The collaborative spirit among team members is impressive. They're supporting each other while maintaining high academic standards — exactly what we hoped to cultivate. I've noticed mentees are becoming more adept at giving and receiving constructive feedback, which is essential for growth in research.
   - name: Farid Adilazuarda
@@ -74,7 +74,7 @@ Our five mentored teams have hit the ground running with structured milestones a
 
 ### Team 2: CoRaL: Contextual Relevance and Linguistic Enrichment for Balanced Data Curation in Low-Resource Language Pre-Training
 
-**Mentors:** Fajri Koto, Muhammad Dehan Al Kautsar
+**Mentors:** Fajri Koto, Muhammad Dehan Al-Kautsar
 
 **The Problem:** Low-resource language corpora are typically plagued by noise, domain imbalance, and code-mixing. Naive filtering pipelines often make things worse — discarding scarce data and erasing the cultural signal that makes these corpora valuable in the first place. The result: training data that is neither high quality nor culturally representative.
 

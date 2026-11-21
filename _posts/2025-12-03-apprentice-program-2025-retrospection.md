@@ -67,7 +67,7 @@ projects:
       - helping models generalize better to languages with very little data
   - title: "Project 3: SEADialogues — Culturally Grounded Dialogue Dataset"
     content: |
-      👥 **Mentees:** Muhammad Dehan Al Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
+      👥 **Mentees:** Muhammad Dehan Al-Kautsar, Aswin Candra, Muhammad Alif Al Hakim, Maxalmina Satria Kahfi
 
       → [View dataset on HuggingFace](https://huggingface.co/datasets/SEACrowd/SEADialogues) && [Read paper](https://arxiv.org/abs/2508.07069)
 

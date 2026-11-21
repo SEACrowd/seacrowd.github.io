@@ -10,7 +10,7 @@ tags:
   - "Multilingual NLP"
 mentors:
   - name: "Fajri Koto"
-  - name: "Muhammad Dehan Al Kautsar"
+  - name: "Muhammad Dehan Al-Kautsar"
 activities:
   - "Build an eval harness that tests 4–6 LLMs across 2–3 tasks and measures cost, latency, and quality"
   - "Build a performance-prediction and cascade-routing strategy that cuts cost while holding quality"

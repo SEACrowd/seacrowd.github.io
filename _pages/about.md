@@ -4,6 +4,7 @@ description:
   A grassroots community advancing AI for Southeast Asia through collaborative research, datasets,
   and mentorship
 permalink: /about.html
+wide: true
 ---
 
 ## Our Vision

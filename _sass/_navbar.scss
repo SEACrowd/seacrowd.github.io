@@ -1,8 +1,10 @@
 @use "variables";
 
 .navbar {
-  background-color: var(--background);
-  box-shadow: 0 2px 4px color-mix(in oklch, var(--foreground) 10%, transparent);
+  background-color: color-mix(in oklch, var(--background) 90%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--foreground) 8%, transparent);
   font-size: 0.875rem;
 
   // Bootstrap navbar variables

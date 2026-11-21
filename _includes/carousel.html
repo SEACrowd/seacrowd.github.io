@@ -39,8 +39,12 @@
         <img
           src="{{ image_path }}"
           class="d-block w-100 h-100"
-          alt="{{ item.alt | default: item.caption | default: 'Carousel image' }}"
+          alt="{{ item.alt | default: item.description | default: item.caption | default: 'Carousel image' }}"
           style="object-fit: cover"
+          {% if forloop.first %}
+            loading="eager"
+            fetchpriority="high"
+          {% endif %}
         >
 
         {% if item.description %}

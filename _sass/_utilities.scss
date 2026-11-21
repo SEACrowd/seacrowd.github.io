@@ -36,7 +36,9 @@ h6 {
 main
   img:not(.profile-thumbnail):not(a img):not(.card img):not(
     .clickable-card img
-  ):not(.carousel img):not(.program-hero img):not(.project-row img),
+  ):not(.carousel img):not(.program-hero img):not(.project-row img):not(
+    .video-facade img
+  ),
 .medium-zoom-image {
   cursor: zoom-in;
   transition: transform 0.3s ease;

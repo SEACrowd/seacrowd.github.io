@@ -2,7 +2,7 @@
 title: SEACrowd Apprentice Program Mentors
 permalink: /mentors/
 description: Experienced AI researchers who guide early-career researchers through the SEACrowd Apprentice Program, from scoping a project to publishing it.
-thumbnail: assets/images/apprenticeship/mentors-hero.png
+thumbnail: assets/images/apprenticeship/mentors-hero.jpg
 hero: true
 toc: false
 form: https://docs.google.com/forms/d/e/1FAIpQLSf55CiCS5ld9ZDGBZ4Lr9lcu5DPG0ElVCtIJ_YzpQxmdJ3QbA/viewform
@@ -53,13 +53,7 @@ faq:
 ---
 
 <section class="program-hero">
-  <img
-    class="program-hero__image"
-    src="{{ 'assets/images/apprenticeship/mentors-hero.png' | relative_url }}"
-    alt="SEACrowd Apprentice Program Mentors: guide early-career AI researchers across Southeast Asia, from first idea to published paper"
-    width="1200"
-    height="630"
-  >
+  {% include hero-image.html src="assets/images/apprenticeship/mentors-hero" alt="SEACrowd Apprentice Program Mentors: guide early-career AI researchers across Southeast Asia, from first idea to published paper" %}
   <div class="hero-actions">
     <a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Express interest to mentor</a>
     <a href="{{ '/apprentice-projects/2027/' | relative_url }}" class="btn btn-outline-secondary">See the 2027 projects</a>

@@ -14,7 +14,7 @@ keywords:
 form: https://docs.google.com/forms/d/1FHgfr7sx8VqZkNrYvgGXl81hwqMqEibYN0nrabfYLRk/viewform
 openDate: 2026-11-20T00:00:00-12:00
 closeDate: 2026-12-13T23:59:00-12:00
-thumbnail: assets/images/apprenticeship/2027-hero.png
+thumbnail: assets/images/apprenticeship/2027-hero.jpg
 hero: true
 faq:
   - title: "What are the key dates for the 2027 Apprentice Program?"
@@ -107,13 +107,7 @@ faq:
 ---
 
 <section class="program-hero">
-  <img
-    class="program-hero__image"
-    src="{{ 'assets/images/apprenticeship/2027-hero.png' | relative_url }}"
-    alt="SEACrowd Apprentice Program 2027: a remote, mentored research program for early-career AI researchers across Southeast Asia"
-    width="1200"
-    height="630"
-  >
+  {% include hero-image.html src="assets/images/apprenticeship/2027-hero" alt="SEACrowd Apprentice Program 2027: a remote, mentored research program for early-career AI researchers across Southeast Asia" %}
   <div class="hero-actions">
     <a href="{{ page.form }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apply as a Mentee</a>
     <a href="/mentors" class="btn btn-light border disabled" role="button" aria-disabled="true" tabindex="-1">Apply as a Mentor (2027)</a>

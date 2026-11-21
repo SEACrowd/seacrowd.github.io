@@ -1,14 +1,33 @@
 <div class="video-container mx-auto mb-4">
   <div class="ratio ratio-16x9 rounded shadow">
     {% if include.video_id %}
-      <iframe
-        src="https://www.youtube.com/embed/{{ include.video_id }}?rel=0&showinfo=0&modestbranding=1"
-        title="{{ include.title | default: 'Video' }}"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
+      {% comment %}
+        Facade: load the iframe only after a click (assets/js/video-facade.js).
+      {% endcomment %}
+      <div
+        class="video-facade"
+        data-video-id="{{ include.video_id }}"
+        data-title="{{ include.title | default: include.caption | default: 'Video' | escape }}"
       >
-      </iframe>
+        <button
+          type="button"
+          class="video-facade__button"
+          aria-label="Play video: {{ include.title | default: include.caption | default: 'Video' | escape }}"
+        >
+          <img
+            class="video-facade__thumb"
+            src="https://i.ytimg.com/vi/{{ include.video_id }}/hqdefault.jpg"
+            alt=""
+            width="480"
+            height="360"
+            loading="lazy"
+            decoding="async"
+          >
+          <span class="video-facade__play" aria-hidden="true">
+            <i class="fas fa-play"></i>
+          </span>
+        </button>
+      </div>
     {% elsif include.vimeo_id %}
       <iframe
         src="https://player.vimeo.com/video/{{ include.vimeo_id }}"

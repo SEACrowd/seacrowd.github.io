@@ -6,7 +6,7 @@ description: "What we learned from running the first SEACrowd Apprentice Program
 category: Apprenticeship
 tags: [apprenticeship, restropection]
 authors: [Samuel Cahyawijaya]
-thumbnail: retrospective-review.png
+thumbnail: retrospective-review.jpg
 projects:
   - title: "Project 1: Language Surgery in Multilingual Large Language Models"
     content: |

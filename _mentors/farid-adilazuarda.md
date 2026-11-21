@@ -4,5 +4,5 @@ role: secondary_mentor
 position: PhD Student
 affiliation: University of Edinburgh
 site: https://faridlazuarda.github.io/
-avatar: farid_adilazuarda.png
+avatar: farid_adilazuarda.jpg
 ---

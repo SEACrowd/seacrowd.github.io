@@ -7,7 +7,7 @@ category: Apprenticeship
 tags: [apprenticeship, restropection]
 featured: true
 authors: [Mentors of SEACrowd Apprentice Programs 2026]
-thumbnail: mid-report-2026.png
+thumbnail: mid-report-2026.jpg
 form: https://docs.google.com/forms/d/e/1FAIpQLSf55CiCS5ld9ZDGBZ4Lr9lcu5DPG0ElVCtIJ_YzpQxmdJ3QbA/viewform
 mentor_voices:
   - name: Alham Fikri Aji

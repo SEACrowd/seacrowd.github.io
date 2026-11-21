@@ -1,7 +1,7 @@
 ---
 name: "Salsabil Maulana Akbar"
 position: "coreteam"
-avatar: "salsabil_maulana_akbar.png"
+avatar: "salsabil_maulana_akbar.jpg"
 twitter: ""
 sortorder: 0
 job: "Secretary"

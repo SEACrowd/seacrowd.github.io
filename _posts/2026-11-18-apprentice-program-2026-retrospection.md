@@ -7,7 +7,7 @@ category: Apprenticeship
 tags: [apprenticeship, restropection]
 featured: true
 authors: [Samuel Cahyawijaya]
-thumbnail: retrospective-2026.png
+thumbnail: retrospective-2026.jpg
 form: https://docs.google.com/forms/d/1FHgfr7sx8VqZkNrYvgGXl81hwqMqEibYN0nrabfYLRk/viewform
 projects:
   - title: "Project 1: SEATauBench — Evaluating AI Agents in Southeast Asian Languages (EMNLP Findings 2026)"

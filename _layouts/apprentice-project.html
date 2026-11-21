@@ -10,11 +10,6 @@ layout: default
   | first
 %}
 {% assign is_current = batch_info.current %}
-{% assign batch_url = '/apprentice-projects/'
-  | append: page.batch
-  | append: '/'
-  | relative_url
-%}
 
 {% assign project_mentors = '' | split: '' %}
 {% for person in page.mentors %}
@@ -25,11 +20,6 @@ layout: default
 {% endfor %}
 
 <article class="project-detail my-4">
-  <a href="{{ batch_url }}" class="project-detail__back text-decoration-none">
-    <i class="fas fa-arrow-left me-1" aria-hidden="true"></i>
-    All Batch {{ page.batch }} projects
-  </a>
-
   <header class="project-detail__header">
     <h1 class="page-title">
       {{ page.title }}

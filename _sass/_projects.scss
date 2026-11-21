@@ -35,15 +35,6 @@
 
 // Dedicated project page
 .project-detail {
-  &__back {
-    font-size: 0.85rem;
-    color: var(--muted-foreground);
-
-    &:hover {
-      color: var(--secondary);
-    }
-  }
-
   &__header {
     margin: 1rem 0 1.5rem;
   }

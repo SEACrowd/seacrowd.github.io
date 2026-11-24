@@ -191,10 +191,31 @@ layout: default
                 <dd>{{ page.mentees.size }} mentees</dd>
               {% endif %}
               {% if page.timezone %}
+                {% assign tz_list = page.timezone | split: '/' %}
                 <dt>Mentor time zone</dt>
                 <dd>
-                  <i class="fas fa-clock me-1" aria-hidden="true"></i>
-                  {{ page.timezone }}
+                  <ul class="list-unstyled mb-1" data-tz-clocks>
+                    {% for tz_item in tz_list %}
+                      {% assign tz_label = tz_item | strip %}
+                      <li data-utc-offset="{{ tz_label }}">
+                        <i class="fas fa-clock me-1" aria-hidden="true"></i>
+                        {{ tz_label }}
+                        <span class="text-muted" data-tz-time></span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  <p class="small text-muted mb-1" data-tz-local hidden></p>
+                  <a
+                    class="small"
+                    href="https://www.timeanddate.com/time/map/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Compare time zones on a map</a
+                  >
+                  <script
+                    src="{{ '/assets/js/project-timezones.js' | relative_url }}"
+                    defer
+                  ></script>
                 </dd>
               {% endif %}
               <dt>
